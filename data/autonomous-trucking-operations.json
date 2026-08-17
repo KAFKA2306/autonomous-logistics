@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "operators": [
+    {
+      "operator": "Aurora Innovation, Inc.",
+      "mode": "autonomous_trucking",
+      "commercial_service": {
+        "started_at": "2025-04-27",
+        "driverless": true,
+        "route": {
+          "origin": "Dallas, Texas",
+          "destination": "Houston, Texas"
+        },
+        "customers": [
+          "Uber Freight",
+          "Hirschbach Motor Lines"
+        ],
+        "source_url": "https://ir.aurora.tech/sec-filings/all-sec-filings/content/0001828108-25-000078/auroracommerciallaunchpres.htm"
+      },
+      "operations": [
+        {
+          "observed_at": "2025-05-01",
+          "metric": "driverless_miles_since_launch",
+          "value": 1200,
+          "qualifier": "greater_than",
+          "unit": "miles",
+          "source_url": "https://ir.aurora.tech/sec-filings/all-sec-filings/content/0001828108-25-000078/auroracommerciallaunchpres.htm"
+        },
+        {
+          "observed_at": "2026-06-30",
+          "metric": "driverless_miles_since_launch",
+          "value": 440000,
+          "qualifier": "approximately_below",
+          "unit": "miles",
+          "source_url": "https://ir.aurora.tech/sec-filings/all-sec-filings/content/0001828108-26-000075/aurora26q2shareholderlet.htm"
+        },
+        {
+          "observed_at": "2026-06-30",
+          "metric": "on_time_performance",
+          "value": 100,
+          "qualifier": "reported",
+          "unit": "percent",
+          "source_url": "https://ir.aurora.tech/sec-filings/all-sec-filings/content/0001828108-26-000075/aurora26q2shareholderlet.htm"
+        },
+        {
+          "observed_at": "2026-06-30",
+          "metric": "aurora_driver_attributed_collisions",
+          "value": 0,
+          "qualifier": "reported",
+          "unit": "collisions",
+          "source_url": "https://ir.aurora.tech/sec-filings/all-sec-filings/content/0001828108-26-000075/aurora26q2shareholderlet.htm"
+        }
+      ]
+    }
+  ]
+}

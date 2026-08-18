@@ -1,0 +1,135 @@
+name: Autonomous logistics evidence
+
+on:
+  pull_request:
+    paths:
+      - autonomous_logistics.py
+      - test_autonomous_logistics.py
+      - data/registry.json
+      - README.md
+      - AGENTS.md
+      - .github/workflows/autonomous-logistics-evidence.yml
+  push:
+    branches: [main]
+    paths:
+      - autonomous_logistics.py
+      - test_autonomous_logistics.py
+      - data/registry.json
+      - README.md
+      - AGENTS.md
+      - .github/workflows/autonomous-logistics-evidence.yml
+  schedule:
+    - cron: '35 21 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: autonomous-logistics-evidence-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Compile and unit test
+        run: |
+          python -m py_compile autonomous_logistics.py test_autonomous_logistics.py
+          python -m unittest -v test_autonomous_logistics
+
+      - name: Collect primary evidence
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            python autonomous_logistics.py \
+              --data-root build/data/autonomous-logistics \
+              --api-dir build/api/v1/autonomous-logistics
+          else
+            python autonomous_logistics.py
+          fi
+
+      - name: Audit source and status boundaries
+        run: |
+          python - <<'PY'
+          import hashlib
+          import json
+          from pathlib import Path
+
+          if '${{ github.event_name }}' == 'pull_request':
+              data_root = Path('build/data/autonomous-logistics')
+              api = Path('build/api/v1/autonomous-logistics')
+          else:
+              data_root = Path('data/autonomous-logistics')
+              api = Path('api/v1/autonomous-logistics')
+
+          index = json.loads((api / 'index.json').read_text())
+          drones = json.loads((api / 'drone-part135.json').read_text())['records']
+          trucking = json.loads((api / 'trucking.json').read_text())['records']
+          events = json.loads((api / 'events.json').read_text())['records']
+          provenance = json.loads((api / 'provenance.json').read_text())
+          coverage = index['coverage']
+
+          assert coverage['faa_part135_operator_count'] == 7, coverage
+          assert coverage['autonomous_trucking_operator_count'] >= 3, coverage
+          assert coverage['commercial_driverless_trucking_operator_count'] >= 3, coverage
+          assert coverage['events_2024_or_later'] >= 5, coverage
+          assert coverage['primary_source_count'] >= 4, coverage
+          assert {row['operator_name'] for row in drones} == {
+              'Amazon Prime Air','Causey Aviation Unmanned','Drone Express','Flytrex','UPS Flight Forward','Wing Aviation','Zipline'
+          }
+          assert all(row['operation_status'] == 'regulatory_authorization' for row in drones)
+          assert all(row['operating_area'] is None for row in drones)
+          assert all(row['operating_area_status'] == 'not_listed_on_current_faa_page' for row in drones)
+          assert {row['operator_id'] for row in trucking} >= {'aurora','gatik','kodiak'}
+          assert all(row['operation_status'] == 'commercial_driverless' for row in trucking)
+          assert all(row['human_driver_in_cab'] is False for row in trucking)
+          assert all(row['commercial'] is True for row in trucking)
+          assert all(row['source_url'].startswith('https://') and len(row['source_sha256']) == 64 for row in drones + trucking + events)
+
+          for row in provenance['sources']:
+              raw = (data_root / row['evidence_path']).read_bytes()
+              assert hashlib.sha256(raw).hexdigest() == row['sha256'], row['source_id']
+          PY
+
+      - name: Rebuild API from raw evidence
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            DATA_ROOT=build/data/autonomous-logistics
+            API_ROOT=build/api/v1/autonomous-logistics
+          else
+            DATA_ROOT=data/autonomous-logistics
+            API_ROOT=api/v1/autonomous-logistics
+          fi
+          rm -rf build/rebuilt-autonomous-logistics
+          python autonomous_logistics.py \
+            --offline \
+            --data-root "$DATA_ROOT" \
+            --api-dir build/rebuilt-autonomous-logistics
+          diff -ru "$API_ROOT" build/rebuilt-autonomous-logistics
+
+      - name: Upload pull-request evidence
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v7
+        with:
+          name: autonomous-logistics-evidence
+          path: build
+          retention-days: 30
+
+      - name: Commit changed evidence and views
+        if: github.event_name != 'pull_request'
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add data/autonomous-logistics api/v1/autonomous-logistics
+          if git diff --cached --quiet; then
+            echo 'No autonomous-logistics evidence change.'
+            exit 0
+          fi
+          git commit -m 'data: update autonomous logistics evidence'
+          git push

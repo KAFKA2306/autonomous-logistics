@@ -20,10 +20,10 @@
       "required_markers": ["January 27, 2026", "without a driver or safety observer", "Texas, Arkansas, and Arizona", "60,000 fully driverless orders"]
     },
     {
-      "source_id": "kodiak-2026-commercial",
-      "authority": "Kodiak AI",
-      "source_url": "https://investors.kodiak.ai/news-releases/news-release-details/kodiak-ai-appoints-chet-gryczan-lead-its-defense-vertical",
-      "required_markers": ["Permian Basin", "without a driver in the cab", "Atlas Energy Solutions"]
+      "source_id": "kodiak-2025-10k",
+      "authority": "Kodiak AI SEC filing",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1853138/000162828026016910/kdk-20251231.htm",
+      "required_markers": ["operating without a human driver today", "10,700 Cumulative Hours of Paid Driverless Operations", "customer-owned and -operated driverless trucks in commercial service", "Permian Basin of West Texas and Eastern New Mexico"]
     }
   ],
   "drone_part135": [
@@ -43,7 +43,7 @@
       "operator_id":"gatik","operator_name":"Gatik","vehicle_class":"freight-only autonomous trucks","system":"Gatik Driver","operation_status":"commercial_driverless","commercial":true,"human_driver_in_cab":false,"safety_observer_required":false,"geography":["Texas","Arkansas","Arizona"],"current_snapshot":{"as_of":"2026-01-27","fully_driverless_orders":60000,"driverless_hours":2000,"driverless_public_road_miles":10000,"max_route_miles":400},"source_id":"gatik-2026-scale"
     },
     {
-      "operator_id":"kodiak","operator_name":"Kodiak AI","vehicle_class":"Class 8 tractor-trailer","system":"Kodiak Driver","operation_status":"commercial_driverless","commercial":true,"human_driver_in_cab":false,"safety_observer_required":false,"geography":["Permian Basin, West Texas","eastern New Mexico"],"customer":"Atlas Energy Solutions","current_snapshot":{"as_of":"2026-02-18","operation":"day-and-night deliveries"},"source_id":"kodiak-2026-commercial"
+      "operator_id":"kodiak","operator_name":"Kodiak AI","vehicle_class":"Class 8 tractor-trailer","system":"Kodiak Driver","operation_status":"commercial_driverless","commercial":true,"human_driver_in_cab":false,"safety_observer_required":false,"geography":["Permian Basin, West Texas","eastern New Mexico"],"customer":"Atlas Energy Solutions","current_snapshot":{"as_of":"2025-12-31","paid_driverless_hours":10700,"paid_driverless_hours_qualifier":"over","customer_owned_driverless_vehicles":20,"revenue_generating_loads":12600,"revenue_generating_loads_qualifier":"over"},"source_id":"kodiak-2025-10k"
     }
   ],
   "operation_events": [
@@ -51,13 +51,14 @@
     {"event_id":"flytrex-part135-2025","operator_id":"flytrex","mode":"drone_package_delivery","event_type":"regulatory_authorization","effective_at":"2025-01-31","operation_status":"regulatory_authorization","source_id":"faa-part135-package-delivery"},
     {"event_id":"aurora-current-2026","operator_id":"aurora","mode":"autonomous_trucking","event_type":"commercial_operation_snapshot","effective_at":"2026-06-30","operation_status":"commercial_driverless","source_id":"aurora-q2-2026"},
     {"event_id":"gatik-scale-2026","operator_id":"gatik","mode":"autonomous_trucking","event_type":"commercial_operation_snapshot","effective_at":"2026-01-27","operation_status":"commercial_driverless","source_id":"gatik-2026-scale"},
-    {"event_id":"kodiak-current-2026","operator_id":"kodiak","mode":"autonomous_trucking","event_type":"commercial_operation_snapshot","effective_at":"2026-02-18","operation_status":"commercial_driverless","source_id":"kodiak-2026-commercial"}
+    {"event_id":"kodiak-launch-2024","operator_id":"kodiak","mode":"autonomous_trucking","event_type":"commercial_service_start","effective_at":"2024-12-01","operation_status":"commercial_driverless","source_id":"kodiak-2025-10k"},
+    {"event_id":"kodiak-current-2025","operator_id":"kodiak","mode":"autonomous_trucking","event_type":"commercial_operation_snapshot","effective_at":"2025-12-31","operation_status":"commercial_driverless","source_id":"kodiak-2025-10k"}
   ],
   "rules": [
     "FAA Part 135 listing is regulatory authorization evidence and is not treated as proof of active commercial flights.",
     "If the current FAA registry page does not publish an operating area, operating_area remains null rather than inferred.",
     "supervised, testing, regulatory authorization and commercial driverless are distinct operation_status values.",
     "planned routes or future driverless validation are not promoted to commercial_driverless facts.",
-    "operator statements are stored with their original qualifiers such as nearly or more than."
+    "operator statements and filings are stored with their original qualifiers such as nearly, over, or more than."
   ]
 }

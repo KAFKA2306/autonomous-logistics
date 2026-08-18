@@ -1,0 +1,80 @@
+{
+  "records": [
+    {
+      "commercial": true,
+      "current_snapshot": {
+        "as_of": "2026-06-30",
+        "driverless_miles_cumulative": 440000,
+        "qualifier": "nearly"
+      },
+      "geography": [
+        "Texas"
+      ],
+      "human_driver_in_cab": false,
+      "operation_status": "commercial_driverless",
+      "operator_id": "aurora",
+      "operator_name": "Aurora Innovation",
+      "safety_observer_required": false,
+      "source_evidence_path": "raw/objects/3110176d5350cc01d7d2c3fdf4fcf18c697e0f17a21f2819a8b2b4349fd84800.html",
+      "source_id": "aurora-q2-2026",
+      "source_sha256": "3110176d5350cc01d7d2c3fdf4fcf18c697e0f17a21f2819a8b2b4349fd84800",
+      "source_url": "https://ir.aurora.tech/sec-filings/all-sec-filings/content/0001828108-26-000075/aurora26q2shareholderlet.htm",
+      "system": "Aurora Driver",
+      "vehicle_class": "Class 8 tractor-trailer"
+    },
+    {
+      "commercial": true,
+      "current_snapshot": {
+        "as_of": "2026-01-27",
+        "driverless_hours": 2000,
+        "driverless_public_road_miles": 10000,
+        "fully_driverless_orders": 60000,
+        "max_route_miles": 400
+      },
+      "geography": [
+        "Texas",
+        "Arkansas",
+        "Arizona"
+      ],
+      "human_driver_in_cab": false,
+      "operation_status": "commercial_driverless",
+      "operator_id": "gatik",
+      "operator_name": "Gatik",
+      "safety_observer_required": false,
+      "source_evidence_path": "raw/objects/b828be5001aab89e9f27226ed146518e6104c7bcc1aaebd59b6263048b16a249.html",
+      "source_id": "gatik-2026-scale",
+      "source_sha256": "b828be5001aab89e9f27226ed146518e6104c7bcc1aaebd59b6263048b16a249",
+      "source_url": "https://archive.gatik.ai/news/press-releases/gatik-becomes-first-us-company-to-operate-fully-driverless-trucks-at-scale-for-commercial-deliveries/",
+      "system": "Gatik Driver",
+      "vehicle_class": "freight-only autonomous trucks"
+    },
+    {
+      "commercial": true,
+      "current_snapshot": {
+        "as_of": "2025-06-10",
+        "driverless_hours_qualifier": "over",
+        "driverless_hours_since_launch": 1600,
+        "driverless_trucks": 4,
+        "loads_qualifier": "over",
+        "loads_since_launch": 800
+      },
+      "customer": "Atlas Energy Solutions",
+      "geography": [
+        "Permian Basin, West Texas",
+        "eastern New Mexico"
+      ],
+      "human_driver_in_cab": false,
+      "operation_status": "commercial_driverless",
+      "operator_id": "kodiak",
+      "operator_name": "Kodiak AI",
+      "safety_observer_required": false,
+      "source_evidence_path": "raw/objects/47db6cf4abb2fe8a0a3387f3b017720d5c15217c0bc87807d5e40c925bfb82fe.html",
+      "source_id": "kodiak-2025-commercial",
+      "source_sha256": "47db6cf4abb2fe8a0a3387f3b017720d5c15217c0bc87807d5e40c925bfb82fe",
+      "source_url": "https://kodiak.ai/news/kodiak-delivers-two-additional-driverless-trucks",
+      "system": "Kodiak Driver",
+      "vehicle_class": "Class 8 tractor-trailer"
+    }
+  ],
+  "schema_version": 1
+}

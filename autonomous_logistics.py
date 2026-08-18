@@ -7,6 +7,8 @@ import hashlib
 import html
 import json
 import re
+import time
+import urllib.error
 import urllib.request
 from datetime import UTC, date, datetime
 from pathlib import Path
@@ -35,17 +37,31 @@ def normalized_text(raw: bytes) -> str:
 
 
 def fetch_source(source: dict[str, Any], data_root: Path) -> dict[str, Any]:
+    source_id = str(source["source_id"])
     url = str(source["source_url"])
     request = urllib.request.Request(url, headers={"User-Agent": "KAFKA2306/autonomous-logistics-evidence"})
-    with urllib.request.urlopen(request, timeout=60) as response:
-        raw = response.read()
-        content_type = response.headers.get_content_type()
+    last_error: Exception | None = None
+    raw = b""
+    content_type = "application/octet-stream"
+    for attempt in range(1, 4):
+        try:
+            print(f"fetch {source_id} attempt {attempt}/3: {url}", flush=True)
+            with urllib.request.urlopen(request, timeout=30) as response:
+                raw = response.read()
+                content_type = response.headers.get_content_type()
+            break
+        except (TimeoutError, urllib.error.URLError) as exc:
+            last_error = exc
+            if attempt < 3:
+                time.sleep(attempt)
+    else:
+        raise RuntimeError(f"primary source unavailable after 3 attempts: {source_id} {url}") from last_error
     if len(raw) < 1000:
-        raise ValueError(f"primary source unexpectedly small: {url}")
+        raise ValueError(f"primary source unexpectedly small: {source_id} {url}")
     text = normalized_text(raw)
     missing = [marker for marker in source.get("required_markers", []) if marker.lower() not in text.lower()]
     if missing:
-        raise ValueError(f"primary source markers missing for {source['source_id']}: {missing}")
+        raise ValueError(f"primary source markers missing for {source_id}: {missing}")
     digest = sha256(raw)
     objects = data_root / "raw" / "objects"
     objects.mkdir(parents=True, exist_ok=True)
@@ -54,7 +70,7 @@ def fetch_source(source: dict[str, Any], data_root: Path) -> dict[str, Any]:
     if not path.exists():
         path.write_bytes(raw)
     return {
-        "source_id": source["source_id"],
+        "source_id": source_id,
         "authority": source["authority"],
         "source_url": url,
         "sha256": digest,

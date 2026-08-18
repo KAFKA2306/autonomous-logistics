@@ -1,5 +1,5 @@
 {
-  "retrieved_at": "2026-08-18T20:02:26.436206+00:00",
+  "retrieved_at": "2026-08-18T21:50:20.500993+00:00",
   "schema_version": 1,
   "sources": [
     {
@@ -38,8 +38,8 @@
     {
       "authority": "Gatik",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/b828be5001aab89e9f27226ed146518e6104c7bcc1aaebd59b6263048b16a249.html",
-      "sha256": "b828be5001aab89e9f27226ed146518e6104c7bcc1aaebd59b6263048b16a249",
+      "evidence_path": "raw/objects/8376772e8b50f635670169bdd618401a082f434cbf6351bf00973dcebbfb7284.html",
+      "sha256": "8376772e8b50f635670169bdd618401a082f434cbf6351bf00973dcebbfb7284",
       "size_bytes": 89255,
       "source_id": "gatik-2026-scale",
       "source_url": "https://archive.gatik.ai/news/press-releases/gatik-becomes-first-us-company-to-operate-fully-driverless-trucks-at-scale-for-commercial-deliveries/",
@@ -53,9 +53,9 @@
     {
       "authority": "Kodiak AI",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/47db6cf4abb2fe8a0a3387f3b017720d5c15217c0bc87807d5e40c925bfb82fe.html",
-      "sha256": "47db6cf4abb2fe8a0a3387f3b017720d5c15217c0bc87807d5e40c925bfb82fe",
-      "size_bytes": 126105,
+      "evidence_path": "raw/objects/6c92dd5b6949a71e1728478bac06be02725c06e90d7a4a0b7f5711085494e0f4.html",
+      "sha256": "6c92dd5b6949a71e1728478bac06be02725c06e90d7a4a0b7f5711085494e0f4",
+      "size_bytes": 126040,
       "source_id": "kodiak-2025-commercial",
       "source_url": "https://kodiak.ai/news/kodiak-delivers-two-additional-driverless-trucks",
       "verified_markers": [

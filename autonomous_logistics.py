@@ -19,6 +19,7 @@ DEFAULT_REGISTRY = ROOT / "data" / "registry.json"
 DEFAULT_DATA_ROOT = ROOT / "data" / "autonomous-logistics"
 DEFAULT_API_DIR = ROOT / "api" / "v1" / "autonomous-logistics"
 ALLOWED_STATUSES = {"regulatory_authorization", "testing", "supervised", "commercial_driverless"}
+USER_AGENT = "KAFKA2306 autonomous-logistics 137051370+KAFKA2306@users.noreply.github.com"
 
 
 def dump(value: object) -> bytes:
@@ -39,7 +40,10 @@ def normalized_text(raw: bytes) -> str:
 def fetch_source(source: dict[str, Any], data_root: Path) -> dict[str, Any]:
     source_id = str(source["source_id"])
     url = str(source["source_url"])
-    request = urllib.request.Request(url, headers={"User-Agent": "KAFKA2306/autonomous-logistics-evidence"})
+    request = urllib.request.Request(
+        url,
+        headers={"User-Agent": USER_AGENT, "Accept-Encoding": "identity"},
+    )
     last_error: Exception | None = None
     raw = b""
     content_type = "application/octet-stream"

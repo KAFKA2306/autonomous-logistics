@@ -31,9 +31,9 @@
       "mode": "autonomous_trucking",
       "operation_status": "commercial_driverless",
       "operator_id": "aurora",
-      "source_evidence_path": "raw/objects/3110176d5350cc01d7d2c3fdf4fcf18c697e0f17a21f2819a8b2b4349fd84800.html",
+      "source_evidence_path": "raw/objects/76f1fb4fcd3eee334bf534c9213e7c6c22105109c42c30517060d2a49e699eac.html",
       "source_id": "aurora-q2-2026",
-      "source_sha256": "3110176d5350cc01d7d2c3fdf4fcf18c697e0f17a21f2819a8b2b4349fd84800",
+      "source_sha256": "76f1fb4fcd3eee334bf534c9213e7c6c22105109c42c30517060d2a49e699eac",
       "source_url": "https://ir.aurora.tech/sec-filings/all-sec-filings/content/0001828108-26-000075/aurora26q2shareholderlet.htm"
     },
     {
@@ -43,9 +43,9 @@
       "mode": "autonomous_trucking",
       "operation_status": "commercial_driverless",
       "operator_id": "gatik",
-      "source_evidence_path": "raw/objects/8376772e8b50f635670169bdd618401a082f434cbf6351bf00973dcebbfb7284.html",
+      "source_evidence_path": "raw/objects/e5557058a313bd5350304209fcc18d0df6a2c9751a3841a16fc04b6373bfc7df.html",
       "source_id": "gatik-2026-scale",
-      "source_sha256": "8376772e8b50f635670169bdd618401a082f434cbf6351bf00973dcebbfb7284",
+      "source_sha256": "e5557058a313bd5350304209fcc18d0df6a2c9751a3841a16fc04b6373bfc7df",
       "source_url": "https://archive.gatik.ai/news/press-releases/gatik-becomes-first-us-company-to-operate-fully-driverless-trucks-at-scale-for-commercial-deliveries/"
     },
     {
@@ -55,9 +55,9 @@
       "mode": "autonomous_trucking",
       "operation_status": "commercial_driverless",
       "operator_id": "kodiak",
-      "source_evidence_path": "raw/objects/6c92dd5b6949a71e1728478bac06be02725c06e90d7a4a0b7f5711085494e0f4.html",
+      "source_evidence_path": "raw/objects/a92befd3e2de12c9565c4412c35468f0b249a3a8f4d1312f441ff3a3944e2e5e.html",
       "source_id": "kodiak-2025-commercial",
-      "source_sha256": "6c92dd5b6949a71e1728478bac06be02725c06e90d7a4a0b7f5711085494e0f4",
+      "source_sha256": "a92befd3e2de12c9565c4412c35468f0b249a3a8f4d1312f441ff3a3944e2e5e",
       "source_url": "https://kodiak.ai/news/kodiak-delivers-two-additional-driverless-trucks"
     },
     {
@@ -67,9 +67,9 @@
       "mode": "autonomous_trucking",
       "operation_status": "commercial_driverless",
       "operator_id": "kodiak",
-      "source_evidence_path": "raw/objects/6c92dd5b6949a71e1728478bac06be02725c06e90d7a4a0b7f5711085494e0f4.html",
+      "source_evidence_path": "raw/objects/a92befd3e2de12c9565c4412c35468f0b249a3a8f4d1312f441ff3a3944e2e5e.html",
       "source_id": "kodiak-2025-commercial",
-      "source_sha256": "6c92dd5b6949a71e1728478bac06be02725c06e90d7a4a0b7f5711085494e0f4",
+      "source_sha256": "a92befd3e2de12c9565c4412c35468f0b249a3a8f4d1312f441ff3a3944e2e5e",
       "source_url": "https://kodiak.ai/news/kodiak-delivers-two-additional-driverless-trucks"
     }
   ],

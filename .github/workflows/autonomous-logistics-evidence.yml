@@ -80,12 +80,15 @@ jobs:
           assert coverage['commercial_driverless_trucking_operator_count'] >= 3, coverage
           assert coverage['events_2024_or_later'] >= 5, coverage
           assert coverage['primary_source_count'] >= 4, coverage
-          assert {row['operator_name'] for row in drones} == {
-              'Amazon Prime Air','Causey Aviation Unmanned','Drone Express','Flytrex','UPS Flight Forward','Wing Aviation','Zipline'
+          assert {row['operator_id'] for row in drones} == {
+              'wing-aviation', 'ups-flight-forward', 'amazon-prime-air', 'zipline',
+              'causey-aviation-unmanned', 'droneup', 'drone-express'
           }
+          assert all('part135_certificate_period' in row for row in drones)
+          assert all('part135_certificate_date' not in row for row in drones)
           assert all(row['operation_status'] == 'regulatory_authorization' for row in drones)
           assert all(row['operating_area'] is None for row in drones)
-          assert all(row['operating_area_status'] == 'not_listed_on_current_faa_page' for row in drones)
+          assert all(row['operating_area_status'] == 'not_listed_as_current_operating_area_on_faa_page' for row in drones)
           assert {row['operator_id'] for row in trucking} >= {'aurora','gatik','kodiak'}
           assert all(row['operation_status'] == 'commercial_driverless' for row in trucking)
           assert all(row['human_driver_in_cab'] is False for row in trucking)

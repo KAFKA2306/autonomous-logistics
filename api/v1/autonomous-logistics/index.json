@@ -11,7 +11,7 @@
     "raw_evidence_count": 4
   },
   "dataset": "Autonomous logistics primary evidence",
-  "retrieved_at": "2026-08-20T21:55:45.776465+00:00",
+  "retrieved_at": "2026-08-21T12:33:49.157030+00:00",
   "rules": [
     "FAA Part 135 listing is regulatory authorization evidence and is not treated as proof of active commercial flights.",
     "If the current FAA registry page does not publish an operating area, operating_area remains null rather than inferred.",

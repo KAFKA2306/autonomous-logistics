@@ -3,7 +3,14 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from autonomous_logistics import build_api, dump, sha256, validate_registry, verify_manifest
+from autonomous_logistics import (
+    build_api,
+    dump,
+    event_period_key,
+    sha256,
+    validate_registry,
+    verify_manifest,
+)
 
 
 class AutonomousLogisticsEvidenceTests(unittest.TestCase):
@@ -51,6 +58,29 @@ class AutonomousLogisticsEvidenceTests(unittest.TestCase):
         for row in self.registry["drone_part135"]:
             self.assertIsNone(row["operating_area"])
             self.assertEqual(row["operating_area_status"], "not_listed_as_current_operating_area_on_faa_page")
+
+    def test_faa_commercial_service_events_preserve_month_precision(self):
+        events = {row["event_id"]: row for row in self.registry["operation_events"]}
+        expected = {
+            "ups-commercial-start-2019": ("2019-09", "ups-flight-forward"),
+            "amazon-commercial-start-2020": ("2020-08", "amazon-prime-air"),
+            "droneup-commercial-start-2024": ("2024-11", "droneup"),
+        }
+        for event_id, (period, operator_id) in expected.items():
+            with self.subTest(event_id=event_id):
+                event = events[event_id]
+                self.assertEqual(event["effective_at"], period)
+                self.assertEqual(event["event_type"], "commercial_service_start")
+                self.assertEqual(event["operation_status"], "commercial")
+                self.assertEqual(event["operator_id"], operator_id)
+                self.assertEqual(event["source_id"], "faa-part135-package-delivery")
+        self.assertNotIn("drone-express-commercial-start-2025", events)
+
+    def test_event_period_key_accepts_source_month_without_fabricating_day(self):
+        self.assertEqual(event_period_key("2019-09"), (2019, 9, 0))
+        self.assertEqual(event_period_key("2026-08-18"), (2026, 8, 18))
+        with self.assertRaises(ValueError):
+            event_period_key("2026-13")
 
     def test_wing_houston_nepa_event_is_authorization_not_service_start(self):
         events = {row["event_id"]: row for row in self.registry["operation_events"]}
@@ -105,15 +135,19 @@ class AutonomousLogisticsEvidenceTests(unittest.TestCase):
             events = json.loads((root / "events.json").read_text())["records"]
         self.assertEqual(index["coverage"]["faa_part135_operator_count"], 7)
         self.assertEqual(index["coverage"]["commercial_driverless_trucking_operator_count"], 3)
-        self.assertEqual(index["coverage"]["operation_event_count"], 6)
+        self.assertEqual(index["coverage"]["operation_event_count"], 9)
         self.assertEqual(index["coverage"]["primary_source_count"], 6)
-        self.assertEqual(index["coverage"]["operation_event_last_date"], "2026-08-18")
+        self.assertEqual(index["coverage"]["operation_event_first_period"], "2019-09")
+        self.assertEqual(index["coverage"]["operation_event_last_period"], "2026-08-18")
+        self.assertEqual(index["coverage"]["events_2024_or_later"], 7)
         self.assertTrue(all(row["operation_status"] == "regulatory_authorization" for row in drones))
         self.assertTrue(all(row["operation_status"] == "commercial_driverless" for row in trucking))
         wing_event = next(row for row in events if row["event_id"] == "wing-houston-nepa-fonsi-2026")
-        droneup_event = next(row for row in events if row["event_id"] == "droneup-capacity-test-2024")
+        droneup_test = next(row for row in events if row["event_id"] == "droneup-capacity-test-2024")
+        droneup_service = next(row for row in events if row["event_id"] == "droneup-commercial-start-2024")
         self.assertEqual(wing_event["operation_status"], "regulatory_authorization")
-        self.assertEqual(droneup_event["operation_status"], "testing")
+        self.assertEqual(droneup_test["operation_status"], "testing")
+        self.assertEqual(droneup_service["operation_status"], "commercial")
 
     def test_raw_manifest_hash_is_verified(self):
         with tempfile.TemporaryDirectory() as tmp:

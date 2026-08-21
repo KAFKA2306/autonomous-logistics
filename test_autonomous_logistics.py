@@ -12,15 +12,45 @@ class AutonomousLogisticsEvidenceTests(unittest.TestCase):
 
     def test_registry_has_current_faa_seven_and_three_trucking_operators(self):
         validate_registry(self.registry)
-        self.assertEqual(len(self.registry["drone_part135"]), 7)
+        drones = self.registry["drone_part135"]
+        self.assertEqual(len(drones), 7)
+        self.assertEqual(
+            {row["operator_id"] for row in drones},
+            {
+                "wing-aviation",
+                "ups-flight-forward",
+                "amazon-prime-air",
+                "zipline",
+                "causey-aviation-unmanned",
+                "droneup",
+                "drone-express",
+            },
+        )
+        self.assertNotIn("flytrex", {row["operator_id"] for row in drones})
         self.assertGreaterEqual(len(self.registry["trucking_operators"]), 3)
-        self.assertTrue(all(row["operation_status"] == "regulatory_authorization" for row in self.registry["drone_part135"]))
+        self.assertTrue(all(row["operation_status"] == "regulatory_authorization" for row in drones))
         self.assertTrue(all(row["operation_status"] == "commercial_driverless" for row in self.registry["trucking_operators"]))
+
+    def test_faa_certificate_period_preserves_source_precision(self):
+        periods = {row["operator_id"]: row["part135_certificate_period"] for row in self.registry["drone_part135"]}
+        self.assertEqual(
+            periods,
+            {
+                "wing-aviation": "2019-04",
+                "ups-flight-forward": "2019-09",
+                "amazon-prime-air": "2020-08",
+                "zipline": "2022-06",
+                "causey-aviation-unmanned": "2023-01",
+                "droneup": "2024-11",
+                "drone-express": "2025-04",
+            },
+        )
+        self.assertTrue(all("part135_certificate_date" not in row for row in self.registry["drone_part135"]))
 
     def test_missing_faa_area_is_explicit_not_inferred(self):
         for row in self.registry["drone_part135"]:
             self.assertIsNone(row["operating_area"])
-            self.assertEqual(row["operating_area_status"], "not_listed_on_current_faa_page")
+            self.assertEqual(row["operating_area_status"], "not_listed_as_current_operating_area_on_faa_page")
 
     def test_wing_houston_nepa_event_is_authorization_not_service_start(self):
         events = {row["event_id"]: row for row in self.registry["operation_events"]}
@@ -31,6 +61,11 @@ class AutonomousLogisticsEvidenceTests(unittest.TestCase):
         self.assertEqual(event["operator_id"], "wing-aviation")
         self.assertEqual(event["source_id"], "faa-nepa-drone-operations")
         self.assertIn("Houston metropolitan area, Texas", event["geography"])
+
+    def test_month_only_faa_certifications_are_not_fabricated_as_day_events(self):
+        event_ids = {row["event_id"] for row in self.registry["operation_events"]}
+        self.assertNotIn("drone-express-part135-2024", event_ids)
+        self.assertNotIn("flytrex-part135-2025", event_ids)
 
     def test_api_keeps_authorization_and_operation_status_separate(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -58,7 +93,7 @@ class AutonomousLogisticsEvidenceTests(unittest.TestCase):
             events = json.loads((root / "events.json").read_text())["records"]
         self.assertEqual(index["coverage"]["faa_part135_operator_count"], 7)
         self.assertEqual(index["coverage"]["commercial_driverless_trucking_operator_count"], 3)
-        self.assertEqual(index["coverage"]["operation_event_count"], 7)
+        self.assertEqual(index["coverage"]["operation_event_count"], 5)
         self.assertEqual(index["coverage"]["operation_event_last_date"], "2026-08-18")
         self.assertTrue(all(row["operation_status"] == "regulatory_authorization" for row in drones))
         self.assertTrue(all(row["operation_status"] == "commercial_driverless" for row in trucking))

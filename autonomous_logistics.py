@@ -99,9 +99,17 @@ def validate_registry(registry: dict[str, Any]) -> None:
             raise ValueError("FAA Part 135 registry entries must not be promoted to commercial operation facts")
         if row.get("current_faa_registry_status") != "listed":
             raise ValueError("all canonical drone entries must be current FAA listed operators")
-        if not row.get("part135_certificate_date") or not row.get("permission"):
+        exact_date = row.get("part135_certificate_date")
+        month_period = row.get("part135_certificate_period")
+        if bool(exact_date) == bool(month_period):
+            raise ValueError(f"FAA authorization must carry exactly one date precision: {row.get('operator_id')}")
+        if exact_date:
+            date.fromisoformat(str(exact_date))
+        elif not re.fullmatch(r"\d{4}-\d{2}", str(month_period)):
+            raise ValueError(f"invalid FAA certificate month precision: {row.get('operator_id')}")
+        if not row.get("permission"):
             raise ValueError(f"incomplete FAA authorization record: {row.get('operator_id')}")
-        if row.get("operating_area") is None and row.get("operating_area_status") != "not_listed_on_current_faa_page":
+        if row.get("operating_area") is None and row.get("operating_area_status") != "not_listed_as_current_operating_area_on_faa_page":
             raise ValueError("missing operating area must carry an explicit source limitation")
         if row.get("source_id") not in sources:
             raise ValueError("drone record refers to unknown source")

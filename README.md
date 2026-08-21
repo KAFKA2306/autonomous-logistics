@@ -17,7 +17,9 @@ Drone package deliveryとautonomous truckingを、**規制認可・試験・supe
 
 FAAの現行Part 135 UAS package-delivery operator一覧を正準registryとして使います。Part 135掲載は**規制認可の証拠**であり、それだけで現在commercial flightを運航しているとは扱いません。
 
-current FAA pageがoperating areaを公開していないoperatorは、`operating_area: null` と `operating_area_status: not_listed_on_current_faa_page` を保持します。推測したservice areaで穴埋めしません。
+現行FAA pageが直接示すoperator membershipとcertificate timingだけを正規化します。certificate timingが月単位なら`part135_certificate_period: YYYY-MM`として保持し、日付を推測しません。Flytrexのようにcertificate holderではなくpartner/UASとして言及される組織をoperator rowへ昇格させません。
+
+current FAA pageが**current operating area**を公開していないoperatorは、`operating_area: null` と `operating_area_status: not_listed_as_current_operating_area_on_faa_page` を保持します。launch時・過去のservice areaをcurrent areaとして穴埋めしません。
 
 ## Autonomous trucking
 

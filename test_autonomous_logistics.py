@@ -17,7 +17,7 @@ class AutonomousLogisticsEvidenceTests(unittest.TestCase):
     def setUp(self):
         self.registry = json.loads(Path("data/registry.json").read_text())
 
-    def test_registry_has_current_faa_seven_and_three_trucking_operators(self):
+    def test_registry_has_seven_faa_listed_and_three_trucking_operators(self):
         validate_registry(self.registry)
         drones = self.registry["drone_part135"]
         self.assertEqual(len(drones), 7)
@@ -34,6 +34,7 @@ class AutonomousLogisticsEvidenceTests(unittest.TestCase):
             },
         )
         self.assertNotIn("flytrex", {row["operator_id"] for row in drones})
+        self.assertNotIn("doordash-air", {row["operator_id"] for row in drones})
         self.assertGreaterEqual(len(self.registry["trucking_operators"]), 3)
         self.assertTrue(all(row["operation_status"] == "regulatory_authorization" for row in drones))
         self.assertTrue(all(row["operation_status"] == "commercial_driverless" for row in self.registry["trucking_operators"]))
@@ -58,6 +59,26 @@ class AutonomousLogisticsEvidenceTests(unittest.TestCase):
         for row in self.registry["drone_part135"]:
             self.assertIsNone(row["operating_area"])
             self.assertEqual(row["operating_area_status"], "not_listed_as_current_operating_area_on_faa_page")
+
+    def test_doordash_authorization_is_preserved_without_promoting_faa_registry_or_operation(self):
+        events = {row["event_id"]: row for row in self.registry["operation_events"]}
+        event = events["doordash-air-part135-announcement-2026"]
+        self.assertEqual(event["effective_at"], "2026-07-29")
+        self.assertEqual(event["event_type"], "regulatory_authorization_announcement")
+        self.assertEqual(event["operation_status"], "regulatory_authorization")
+        self.assertEqual(event["operator_id"], "doordash-air")
+        self.assertEqual(event["source_id"], "doordash-air-part135-2026")
+        self.assertNotIn(
+            "doordash-air",
+            {row["operator_id"] for row in self.registry["drone_part135"]},
+        )
+        self.assertFalse(
+            any(
+                row.get("operator_id") == "doordash-air"
+                and row.get("operation_status") == "commercial"
+                for row in self.registry["operation_events"]
+            )
+        )
 
     def test_faa_commercial_service_events_preserve_month_precision(self):
         events = {row["event_id"]: row for row in self.registry["operation_events"]}
@@ -135,17 +156,19 @@ class AutonomousLogisticsEvidenceTests(unittest.TestCase):
             events = json.loads((root / "events.json").read_text())["records"]
         self.assertEqual(index["coverage"]["faa_part135_operator_count"], 7)
         self.assertEqual(index["coverage"]["commercial_driverless_trucking_operator_count"], 3)
-        self.assertEqual(index["coverage"]["operation_event_count"], 9)
-        self.assertEqual(index["coverage"]["primary_source_count"], 6)
+        self.assertEqual(index["coverage"]["operation_event_count"], 10)
+        self.assertEqual(index["coverage"]["primary_source_count"], 7)
         self.assertEqual(index["coverage"]["operation_event_first_period"], "2019-09")
         self.assertEqual(index["coverage"]["operation_event_last_period"], "2026-08-18")
-        self.assertEqual(index["coverage"]["events_2024_or_later"], 7)
+        self.assertEqual(index["coverage"]["events_2024_or_later"], 8)
         self.assertTrue(all(row["operation_status"] == "regulatory_authorization" for row in drones))
         self.assertTrue(all(row["operation_status"] == "commercial_driverless" for row in trucking))
         wing_event = next(row for row in events if row["event_id"] == "wing-houston-nepa-fonsi-2026")
+        doordash_event = next(row for row in events if row["event_id"] == "doordash-air-part135-announcement-2026")
         droneup_test = next(row for row in events if row["event_id"] == "droneup-capacity-test-2024")
         droneup_service = next(row for row in events if row["event_id"] == "droneup-commercial-start-2024")
         self.assertEqual(wing_event["operation_status"], "regulatory_authorization")
+        self.assertEqual(doordash_event["operation_status"], "regulatory_authorization")
         self.assertEqual(droneup_test["operation_status"], "testing")
         self.assertEqual(droneup_service["operation_status"], "commercial")
 

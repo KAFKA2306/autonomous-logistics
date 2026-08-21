@@ -40,7 +40,10 @@ def normalized_text(raw: bytes) -> str:
 def fetch_source(source: dict[str, Any], data_root: Path) -> dict[str, Any]:
     source_id = str(source["source_id"])
     url = str(source["source_url"])
-    request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT, "Accept-Encoding": "identity"})
+    request = urllib.request.Request(
+        url,
+        headers={"User-Agent": USER_AGENT, "Accept-Encoding": "identity"},
+    )
     last_error: Exception | None = None
     raw = b""
     content_type = "application/octet-stream"
@@ -70,7 +73,16 @@ def fetch_source(source: dict[str, Any], data_root: Path) -> dict[str, Any]:
     path = objects / f"{digest}{suffix}"
     if not path.exists():
         path.write_bytes(raw)
-    return {"source_id": source_id, "authority": source["authority"], "source_url": url, "sha256": digest, "size_bytes": len(raw), "content_type": content_type, "evidence_path": path.relative_to(data_root).as_posix(), "verified_markers": source.get("required_markers", [])}
+    return {
+        "source_id": source_id,
+        "authority": source["authority"],
+        "source_url": url,
+        "sha256": digest,
+        "size_bytes": len(raw),
+        "content_type": content_type,
+        "evidence_path": path.relative_to(data_root).as_posix(),
+        "verified_markers": source.get("required_markers", []),
+    }
 
 
 def validate_registry(registry: dict[str, Any]) -> None:
@@ -110,8 +122,9 @@ def validate_registry(registry: dict[str, Any]) -> None:
         status = row.get("operation_status")
         if status not in ALLOWED_STATUSES:
             raise ValueError(f"unsupported trucking status: {status}")
-        if status == "commercial_driverless" and (row.get("commercial") is not True or row.get("human_driver_in_cab") is not False):
-            raise ValueError(f"commercial driverless record is internally inconsistent: {row['operator_id']}")
+        if status == "commercial_driverless":
+            if row.get("commercial") is not True or row.get("human_driver_in_cab") is not False:
+                raise ValueError(f"commercial driverless record is internally inconsistent: {row['operator_id']}")
         if not row.get("geography") or row.get("source_id") not in sources:
             raise ValueError(f"trucking record lacks geography/source: {row.get('operator_id')}")
     events = registry.get("operation_events") or []
@@ -140,7 +153,12 @@ def enrich_records(records: list[dict[str, Any]], source_map: dict[str, dict[str
     out = []
     for source in records:
         evidence = source_map[str(source["source_id"])]
-        out.append({**source, "source_url": evidence["source_url"], "source_sha256": evidence["sha256"], "source_evidence_path": evidence["evidence_path"]})
+        out.append({
+            **source,
+            "source_url": evidence["source_url"],
+            "source_sha256": evidence["sha256"],
+            "source_evidence_path": evidence["evidence_path"],
+        })
     return out
 
 
@@ -156,8 +174,31 @@ def build_api(registry: dict[str, Any], manifest: dict[str, Any], api_dir: Path)
     (api_dir / "provenance.json").write_bytes(dump(manifest))
     (api_dir / "registry.json").write_bytes(dump(registry))
     event_dates = [date.fromisoformat(row["effective_at"]) for row in events]
-    coverage = {"faa_part135_operator_count": len(drones), "autonomous_trucking_operator_count": len(trucking), "commercial_driverless_trucking_operator_count": sum(row["operation_status"] == "commercial_driverless" for row in trucking), "operation_event_count": len(events), "operation_event_first_date": min(event_dates).isoformat(), "operation_event_last_date": max(event_dates).isoformat(), "events_2024_or_later": sum(row_date.year >= 2024 for row_date in event_dates), "primary_source_count": len(manifest["sources"]), "raw_evidence_count": len(manifest["sources"])}
-    index = {"schema_version": 1, "dataset": "Autonomous logistics primary evidence", "retrieved_at": manifest["retrieved_at"], "coverage": coverage, "views": {"drone_part135": "drone-part135.json", "trucking": "trucking.json", "events": "events.json", "registry": "registry.json", "provenance": "provenance.json"}, "rules": registry["rules"]}
+    coverage = {
+        "faa_part135_operator_count": len(drones),
+        "autonomous_trucking_operator_count": len(trucking),
+        "commercial_driverless_trucking_operator_count": sum(row["operation_status"] == "commercial_driverless" for row in trucking),
+        "operation_event_count": len(events),
+        "operation_event_first_date": min(event_dates).isoformat(),
+        "operation_event_last_date": max(event_dates).isoformat(),
+        "events_2024_or_later": sum(row_date.year >= 2024 for row_date in event_dates),
+        "primary_source_count": len(manifest["sources"]),
+        "raw_evidence_count": len(manifest["sources"]),
+    }
+    index = {
+        "schema_version": 1,
+        "dataset": "Autonomous logistics primary evidence",
+        "retrieved_at": manifest["retrieved_at"],
+        "coverage": coverage,
+        "views": {
+            "drone_part135": "drone-part135.json",
+            "trucking": "trucking.json",
+            "events": "events.json",
+            "registry": "registry.json",
+            "provenance": "provenance.json",
+        },
+        "rules": registry["rules"],
+    }
     (api_dir / "index.json").write_bytes(dump(index))
     return index
 
@@ -165,7 +206,11 @@ def build_api(registry: dict[str, Any], manifest: dict[str, Any], api_dir: Path)
 def collect(registry: dict[str, Any], data_root: Path) -> dict[str, Any]:
     retrieved_at = datetime.now(UTC).isoformat()
     source_evidence = [fetch_source(row, data_root) for row in registry["sources"]]
-    manifest = {"schema_version": 1, "retrieved_at": retrieved_at, "sources": source_evidence}
+    manifest = {
+        "schema_version": 1,
+        "retrieved_at": retrieved_at,
+        "sources": source_evidence,
+    }
     raw = dump(manifest)
     manifests = data_root / "raw" / "manifests"
     manifests.mkdir(parents=True, exist_ok=True)

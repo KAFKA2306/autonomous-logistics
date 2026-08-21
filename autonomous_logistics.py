@@ -18,7 +18,7 @@ ROOT = Path(__file__).resolve().parent
 DEFAULT_REGISTRY = ROOT / "data" / "registry.json"
 DEFAULT_DATA_ROOT = ROOT / "data" / "autonomous-logistics"
 DEFAULT_API_DIR = ROOT / "api" / "v1" / "autonomous-logistics"
-ALLOWED_STATUSES = {"regulatory_authorization", "testing", "supervised", "commercial_driverless"}
+ALLOWED_STATUSES = {"regulatory_authorization", "testing", "supervised", "commercial", "commercial_driverless"}
 USER_AGENT = "KAFKA2306 autonomous-logistics 137051370+KAFKA2306@users.noreply.github.com"
 
 
@@ -85,6 +85,18 @@ def fetch_source(source: dict[str, Any], data_root: Path) -> dict[str, Any]:
     }
 
 
+def event_period_key(value: object) -> tuple[int, int, int]:
+    """Validate ISO 8601 calendar-day or reduced month precision without inventing a day."""
+    text = str(value)
+    if re.fullmatch(r"\d{4}-\d{2}", text):
+        year, month = (int(part) for part in text.split("-"))
+        if not 1 <= month <= 12:
+            raise ValueError(f"invalid event month precision: {text}")
+        return year, month, 0
+    parsed = date.fromisoformat(text)
+    return parsed.year, parsed.month, parsed.day
+
+
 def validate_registry(registry: dict[str, Any]) -> None:
     sources = {str(row["source_id"]): row for row in registry.get("sources", [])}
     if len(sources) != len(registry.get("sources", [])) or len(sources) < 4:
@@ -130,9 +142,10 @@ def validate_registry(registry: dict[str, Any]) -> None:
     events = registry.get("operation_events") or []
     if not events:
         raise ValueError("operation event table is empty")
-    if not any(date.fromisoformat(row["effective_at"]).year >= 2024 for row in events):
+    if not any(event_period_key(row["effective_at"])[0] >= 2024 for row in events):
         raise ValueError("operation events must include 2024+ evidence")
     for row in events:
+        event_period_key(row["effective_at"])
         if row.get("operation_status") not in ALLOWED_STATUSES:
             raise ValueError(f"event has unsupported operation status: {row}")
         if row.get("source_id") not in sources:
@@ -173,15 +186,15 @@ def build_api(registry: dict[str, Any], manifest: dict[str, Any], api_dir: Path)
     (api_dir / "events.json").write_bytes(dump({"schema_version": 1, "records": events}))
     (api_dir / "provenance.json").write_bytes(dump(manifest))
     (api_dir / "registry.json").write_bytes(dump(registry))
-    event_dates = [date.fromisoformat(row["effective_at"]) for row in events]
+    event_periods = [str(row["effective_at"]) for row in events]
     coverage = {
         "faa_part135_operator_count": len(drones),
         "autonomous_trucking_operator_count": len(trucking),
         "commercial_driverless_trucking_operator_count": sum(row["operation_status"] == "commercial_driverless" for row in trucking),
         "operation_event_count": len(events),
-        "operation_event_first_date": min(event_dates).isoformat(),
-        "operation_event_last_date": max(event_dates).isoformat(),
-        "events_2024_or_later": sum(row_date.year >= 2024 for row_date in event_dates),
+        "operation_event_first_period": min(event_periods, key=event_period_key),
+        "operation_event_last_period": max(event_periods, key=event_period_key),
+        "events_2024_or_later": sum(event_period_key(value)[0] >= 2024 for value in event_periods),
         "primary_source_count": len(manifest["sources"]),
         "raw_evidence_count": len(manifest["sources"]),
     }

@@ -5,7 +5,18 @@
       "source_id": "faa-part135-package-delivery",
       "authority": "Federal Aviation Administration",
       "source_url": "https://www.faa.gov/uas/advanced_operations/package_delivery_drone",
-      "required_markers": ["Amazon Prime Air", "Causey Aviation Unmanned", "DroneUp", "Drone Express", "UPS Flight Forward", "Wing Aviation", "Zipline"]
+      "required_markers": [
+        "Amazon Prime Air",
+        "Causey Aviation Unmanned",
+        "DroneUp",
+        "Drone Express",
+        "UPS Flight Forward",
+        "Wing Aviation",
+        "Zipline",
+        "first commercial package delivery by drone operations",
+        "began commercial operations in August 2020",
+        "began operations in the Murphy, TX area as an on-demand package delivery service provider"
+      ]
     },
     {
       "source_id": "faa-nepa-drone-operations",
@@ -53,6 +64,9 @@
     {"operator_id":"kodiak","operator_name":"Kodiak AI","vehicle_class":"Class 8 tractor-trailer","system":"Kodiak Driver","operation_status":"commercial_driverless","commercial":true,"human_driver_in_cab":false,"safety_observer_required":false,"geography":["Permian Basin, West Texas","eastern New Mexico"],"customer":"Atlas Energy Solutions","current_snapshot":{"as_of":"2025-06-10","driverless_trucks":4,"loads_since_launch":800,"loads_qualifier":"over","driverless_hours_since_launch":1600,"driverless_hours_qualifier":"over"},"source_id":"kodiak-2025-commercial"}
   ],
   "operation_events": [
+    {"event_id":"ups-commercial-start-2019","operator_id":"ups-flight-forward","mode":"drone_package_delivery","event_type":"commercial_service_start","effective_at":"2019-09","operation_status":"commercial","geography":["WakeMed hospital campus, Raleigh, North Carolina"],"source_id":"faa-part135-package-delivery"},
+    {"event_id":"amazon-commercial-start-2020","operator_id":"amazon-prime-air","mode":"drone_package_delivery","event_type":"commercial_service_start","effective_at":"2020-08","operation_status":"commercial","geography":["Pendleton, Oregon"],"source_id":"faa-part135-package-delivery"},
+    {"event_id":"droneup-commercial-start-2024","operator_id":"droneup","mode":"drone_package_delivery","event_type":"commercial_service_start","effective_at":"2024-11","operation_status":"commercial","geography":["Murphy, Texas"],"aircraft":"Prism V2","source_id":"faa-part135-package-delivery"},
     {"event_id":"wing-houston-nepa-fonsi-2026","operator_id":"wing-aviation","mode":"drone_package_delivery","event_type":"environmental_authorization","effective_at":"2026-08-18","operation_status":"regulatory_authorization","authorization_type":"NEPA Finding of No Significant Impact / Record of Decision","geography":["Houston metropolitan area, Texas"],"source_id":"faa-nepa-drone-operations"},
     {"event_id":"aurora-current-2026","operator_id":"aurora","mode":"autonomous_trucking","event_type":"commercial_operation_snapshot","effective_at":"2026-06-30","operation_status":"commercial_driverless","source_id":"aurora-q2-2026"},
     {"event_id":"gatik-scale-2026","operator_id":"gatik","mode":"autonomous_trucking","event_type":"commercial_operation_snapshot","effective_at":"2026-01-27","operation_status":"commercial_driverless","source_id":"gatik-2026-scale"},
@@ -62,11 +76,12 @@
   ],
   "rules": [
     "FAA Part 135 listing is regulatory authorization evidence and is not treated as proof of active commercial flights.",
-    "FAA certificate timing is stored only at the precision directly stated by the canonical source; month-level evidence is not fabricated into a day-level date.",
+    "FAA certificate and event timing are stored only at the precision directly stated by the canonical source; month-level evidence is not fabricated into a day-level date.",
     "FAA NEPA findings and records of decision are environmental authorization evidence and are not treated as proof that commercial service has started.",
     "Capacity testing and delivery benchmarks from a research and development facility remain testing evidence and are not promoted to active commercial service.",
+    "Commercial package-delivery events require a primary source to state that operations or commercial deliveries actually began; future wording is not promoted to an operation event.",
     "If the current FAA page does not publish a current operating area, operating_area remains null rather than inferred from historical or launch geography.",
-    "supervised, testing, regulatory authorization and commercial_driverless are distinct operation_status values.",
+    "regulatory authorization, testing, supervised, commercial package delivery and commercial driverless trucking are kept distinct.",
     "planned routes or future driverless validation are not promoted to commercial_driverless facts.",
     "operator statements and filings are stored with their original qualifiers such as nearly, over, or more than."
   ]

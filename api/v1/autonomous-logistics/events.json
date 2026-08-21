@@ -1,6 +1,52 @@
 {
   "records": [
     {
+      "effective_at": "2019-09",
+      "event_id": "ups-commercial-start-2019",
+      "event_type": "commercial_service_start",
+      "geography": [
+        "WakeMed hospital campus, Raleigh, North Carolina"
+      ],
+      "mode": "drone_package_delivery",
+      "operation_status": "commercial",
+      "operator_id": "ups-flight-forward",
+      "source_evidence_path": "raw/objects/381665e05a70bcfa14b1cf73a826490462886adbf6b17b2460819d222b3cac21.html",
+      "source_id": "faa-part135-package-delivery",
+      "source_sha256": "381665e05a70bcfa14b1cf73a826490462886adbf6b17b2460819d222b3cac21",
+      "source_url": "https://www.faa.gov/uas/advanced_operations/package_delivery_drone"
+    },
+    {
+      "effective_at": "2020-08",
+      "event_id": "amazon-commercial-start-2020",
+      "event_type": "commercial_service_start",
+      "geography": [
+        "Pendleton, Oregon"
+      ],
+      "mode": "drone_package_delivery",
+      "operation_status": "commercial",
+      "operator_id": "amazon-prime-air",
+      "source_evidence_path": "raw/objects/381665e05a70bcfa14b1cf73a826490462886adbf6b17b2460819d222b3cac21.html",
+      "source_id": "faa-part135-package-delivery",
+      "source_sha256": "381665e05a70bcfa14b1cf73a826490462886adbf6b17b2460819d222b3cac21",
+      "source_url": "https://www.faa.gov/uas/advanced_operations/package_delivery_drone"
+    },
+    {
+      "aircraft": "Prism V2",
+      "effective_at": "2024-11",
+      "event_id": "droneup-commercial-start-2024",
+      "event_type": "commercial_service_start",
+      "geography": [
+        "Murphy, Texas"
+      ],
+      "mode": "drone_package_delivery",
+      "operation_status": "commercial",
+      "operator_id": "droneup",
+      "source_evidence_path": "raw/objects/381665e05a70bcfa14b1cf73a826490462886adbf6b17b2460819d222b3cac21.html",
+      "source_id": "faa-part135-package-delivery",
+      "source_sha256": "381665e05a70bcfa14b1cf73a826490462886adbf6b17b2460819d222b3cac21",
+      "source_url": "https://www.faa.gov/uas/advanced_operations/package_delivery_drone"
+    },
+    {
       "authorization_type": "NEPA Finding of No Significant Impact / Record of Decision",
       "effective_at": "2026-08-18",
       "event_id": "wing-houston-nepa-fonsi-2026",
@@ -35,9 +81,9 @@
       "mode": "autonomous_trucking",
       "operation_status": "commercial_driverless",
       "operator_id": "gatik",
-      "source_evidence_path": "raw/objects/de32902e5591cafb6e015d2abd8533cbd399b85c34659fc7333666763062aeaa.html",
+      "source_evidence_path": "raw/objects/bed23951581f0eb29b5c0263784a97bd4ec57abf16b57e926d1524f64f49e349.html",
       "source_id": "gatik-2026-scale",
-      "source_sha256": "de32902e5591cafb6e015d2abd8533cbd399b85c34659fc7333666763062aeaa",
+      "source_sha256": "bed23951581f0eb29b5c0263784a97bd4ec57abf16b57e926d1524f64f49e349",
       "source_url": "https://archive.gatik.ai/news/press-releases/gatik-becomes-first-us-company-to-operate-fully-driverless-trucks-at-scale-for-commercial-deliveries/"
     },
     {
@@ -47,9 +93,9 @@
       "mode": "autonomous_trucking",
       "operation_status": "commercial_driverless",
       "operator_id": "kodiak",
-      "source_evidence_path": "raw/objects/ca400feae60666378a070f8c5ad634159d18311656caf9401649cf60fa5e7d8d.html",
+      "source_evidence_path": "raw/objects/1f97d70bbbf73ab57ab988eff83867a65272c5332aff4b86c6d65fe27851ec61.html",
       "source_id": "kodiak-2025-commercial",
-      "source_sha256": "ca400feae60666378a070f8c5ad634159d18311656caf9401649cf60fa5e7d8d",
+      "source_sha256": "1f97d70bbbf73ab57ab988eff83867a65272c5332aff4b86c6d65fe27851ec61",
       "source_url": "https://kodiak.ai/news/kodiak-delivers-two-additional-driverless-trucks"
     },
     {
@@ -59,9 +105,9 @@
       "mode": "autonomous_trucking",
       "operation_status": "commercial_driverless",
       "operator_id": "kodiak",
-      "source_evidence_path": "raw/objects/ca400feae60666378a070f8c5ad634159d18311656caf9401649cf60fa5e7d8d.html",
+      "source_evidence_path": "raw/objects/1f97d70bbbf73ab57ab988eff83867a65272c5332aff4b86c6d65fe27851ec61.html",
       "source_id": "kodiak-2025-commercial",
-      "source_sha256": "ca400feae60666378a070f8c5ad634159d18311656caf9401649cf60fa5e7d8d",
+      "source_sha256": "1f97d70bbbf73ab57ab988eff83867a65272c5332aff4b86c6d65fe27851ec61",
       "source_url": "https://kodiak.ai/news/kodiak-delivers-two-additional-driverless-trucks"
     },
     {
@@ -75,9 +121,9 @@
       "operation_status": "testing",
       "operator_id": "droneup",
       "pilot_to_drone_ratio": "one-to-many",
-      "source_evidence_path": "raw/objects/544b2b841402136b4d740289f06fdfbea59db739aa7d892dc2e656524877ecf4.html",
+      "source_evidence_path": "raw/objects/28a712de6e144bff33945474815b58caa0caea2b0e858160f17a772f41cdda25.html",
       "source_id": "droneup-capacity-test-2024",
-      "source_sha256": "544b2b841402136b4d740289f06fdfbea59db739aa7d892dc2e656524877ecf4",
+      "source_sha256": "28a712de6e144bff33945474815b58caa0caea2b0e858160f17a772f41cdda25",
       "source_url": "https://www.droneup.com/news/droneup-achieves-500-deliveries-per-day",
       "test_context": "research and development facility capacity testing for commercial partners"
     }

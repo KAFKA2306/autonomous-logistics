@@ -1,5 +1,5 @@
 {
-  "retrieved_at": "2026-08-21T21:52:53.460180+00:00",
+  "retrieved_at": "2026-08-21T22:39:17.306949+00:00",
   "schema_version": 1,
   "sources": [
     {
@@ -17,7 +17,10 @@
         "Drone Express",
         "UPS Flight Forward",
         "Wing Aviation",
-        "Zipline"
+        "Zipline",
+        "first commercial package delivery by drone operations",
+        "began commercial operations in August 2020",
+        "began operations in the Murphy, TX area as an on-demand package delivery service provider"
       ]
     },
     {
@@ -38,8 +41,8 @@
     {
       "authority": "DroneUp",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/544b2b841402136b4d740289f06fdfbea59db739aa7d892dc2e656524877ecf4.html",
-      "sha256": "544b2b841402136b4d740289f06fdfbea59db739aa7d892dc2e656524877ecf4",
+      "evidence_path": "raw/objects/28a712de6e144bff33945474815b58caa0caea2b0e858160f17a772f41cdda25.html",
+      "sha256": "28a712de6e144bff33945474815b58caa0caea2b0e858160f17a772f41cdda25",
       "size_bytes": 230049,
       "source_id": "droneup-capacity-test-2024",
       "source_url": "https://www.droneup.com/news/droneup-achieves-500-deliveries-per-day",
@@ -68,8 +71,8 @@
     {
       "authority": "Gatik",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/de32902e5591cafb6e015d2abd8533cbd399b85c34659fc7333666763062aeaa.html",
-      "sha256": "de32902e5591cafb6e015d2abd8533cbd399b85c34659fc7333666763062aeaa",
+      "evidence_path": "raw/objects/bed23951581f0eb29b5c0263784a97bd4ec57abf16b57e926d1524f64f49e349.html",
+      "sha256": "bed23951581f0eb29b5c0263784a97bd4ec57abf16b57e926d1524f64f49e349",
       "size_bytes": 89255,
       "source_id": "gatik-2026-scale",
       "source_url": "https://archive.gatik.ai/news/press-releases/gatik-becomes-first-us-company-to-operate-fully-driverless-trucks-at-scale-for-commercial-deliveries/",
@@ -83,9 +86,9 @@
     {
       "authority": "Kodiak AI",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/ca400feae60666378a070f8c5ad634159d18311656caf9401649cf60fa5e7d8d.html",
-      "sha256": "ca400feae60666378a070f8c5ad634159d18311656caf9401649cf60fa5e7d8d",
-      "size_bytes": 126105,
+      "evidence_path": "raw/objects/1f97d70bbbf73ab57ab988eff83867a65272c5332aff4b86c6d65fe27851ec61.html",
+      "sha256": "1f97d70bbbf73ab57ab988eff83867a65272c5332aff4b86c6d65fe27851ec61",
+      "size_bytes": 126040,
       "source_id": "kodiak-2025-commercial",
       "source_url": "https://kodiak.ai/news/kodiak-delivers-two-additional-driverless-trucks",
       "verified_markers": [

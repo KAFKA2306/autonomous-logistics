@@ -1,137 +1,84 @@
 {
   "drone_part135": [
     {
-      "certificate_holder": "Amazon.com Services LLC",
-      "certificate_holder_location": {
-        "city": "Seattle",
-        "state": "WA"
-      },
       "current_faa_registry_status": "listed",
       "operating_area": null,
-      "operating_area_status": "not_listed_on_current_faa_page",
+      "operating_area_status": "not_listed_as_current_operating_area_on_faa_page",
+      "operation_status": "regulatory_authorization",
+      "operator_id": "wing-aviation",
+      "operator_name": "Wing Aviation, LLC",
+      "part135_certificate_period": "2019-04",
+      "permission": "FAA Part 135 UAS package delivery operator",
+      "source_id": "faa-part135-package-delivery"
+    },
+    {
+      "current_faa_registry_status": "listed",
+      "operating_area": null,
+      "operating_area_status": "not_listed_as_current_operating_area_on_faa_page",
+      "operation_status": "regulatory_authorization",
+      "operator_id": "ups-flight-forward",
+      "operator_name": "UPS Flight Forward, Inc.",
+      "part135_certificate_period": "2019-09",
+      "permission": "FAA Part 135 UAS package delivery operator",
+      "source_id": "faa-part135-package-delivery"
+    },
+    {
+      "current_faa_registry_status": "listed",
+      "operating_area": null,
+      "operating_area_status": "not_listed_as_current_operating_area_on_faa_page",
       "operation_status": "regulatory_authorization",
       "operator_id": "amazon-prime-air",
       "operator_name": "Amazon Prime Air",
-      "part135_certificate_date": "2020-09-05",
+      "part135_certificate_period": "2020-08",
       "permission": "FAA Part 135 UAS package delivery operator",
       "source_id": "faa-part135-package-delivery"
     },
     {
-      "certificate_holder": "Causey Aviation Unmanned, Inc.",
-      "certificate_holder_location": {
-        "city": "Liberty",
-        "state": "NC"
-      },
       "current_faa_registry_status": "listed",
       "operating_area": null,
-      "operating_area_status": "not_listed_on_current_faa_page",
-      "operation_status": "regulatory_authorization",
-      "operator_id": "causey-aviation-unmanned",
-      "operator_name": "Causey Aviation Unmanned",
-      "part135_certificate_date": "2022-09-27",
-      "permission": "FAA Part 135 UAS package delivery operator",
-      "source_id": "faa-part135-package-delivery"
-    },
-    {
-      "certificate_holder": "Drone Express, Inc.",
-      "certificate_holder_location": {
-        "city": "Dayton",
-        "state": "OH"
-      },
-      "current_faa_registry_status": "listed",
-      "operating_area": null,
-      "operating_area_status": "not_listed_on_current_faa_page",
-      "operation_status": "regulatory_authorization",
-      "operator_id": "drone-express",
-      "operator_name": "Drone Express",
-      "part135_certificate_date": "2024-09-05",
-      "permission": "FAA Part 135 UAS package delivery operator",
-      "source_id": "faa-part135-package-delivery"
-    },
-    {
-      "certificate_holder": "Flytrex Aviation, Inc.",
-      "certificate_holder_location": {
-        "city": "Dallas",
-        "state": "TX"
-      },
-      "current_faa_registry_status": "listed",
-      "operating_area": null,
-      "operating_area_status": "not_listed_on_current_faa_page",
-      "operation_status": "regulatory_authorization",
-      "operator_id": "flytrex",
-      "operator_name": "Flytrex",
-      "part135_certificate_date": "2025-01-31",
-      "permission": "FAA Part 135 UAS package delivery operator",
-      "source_id": "faa-part135-package-delivery"
-    },
-    {
-      "certificate_holder": "UPS Flight Forward, Inc.",
-      "certificate_holder_location": {
-        "city": "Louisville",
-        "state": "KY"
-      },
-      "current_faa_registry_status": "listed",
-      "operating_area": null,
-      "operating_area_status": "not_listed_on_current_faa_page",
-      "operation_status": "regulatory_authorization",
-      "operator_id": "ups-flight-forward",
-      "operator_name": "UPS Flight Forward",
-      "part135_certificate_date": "2019-09-27",
-      "permission": "FAA Part 135 UAS package delivery operator",
-      "source_id": "faa-part135-package-delivery"
-    },
-    {
-      "certificate_holder": "Wing Aviation LLC",
-      "certificate_holder_location": {
-        "city": "Palo Alto",
-        "state": "CA"
-      },
-      "current_faa_registry_status": "listed",
-      "operating_area": null,
-      "operating_area_status": "not_listed_on_current_faa_page",
-      "operation_status": "regulatory_authorization",
-      "operator_id": "wing-aviation",
-      "operator_name": "Wing Aviation",
-      "part135_certificate_date": "2019-04-23",
-      "permission": "FAA Part 135 UAS package delivery operator",
-      "source_id": "faa-part135-package-delivery"
-    },
-    {
-      "certificate_holder": "Zipline International Inc.",
-      "certificate_holder_location": {
-        "city": "South San Francisco",
-        "state": "CA"
-      },
-      "current_faa_registry_status": "listed",
-      "operating_area": null,
-      "operating_area_status": "not_listed_on_current_faa_page",
+      "operating_area_status": "not_listed_as_current_operating_area_on_faa_page",
       "operation_status": "regulatory_authorization",
       "operator_id": "zipline",
-      "operator_name": "Zipline",
-      "part135_certificate_date": "2022-06-17",
+      "operator_name": "Zipline International Inc.",
+      "part135_certificate_period": "2022-06",
+      "permission": "FAA Part 135 UAS package delivery operator",
+      "source_id": "faa-part135-package-delivery"
+    },
+    {
+      "current_faa_registry_status": "listed",
+      "operating_area": null,
+      "operating_area_status": "not_listed_as_current_operating_area_on_faa_page",
+      "operation_status": "regulatory_authorization",
+      "operator_id": "causey-aviation-unmanned",
+      "operator_name": "Causey Aviation Unmanned, Inc.",
+      "part135_certificate_period": "2023-01",
+      "permission": "FAA Part 135 UAS package delivery operator",
+      "source_id": "faa-part135-package-delivery"
+    },
+    {
+      "current_faa_registry_status": "listed",
+      "operating_area": null,
+      "operating_area_status": "not_listed_as_current_operating_area_on_faa_page",
+      "operation_status": "regulatory_authorization",
+      "operator_id": "droneup",
+      "operator_name": "DroneUp, LLC",
+      "part135_certificate_period": "2024-11",
+      "permission": "FAA Part 135 UAS package delivery operator",
+      "source_id": "faa-part135-package-delivery"
+    },
+    {
+      "current_faa_registry_status": "listed",
+      "operating_area": null,
+      "operating_area_status": "not_listed_as_current_operating_area_on_faa_page",
+      "operation_status": "regulatory_authorization",
+      "operator_id": "drone-express",
+      "operator_name": "Drone Express, Inc. (DEXA)",
+      "part135_certificate_period": "2025-04",
       "permission": "FAA Part 135 UAS package delivery operator",
       "source_id": "faa-part135-package-delivery"
     }
   ],
   "operation_events": [
-    {
-      "effective_at": "2024-09-05",
-      "event_id": "drone-express-part135-2024",
-      "event_type": "regulatory_authorization",
-      "mode": "drone_package_delivery",
-      "operation_status": "regulatory_authorization",
-      "operator_id": "drone-express",
-      "source_id": "faa-part135-package-delivery"
-    },
-    {
-      "effective_at": "2025-01-31",
-      "event_id": "flytrex-part135-2025",
-      "event_type": "regulatory_authorization",
-      "mode": "drone_package_delivery",
-      "operation_status": "regulatory_authorization",
-      "operator_id": "flytrex",
-      "source_id": "faa-part135-package-delivery"
-    },
     {
       "authorization_type": "NEPA Finding of No Significant Impact / Record of Decision",
       "effective_at": "2026-08-18",
@@ -184,8 +131,9 @@
   ],
   "rules": [
     "FAA Part 135 listing is regulatory authorization evidence and is not treated as proof of active commercial flights.",
+    "FAA certificate timing is stored only at the precision directly stated by the canonical source; month-level evidence is not fabricated into a day-level date.",
     "FAA NEPA findings and records of decision are environmental authorization evidence and are not treated as proof that commercial service has started.",
-    "If the current FAA registry page does not publish an operating area, operating_area remains null rather than inferred.",
+    "If the current FAA page does not publish a current operating area, operating_area remains null rather than inferred from historical or launch geography.",
     "supervised, testing, regulatory authorization and commercial_driverless are distinct operation_status values.",
     "planned routes or future driverless validation are not promoted to commercial_driverless facts.",
     "operator statements and filings are stored with their original qualifiers such as nearly, over, or more than."
@@ -197,8 +145,8 @@
       "required_markers": [
         "Amazon Prime Air",
         "Causey Aviation Unmanned",
+        "DroneUp",
         "Drone Express",
-        "Flytrex",
         "UPS Flight Forward",
         "Wing Aviation",
         "Zipline"

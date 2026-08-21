@@ -1,5 +1,5 @@
 {
-  "retrieved_at": "2026-08-21T19:39:24.725497+00:00",
+  "retrieved_at": "2026-08-21T20:45:40.897595+00:00",
   "schema_version": 1,
   "sources": [
     {
@@ -13,8 +13,8 @@
       "verified_markers": [
         "Amazon Prime Air",
         "Causey Aviation Unmanned",
+        "DroneUp",
         "Drone Express",
-        "Flytrex",
         "UPS Flight Forward",
         "Wing Aviation",
         "Zipline"
@@ -53,8 +53,8 @@
     {
       "authority": "Gatik",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/e296babe98f3dd088c753a1d225f867167a84b6bf6580686484f04d95822717e.html",
-      "sha256": "e296babe98f3dd088c753a1d225f867167a84b6bf6580686484f04d95822717e",
+      "evidence_path": "raw/objects/0a3b14e62ea2112ce2d11532590eb2e1fa2b8b2e1db3f8b11141f9f1ed614b46.html",
+      "sha256": "0a3b14e62ea2112ce2d11532590eb2e1fa2b8b2e1db3f8b11141f9f1ed614b46",
       "size_bytes": 89255,
       "source_id": "gatik-2026-scale",
       "source_url": "https://archive.gatik.ai/news/press-releases/gatik-becomes-first-us-company-to-operate-fully-driverless-trucks-at-scale-for-commercial-deliveries/",
@@ -68,9 +68,9 @@
     {
       "authority": "Kodiak AI",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/7eb0b849bdf8079d5ffd6bdde721a5c6b42ef8856126de74bfee50d8d6cbe0a0.html",
-      "sha256": "7eb0b849bdf8079d5ffd6bdde721a5c6b42ef8856126de74bfee50d8d6cbe0a0",
-      "size_bytes": 126105,
+      "evidence_path": "raw/objects/fd7c21be7404a47b3cdb83b438a0ed144cdea2dfa19296e036b51c9c8cf9aec1.html",
+      "sha256": "fd7c21be7404a47b3cdb83b438a0ed144cdea2dfa19296e036b51c9c8cf9aec1",
+      "size_bytes": 126040,
       "source_id": "kodiak-2025-commercial",
       "source_url": "https://kodiak.ai/news/kodiak-delivers-two-additional-driverless-trucks",
       "verified_markers": [

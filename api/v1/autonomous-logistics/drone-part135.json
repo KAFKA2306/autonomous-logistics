@@ -1,18 +1,41 @@
 {
   "records": [
     {
-      "certificate_holder": "Amazon.com Services LLC",
-      "certificate_holder_location": {
-        "city": "Seattle",
-        "state": "WA"
-      },
       "current_faa_registry_status": "listed",
       "operating_area": null,
-      "operating_area_status": "not_listed_on_current_faa_page",
+      "operating_area_status": "not_listed_as_current_operating_area_on_faa_page",
+      "operation_status": "regulatory_authorization",
+      "operator_id": "wing-aviation",
+      "operator_name": "Wing Aviation, LLC",
+      "part135_certificate_period": "2019-04",
+      "permission": "FAA Part 135 UAS package delivery operator",
+      "source_evidence_path": "raw/objects/381665e05a70bcfa14b1cf73a826490462886adbf6b17b2460819d222b3cac21.html",
+      "source_id": "faa-part135-package-delivery",
+      "source_sha256": "381665e05a70bcfa14b1cf73a826490462886adbf6b17b2460819d222b3cac21",
+      "source_url": "https://www.faa.gov/uas/advanced_operations/package_delivery_drone"
+    },
+    {
+      "current_faa_registry_status": "listed",
+      "operating_area": null,
+      "operating_area_status": "not_listed_as_current_operating_area_on_faa_page",
+      "operation_status": "regulatory_authorization",
+      "operator_id": "ups-flight-forward",
+      "operator_name": "UPS Flight Forward, Inc.",
+      "part135_certificate_period": "2019-09",
+      "permission": "FAA Part 135 UAS package delivery operator",
+      "source_evidence_path": "raw/objects/381665e05a70bcfa14b1cf73a826490462886adbf6b17b2460819d222b3cac21.html",
+      "source_id": "faa-part135-package-delivery",
+      "source_sha256": "381665e05a70bcfa14b1cf73a826490462886adbf6b17b2460819d222b3cac21",
+      "source_url": "https://www.faa.gov/uas/advanced_operations/package_delivery_drone"
+    },
+    {
+      "current_faa_registry_status": "listed",
+      "operating_area": null,
+      "operating_area_status": "not_listed_as_current_operating_area_on_faa_page",
       "operation_status": "regulatory_authorization",
       "operator_id": "amazon-prime-air",
       "operator_name": "Amazon Prime Air",
-      "part135_certificate_date": "2020-09-05",
+      "part135_certificate_period": "2020-08",
       "permission": "FAA Part 135 UAS package delivery operator",
       "source_evidence_path": "raw/objects/381665e05a70bcfa14b1cf73a826490462886adbf6b17b2460819d222b3cac21.html",
       "source_id": "faa-part135-package-delivery",
@@ -20,113 +43,55 @@
       "source_url": "https://www.faa.gov/uas/advanced_operations/package_delivery_drone"
     },
     {
-      "certificate_holder": "Causey Aviation Unmanned, Inc.",
-      "certificate_holder_location": {
-        "city": "Liberty",
-        "state": "NC"
-      },
       "current_faa_registry_status": "listed",
       "operating_area": null,
-      "operating_area_status": "not_listed_on_current_faa_page",
-      "operation_status": "regulatory_authorization",
-      "operator_id": "causey-aviation-unmanned",
-      "operator_name": "Causey Aviation Unmanned",
-      "part135_certificate_date": "2022-09-27",
-      "permission": "FAA Part 135 UAS package delivery operator",
-      "source_evidence_path": "raw/objects/381665e05a70bcfa14b1cf73a826490462886adbf6b17b2460819d222b3cac21.html",
-      "source_id": "faa-part135-package-delivery",
-      "source_sha256": "381665e05a70bcfa14b1cf73a826490462886adbf6b17b2460819d222b3cac21",
-      "source_url": "https://www.faa.gov/uas/advanced_operations/package_delivery_drone"
-    },
-    {
-      "certificate_holder": "Drone Express, Inc.",
-      "certificate_holder_location": {
-        "city": "Dayton",
-        "state": "OH"
-      },
-      "current_faa_registry_status": "listed",
-      "operating_area": null,
-      "operating_area_status": "not_listed_on_current_faa_page",
-      "operation_status": "regulatory_authorization",
-      "operator_id": "drone-express",
-      "operator_name": "Drone Express",
-      "part135_certificate_date": "2024-09-05",
-      "permission": "FAA Part 135 UAS package delivery operator",
-      "source_evidence_path": "raw/objects/381665e05a70bcfa14b1cf73a826490462886adbf6b17b2460819d222b3cac21.html",
-      "source_id": "faa-part135-package-delivery",
-      "source_sha256": "381665e05a70bcfa14b1cf73a826490462886adbf6b17b2460819d222b3cac21",
-      "source_url": "https://www.faa.gov/uas/advanced_operations/package_delivery_drone"
-    },
-    {
-      "certificate_holder": "Flytrex Aviation, Inc.",
-      "certificate_holder_location": {
-        "city": "Dallas",
-        "state": "TX"
-      },
-      "current_faa_registry_status": "listed",
-      "operating_area": null,
-      "operating_area_status": "not_listed_on_current_faa_page",
-      "operation_status": "regulatory_authorization",
-      "operator_id": "flytrex",
-      "operator_name": "Flytrex",
-      "part135_certificate_date": "2025-01-31",
-      "permission": "FAA Part 135 UAS package delivery operator",
-      "source_evidence_path": "raw/objects/381665e05a70bcfa14b1cf73a826490462886adbf6b17b2460819d222b3cac21.html",
-      "source_id": "faa-part135-package-delivery",
-      "source_sha256": "381665e05a70bcfa14b1cf73a826490462886adbf6b17b2460819d222b3cac21",
-      "source_url": "https://www.faa.gov/uas/advanced_operations/package_delivery_drone"
-    },
-    {
-      "certificate_holder": "UPS Flight Forward, Inc.",
-      "certificate_holder_location": {
-        "city": "Louisville",
-        "state": "KY"
-      },
-      "current_faa_registry_status": "listed",
-      "operating_area": null,
-      "operating_area_status": "not_listed_on_current_faa_page",
-      "operation_status": "regulatory_authorization",
-      "operator_id": "ups-flight-forward",
-      "operator_name": "UPS Flight Forward",
-      "part135_certificate_date": "2019-09-27",
-      "permission": "FAA Part 135 UAS package delivery operator",
-      "source_evidence_path": "raw/objects/381665e05a70bcfa14b1cf73a826490462886adbf6b17b2460819d222b3cac21.html",
-      "source_id": "faa-part135-package-delivery",
-      "source_sha256": "381665e05a70bcfa14b1cf73a826490462886adbf6b17b2460819d222b3cac21",
-      "source_url": "https://www.faa.gov/uas/advanced_operations/package_delivery_drone"
-    },
-    {
-      "certificate_holder": "Wing Aviation LLC",
-      "certificate_holder_location": {
-        "city": "Palo Alto",
-        "state": "CA"
-      },
-      "current_faa_registry_status": "listed",
-      "operating_area": null,
-      "operating_area_status": "not_listed_on_current_faa_page",
-      "operation_status": "regulatory_authorization",
-      "operator_id": "wing-aviation",
-      "operator_name": "Wing Aviation",
-      "part135_certificate_date": "2019-04-23",
-      "permission": "FAA Part 135 UAS package delivery operator",
-      "source_evidence_path": "raw/objects/381665e05a70bcfa14b1cf73a826490462886adbf6b17b2460819d222b3cac21.html",
-      "source_id": "faa-part135-package-delivery",
-      "source_sha256": "381665e05a70bcfa14b1cf73a826490462886adbf6b17b2460819d222b3cac21",
-      "source_url": "https://www.faa.gov/uas/advanced_operations/package_delivery_drone"
-    },
-    {
-      "certificate_holder": "Zipline International Inc.",
-      "certificate_holder_location": {
-        "city": "South San Francisco",
-        "state": "CA"
-      },
-      "current_faa_registry_status": "listed",
-      "operating_area": null,
-      "operating_area_status": "not_listed_on_current_faa_page",
+      "operating_area_status": "not_listed_as_current_operating_area_on_faa_page",
       "operation_status": "regulatory_authorization",
       "operator_id": "zipline",
-      "operator_name": "Zipline",
-      "part135_certificate_date": "2022-06-17",
+      "operator_name": "Zipline International Inc.",
+      "part135_certificate_period": "2022-06",
+      "permission": "FAA Part 135 UAS package delivery operator",
+      "source_evidence_path": "raw/objects/381665e05a70bcfa14b1cf73a826490462886adbf6b17b2460819d222b3cac21.html",
+      "source_id": "faa-part135-package-delivery",
+      "source_sha256": "381665e05a70bcfa14b1cf73a826490462886adbf6b17b2460819d222b3cac21",
+      "source_url": "https://www.faa.gov/uas/advanced_operations/package_delivery_drone"
+    },
+    {
+      "current_faa_registry_status": "listed",
+      "operating_area": null,
+      "operating_area_status": "not_listed_as_current_operating_area_on_faa_page",
+      "operation_status": "regulatory_authorization",
+      "operator_id": "causey-aviation-unmanned",
+      "operator_name": "Causey Aviation Unmanned, Inc.",
+      "part135_certificate_period": "2023-01",
+      "permission": "FAA Part 135 UAS package delivery operator",
+      "source_evidence_path": "raw/objects/381665e05a70bcfa14b1cf73a826490462886adbf6b17b2460819d222b3cac21.html",
+      "source_id": "faa-part135-package-delivery",
+      "source_sha256": "381665e05a70bcfa14b1cf73a826490462886adbf6b17b2460819d222b3cac21",
+      "source_url": "https://www.faa.gov/uas/advanced_operations/package_delivery_drone"
+    },
+    {
+      "current_faa_registry_status": "listed",
+      "operating_area": null,
+      "operating_area_status": "not_listed_as_current_operating_area_on_faa_page",
+      "operation_status": "regulatory_authorization",
+      "operator_id": "droneup",
+      "operator_name": "DroneUp, LLC",
+      "part135_certificate_period": "2024-11",
+      "permission": "FAA Part 135 UAS package delivery operator",
+      "source_evidence_path": "raw/objects/381665e05a70bcfa14b1cf73a826490462886adbf6b17b2460819d222b3cac21.html",
+      "source_id": "faa-part135-package-delivery",
+      "source_sha256": "381665e05a70bcfa14b1cf73a826490462886adbf6b17b2460819d222b3cac21",
+      "source_url": "https://www.faa.gov/uas/advanced_operations/package_delivery_drone"
+    },
+    {
+      "current_faa_registry_status": "listed",
+      "operating_area": null,
+      "operating_area_status": "not_listed_as_current_operating_area_on_faa_page",
+      "operation_status": "regulatory_authorization",
+      "operator_id": "drone-express",
+      "operator_name": "Drone Express, Inc. (DEXA)",
+      "part135_certificate_period": "2025-04",
       "permission": "FAA Part 135 UAS package delivery operator",
       "source_evidence_path": "raw/objects/381665e05a70bcfa14b1cf73a826490462886adbf6b17b2460819d222b3cac21.html",
       "source_id": "faa-part135-package-delivery",

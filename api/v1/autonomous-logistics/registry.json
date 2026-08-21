@@ -117,6 +117,17 @@
       "source_id": "faa-part135-package-delivery"
     },
     {
+      "authorization_type": "FAA Part 135 air carrier certification",
+      "effective_at": "2026-07-29",
+      "event_id": "doordash-air-part135-announcement-2026",
+      "event_type": "regulatory_authorization_announcement",
+      "mode": "drone_package_delivery",
+      "operation_status": "regulatory_authorization",
+      "operator_id": "doordash-air",
+      "operator_name": "DoorDash Air / DoorDash Labs",
+      "source_id": "doordash-air-part135-2026"
+    },
+    {
       "authorization_type": "NEPA Finding of No Significant Impact / Record of Decision",
       "effective_at": "2026-08-18",
       "event_id": "wing-houston-nepa-fonsi-2026",
@@ -182,6 +193,7 @@
   ],
   "rules": [
     "FAA Part 135 listing is regulatory authorization evidence and is not treated as proof of active commercial flights.",
+    "When an operator primary source reports a new Part 135 authorization before the FAA package-delivery page is updated, preserve that authorization as a separate event without adding it to the FAA-listed registry view.",
     "FAA certificate and event timing are stored only at the precision directly stated by the canonical source; month-level evidence is not fabricated into a day-level date.",
     "FAA NEPA findings and records of decision are environmental authorization evidence and are not treated as proof that commercial service has started.",
     "Capacity testing and delivery benchmarks from a research and development facility remain testing evidence and are not promoted to active commercial service.",
@@ -209,6 +221,17 @@
       ],
       "source_id": "faa-part135-package-delivery",
       "source_url": "https://www.faa.gov/uas/advanced_operations/package_delivery_drone"
+    },
+    {
+      "authority": "DoorDash",
+      "required_markers": [
+        "Jul 29, 2026",
+        "Part 135 air carrier certification",
+        "authorized by the FAA to commercially operate our own drone delivery service",
+        "eighth drone operator"
+      ],
+      "source_id": "doordash-air-part135-2026",
+      "source_url": "https://about.doordash.com/en-us/news/doordash-air"
     },
     {
       "authority": "Federal Aviation Administration",

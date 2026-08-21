@@ -41,9 +41,9 @@
       "operator_id": "gatik",
       "operator_name": "Gatik",
       "safety_observer_required": false,
-      "source_evidence_path": "raw/objects/f25036ba1fb442280e9dbd87f6ac0d1a9fe3b408f64d76d8767417191ed546df.html",
+      "source_evidence_path": "raw/objects/e296babe98f3dd088c753a1d225f867167a84b6bf6580686484f04d95822717e.html",
       "source_id": "gatik-2026-scale",
-      "source_sha256": "f25036ba1fb442280e9dbd87f6ac0d1a9fe3b408f64d76d8767417191ed546df",
+      "source_sha256": "e296babe98f3dd088c753a1d225f867167a84b6bf6580686484f04d95822717e",
       "source_url": "https://archive.gatik.ai/news/press-releases/gatik-becomes-first-us-company-to-operate-fully-driverless-trucks-at-scale-for-commercial-deliveries/",
       "system": "Gatik Driver",
       "vehicle_class": "freight-only autonomous trucks"
@@ -68,9 +68,9 @@
       "operator_id": "kodiak",
       "operator_name": "Kodiak AI",
       "safety_observer_required": false,
-      "source_evidence_path": "raw/objects/d192ca5da338e11192beafeaf45f5cca2765ab011f86c5e683789586bec1655b.html",
+      "source_evidence_path": "raw/objects/7eb0b849bdf8079d5ffd6bdde721a5c6b42ef8856126de74bfee50d8d6cbe0a0.html",
       "source_id": "kodiak-2025-commercial",
-      "source_sha256": "d192ca5da338e11192beafeaf45f5cca2765ab011f86c5e683789586bec1655b",
+      "source_sha256": "7eb0b849bdf8079d5ffd6bdde721a5c6b42ef8856126de74bfee50d8d6cbe0a0",
       "source_url": "https://kodiak.ai/news/kodiak-delivers-two-additional-driverless-trucks",
       "system": "Kodiak Driver",
       "vehicle_class": "Class 8 tractor-trailer"

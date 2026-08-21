@@ -133,6 +133,19 @@
       "source_id": "faa-part135-package-delivery"
     },
     {
+      "authorization_type": "NEPA Finding of No Significant Impact / Record of Decision",
+      "effective_at": "2026-08-18",
+      "event_id": "wing-houston-nepa-fonsi-2026",
+      "event_type": "environmental_authorization",
+      "geography": [
+        "Houston metropolitan area, Texas"
+      ],
+      "mode": "drone_package_delivery",
+      "operation_status": "regulatory_authorization",
+      "operator_id": "wing-aviation",
+      "source_id": "faa-nepa-drone-operations"
+    },
+    {
       "effective_at": "2026-06-30",
       "event_id": "aurora-current-2026",
       "event_type": "commercial_operation_snapshot",
@@ -171,6 +184,7 @@
   ],
   "rules": [
     "FAA Part 135 listing is regulatory authorization evidence and is not treated as proof of active commercial flights.",
+    "FAA NEPA findings and records of decision are environmental authorization evidence and are not treated as proof that commercial service has started.",
     "If the current FAA registry page does not publish an operating area, operating_area remains null rather than inferred.",
     "supervised, testing, regulatory authorization and commercial_driverless are distinct operation_status values.",
     "planned routes or future driverless validation are not promoted to commercial_driverless facts.",
@@ -191,6 +205,17 @@
       ],
       "source_id": "faa-part135-package-delivery",
       "source_url": "https://www.faa.gov/uas/advanced_operations/package_delivery_drone"
+    },
+    {
+      "authority": "Federal Aviation Administration",
+      "required_markers": [
+        "August 18, 2026",
+        "Wing Aviation, LLC",
+        "Houston metropolitan area",
+        "Finding of No Significant Impact"
+      ],
+      "source_id": "faa-nepa-drone-operations",
+      "source_url": "https://www.faa.gov/uas/advanced_operations/nepa_and_drones"
     },
     {
       "authority": "Aurora Innovation",

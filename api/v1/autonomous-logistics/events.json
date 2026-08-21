@@ -25,6 +25,22 @@
       "source_url": "https://www.faa.gov/uas/advanced_operations/package_delivery_drone"
     },
     {
+      "authorization_type": "NEPA Finding of No Significant Impact / Record of Decision",
+      "effective_at": "2026-08-18",
+      "event_id": "wing-houston-nepa-fonsi-2026",
+      "event_type": "environmental_authorization",
+      "geography": [
+        "Houston metropolitan area, Texas"
+      ],
+      "mode": "drone_package_delivery",
+      "operation_status": "regulatory_authorization",
+      "operator_id": "wing-aviation",
+      "source_evidence_path": "raw/objects/7e125bd9c0f7648e5402d544da2f3f99005a14ae36885015d677d52e610d7d5e.html",
+      "source_id": "faa-nepa-drone-operations",
+      "source_sha256": "7e125bd9c0f7648e5402d544da2f3f99005a14ae36885015d677d52e610d7d5e",
+      "source_url": "https://www.faa.gov/uas/advanced_operations/nepa_and_drones"
+    },
+    {
       "effective_at": "2026-06-30",
       "event_id": "aurora-current-2026",
       "event_type": "commercial_operation_snapshot",
@@ -43,9 +59,9 @@
       "mode": "autonomous_trucking",
       "operation_status": "commercial_driverless",
       "operator_id": "gatik",
-      "source_evidence_path": "raw/objects/f25036ba1fb442280e9dbd87f6ac0d1a9fe3b408f64d76d8767417191ed546df.html",
+      "source_evidence_path": "raw/objects/e296babe98f3dd088c753a1d225f867167a84b6bf6580686484f04d95822717e.html",
       "source_id": "gatik-2026-scale",
-      "source_sha256": "f25036ba1fb442280e9dbd87f6ac0d1a9fe3b408f64d76d8767417191ed546df",
+      "source_sha256": "e296babe98f3dd088c753a1d225f867167a84b6bf6580686484f04d95822717e",
       "source_url": "https://archive.gatik.ai/news/press-releases/gatik-becomes-first-us-company-to-operate-fully-driverless-trucks-at-scale-for-commercial-deliveries/"
     },
     {
@@ -55,9 +71,9 @@
       "mode": "autonomous_trucking",
       "operation_status": "commercial_driverless",
       "operator_id": "kodiak",
-      "source_evidence_path": "raw/objects/d192ca5da338e11192beafeaf45f5cca2765ab011f86c5e683789586bec1655b.html",
+      "source_evidence_path": "raw/objects/7eb0b849bdf8079d5ffd6bdde721a5c6b42ef8856126de74bfee50d8d6cbe0a0.html",
       "source_id": "kodiak-2025-commercial",
-      "source_sha256": "d192ca5da338e11192beafeaf45f5cca2765ab011f86c5e683789586bec1655b",
+      "source_sha256": "7eb0b849bdf8079d5ffd6bdde721a5c6b42ef8856126de74bfee50d8d6cbe0a0",
       "source_url": "https://kodiak.ai/news/kodiak-delivers-two-additional-driverless-trucks"
     },
     {
@@ -67,9 +83,9 @@
       "mode": "autonomous_trucking",
       "operation_status": "commercial_driverless",
       "operator_id": "kodiak",
-      "source_evidence_path": "raw/objects/d192ca5da338e11192beafeaf45f5cca2765ab011f86c5e683789586bec1655b.html",
+      "source_evidence_path": "raw/objects/7eb0b849bdf8079d5ffd6bdde721a5c6b42ef8856126de74bfee50d8d6cbe0a0.html",
       "source_id": "kodiak-2025-commercial",
-      "source_sha256": "d192ca5da338e11192beafeaf45f5cca2765ab011f86c5e683789586bec1655b",
+      "source_sha256": "7eb0b849bdf8079d5ffd6bdde721a5c6b42ef8856126de74bfee50d8d6cbe0a0",
       "source_url": "https://kodiak.ai/news/kodiak-delivers-two-additional-driverless-trucks"
     }
   ],

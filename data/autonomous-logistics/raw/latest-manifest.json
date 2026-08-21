@@ -1,5 +1,5 @@
 {
-  "retrieved_at": "2026-08-21T19:34:04.496666+00:00",
+  "retrieved_at": "2026-08-21T19:39:24.725497+00:00",
   "schema_version": 1,
   "sources": [
     {
@@ -21,6 +21,21 @@
       ]
     },
     {
+      "authority": "Federal Aviation Administration",
+      "content_type": "text/html",
+      "evidence_path": "raw/objects/7e125bd9c0f7648e5402d544da2f3f99005a14ae36885015d677d52e610d7d5e.html",
+      "sha256": "7e125bd9c0f7648e5402d544da2f3f99005a14ae36885015d677d52e610d7d5e",
+      "size_bytes": 206093,
+      "source_id": "faa-nepa-drone-operations",
+      "source_url": "https://www.faa.gov/uas/advanced_operations/nepa_and_drones",
+      "verified_markers": [
+        "August 18, 2026",
+        "Wing Aviation, LLC",
+        "Houston metropolitan area",
+        "Finding of No Significant Impact"
+      ]
+    },
+    {
       "authority": "Aurora Innovation",
       "content_type": "text/html",
       "evidence_path": "raw/objects/b7d5f2edae50ca8e18980cebdf94c7af2f478f28a36acfa4bc5175160724c2c7.html",
@@ -38,8 +53,8 @@
     {
       "authority": "Gatik",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/f25036ba1fb442280e9dbd87f6ac0d1a9fe3b408f64d76d8767417191ed546df.html",
-      "sha256": "f25036ba1fb442280e9dbd87f6ac0d1a9fe3b408f64d76d8767417191ed546df",
+      "evidence_path": "raw/objects/e296babe98f3dd088c753a1d225f867167a84b6bf6580686484f04d95822717e.html",
+      "sha256": "e296babe98f3dd088c753a1d225f867167a84b6bf6580686484f04d95822717e",
       "size_bytes": 89255,
       "source_id": "gatik-2026-scale",
       "source_url": "https://archive.gatik.ai/news/press-releases/gatik-becomes-first-us-company-to-operate-fully-driverless-trucks-at-scale-for-commercial-deliveries/",
@@ -53,8 +68,8 @@
     {
       "authority": "Kodiak AI",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/d192ca5da338e11192beafeaf45f5cca2765ab011f86c5e683789586bec1655b.html",
-      "sha256": "d192ca5da338e11192beafeaf45f5cca2765ab011f86c5e683789586bec1655b",
+      "evidence_path": "raw/objects/7eb0b849bdf8079d5ffd6bdde721a5c6b42ef8856126de74bfee50d8d6cbe0a0.html",
+      "sha256": "7eb0b849bdf8079d5ffd6bdde721a5c6b42ef8856126de74bfee50d8d6cbe0a0",
       "size_bytes": 126105,
       "source_id": "kodiak-2025-commercial",
       "source_url": "https://kodiak.ai/news/kodiak-delivers-two-additional-driverless-trucks",

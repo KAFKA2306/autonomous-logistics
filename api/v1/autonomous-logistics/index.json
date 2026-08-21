@@ -11,7 +11,7 @@
     "raw_evidence_count": 6
   },
   "dataset": "Autonomous logistics primary evidence",
-  "retrieved_at": "2026-08-21T21:43:39.925660+00:00",
+  "retrieved_at": "2026-08-21T21:52:53.460180+00:00",
   "rules": [
     "FAA Part 135 listing is regulatory authorization evidence and is not treated as proof of active commercial flights.",
     "FAA certificate timing is stored only at the precision directly stated by the canonical source; month-level evidence is not fabricated into a day-level date.",

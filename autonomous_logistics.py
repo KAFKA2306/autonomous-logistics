@@ -97,7 +97,7 @@ def validate_registry(registry: dict[str, Any]) -> None:
             raise ValueError(f"invalid FAA certificate month precision: {row.get('operator_id')}")
         if not row.get("permission"):
             raise ValueError(f"incomplete FAA authorization record: {row.get('operator_id')}")
-        if row.get("operating_area") is None and row.get("operating_area_status") != "not_listed_on_current_faa_page":
+        if row.get("operating_area") is None and row.get("operating_area_status") != "not_listed_as_current_operating_area_on_faa_page":
             raise ValueError("missing operating area must carry an explicit source limitation")
         if row.get("source_id") not in sources:
             raise ValueError("drone record refers to unknown source")

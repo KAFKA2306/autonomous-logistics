@@ -62,12 +62,24 @@ class AutonomousLogisticsEvidenceTests(unittest.TestCase):
         self.assertEqual(event["source_id"], "faa-nepa-drone-operations")
         self.assertIn("Houston metropolitan area, Texas", event["geography"])
 
+    def test_droneup_capacity_benchmark_remains_testing_evidence(self):
+        events = {row["event_id"]: row for row in self.registry["operation_events"]}
+        event = events["droneup-capacity-test-2024"]
+        self.assertEqual(event["effective_at"], "2024-08-06")
+        self.assertEqual(event["event_type"], "capacity_test_snapshot")
+        self.assertEqual(event["operation_status"], "testing")
+        self.assertEqual(event["deliveries_single_day"], 500)
+        self.assertEqual(event["deliveries_per_hour"], 40)
+        self.assertEqual(event["max_package_weight_lb"], 10)
+        self.assertEqual(event["pilot_to_drone_ratio"], "one-to-many")
+        self.assertEqual(event["source_id"], "droneup-capacity-test-2024")
+
     def test_month_only_faa_certifications_are_not_fabricated_as_day_events(self):
         event_ids = {row["event_id"] for row in self.registry["operation_events"]}
         self.assertNotIn("drone-express-part135-2024", event_ids)
         self.assertNotIn("flytrex-part135-2025", event_ids)
 
-    def test_api_keeps_authorization_and_operation_status_separate(self):
+    def test_api_keeps_authorization_testing_and_operation_status_separate(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
             manifest = {
@@ -93,12 +105,15 @@ class AutonomousLogisticsEvidenceTests(unittest.TestCase):
             events = json.loads((root / "events.json").read_text())["records"]
         self.assertEqual(index["coverage"]["faa_part135_operator_count"], 7)
         self.assertEqual(index["coverage"]["commercial_driverless_trucking_operator_count"], 3)
-        self.assertEqual(index["coverage"]["operation_event_count"], 5)
+        self.assertEqual(index["coverage"]["operation_event_count"], 6)
+        self.assertEqual(index["coverage"]["primary_source_count"], 6)
         self.assertEqual(index["coverage"]["operation_event_last_date"], "2026-08-18")
         self.assertTrue(all(row["operation_status"] == "regulatory_authorization" for row in drones))
         self.assertTrue(all(row["operation_status"] == "commercial_driverless" for row in trucking))
         wing_event = next(row for row in events if row["event_id"] == "wing-houston-nepa-fonsi-2026")
+        droneup_event = next(row for row in events if row["event_id"] == "droneup-capacity-test-2024")
         self.assertEqual(wing_event["operation_status"], "regulatory_authorization")
+        self.assertEqual(droneup_event["operation_status"], "testing")
 
     def test_raw_manifest_hash_is_verified(self):
         with tempfile.TemporaryDirectory() as tmp:

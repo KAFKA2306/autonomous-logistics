@@ -21,6 +21,8 @@ FAAの現行Part 135 UAS package-delivery operator一覧を正準registryとし�
 
 current FAA pageが**current operating area**を公開していないoperatorは、`operating_area: null` と `operating_area_status: not_listed_as_current_operating_area_on_faa_page` を保持します。launch時・過去のservice areaをcurrent areaとして穴埋めしません。
 
+operatorが公開するcapacity/R&D testの実測値はeventとして保存できますが、`operation_status: testing`のまま保持し、commercial serviceの証拠へ昇格させません。
+
 ## Autonomous trucking
 
 current primary-source operation evidenceをoperator別に保持します。

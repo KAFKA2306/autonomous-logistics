@@ -17,7 +17,7 @@ class AutonomousLogisticsEvidenceTests(unittest.TestCase):
     def setUp(self):
         self.registry = json.loads(Path("data/registry.json").read_text())
 
-    def test_registry_has_current_faa_seven_and_three_trucking_operators(self):
+    def test_registry_has_seven_faa_listed_and_three_trucking_operators(self):
         validate_registry(self.registry)
         drones = self.registry["drone_part135"]
         self.assertEqual(len(drones), 7)

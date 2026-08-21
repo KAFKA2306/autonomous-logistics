@@ -1,5 +1,5 @@
 {
-  "retrieved_at": "2026-08-21T20:45:40.897595+00:00",
+  "retrieved_at": "2026-08-21T21:43:39.925660+00:00",
   "schema_version": 1,
   "sources": [
     {
@@ -36,6 +36,21 @@
       ]
     },
     {
+      "authority": "DroneUp",
+      "content_type": "text/html",
+      "evidence_path": "raw/objects/af29e61d1f6768dfa4d3754643bcf75a02f15b84a324d2c806d8055c1004bc63.html",
+      "sha256": "af29e61d1f6768dfa4d3754643bcf75a02f15b84a324d2c806d8055c1004bc63",
+      "size_bytes": 230049,
+      "source_id": "droneup-capacity-test-2024",
+      "source_url": "https://www.droneup.com/news/droneup-achieves-500-deliveries-per-day",
+      "verified_markers": [
+        "August 6, 2024",
+        "500 deliveries made in a single day",
+        "40 deliveries per hour",
+        "Automation testing"
+      ]
+    },
+    {
       "authority": "Aurora Innovation",
       "content_type": "text/html",
       "evidence_path": "raw/objects/b7d5f2edae50ca8e18980cebdf94c7af2f478f28a36acfa4bc5175160724c2c7.html",
@@ -53,8 +68,8 @@
     {
       "authority": "Gatik",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/0a3b14e62ea2112ce2d11532590eb2e1fa2b8b2e1db3f8b11141f9f1ed614b46.html",
-      "sha256": "0a3b14e62ea2112ce2d11532590eb2e1fa2b8b2e1db3f8b11141f9f1ed614b46",
+      "evidence_path": "raw/objects/dd8c899f0ca34004ac6835958c2cb806ff1310e30d08d80779e68b993a7dd9e3.html",
+      "sha256": "dd8c899f0ca34004ac6835958c2cb806ff1310e30d08d80779e68b993a7dd9e3",
       "size_bytes": 89255,
       "source_id": "gatik-2026-scale",
       "source_url": "https://archive.gatik.ai/news/press-releases/gatik-becomes-first-us-company-to-operate-fully-driverless-trucks-at-scale-for-commercial-deliveries/",
@@ -68,8 +83,8 @@
     {
       "authority": "Kodiak AI",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/fd7c21be7404a47b3cdb83b438a0ed144cdea2dfa19296e036b51c9c8cf9aec1.html",
-      "sha256": "fd7c21be7404a47b3cdb83b438a0ed144cdea2dfa19296e036b51c9c8cf9aec1",
+      "evidence_path": "raw/objects/0f0f94cc53fadcbf9a9ac6d3a0906b54042a033aed4dba6571b9a6e18c78aa1f.html",
+      "sha256": "0f0f94cc53fadcbf9a9ac6d3a0906b54042a033aed4dba6571b9a6e18c78aa1f",
       "size_bytes": 126040,
       "source_id": "kodiak-2025-commercial",
       "source_url": "https://kodiak.ai/news/kodiak-delivers-two-additional-driverless-trucks",

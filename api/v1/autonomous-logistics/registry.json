@@ -127,12 +127,27 @@
       "operation_status": "commercial_driverless",
       "operator_id": "kodiak",
       "source_id": "kodiak-2025-commercial"
+    },
+    {
+      "deliveries_per_hour": 40,
+      "deliveries_single_day": 500,
+      "effective_at": "2024-08-06",
+      "event_id": "droneup-capacity-test-2024",
+      "event_type": "capacity_test_snapshot",
+      "max_package_weight_lb": 10,
+      "mode": "drone_package_delivery",
+      "operation_status": "testing",
+      "operator_id": "droneup",
+      "pilot_to_drone_ratio": "one-to-many",
+      "source_id": "droneup-capacity-test-2024",
+      "test_context": "research and development facility capacity testing for commercial partners"
     }
   ],
   "rules": [
     "FAA Part 135 listing is regulatory authorization evidence and is not treated as proof of active commercial flights.",
     "FAA certificate timing is stored only at the precision directly stated by the canonical source; month-level evidence is not fabricated into a day-level date.",
     "FAA NEPA findings and records of decision are environmental authorization evidence and are not treated as proof that commercial service has started.",
+    "Capacity testing and delivery benchmarks from a research and development facility remain testing evidence and are not promoted to active commercial service.",
     "If the current FAA page does not publish a current operating area, operating_area remains null rather than inferred from historical or launch geography.",
     "supervised, testing, regulatory authorization and commercial_driverless are distinct operation_status values.",
     "planned routes or future driverless validation are not promoted to commercial_driverless facts.",
@@ -164,6 +179,17 @@
       ],
       "source_id": "faa-nepa-drone-operations",
       "source_url": "https://www.faa.gov/uas/advanced_operations/nepa_and_drones"
+    },
+    {
+      "authority": "DroneUp",
+      "required_markers": [
+        "August 6, 2024",
+        "500 deliveries made in a single day",
+        "40 deliveries per hour",
+        "Automation testing"
+      ],
+      "source_id": "droneup-capacity-test-2024",
+      "source_url": "https://www.droneup.com/news/droneup-achieves-500-deliveries-per-day"
     },
     {
       "authority": "Aurora Innovation",

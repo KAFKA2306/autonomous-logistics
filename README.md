@@ -2,7 +2,7 @@
 
 [![Autonomous logistics evidence](https://github.com/KAFKA2306/autonomous-logistics/actions/workflows/autonomous-logistics-evidence.yml/badge.svg)](https://github.com/KAFKA2306/autonomous-logistics/actions/workflows/autonomous-logistics-evidence.yml)
 
-Drone package deliveryとautonomous truckingを、**規制認可・試験・supervised operation・commercial operationを混同せず**一次情報で追跡するdatasetです。旧CFD/trading snapshotではなく、`api/v1/autonomous-logistics/` が正準成果物です。
+Drone package deliveryとautonomous truckingを、**規制認可・試験・supervised operation・commercial operationを混同せず**一次情報で追跡するdatasetです。`api/v1/autonomous-logistics/` が正準成果物です。
 
 ## 正準data
 

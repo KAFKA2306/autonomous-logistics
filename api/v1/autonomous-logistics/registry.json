@@ -171,6 +171,19 @@
       "source_id": "doordash-air-part135-2026"
     },
     {
+      "commercial_autonomous_miles_cumulative": 135000000,
+      "commercial_autonomous_miles_cumulative_qualifier": "more than",
+      "deliveries_cumulative": 2700000,
+      "deliveries_cumulative_qualifier": "more than",
+      "effective_at": "2026-08-17",
+      "event_id": "zipline-commercial-scale-2026-08-17",
+      "event_type": "commercial_operation_snapshot",
+      "mode": "drone_package_delivery",
+      "operation_status": "commercial",
+      "operator_id": "zipline",
+      "source_id": "uber-zipline-partnership-2026"
+    },
+    {
       "authorization_type": "NEPA Finding of No Significant Impact / Record of Decision",
       "effective_at": "2026-08-18",
       "event_id": "wing-houston-nepa-fonsi-2026",
@@ -323,6 +336,17 @@
       ],
       "source_id": "zipline-commercial-scale-2026",
       "source_url": "https://www.zipline.com/newsroom/zipline-accelerates-u-s-growth-with-13x-marketplace-expansion-new-leadership-hires-and-launches-in-austin-and-cleveland"
+    },
+    {
+      "authority": "Uber Technologies, Inc.",
+      "required_markers": [
+        "August 17, 2026",
+        "more than 2.7 million deliveries",
+        "more than 135 million commercial autonomous miles",
+        "first deployments will begin later this year"
+      ],
+      "source_id": "uber-zipline-partnership-2026",
+      "source_url": "https://investor.uber.com/news-events/news/press-release-details/2026/Uber-and-Zipline-Partner-to-Bring-Drone-Delivery-to-Millions-of-Americans/default.aspx"
     },
     {
       "authority": "Aurora Innovation",

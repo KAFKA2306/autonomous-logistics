@@ -1,5 +1,5 @@
 {
-  "retrieved_at": "2026-08-22T02:42:20.752691+00:00",
+  "retrieved_at": "2026-08-22T03:40:51.938735+00:00",
   "schema_version": 1,
   "sources": [
     {
@@ -41,8 +41,8 @@
     {
       "authority": "DoorDash",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/833db4e0d5d0384d70d330f95627441ceea48d34164fe0a28914c3bd0429fd45.html",
-      "sha256": "833db4e0d5d0384d70d330f95627441ceea48d34164fe0a28914c3bd0429fd45",
+      "evidence_path": "raw/objects/f848627d2abf12b2f6adcf9b1ce23f82bf8e7bc1332141545bba56ba78f3ec0e.html",
+      "sha256": "f848627d2abf12b2f6adcf9b1ce23f82bf8e7bc1332141545bba56ba78f3ec0e",
       "size_bytes": 307927,
       "source_id": "doordash-air-part135-2026",
       "source_url": "https://about.doordash.com/en-us/news/doordash-air",
@@ -75,8 +75,8 @@
     {
       "authority": "DroneUp",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/019d9708f1fa2187c7445f1ecd2180457a004ff3b61faf2e43ae04c327e3cf9f.html",
-      "sha256": "019d9708f1fa2187c7445f1ecd2180457a004ff3b61faf2e43ae04c327e3cf9f",
+      "evidence_path": "raw/objects/6e26936efadde7a740b04230e349104f1638d6f5eee870a42b183eb0b5e8674d.html",
+      "sha256": "6e26936efadde7a740b04230e349104f1638d6f5eee870a42b183eb0b5e8674d",
       "size_bytes": 230049,
       "source_id": "droneup-capacity-test-2024",
       "source_url": "https://www.droneup.com/news/droneup-achieves-500-deliveries-per-day",
@@ -103,6 +103,21 @@
       ]
     },
     {
+      "authority": "Uber Technologies, Inc.",
+      "content_type": "text/html",
+      "evidence_path": "raw/objects/2cb419d15eb674d5410c97c9987fdff014d2cdd1ee2900a47111966eeb6a1ec6.html",
+      "sha256": "2cb419d15eb674d5410c97c9987fdff014d2cdd1ee2900a47111966eeb6a1ec6",
+      "size_bytes": 78739,
+      "source_id": "uber-zipline-partnership-2026",
+      "source_url": "https://investor.uber.com/news-events/news/press-release-details/2026/Uber-and-Zipline-Partner-to-Bring-Drone-Delivery-to-Millions-of-Americans/default.aspx",
+      "verified_markers": [
+        "August 17, 2026",
+        "more than 2.7 million deliveries",
+        "more than 135 million commercial autonomous miles",
+        "first deployments will begin later this year"
+      ]
+    },
+    {
       "authority": "Aurora Innovation",
       "content_type": "text/html",
       "evidence_path": "raw/objects/b7d5f2edae50ca8e18980cebdf94c7af2f478f28a36acfa4bc5175160724c2c7.html",
@@ -120,8 +135,8 @@
     {
       "authority": "Gatik",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/4ed04ae7027000e91306b9d8708845555b47dba64dc44f70ff1f384788ada017.html",
-      "sha256": "4ed04ae7027000e91306b9d8708845555b47dba64dc44f70ff1f384788ada017",
+      "evidence_path": "raw/objects/d4a1b959197539e9ce83f6d04c66701e8f132da93b4e4e369a724b9a8260294e.html",
+      "sha256": "d4a1b959197539e9ce83f6d04c66701e8f132da93b4e4e369a724b9a8260294e",
       "size_bytes": 89255,
       "source_id": "gatik-2026-scale",
       "source_url": "https://archive.gatik.ai/news/press-releases/gatik-becomes-first-us-company-to-operate-fully-driverless-trucks-at-scale-for-commercial-deliveries/",
@@ -135,8 +150,8 @@
     {
       "authority": "Kodiak AI",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/a787231b231e92a70b3db13600ca74542be6c294e4f742d989fdb8d9eed82e74.html",
-      "sha256": "a787231b231e92a70b3db13600ca74542be6c294e4f742d989fdb8d9eed82e74",
+      "evidence_path": "raw/objects/075943d13f369812b8aa75540d33779babcd721fa9a8c939ccd4922c76bbe581.html",
+      "sha256": "075943d13f369812b8aa75540d33779babcd721fa9a8c939ccd4922c76bbe581",
       "size_bytes": 126105,
       "source_id": "kodiak-2025-commercial",
       "source_url": "https://kodiak.ai/news/kodiak-delivers-two-additional-driverless-trucks",

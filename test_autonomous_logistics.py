@@ -140,6 +140,21 @@ class AutonomousLogisticsEvidenceTests(unittest.TestCase):
         self.assertTrue(event["holidays_authorized"])
         self.assertNotIn("deliveries_per_day", event)
 
+    def test_zipline_2_5m_snapshot_is_observed_commercial_scale(self):
+        events = {row["event_id"]: row for row in self.registry["operation_events"]}
+        event = events["zipline-commercial-scale-2026-07-14"]
+        self.assertEqual(event["effective_at"], "2026-07-14")
+        self.assertEqual(event["event_type"], "commercial_operation_snapshot")
+        self.assertEqual(event["operation_status"], "commercial")
+        self.assertEqual(event["operator_id"], "zipline")
+        self.assertEqual(event["deliveries_cumulative"], 2500000)
+        self.assertEqual(event["deliveries_cumulative_qualifier"], "more_than")
+        self.assertEqual(event["deliveries_last_year"], 1000000)
+        self.assertEqual(event["us_flight_share_approx"], 0.70)
+        self.assertEqual(event["us_flight_share_qualifier"], "roughly")
+        self.assertEqual(event["source_id"], "zipline-commercial-scale-2026")
+        self.assertNotIn("authorized_max_operations_per_day", event)
+
     def test_droneup_capacity_benchmark_remains_testing_evidence(self):
         events = {row["event_id"]: row for row in self.registry["operation_events"]}
         event = events["droneup-capacity-test-2024"]
@@ -183,21 +198,24 @@ class AutonomousLogisticsEvidenceTests(unittest.TestCase):
             events = json.loads((root / "events.json").read_text())["records"]
         self.assertEqual(index["coverage"]["faa_part135_operator_count"], 7)
         self.assertEqual(index["coverage"]["commercial_driverless_trucking_operator_count"], 3)
-        self.assertEqual(index["coverage"]["operation_event_count"], 12)
-        self.assertEqual(index["coverage"]["primary_source_count"], 8)
+        self.assertEqual(index["coverage"]["operation_event_count"], 13)
+        self.assertEqual(index["coverage"]["primary_source_count"], 9)
         self.assertEqual(index["coverage"]["operation_event_first_period"], "2019-09")
         self.assertEqual(index["coverage"]["operation_event_last_period"], "2026-08-18")
-        self.assertEqual(index["coverage"]["events_2024_or_later"], 10)
+        self.assertEqual(index["coverage"]["events_2024_or_later"], 11)
         self.assertTrue(all(row["operation_status"] == "regulatory_authorization" for row in drones))
         self.assertTrue(all(row["operation_status"] == "commercial_driverless" for row in trucking))
         wing_event = next(row for row in events if row["event_id"] == "wing-houston-nepa-fonsi-2026")
         zipline_event = next(row for row in events if row["event_id"] == "zipline-pea-ridge-opspec-expansion-2026")
+        zipline_scale = next(row for row in events if row["event_id"] == "zipline-commercial-scale-2026-07-14")
         doordash_event = next(row for row in events if row["event_id"] == "doordash-air-part135-announcement-2026")
         causey_scale = next(row for row in events if row["event_id"] == "causey-commercial-scale-2024-03")
         droneup_test = next(row for row in events if row["event_id"] == "droneup-capacity-test-2024")
         droneup_service = next(row for row in events if row["event_id"] == "droneup-commercial-start-2024")
         self.assertEqual(wing_event["operation_status"], "regulatory_authorization")
         self.assertEqual(zipline_event["operation_status"], "regulatory_authorization")
+        self.assertEqual(zipline_scale["operation_status"], "commercial")
+        self.assertEqual(zipline_scale["deliveries_cumulative_qualifier"], "more_than")
         self.assertEqual(doordash_event["operation_status"], "regulatory_authorization")
         self.assertEqual(causey_scale["operation_status"], "commercial")
         self.assertEqual(causey_scale["deliveries_cumulative_qualifier"], "over")

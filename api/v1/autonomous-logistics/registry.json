@@ -146,6 +146,20 @@
       "source_id": "faa-nepa-drone-operations"
     },
     {
+      "deliveries_cumulative": 2500000,
+      "deliveries_cumulative_qualifier": "more than",
+      "deliveries_last_year": 1000000,
+      "effective_at": "2026-07-14",
+      "event_id": "zipline-commercial-scale-2026-07-14",
+      "event_type": "commercial_operation_snapshot",
+      "mode": "drone_package_delivery",
+      "operation_status": "commercial",
+      "operator_id": "zipline",
+      "source_id": "zipline-commercial-scale-2026",
+      "us_flight_share_approx": 0.7,
+      "us_flight_share_qualifier": "roughly"
+    },
+    {
       "authorization_type": "FAA Part 135 air carrier certification",
       "effective_at": "2026-07-29",
       "event_id": "doordash-air-part135-announcement-2026",
@@ -298,6 +312,17 @@
       ],
       "source_id": "droneup-capacity-test-2024",
       "source_url": "https://www.droneup.com/news/droneup-achieves-500-deliveries-per-day"
+    },
+    {
+      "authority": "Zipline",
+      "required_markers": [
+        "July 14, 2026",
+        "more than 2.5 million commercial deliveries",
+        "one million in the last year alone",
+        "Roughly 70% of them take place in the United States"
+      ],
+      "source_id": "zipline-commercial-scale-2026",
+      "source_url": "https://www.zipline.com/newsroom/zipline-accelerates-u-s-growth-with-13x-marketplace-expansion-new-leadership-hires-and-launches-in-austin-and-cleveland"
     },
     {
       "authority": "Aurora Innovation",

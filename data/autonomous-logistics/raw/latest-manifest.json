@@ -1,5 +1,5 @@
 {
-  "retrieved_at": "2026-08-22T01:40:09.748746+00:00",
+  "retrieved_at": "2026-08-22T02:42:20.752691+00:00",
   "schema_version": 1,
   "sources": [
     {
@@ -41,8 +41,8 @@
     {
       "authority": "DoorDash",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/8f737314b6a397da6aa31e8748bc4a5b4723da20e453069ad93c26b3794036e1.html",
-      "sha256": "8f737314b6a397da6aa31e8748bc4a5b4723da20e453069ad93c26b3794036e1",
+      "evidence_path": "raw/objects/833db4e0d5d0384d70d330f95627441ceea48d34164fe0a28914c3bd0429fd45.html",
+      "sha256": "833db4e0d5d0384d70d330f95627441ceea48d34164fe0a28914c3bd0429fd45",
       "size_bytes": 307927,
       "source_id": "doordash-air-part135-2026",
       "source_url": "https://about.doordash.com/en-us/news/doordash-air",
@@ -75,9 +75,9 @@
     {
       "authority": "DroneUp",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/c15a4c4c90c912e3f7d0edc81d29371bebcc2cdbbd4f35099ee2604a0260fdfc.html",
-      "sha256": "c15a4c4c90c912e3f7d0edc81d29371bebcc2cdbbd4f35099ee2604a0260fdfc",
-      "size_bytes": 167489,
+      "evidence_path": "raw/objects/019d9708f1fa2187c7445f1ecd2180457a004ff3b61faf2e43ae04c327e3cf9f.html",
+      "sha256": "019d9708f1fa2187c7445f1ecd2180457a004ff3b61faf2e43ae04c327e3cf9f",
+      "size_bytes": 230049,
       "source_id": "droneup-capacity-test-2024",
       "source_url": "https://www.droneup.com/news/droneup-achieves-500-deliveries-per-day",
       "verified_markers": [
@@ -85,6 +85,21 @@
         "500 deliveries made in a single day",
         "40 deliveries per hour",
         "Automation testing"
+      ]
+    },
+    {
+      "authority": "Zipline",
+      "content_type": "text/html",
+      "evidence_path": "raw/objects/c7c5933eee63dd3a28a0aa14fb0d26bbc6fc88afdafc8fd6e612aecc54b37092.html",
+      "sha256": "c7c5933eee63dd3a28a0aa14fb0d26bbc6fc88afdafc8fd6e612aecc54b37092",
+      "size_bytes": 120600,
+      "source_id": "zipline-commercial-scale-2026",
+      "source_url": "https://www.zipline.com/newsroom/zipline-accelerates-u-s-growth-with-13x-marketplace-expansion-new-leadership-hires-and-launches-in-austin-and-cleveland",
+      "verified_markers": [
+        "July 14, 2026",
+        "more than 2.5 million commercial deliveries",
+        "one million in the last year alone",
+        "Roughly 70% of them take place in the United States"
       ]
     },
     {
@@ -105,8 +120,8 @@
     {
       "authority": "Gatik",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/f78ab5df96c87e4d1f5800176e233cb2f81a91be00ee47e631732672b2596650.html",
-      "sha256": "f78ab5df96c87e4d1f5800176e233cb2f81a91be00ee47e631732672b2596650",
+      "evidence_path": "raw/objects/4ed04ae7027000e91306b9d8708845555b47dba64dc44f70ff1f384788ada017.html",
+      "sha256": "4ed04ae7027000e91306b9d8708845555b47dba64dc44f70ff1f384788ada017",
       "size_bytes": 89255,
       "source_id": "gatik-2026-scale",
       "source_url": "https://archive.gatik.ai/news/press-releases/gatik-becomes-first-us-company-to-operate-fully-driverless-trucks-at-scale-for-commercial-deliveries/",
@@ -120,9 +135,9 @@
     {
       "authority": "Kodiak AI",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/ae4c21f69ba6aee00518685298b20954906425036c7b8ce92e5af973db3cba27.html",
-      "sha256": "ae4c21f69ba6aee00518685298b20954906425036c7b8ce92e5af973db3cba27",
-      "size_bytes": 126040,
+      "evidence_path": "raw/objects/a787231b231e92a70b3db13600ca74542be6c294e4f742d989fdb8d9eed82e74.html",
+      "sha256": "a787231b231e92a70b3db13600ca74542be6c294e4f742d989fdb8d9eed82e74",
+      "size_bytes": 126105,
       "source_id": "kodiak-2025-commercial",
       "source_url": "https://kodiak.ai/news/kodiak-delivers-two-additional-driverless-trucks",
       "verified_markers": [

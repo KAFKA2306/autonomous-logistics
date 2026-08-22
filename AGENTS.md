@@ -2,7 +2,7 @@
 
 ## Repository responsibility
 
-This repository owns primary evidence for autonomous logistics: FAA-regulated UAS package delivery and autonomous trucking operations. Do not reintroduce the former CFD/trading prototype.
+This repository owns primary evidence for autonomous logistics: FAA-regulated UAS package delivery and autonomous trucking operations.
 
 ## Source hierarchy
 
@@ -29,15 +29,6 @@ Cross-repository forecast comparison belongs in `investor2`; do not duplicate AR
 - Future/planned driverless routes remain planned/supervised until a primary source states actual commercial driverless operation.
 - Preserve original qualifiers such as `nearly`, `more than`, or date scope.
 - Every normalized record must resolve to a raw source SHA-256.
-- Remove obsolete trading/CFD paths rather than maintaining compatibility fallbacks.
-
-## Branch lifecycle
-
-- Aside from the default branch and unavoidable platform-managed/protected branches, a persistent branch is permitted only while it is the head branch of a currently open PR.
-- Creating a work branch creates an obligation to open or reuse its canonical PR immediately; do not use branches as backlog, continuation state, backup, archive, or evidence storage.
-- After a PR is merged or closed, delete its head branch after verifying PR/main state. A branch with no open PR is an orphan and must be deleted.
-- Before and after work, compare repository branches with open PR heads. Do not report cleanup/fixed point while an orphan task branch remains.
-- If the available tool cannot delete a branch, record that as a tooling blocker and do not claim cleanup complete. Never create another orphan branch as a workaround.
 
 ## Merge and release are separate
 
@@ -64,4 +55,4 @@ These checks are merge evidence. The `Autonomous logistics evidence` workflow or
 
 ## Completion report
 
-Report verified logistics evidence Before -> After, primary/raw evidence and canonical artifact, Issue/PR/commit/check evidence, then report `merged` and `released` separately with direct evidence for each. Include branch cleanup state, duplicate/manual work removed and the remaining verified blocker.
+Report verified logistics evidence Before -> After, primary/raw evidence and canonical artifact, Issue/PR/commit/check evidence, then report `merged` and `released` separately with direct evidence for each. Include duplicate/manual work removed and the remaining verified blocker.

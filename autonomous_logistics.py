@@ -7,6 +7,7 @@ import hashlib
 import html
 import json
 import re
+import shutil
 import time
 import urllib.error
 import urllib.request
@@ -40,10 +41,7 @@ def normalized_text(raw: bytes) -> str:
 def fetch_source(source: dict[str, Any], data_root: Path) -> dict[str, Any]:
     source_id = str(source["source_id"])
     url = str(source["source_url"])
-    request = urllib.request.Request(
-        url,
-        headers={"User-Agent": USER_AGENT, "Accept-Encoding": "identity"},
-    )
+    request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT, "Accept-Encoding": "identity"})
     last_error: Exception | None = None
     raw = b""
     content_type = "application/octet-stream"
@@ -134,9 +132,8 @@ def validate_registry(registry: dict[str, Any]) -> None:
         status = row.get("operation_status")
         if status not in ALLOWED_STATUSES:
             raise ValueError(f"unsupported trucking status: {status}")
-        if status == "commercial_driverless":
-            if row.get("commercial") is not True or row.get("human_driver_in_cab") is not False:
-                raise ValueError(f"commercial driverless record is internally inconsistent: {row['operator_id']}")
+        if status == "commercial_driverless" and (row.get("commercial") is not True or row.get("human_driver_in_cab") is not False):
+            raise ValueError(f"commercial driverless record is internally inconsistent: {row['operator_id']}")
         if not row.get("geography") or row.get("source_id") not in sources:
             raise ValueError(f"trucking record lacks geography/source: {row.get('operator_id')}")
     events = registry.get("operation_events") or []
@@ -163,16 +160,15 @@ def verify_manifest(data_root: Path) -> dict[str, Any]:
 
 
 def enrich_records(records: list[dict[str, Any]], source_map: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
-    out = []
-    for source in records:
-        evidence = source_map[str(source["source_id"])]
-        out.append({
+    return [
+        {
             **source,
-            "source_url": evidence["source_url"],
-            "source_sha256": evidence["sha256"],
-            "source_evidence_path": evidence["evidence_path"],
-        })
-    return out
+            "source_url": source_map[str(source["source_id"])]["source_url"],
+            "source_sha256": source_map[str(source["source_id"])]["sha256"],
+            "source_evidence_path": source_map[str(source["source_id"])]["evidence_path"],
+        }
+        for source in records
+    ]
 
 
 def build_api(registry: dict[str, Any], manifest: dict[str, Any], api_dir: Path) -> dict[str, Any]:
@@ -216,20 +212,28 @@ def build_api(registry: dict[str, Any], manifest: dict[str, Any], api_dir: Path)
     return index
 
 
+def prune_raw_evidence(data_root: Path, source_evidence: list[dict[str, Any]]) -> None:
+    raw_root = data_root / "raw"
+    referenced = {data_root / row["evidence_path"] for row in source_evidence}
+    objects = raw_root / "objects"
+    if objects.exists():
+        for path in objects.iterdir():
+            if path.is_file() and path not in referenced:
+                path.unlink()
+    historical_manifests = raw_root / "manifests"
+    if historical_manifests.exists():
+        shutil.rmtree(historical_manifests)
+
+
 def collect(registry: dict[str, Any], data_root: Path) -> dict[str, Any]:
-    retrieved_at = datetime.now(UTC).isoformat()
     source_evidence = [fetch_source(row, data_root) for row in registry["sources"]]
     manifest = {
         "schema_version": 1,
-        "retrieved_at": retrieved_at,
+        "retrieved_at": datetime.now(UTC).isoformat(),
         "sources": source_evidence,
     }
-    raw = dump(manifest)
-    manifests = data_root / "raw" / "manifests"
-    manifests.mkdir(parents=True, exist_ok=True)
-    digest = sha256(raw)
-    (manifests / f"{digest}.json").write_bytes(raw)
-    (data_root / "raw" / "latest-manifest.json").write_bytes(raw)
+    prune_raw_evidence(data_root, source_evidence)
+    (data_root / "raw" / "latest-manifest.json").write_bytes(dump(manifest))
     return manifest
 
 

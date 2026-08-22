@@ -287,6 +287,15 @@
       "source_id": "kodiak-2025-commercial"
     },
     {
+      "effective_at": "2026-06-30",
+      "event_id": "kodiak-scale-2026-q2",
+      "event_type": "commercial_operation_snapshot",
+      "mode": "autonomous_trucking",
+      "operation_status": "commercial_driverless",
+      "operator_id": "kodiak",
+      "source_id": "kodiak-q2-2026"
+    },
+    {
       "deliveries_per_hour": 40,
       "deliveries_single_day": 500,
       "effective_at": "2024-08-06",
@@ -460,6 +469,17 @@
       ],
       "source_id": "kodiak-2025-commercial",
       "source_url": "https://kodiak.ai/news/kodiak-delivers-two-additional-driverless-trucks"
+    },
+    {
+      "authority": "Kodiak AI, Inc.",
+      "required_markers": [
+        "35 Customer-Owned Driverless Vehicles",
+        "40,000 Cumulative Hours of Paid Driverless Operations",
+        "more than 300,000 tons of freight",
+        "20,000 Cumulative Loads Delivered"
+      ],
+      "source_id": "kodiak-q2-2026",
+      "source_url": "https://investors.kodiak.ai/news-releases/news-release-details/kodiak-ai-reports-second-quarter-2026-results-and-advances"
     }
   ],
   "trucking_operators": [
@@ -508,12 +528,14 @@
     {
       "commercial": true,
       "current_snapshot": {
-        "as_of": "2025-06-10",
-        "driverless_hours_qualifier": "over",
-        "driverless_hours_since_launch": 1600,
-        "driverless_trucks": 4,
-        "loads_qualifier": "over",
-        "loads_since_launch": 800
+        "as_of": "2026-06-30",
+        "customer_owned_driverless_vehicles": 35,
+        "freight_tons_q2_2026": 300000,
+        "freight_tons_q2_2026_qualifier": "more than",
+        "loads_cumulative": 20000,
+        "loads_cumulative_qualifier": "exceeded",
+        "paid_driverless_hours_cumulative": 40000,
+        "paid_driverless_hours_cumulative_qualifier": "surpassed"
       },
       "customer": "Atlas Energy Solutions",
       "geography": [
@@ -525,7 +547,7 @@
       "operator_id": "kodiak",
       "operator_name": "Kodiak AI",
       "safety_observer_required": false,
-      "source_id": "kodiak-2025-commercial",
+      "source_id": "kodiak-q2-2026",
       "system": "Kodiak Driver",
       "vehicle_class": "Class 8 tractor-trailer"
     }

@@ -1,5 +1,5 @@
 {
-  "retrieved_at": "2026-08-22T04:41:15.307488+00:00",
+  "retrieved_at": "2026-08-22T05:42:22.160193+00:00",
   "schema_version": 1,
   "sources": [
     {
@@ -20,6 +20,8 @@
         "Zipline",
         "first commercial package delivery by drone operations",
         "began commercial operations in August 2020",
+        "Zipline began operations in Charlotte, NC",
+        "began on-demand commercial drone deliveries in Holly Springs and Raeford, NC with the Flytrex UAS",
         "began operations in the Murphy, TX area as an on-demand package delivery service provider"
       ]
     },
@@ -41,8 +43,8 @@
     {
       "authority": "DoorDash",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/84eeef2b5b8611c76fa5ec74cd48019bc4568b4d6f0e11c78513ef5ff3cf8136.html",
-      "sha256": "84eeef2b5b8611c76fa5ec74cd48019bc4568b4d6f0e11c78513ef5ff3cf8136",
+      "evidence_path": "raw/objects/04248bd82da47ed3a5ae6618b350f4f90a406826ca49e87351a521f523a09206.html",
+      "sha256": "04248bd82da47ed3a5ae6618b350f4f90a406826ca49e87351a521f523a09206",
       "size_bytes": 307927,
       "source_id": "doordash-air-part135-2026",
       "source_url": "https://about.doordash.com/en-us/news/doordash-air",
@@ -75,9 +77,9 @@
     {
       "authority": "DroneUp",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/3c9735e8299240d4ba7595ce92ed8bde8312d4b88a5e17300aad409293e722d8.html",
-      "sha256": "3c9735e8299240d4ba7595ce92ed8bde8312d4b88a5e17300aad409293e722d8",
-      "size_bytes": 167489,
+      "evidence_path": "raw/objects/f676c9ab462fed5543681111fcec1611c9e9dd13eea0b7727db8917ea5ce5639.html",
+      "sha256": "f676c9ab462fed5543681111fcec1611c9e9dd13eea0b7727db8917ea5ce5639",
+      "size_bytes": 230049,
       "source_id": "droneup-capacity-test-2024",
       "source_url": "https://www.droneup.com/news/droneup-achieves-500-deliveries-per-day",
       "verified_markers": [
@@ -121,9 +123,9 @@
     {
       "authority": "Uber Technologies, Inc.",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/680e022cbef930b622a4c645b01be90ed3391f369d4e9c80ec3a8b8c1519ad3c.html",
-      "sha256": "680e022cbef930b622a4c645b01be90ed3391f369d4e9c80ec3a8b8c1519ad3c",
-      "size_bytes": 78739,
+      "evidence_path": "raw/objects/5cbe19baa8572fc6624c0c44c80321fde77eaa89b152babce5d40ce2cfccdacc.html",
+      "sha256": "5cbe19baa8572fc6624c0c44c80321fde77eaa89b152babce5d40ce2cfccdacc",
+      "size_bytes": 76951,
       "source_id": "uber-zipline-partnership-2026",
       "source_url": "https://investor.uber.com/news-events/news/press-release-details/2026/Uber-and-Zipline-Partner-to-Bring-Drone-Delivery-to-Millions-of-Americans/default.aspx",
       "verified_markers": [
@@ -151,8 +153,8 @@
     {
       "authority": "Gatik",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/4eb47df66919822d17bbcc2fbf063ede949b262f72b216547e8fc1c547ffcd4b.html",
-      "sha256": "4eb47df66919822d17bbcc2fbf063ede949b262f72b216547e8fc1c547ffcd4b",
+      "evidence_path": "raw/objects/0f420a3d15897bae1fbe62f786808222dec4dc311f8ffb9a6077397475198e80.html",
+      "sha256": "0f420a3d15897bae1fbe62f786808222dec4dc311f8ffb9a6077397475198e80",
       "size_bytes": 89255,
       "source_id": "gatik-2026-scale",
       "source_url": "https://archive.gatik.ai/news/press-releases/gatik-becomes-first-us-company-to-operate-fully-driverless-trucks-at-scale-for-commercial-deliveries/",
@@ -166,8 +168,8 @@
     {
       "authority": "Kodiak AI",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/75408a18697e323706daa972d0d09d456de938717ccbb780192539a5e138fd8e.html",
-      "sha256": "75408a18697e323706daa972d0d09d456de938717ccbb780192539a5e138fd8e",
+      "evidence_path": "raw/objects/9608a065137bfa1f0e05dc0b67c6340426b9883312ae2496f3921502f23c3939.html",
+      "sha256": "9608a065137bfa1f0e05dc0b67c6340426b9883312ae2496f3921502f23c3939",
       "size_bytes": 126105,
       "source_id": "kodiak-2025-commercial",
       "source_url": "https://kodiak.ai/news/kodiak-delivers-two-additional-driverless-trucks",

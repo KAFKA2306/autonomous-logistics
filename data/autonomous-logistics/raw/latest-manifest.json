@@ -1,5 +1,5 @@
 {
-  "retrieved_at": "2026-08-21T23:40:51.700896+00:00",
+  "retrieved_at": "2026-08-22T00:40:02.298234+00:00",
   "schema_version": 1,
   "sources": [
     {
@@ -26,8 +26,8 @@
     {
       "authority": "DoorDash",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/7aa383da8f280eeb476fa2ca7d0d550c3a664505eaf8ce555e69cccdd224f6ce.html",
-      "sha256": "7aa383da8f280eeb476fa2ca7d0d550c3a664505eaf8ce555e69cccdd224f6ce",
+      "evidence_path": "raw/objects/e6a497c468c6f28e355422cfb0db4a3082407daab29693168fb971ee0ca4ea5e.html",
+      "sha256": "e6a497c468c6f28e355422cfb0db4a3082407daab29693168fb971ee0ca4ea5e",
       "size_bytes": 307927,
       "source_id": "doordash-air-part135-2026",
       "source_url": "https://about.doordash.com/en-us/news/doordash-air",
@@ -50,14 +50,18 @@
         "August 18, 2026",
         "Wing Aviation, LLC",
         "Houston metropolitan area",
-        "Finding of No Significant Impact"
+        "Finding of No Significant Impact",
+        "March 24, 2026",
+        "Pea Ridge, Arkansas",
+        "from 100 operations per day to 400 operations per day",
+        "24 hours per day"
       ]
     },
     {
       "authority": "DroneUp",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/d86e854cd3f1194ef84d6966e9e0c09ab45c6cb6304aabd9abe40370b0c2aa36.html",
-      "sha256": "d86e854cd3f1194ef84d6966e9e0c09ab45c6cb6304aabd9abe40370b0c2aa36",
+      "evidence_path": "raw/objects/25a64ca3babb1427a9751b1d8713d3d67686fe80378312bd67589daf35eda91d.html",
+      "sha256": "25a64ca3babb1427a9751b1d8713d3d67686fe80378312bd67589daf35eda91d",
       "size_bytes": 167489,
       "source_id": "droneup-capacity-test-2024",
       "source_url": "https://www.droneup.com/news/droneup-achieves-500-deliveries-per-day",
@@ -86,8 +90,8 @@
     {
       "authority": "Gatik",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/1ca62705018bb9c34bfc3a12646e89bd597b45059e7789ea50fc74d18814321e.html",
-      "sha256": "1ca62705018bb9c34bfc3a12646e89bd597b45059e7789ea50fc74d18814321e",
+      "evidence_path": "raw/objects/c56eb3bc50947eccb612cb0bb86c2490c669f25a9e15b51249dc5e4ea68b55ce.html",
+      "sha256": "c56eb3bc50947eccb612cb0bb86c2490c669f25a9e15b51249dc5e4ea68b55ce",
       "size_bytes": 89255,
       "source_id": "gatik-2026-scale",
       "source_url": "https://archive.gatik.ai/news/press-releases/gatik-becomes-first-us-company-to-operate-fully-driverless-trucks-at-scale-for-commercial-deliveries/",
@@ -101,8 +105,8 @@
     {
       "authority": "Kodiak AI",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/aafc7a47e4b5424473cf752c3b298c755f69df5539d0ad0de9650fe1efce5fd1.html",
-      "sha256": "aafc7a47e4b5424473cf752c3b298c755f69df5539d0ad0de9650fe1efce5fd1",
+      "evidence_path": "raw/objects/c29fee2f78aa3de8cbab87c1878d653751995bf81b312e53876a6cca3bcae67a.html",
+      "sha256": "c29fee2f78aa3de8cbab87c1878d653751995bf81b312e53876a6cca3bcae67a",
       "size_bytes": 126040,
       "source_id": "kodiak-2025-commercial",
       "source_url": "https://kodiak.ai/news/kodiak-delivers-two-additional-driverless-trucks",

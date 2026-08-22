@@ -104,6 +104,18 @@
       "source_id": "faa-part135-package-delivery"
     },
     {
+      "deliveries_cumulative": 80000,
+      "deliveries_cumulative_qualifier": "over",
+      "effective_at": "2024-03",
+      "event_id": "causey-commercial-scale-2024-03",
+      "event_type": "commercial_operation_snapshot",
+      "mode": "drone_package_delivery",
+      "operation_status": "commercial",
+      "operator_id": "causey-aviation-unmanned",
+      "recipient_scope": "consumer homes in the U.S.",
+      "source_id": "faa-ipa-causey-operations"
+    },
+    {
       "aircraft": "Prism V2",
       "effective_at": "2024-11",
       "event_id": "droneup-commercial-start-2024",
@@ -238,6 +250,17 @@
       ],
       "source_id": "faa-part135-package-delivery",
       "source_url": "https://www.faa.gov/uas/advanced_operations/package_delivery_drone"
+    },
+    {
+      "authority": "Federal Aviation Administration",
+      "required_markers": [
+        "Causey Aviation Unmanned",
+        "As of March 2024",
+        "over 80,000 deliveries",
+        "consumer homes in the U.S."
+      ],
+      "source_id": "faa-ipa-causey-operations",
+      "source_url": "https://www.faa.gov/uas/programs_partnerships/ipa"
     },
     {
       "authority": "DoorDash",

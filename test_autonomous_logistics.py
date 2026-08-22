@@ -85,6 +85,8 @@ class AutonomousLogisticsEvidenceTests(unittest.TestCase):
         expected = {
             "ups-commercial-start-2019": ("2019-09", "ups-flight-forward"),
             "amazon-commercial-start-2020": ("2020-08", "amazon-prime-air"),
+            "zipline-commercial-start-2022": ("2022-06", "zipline"),
+            "causey-commercial-start-2023": ("2023-01", "causey-aviation-unmanned"),
             "droneup-commercial-start-2024": ("2024-11", "droneup"),
         }
         for event_id, (period, operator_id) in expected.items():
@@ -95,6 +97,12 @@ class AutonomousLogisticsEvidenceTests(unittest.TestCase):
                 self.assertEqual(event["operation_status"], "commercial")
                 self.assertEqual(event["operator_id"], operator_id)
                 self.assertEqual(event["source_id"], "faa-part135-package-delivery")
+        self.assertEqual(events["zipline-commercial-start-2022"]["geography"], ["Charlotte, North Carolina"])
+        self.assertEqual(
+            events["causey-commercial-start-2023"]["geography"],
+            ["Holly Springs, North Carolina", "Raeford, North Carolina"],
+        )
+        self.assertEqual(events["causey-commercial-start-2023"]["aircraft"], "Flytrex UAS")
         self.assertNotIn("drone-express-commercial-start-2025", events)
 
     def test_causey_80k_snapshot_is_observed_commercial_scale(self):
@@ -225,7 +233,7 @@ class AutonomousLogisticsEvidenceTests(unittest.TestCase):
             events = json.loads((root / "events.json").read_text())["records"]
         self.assertEqual(index["coverage"]["faa_part135_operator_count"], 7)
         self.assertEqual(index["coverage"]["commercial_driverless_trucking_operator_count"], 3)
-        self.assertEqual(index["coverage"]["operation_event_count"], 15)
+        self.assertEqual(index["coverage"]["operation_event_count"], 17)
         self.assertEqual(index["coverage"]["primary_source_count"], 11)
         self.assertEqual(index["coverage"]["operation_event_first_period"], "2019-09")
         self.assertEqual(index["coverage"]["operation_event_last_period"], "2026-08-18")

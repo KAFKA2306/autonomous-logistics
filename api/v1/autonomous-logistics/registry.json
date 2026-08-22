@@ -146,6 +146,22 @@
       "source_id": "faa-nepa-drone-operations"
     },
     {
+      "deliveries_cumulative": 1000000,
+      "deliveries_cumulative_qualifier": "well over",
+      "effective_at": "2026-06-08",
+      "event_id": "wing-commercial-scale-2026-06-08",
+      "event_type": "commercial_operation_snapshot",
+      "geography": [
+        "Dallas-Fort Worth",
+        "Metro Atlanta",
+        "Greater Houston"
+      ],
+      "mode": "drone_package_delivery",
+      "operation_status": "commercial",
+      "operator_id": "wing-aviation",
+      "source_id": "wing-commercial-scale-2026"
+    },
+    {
       "deliveries_cumulative": 2500000,
       "deliveries_cumulative_qualifier": "more than",
       "deliveries_last_year": 1000000,
@@ -325,6 +341,18 @@
       ],
       "source_id": "droneup-capacity-test-2024",
       "source_url": "https://www.droneup.com/news/droneup-achieves-500-deliveries-per-day"
+    },
+    {
+      "authority": "Wing Aviation LLC",
+      "required_markers": [
+        "Jun 8, 2026",
+        "well over one million commercial deliveries completed",
+        "Dallas-Fort Worth",
+        "Metro Atlanta",
+        "Greater Houston"
+      ],
+      "source_id": "wing-commercial-scale-2026",
+      "source_url": "https://wing.com/news/wing-and-walmart-seven-new-markets-drone-delivery"
     },
     {
       "authority": "Zipline",

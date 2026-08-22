@@ -1,5 +1,5 @@
 {
-  "retrieved_at": "2026-08-22T03:40:51.938735+00:00",
+  "retrieved_at": "2026-08-22T04:41:15.307488+00:00",
   "schema_version": 1,
   "sources": [
     {
@@ -41,8 +41,8 @@
     {
       "authority": "DoorDash",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/f848627d2abf12b2f6adcf9b1ce23f82bf8e7bc1332141545bba56ba78f3ec0e.html",
-      "sha256": "f848627d2abf12b2f6adcf9b1ce23f82bf8e7bc1332141545bba56ba78f3ec0e",
+      "evidence_path": "raw/objects/84eeef2b5b8611c76fa5ec74cd48019bc4568b4d6f0e11c78513ef5ff3cf8136.html",
+      "sha256": "84eeef2b5b8611c76fa5ec74cd48019bc4568b4d6f0e11c78513ef5ff3cf8136",
       "size_bytes": 307927,
       "source_id": "doordash-air-part135-2026",
       "source_url": "https://about.doordash.com/en-us/news/doordash-air",
@@ -75,9 +75,9 @@
     {
       "authority": "DroneUp",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/6e26936efadde7a740b04230e349104f1638d6f5eee870a42b183eb0b5e8674d.html",
-      "sha256": "6e26936efadde7a740b04230e349104f1638d6f5eee870a42b183eb0b5e8674d",
-      "size_bytes": 230049,
+      "evidence_path": "raw/objects/3c9735e8299240d4ba7595ce92ed8bde8312d4b88a5e17300aad409293e722d8.html",
+      "sha256": "3c9735e8299240d4ba7595ce92ed8bde8312d4b88a5e17300aad409293e722d8",
+      "size_bytes": 167489,
       "source_id": "droneup-capacity-test-2024",
       "source_url": "https://www.droneup.com/news/droneup-achieves-500-deliveries-per-day",
       "verified_markers": [
@@ -85,6 +85,22 @@
         "500 deliveries made in a single day",
         "40 deliveries per hour",
         "Automation testing"
+      ]
+    },
+    {
+      "authority": "Wing Aviation LLC",
+      "content_type": "text/html",
+      "evidence_path": "raw/objects/645889b71e1c3b3fa02ea083b0bce4a825c04e040035f1de8d138a8dd539ad80.html",
+      "sha256": "645889b71e1c3b3fa02ea083b0bce4a825c04e040035f1de8d138a8dd539ad80",
+      "size_bytes": 407398,
+      "source_id": "wing-commercial-scale-2026",
+      "source_url": "https://wing.com/news/wing-and-walmart-seven-new-markets-drone-delivery",
+      "verified_markers": [
+        "Jun 8, 2026",
+        "well over one million commercial deliveries completed",
+        "Dallas-Fort Worth",
+        "Metro Atlanta",
+        "Greater Houston"
       ]
     },
     {
@@ -105,8 +121,8 @@
     {
       "authority": "Uber Technologies, Inc.",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/2cb419d15eb674d5410c97c9987fdff014d2cdd1ee2900a47111966eeb6a1ec6.html",
-      "sha256": "2cb419d15eb674d5410c97c9987fdff014d2cdd1ee2900a47111966eeb6a1ec6",
+      "evidence_path": "raw/objects/680e022cbef930b622a4c645b01be90ed3391f369d4e9c80ec3a8b8c1519ad3c.html",
+      "sha256": "680e022cbef930b622a4c645b01be90ed3391f369d4e9c80ec3a8b8c1519ad3c",
       "size_bytes": 78739,
       "source_id": "uber-zipline-partnership-2026",
       "source_url": "https://investor.uber.com/news-events/news/press-release-details/2026/Uber-and-Zipline-Partner-to-Bring-Drone-Delivery-to-Millions-of-Americans/default.aspx",
@@ -135,8 +151,8 @@
     {
       "authority": "Gatik",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/d4a1b959197539e9ce83f6d04c66701e8f132da93b4e4e369a724b9a8260294e.html",
-      "sha256": "d4a1b959197539e9ce83f6d04c66701e8f132da93b4e4e369a724b9a8260294e",
+      "evidence_path": "raw/objects/4eb47df66919822d17bbcc2fbf063ede949b262f72b216547e8fc1c547ffcd4b.html",
+      "sha256": "4eb47df66919822d17bbcc2fbf063ede949b262f72b216547e8fc1c547ffcd4b",
       "size_bytes": 89255,
       "source_id": "gatik-2026-scale",
       "source_url": "https://archive.gatik.ai/news/press-releases/gatik-becomes-first-us-company-to-operate-fully-driverless-trucks-at-scale-for-commercial-deliveries/",
@@ -150,8 +166,8 @@
     {
       "authority": "Kodiak AI",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/075943d13f369812b8aa75540d33779babcd721fa9a8c939ccd4922c76bbe581.html",
-      "sha256": "075943d13f369812b8aa75540d33779babcd721fa9a8c939ccd4922c76bbe581",
+      "evidence_path": "raw/objects/75408a18697e323706daa972d0d09d456de938717ccbb780192539a5e138fd8e.html",
+      "sha256": "75408a18697e323706daa972d0d09d456de938717ccbb780192539a5e138fd8e",
       "size_bytes": 126105,
       "source_id": "kodiak-2025-commercial",
       "source_url": "https://kodiak.ai/news/kodiak-delivers-two-additional-driverless-trucks",

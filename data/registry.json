@@ -5,35 +5,19 @@
       "source_id": "faa-part135-package-delivery",
       "authority": "Federal Aviation Administration",
       "source_url": "https://www.faa.gov/uas/advanced_operations/package_delivery_drone",
-      "required_markers": [
-        "Amazon Prime Air",
-        "Causey Aviation Unmanned",
-        "DroneUp",
-        "Drone Express",
-        "UPS Flight Forward",
-        "Wing Aviation",
-        "Zipline",
-        "first commercial package delivery by drone operations",
-        "began commercial operations in August 2020",
-        "began operations in the Murphy, TX area as an on-demand package delivery service provider"
-      ]
+      "required_markers": ["Amazon Prime Air", "Causey Aviation Unmanned", "DroneUp", "Drone Express", "UPS Flight Forward", "Wing Aviation", "Zipline", "first commercial package delivery by drone operations", "began commercial operations in August 2020", "began operations in the Murphy, TX area as an on-demand package delivery service provider"]
     },
     {
       "source_id": "doordash-air-part135-2026",
       "authority": "DoorDash",
       "source_url": "https://about.doordash.com/en-us/news/doordash-air",
-      "required_markers": [
-        "Jul 29, 2026",
-        "Part 135 air carrier certification",
-        "authorized by the FAA to commercially operate our own drone delivery service",
-        "eighth drone operator"
-      ]
+      "required_markers": ["Jul 29, 2026", "Part 135 air carrier certification", "authorized by the FAA to commercially operate our own drone delivery service", "eighth drone operator"]
     },
     {
       "source_id": "faa-nepa-drone-operations",
       "authority": "Federal Aviation Administration",
       "source_url": "https://www.faa.gov/uas/advanced_operations/nepa_and_drones",
-      "required_markers": ["August 18, 2026", "Wing Aviation, LLC", "Houston metropolitan area", "Finding of No Significant Impact"]
+      "required_markers": ["August 18, 2026", "Wing Aviation, LLC", "Houston metropolitan area", "Finding of No Significant Impact", "March 24, 2026", "Pea Ridge, Arkansas", "from 100 operations per day to 400 operations per day", "24 hours per day"]
     },
     {
       "source_id": "droneup-capacity-test-2024",
@@ -78,6 +62,7 @@
     {"event_id":"ups-commercial-start-2019","operator_id":"ups-flight-forward","mode":"drone_package_delivery","event_type":"commercial_service_start","effective_at":"2019-09","operation_status":"commercial","geography":["WakeMed hospital campus, Raleigh, North Carolina"],"source_id":"faa-part135-package-delivery"},
     {"event_id":"amazon-commercial-start-2020","operator_id":"amazon-prime-air","mode":"drone_package_delivery","event_type":"commercial_service_start","effective_at":"2020-08","operation_status":"commercial","geography":["Pendleton, Oregon"],"source_id":"faa-part135-package-delivery"},
     {"event_id":"droneup-commercial-start-2024","operator_id":"droneup","mode":"drone_package_delivery","event_type":"commercial_service_start","effective_at":"2024-11","operation_status":"commercial","geography":["Murphy, Texas"],"aircraft":"Prism V2","source_id":"faa-part135-package-delivery"},
+    {"event_id":"zipline-pea-ridge-opspec-expansion-2026","operator_id":"zipline","mode":"drone_package_delivery","event_type":"environmental_authorization","effective_at":"2026-03-24","operation_status":"regulatory_authorization","authorization_type":"OpSpec amendment supported by NEPA Written Re-evaluation / Record of Decision","geography":["Pea Ridge, Arkansas and surrounding area"],"prior_max_operations_per_day":100,"authorized_max_operations_per_day":400,"authorized_operating_hours":"24 hours per day","holidays_authorized":true,"source_id":"faa-nepa-drone-operations"},
     {"event_id":"doordash-air-part135-announcement-2026","operator_id":"doordash-air","operator_name":"DoorDash Air / DoorDash Labs","mode":"drone_package_delivery","event_type":"regulatory_authorization_announcement","effective_at":"2026-07-29","operation_status":"regulatory_authorization","authorization_type":"FAA Part 135 air carrier certification","source_id":"doordash-air-part135-2026"},
     {"event_id":"wing-houston-nepa-fonsi-2026","operator_id":"wing-aviation","mode":"drone_package_delivery","event_type":"environmental_authorization","effective_at":"2026-08-18","operation_status":"regulatory_authorization","authorization_type":"NEPA Finding of No Significant Impact / Record of Decision","geography":["Houston metropolitan area, Texas"],"source_id":"faa-nepa-drone-operations"},
     {"event_id":"aurora-current-2026","operator_id":"aurora","mode":"autonomous_trucking","event_type":"commercial_operation_snapshot","effective_at":"2026-06-30","operation_status":"commercial_driverless","source_id":"aurora-q2-2026"},
@@ -90,7 +75,7 @@
     "FAA Part 135 listing is regulatory authorization evidence and is not treated as proof of active commercial flights.",
     "When an operator primary source reports a new Part 135 authorization before the FAA package-delivery page is updated, preserve that authorization as a separate event without adding it to the FAA-listed registry view.",
     "FAA certificate and event timing are stored only at the precision directly stated by the canonical source; month-level evidence is not fabricated into a day-level date.",
-    "FAA NEPA findings and records of decision are environmental authorization evidence and are not treated as proof that commercial service has started.",
+    "FAA NEPA findings and records of decision are environmental authorization evidence and are not treated as proof that commercial service has started or that the authorized daily maximum was actually achieved.",
     "Capacity testing and delivery benchmarks from a research and development facility remain testing evidence and are not promoted to active commercial service.",
     "Commercial package-delivery events require a primary source to state that operations or commercial deliveries actually began; future wording is not promoted to an operation event.",
     "If the current FAA page does not publish a current operating area, operating_area remains null rather than inferred from historical or launch geography.",

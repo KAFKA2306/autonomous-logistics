@@ -1,5 +1,5 @@
 {
-  "retrieved_at": "2026-08-22T05:42:22.160193+00:00",
+  "retrieved_at": "2026-08-22T06:42:53.315465+00:00",
   "schema_version": 1,
   "sources": [
     {
@@ -26,6 +26,21 @@
       ]
     },
     {
+      "authority": "Wing Aviation LLC",
+      "content_type": "text/html",
+      "evidence_path": "raw/objects/fe98a7bd1441e8ee35cc40f490448912677cec3331e2fa219760ecb032e4ed1b.html",
+      "sha256": "fe98a7bd1441e8ee35cc40f490448912677cec3331e2fa219760ecb032e4ed1b",
+      "size_bytes": 410423,
+      "source_id": "wing-christiansburg-commercial-start-2019",
+      "source_url": "https://wing.com/news/wing-launches-americas-first-commercial",
+      "verified_markers": [
+        "Oct 18, 2019",
+        "commercial air delivery service",
+        "Christiansburg, Virginia",
+        "delivers directly to their homes"
+      ]
+    },
+    {
       "authority": "Federal Aviation Administration",
       "content_type": "text/html",
       "evidence_path": "raw/objects/20a462b34df6d465fff97ac06ef8246eac593cc31a41a510d90add5290a6be51.html",
@@ -43,8 +58,8 @@
     {
       "authority": "DoorDash",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/04248bd82da47ed3a5ae6618b350f4f90a406826ca49e87351a521f523a09206.html",
-      "sha256": "04248bd82da47ed3a5ae6618b350f4f90a406826ca49e87351a521f523a09206",
+      "evidence_path": "raw/objects/64d013a9ea633b7422fe67bc61883c010c415ddad430652524e3a1802a58224e.html",
+      "sha256": "64d013a9ea633b7422fe67bc61883c010c415ddad430652524e3a1802a58224e",
       "size_bytes": 307927,
       "source_id": "doordash-air-part135-2026",
       "source_url": "https://about.doordash.com/en-us/news/doordash-air",
@@ -77,9 +92,9 @@
     {
       "authority": "DroneUp",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/f676c9ab462fed5543681111fcec1611c9e9dd13eea0b7727db8917ea5ce5639.html",
-      "sha256": "f676c9ab462fed5543681111fcec1611c9e9dd13eea0b7727db8917ea5ce5639",
-      "size_bytes": 230049,
+      "evidence_path": "raw/objects/da34fefbeb0933916420fd36aac6b6fc3d652d35094f08841717aedb204e5281.html",
+      "sha256": "da34fefbeb0933916420fd36aac6b6fc3d652d35094f08841717aedb204e5281",
+      "size_bytes": 167489,
       "source_id": "droneup-capacity-test-2024",
       "source_url": "https://www.droneup.com/news/droneup-achieves-500-deliveries-per-day",
       "verified_markers": [
@@ -153,8 +168,8 @@
     {
       "authority": "Gatik",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/0f420a3d15897bae1fbe62f786808222dec4dc311f8ffb9a6077397475198e80.html",
-      "sha256": "0f420a3d15897bae1fbe62f786808222dec4dc311f8ffb9a6077397475198e80",
+      "evidence_path": "raw/objects/591d271eb5ef6e52b79b57c879fe98ceccdb58576a27c9c7798e7bfb34729f38.html",
+      "sha256": "591d271eb5ef6e52b79b57c879fe98ceccdb58576a27c9c7798e7bfb34729f38",
       "size_bytes": 89255,
       "source_id": "gatik-2026-scale",
       "source_url": "https://archive.gatik.ai/news/press-releases/gatik-becomes-first-us-company-to-operate-fully-driverless-trucks-at-scale-for-commercial-deliveries/",
@@ -168,8 +183,8 @@
     {
       "authority": "Kodiak AI",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/9608a065137bfa1f0e05dc0b67c6340426b9883312ae2496f3921502f23c3939.html",
-      "sha256": "9608a065137bfa1f0e05dc0b67c6340426b9883312ae2496f3921502f23c3939",
+      "evidence_path": "raw/objects/bd8db76d881af6c13e0d1f648b66102b45a20734df1cc296545ed5660f305243.html",
+      "sha256": "bd8db76d881af6c13e0d1f648b66102b45a20734df1cc296545ed5660f305243",
       "size_bytes": 126105,
       "source_id": "kodiak-2025-commercial",
       "source_url": "https://kodiak.ai/news/kodiak-delivers-two-additional-driverless-trucks",

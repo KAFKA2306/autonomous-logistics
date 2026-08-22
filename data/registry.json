@@ -32,6 +32,12 @@
       "required_markers": ["August 6, 2024", "500 deliveries made in a single day", "40 deliveries per hour", "Automation testing"]
     },
     {
+      "source_id": "zipline-commercial-scale-2026",
+      "authority": "Zipline",
+      "source_url": "https://www.zipline.com/newsroom/zipline-accelerates-u-s-growth-with-13x-marketplace-expansion-new-leadership-hires-and-launches-in-austin-and-cleveland",
+      "required_markers": ["July 14, 2026", "more than 2.5 million commercial deliveries", "one million in the last year alone", "Roughly 70% of them take place in the United States"]
+    },
+    {
       "source_id": "aurora-q2-2026",
       "authority": "Aurora Innovation",
       "source_url": "https://ir.aurora.tech/sec-filings/all-sec-filings/content/0001828108-26-000075/aurora26q2shareholderlet.htm",
@@ -70,6 +76,7 @@
     {"event_id":"causey-commercial-scale-2024-03","operator_id":"causey-aviation-unmanned","mode":"drone_package_delivery","event_type":"commercial_operation_snapshot","effective_at":"2024-03","operation_status":"commercial","deliveries_cumulative":80000,"deliveries_cumulative_qualifier":"over","recipient_scope":"consumer homes in the U.S.","source_id":"faa-ipa-causey-operations"},
     {"event_id":"droneup-commercial-start-2024","operator_id":"droneup","mode":"drone_package_delivery","event_type":"commercial_service_start","effective_at":"2024-11","operation_status":"commercial","geography":["Murphy, Texas"],"aircraft":"Prism V2","source_id":"faa-part135-package-delivery"},
     {"event_id":"zipline-pea-ridge-opspec-expansion-2026","operator_id":"zipline","mode":"drone_package_delivery","event_type":"environmental_authorization","effective_at":"2026-03-24","operation_status":"regulatory_authorization","authorization_type":"OpSpec amendment supported by NEPA Written Re-evaluation / Record of Decision","geography":["Pea Ridge, Arkansas and surrounding area"],"prior_max_operations_per_day":100,"authorized_max_operations_per_day":400,"authorized_operating_hours":"24 hours per day","holidays_authorized":true,"source_id":"faa-nepa-drone-operations"},
+    {"event_id":"zipline-commercial-scale-2026-07-14","operator_id":"zipline","mode":"drone_package_delivery","event_type":"commercial_operation_snapshot","effective_at":"2026-07-14","operation_status":"commercial","deliveries_cumulative":2500000,"deliveries_cumulative_qualifier":"more than","deliveries_last_year":1000000,"us_flight_share_approx":0.70,"us_flight_share_qualifier":"roughly","source_id":"zipline-commercial-scale-2026"},
     {"event_id":"doordash-air-part135-announcement-2026","operator_id":"doordash-air","operator_name":"DoorDash Air / DoorDash Labs","mode":"drone_package_delivery","event_type":"regulatory_authorization_announcement","effective_at":"2026-07-29","operation_status":"regulatory_authorization","authorization_type":"FAA Part 135 air carrier certification","source_id":"doordash-air-part135-2026"},
     {"event_id":"wing-houston-nepa-fonsi-2026","operator_id":"wing-aviation","mode":"drone_package_delivery","event_type":"environmental_authorization","effective_at":"2026-08-18","operation_status":"regulatory_authorization","authorization_type":"NEPA Finding of No Significant Impact / Record of Decision","geography":["Houston metropolitan area, Texas"],"source_id":"faa-nepa-drone-operations"},
     {"event_id":"aurora-current-2026","operator_id":"aurora","mode":"autonomous_trucking","event_type":"commercial_operation_snapshot","effective_at":"2026-06-30","operation_status":"commercial_driverless","source_id":"aurora-q2-2026"},

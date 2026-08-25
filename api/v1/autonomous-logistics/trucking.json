@@ -15,9 +15,9 @@
       "operator_id": "aurora",
       "operator_name": "Aurora Innovation",
       "safety_observer_required": false,
-      "source_evidence_path": "raw/objects/b7d5f2edae50ca8e18980cebdf94c7af2f478f28a36acfa4bc5175160724c2c7.html",
+      "source_evidence_path": "raw/objects/0b4b79a4f805db235213f473e6e765632f0a2f5267cdcdb0983555a9ae76cc1a.html",
       "source_id": "aurora-q2-2026",
-      "source_sha256": "b7d5f2edae50ca8e18980cebdf94c7af2f478f28a36acfa4bc5175160724c2c7",
+      "source_sha256": "0b4b79a4f805db235213f473e6e765632f0a2f5267cdcdb0983555a9ae76cc1a",
       "source_url": "https://ir.aurora.tech/sec-filings/all-sec-filings/content/0001828108-26-000075/aurora26q2shareholderlet.htm",
       "system": "Aurora Driver",
       "vehicle_class": "Class 8 tractor-trailer"
@@ -41,9 +41,9 @@
       "operator_id": "gatik",
       "operator_name": "Gatik",
       "safety_observer_required": false,
-      "source_evidence_path": "raw/objects/ea7be8ed2a8a299dab45be3e104631778a664c47ea5086a278394eccfd5a6a22.html",
+      "source_evidence_path": "raw/objects/267e360d02dc1c64e26c6c378b0c0dc9c75a910fe0b0e58073246295ae890d40.html",
       "source_id": "gatik-2026-scale",
-      "source_sha256": "ea7be8ed2a8a299dab45be3e104631778a664c47ea5086a278394eccfd5a6a22",
+      "source_sha256": "267e360d02dc1c64e26c6c378b0c0dc9c75a910fe0b0e58073246295ae890d40",
       "source_url": "https://archive.gatik.ai/news/press-releases/gatik-becomes-first-us-company-to-operate-fully-driverless-trucks-at-scale-for-commercial-deliveries/",
       "system": "Gatik Driver",
       "vehicle_class": "freight-only autonomous trucks"

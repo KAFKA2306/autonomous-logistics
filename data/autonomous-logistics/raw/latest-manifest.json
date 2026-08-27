@@ -1,5 +1,5 @@
 {
-  "retrieved_at": "2026-08-25T21:55:05.004084+00:00",
+  "retrieved_at": "2026-08-27T01:00:19.651072+00:00",
   "schema_version": 1,
   "sources": [
     {
@@ -58,9 +58,9 @@
     {
       "authority": "DoorDash",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/ad473d83ef0bffb0d8ee1c510e28ff1e12674291f16518aa83122339a255cee0.html",
-      "sha256": "ad473d83ef0bffb0d8ee1c510e28ff1e12674291f16518aa83122339a255cee0",
-      "size_bytes": 308253,
+      "evidence_path": "raw/objects/03ab765db39c57b8caa9f4fcdd6441508f566bff73102e8b758947a79b746549.html",
+      "sha256": "03ab765db39c57b8caa9f4fcdd6441508f566bff73102e8b758947a79b746549",
+      "size_bytes": 308249,
       "source_id": "doordash-air-part135-2026",
       "source_url": "https://about.doordash.com/en-us/news/doordash-air",
       "verified_markers": [
@@ -92,9 +92,9 @@
     {
       "authority": "DroneUp",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/c1195a6dbfb5ffcd92c6caf80726934b2f8e1b693503e027aa1b4d2261b8e692.html",
-      "sha256": "c1195a6dbfb5ffcd92c6caf80726934b2f8e1b693503e027aa1b4d2261b8e692",
-      "size_bytes": 163309,
+      "evidence_path": "raw/objects/ed667a350a72dc6dcf9bc243be0461cc4a437252581f00566d4455398e447f55.html",
+      "sha256": "ed667a350a72dc6dcf9bc243be0461cc4a437252581f00566d4455398e447f55",
+      "size_bytes": 181089,
       "source_id": "droneup-capacity-test-2024",
       "source_url": "https://www.droneup.com/news/droneup-achieves-500-deliveries-per-day",
       "verified_markers": [
@@ -123,8 +123,8 @@
     {
       "authority": "Zipline",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/c7c5933eee63dd3a28a0aa14fb0d26bbc6fc88afdafc8fd6e612aecc54b37092.html",
-      "sha256": "c7c5933eee63dd3a28a0aa14fb0d26bbc6fc88afdafc8fd6e612aecc54b37092",
+      "evidence_path": "raw/objects/b8322d627607f59a2f5abfdc6a53b3a493f52cca7a516785f2c9c010a6ae832f.html",
+      "sha256": "b8322d627607f59a2f5abfdc6a53b3a493f52cca7a516785f2c9c010a6ae832f",
       "size_bytes": 120600,
       "source_id": "zipline-commercial-scale-2026",
       "source_url": "https://www.zipline.com/newsroom/zipline-accelerates-u-s-growth-with-13x-marketplace-expansion-new-leadership-hires-and-launches-in-austin-and-cleveland",
@@ -138,8 +138,8 @@
     {
       "authority": "Uber Technologies, Inc.",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/f140cd97040813ae71658af0accb0c3117df6421b2d4e32d626cb5ddaf42de54.html",
-      "sha256": "f140cd97040813ae71658af0accb0c3117df6421b2d4e32d626cb5ddaf42de54",
+      "evidence_path": "raw/objects/d5a09c27aafc312344e1620347051c2bb5ddd3238a5448f69aae9343acdd4896.html",
+      "sha256": "d5a09c27aafc312344e1620347051c2bb5ddd3238a5448f69aae9343acdd4896",
       "size_bytes": 78739,
       "source_id": "uber-zipline-partnership-2026",
       "source_url": "https://investor.uber.com/news-events/news/press-release-details/2026/Uber-and-Zipline-Partner-to-Bring-Drone-Delivery-to-Millions-of-Americans/default.aspx",
@@ -168,8 +168,8 @@
     {
       "authority": "Gatik",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/267e360d02dc1c64e26c6c378b0c0dc9c75a910fe0b0e58073246295ae890d40.html",
-      "sha256": "267e360d02dc1c64e26c6c378b0c0dc9c75a910fe0b0e58073246295ae890d40",
+      "evidence_path": "raw/objects/ed0cf55407b6e1a609c4e277fbf2e1ea7aadb1a1244c5e1cc10c6de67726aec8.html",
+      "sha256": "ed0cf55407b6e1a609c4e277fbf2e1ea7aadb1a1244c5e1cc10c6de67726aec8",
       "size_bytes": 91731,
       "source_id": "gatik-2026-scale",
       "source_url": "https://archive.gatik.ai/news/press-releases/gatik-becomes-first-us-company-to-operate-fully-driverless-trucks-at-scale-for-commercial-deliveries/",
@@ -183,9 +183,9 @@
     {
       "authority": "Kodiak AI",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/56329df52f9eeaaf80131439a2a2cda55170020e7414fcbfdcb6fb3d993f9a3c.html",
-      "sha256": "56329df52f9eeaaf80131439a2a2cda55170020e7414fcbfdcb6fb3d993f9a3c",
-      "size_bytes": 126105,
+      "evidence_path": "raw/objects/5be28d32731b1dead0709a328b33f57e7707c658a8897c8909e444e9f2287023.html",
+      "sha256": "5be28d32731b1dead0709a328b33f57e7707c658a8897c8909e444e9f2287023",
+      "size_bytes": 126311,
       "source_id": "kodiak-2025-commercial",
       "source_url": "https://kodiak.ai/news/kodiak-delivers-two-additional-driverless-trucks",
       "verified_markers": [

@@ -1,13 +1,13 @@
 {
-  "retrieved_at": "2026-08-27T01:00:19.651072+00:00",
+  "retrieved_at": "2026-08-28T05:35:25.412791+00:00",
   "schema_version": 1,
   "sources": [
     {
       "authority": "Federal Aviation Administration",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/381665e05a70bcfa14b1cf73a826490462886adbf6b17b2460819d222b3cac21.html",
-      "sha256": "381665e05a70bcfa14b1cf73a826490462886adbf6b17b2460819d222b3cac21",
-      "size_bytes": 144652,
+      "evidence_path": "raw/objects/dac163604dedf90263413e429c02517ef146c01ba276a3374ec69148f4778e96.html",
+      "sha256": "dac163604dedf90263413e429c02517ef146c01ba276a3374ec69148f4778e96",
+      "size_bytes": 144682,
       "source_id": "faa-part135-package-delivery",
       "source_url": "https://www.faa.gov/uas/advanced_operations/package_delivery_drone",
       "verified_markers": [
@@ -43,9 +43,9 @@
     {
       "authority": "Federal Aviation Administration",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/20a462b34df6d465fff97ac06ef8246eac593cc31a41a510d90add5290a6be51.html",
-      "sha256": "20a462b34df6d465fff97ac06ef8246eac593cc31a41a510d90add5290a6be51",
-      "size_bytes": 129949,
+      "evidence_path": "raw/objects/1c64b56f0312593375dd24e0a0c70a5f4a51633350fae40c378c38a92cf3ee2d.html",
+      "sha256": "1c64b56f0312593375dd24e0a0c70a5f4a51633350fae40c378c38a92cf3ee2d",
+      "size_bytes": 129979,
       "source_id": "faa-ipa-causey-operations",
       "source_url": "https://www.faa.gov/uas/programs_partnerships/ipa",
       "verified_markers": [
@@ -58,9 +58,9 @@
     {
       "authority": "DoorDash",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/03ab765db39c57b8caa9f4fcdd6441508f566bff73102e8b758947a79b746549.html",
-      "sha256": "03ab765db39c57b8caa9f4fcdd6441508f566bff73102e8b758947a79b746549",
-      "size_bytes": 308249,
+      "evidence_path": "raw/objects/de942329a47fde9b2f279e3ea4388e932de3262f2c86a089bd885766d855646b.html",
+      "sha256": "de942329a47fde9b2f279e3ea4388e932de3262f2c86a089bd885766d855646b",
+      "size_bytes": 406072,
       "source_id": "doordash-air-part135-2026",
       "source_url": "https://about.doordash.com/en-us/news/doordash-air",
       "verified_markers": [
@@ -73,9 +73,9 @@
     {
       "authority": "Federal Aviation Administration",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/7e125bd9c0f7648e5402d544da2f3f99005a14ae36885015d677d52e610d7d5e.html",
-      "sha256": "7e125bd9c0f7648e5402d544da2f3f99005a14ae36885015d677d52e610d7d5e",
-      "size_bytes": 206093,
+      "evidence_path": "raw/objects/0129a52891d3d6e2ead68c9fdb5711d9501aa7b312f8764ecbc905d5a1d9a7c5.html",
+      "sha256": "0129a52891d3d6e2ead68c9fdb5711d9501aa7b312f8764ecbc905d5a1d9a7c5",
+      "size_bytes": 206123,
       "source_id": "faa-nepa-drone-operations",
       "source_url": "https://www.faa.gov/uas/advanced_operations/nepa_and_drones",
       "verified_markers": [
@@ -92,9 +92,9 @@
     {
       "authority": "DroneUp",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/ed667a350a72dc6dcf9bc243be0461cc4a437252581f00566d4455398e447f55.html",
-      "sha256": "ed667a350a72dc6dcf9bc243be0461cc4a437252581f00566d4455398e447f55",
-      "size_bytes": 181089,
+      "evidence_path": "raw/objects/0dbb4c1ae38d3da525527b4f188ea547a44ecf5cbb7461a2b5101140021b1087.html",
+      "sha256": "0dbb4c1ae38d3da525527b4f188ea547a44ecf5cbb7461a2b5101140021b1087",
+      "size_bytes": 163278,
       "source_id": "droneup-capacity-test-2024",
       "source_url": "https://www.droneup.com/news/droneup-achieves-500-deliveries-per-day",
       "verified_markers": [
@@ -138,9 +138,9 @@
     {
       "authority": "Uber Technologies, Inc.",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/d5a09c27aafc312344e1620347051c2bb5ddd3238a5448f69aae9343acdd4896.html",
-      "sha256": "d5a09c27aafc312344e1620347051c2bb5ddd3238a5448f69aae9343acdd4896",
-      "size_bytes": 78739,
+      "evidence_path": "raw/objects/e385d4102dbcd546878f10b4e86914d95afa514458db43dc23db3c09f9a00b47.html",
+      "sha256": "e385d4102dbcd546878f10b4e86914d95afa514458db43dc23db3c09f9a00b47",
+      "size_bytes": 78740,
       "source_id": "uber-zipline-partnership-2026",
       "source_url": "https://investor.uber.com/news-events/news/press-release-details/2026/Uber-and-Zipline-Partner-to-Bring-Drone-Delivery-to-Millions-of-Americans/default.aspx",
       "verified_markers": [
@@ -168,8 +168,8 @@
     {
       "authority": "Gatik",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/ed0cf55407b6e1a609c4e277fbf2e1ea7aadb1a1244c5e1cc10c6de67726aec8.html",
-      "sha256": "ed0cf55407b6e1a609c4e277fbf2e1ea7aadb1a1244c5e1cc10c6de67726aec8",
+      "evidence_path": "raw/objects/69390e0b4cb6073ef338407acc2c4129ea0a1064f1b3d8fc29662df7e85b660e.html",
+      "sha256": "69390e0b4cb6073ef338407acc2c4129ea0a1064f1b3d8fc29662df7e85b660e",
       "size_bytes": 91731,
       "source_id": "gatik-2026-scale",
       "source_url": "https://archive.gatik.ai/news/press-releases/gatik-becomes-first-us-company-to-operate-fully-driverless-trucks-at-scale-for-commercial-deliveries/",
@@ -183,8 +183,8 @@
     {
       "authority": "Kodiak AI",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/5be28d32731b1dead0709a328b33f57e7707c658a8897c8909e444e9f2287023.html",
-      "sha256": "5be28d32731b1dead0709a328b33f57e7707c658a8897c8909e444e9f2287023",
+      "evidence_path": "raw/objects/e5c4cbe9af29a43e57e9cb96b9e16c4b38dce2c2fa0931a3fe1654435bc81da1.html",
+      "sha256": "e5c4cbe9af29a43e57e9cb96b9e16c4b38dce2c2fa0931a3fe1654435bc81da1",
       "size_bytes": 126311,
       "source_id": "kodiak-2025-commercial",
       "source_url": "https://kodiak.ai/news/kodiak-delivers-two-additional-driverless-trucks",

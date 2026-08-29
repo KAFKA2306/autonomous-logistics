@@ -48,6 +48,30 @@ jobs:
           python -m py_compile autonomous_logistics.py test_autonomous_logistics.py
           python -m unittest -v test_autonomous_logistics
 
+      - name: Snapshot verified state before collection
+        if: github.event_name != 'pull_request'
+        run: |
+          mkdir -p build
+          python - <<'PY'
+          import hashlib
+          import json
+          from pathlib import Path
+
+          api = Path('api/v1/autonomous-logistics')
+          semantic = {}
+          for name in ['drone-part135.json', 'trucking.json', 'events.json']:
+              rows = json.loads((api / name).read_text())['records']
+              cleaned = []
+              for row in rows:
+                  cleaned.append({
+                      key: value for key, value in row.items()
+                      if key not in {'source_sha256', 'source_url', 'retrieved_at'}
+                  })
+              semantic[name] = cleaned
+          payload = json.dumps(semantic, sort_keys=True, separators=(',', ':')).encode()
+          Path('build/verified-state-before.sha256').write_text(hashlib.sha256(payload).hexdigest() + '\n')
+          PY
+
       - name: Collect primary evidence
         run: |
           if [ "${{ github.event_name }}" = "pull_request" ]; then
@@ -118,10 +142,13 @@ jobs:
               "canonical APIの取得または解析に失敗しました",
               "source_sha256",
               "source_url",
+              "verified_state_changed_since_previous_collection",
+              "今回の取得では、確認済み状態の変更はありません",
           ]:
               assert required in page, required
           assert "fetch(API + path, { cache: 'no-store' })" in page
-          assert "if (!response.ok) throw new Error" in page
+          assert "fetch('deployment.json', { cache: 'no-store' })" in page
+          assert page.count("if (!response.ok) throw new Error") == 2
           PY
 
       - name: Rebuild API from raw evidence
@@ -169,16 +196,30 @@ jobs:
           cp web/index.html build/pages/index.html
           cp api/v1/autonomous-logistics/*.json build/pages/api/v1/autonomous-logistics/
           python - <<'PY'
+          import hashlib
           import json
           import subprocess
           from pathlib import Path
-          events = json.loads(Path('api/v1/autonomous-logistics/events.json').read_text())['records']
+
+          api = Path('api/v1/autonomous-logistics')
+          events = json.loads((api / 'events.json').read_text())['records']
           latest = max(events, key=lambda row: row['effective_at'])
+          semantic = {}
+          for name in ['drone-part135.json', 'trucking.json', 'events.json']:
+              rows = json.loads((api / name).read_text())['records']
+              semantic[name] = [{
+                  key: value for key, value in row.items()
+                  if key not in {'source_sha256', 'source_url', 'retrieved_at'}
+              } for row in rows]
+          semantic_payload = json.dumps(semantic, sort_keys=True, separators=(',', ':')).encode()
+          current_digest = hashlib.sha256(semantic_payload).hexdigest()
+          previous_digest = Path('build/verified-state-before.sha256').read_text().strip()
           payload = {
               'source_commit_sha': subprocess.check_output(['git', 'rev-parse', 'HEAD'], text=True).strip(),
-              'dataset_retrieved_at': json.loads(Path('api/v1/autonomous-logistics/index.json').read_text())['retrieved_at'],
+              'dataset_retrieved_at': json.loads((api / 'index.json').read_text())['retrieved_at'],
               'latest_event_id': latest['event_id'],
               'latest_event_effective_at': latest['effective_at'],
+              'verified_state_changed_since_previous_collection': current_digest != previous_digest,
           }
           Path('build/pages/deployment.json').write_text(json.dumps(payload, indent=2) + '\n')
           PY
@@ -211,7 +252,9 @@ jobs:
           PAGE_URL: ${{ steps.deployment.outputs.page_url }}
         run: |
           test -n "$PAGE_URL"
-          curl --fail --silent --show-error --location --retry 3 --retry-delay 5 "${PAGE_URL}index.html" | grep -F '認可 ≠ 実運用'
+          curl --fail --silent --show-error --location --retry 3 --retry-delay 5 "${PAGE_URL}index.html" -o index.html
+          grep -F '認可 ≠ 実運用' index.html
+          grep -F '今回の取得では、確認済み状態の変更はありません' index.html
           curl --fail --silent --show-error --location --retry 3 --retry-delay 5 "${PAGE_URL}api/v1/autonomous-logistics/index.json" | python -m json.tool >/dev/null
           curl --fail --silent --show-error --location --retry 3 --retry-delay 5 "${PAGE_URL}api/v1/autonomous-logistics/events.json" -o events.json
           curl --fail --silent --show-error --location --retry 3 --retry-delay 5 "${PAGE_URL}deployment.json" -o deployment.json
@@ -225,4 +268,5 @@ jobs:
           assert deployment['dataset_retrieved_at']
           assert deployment['latest_event_id'] == latest['event_id']
           assert deployment['latest_event_effective_at'] == latest['effective_at']
+          assert isinstance(deployment['verified_state_changed_since_previous_collection'], bool)
           PY

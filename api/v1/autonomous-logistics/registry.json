@@ -481,8 +481,10 @@
       "required_markers": [
         "35 Customer-Owned Driverless Vehicles",
         "40,000 Cumulative Hours of Paid Driverless Operations",
+        "71% increase from the end of Q1",
         "more than 300,000 tons of freight",
         "20,000 Cumulative Loads Delivered",
+        "approximately 32% growth from the end of Q1",
         "second simultaneous load-out point",
         "42-mile Dune Express sand conveyor system"
       ],
@@ -545,8 +547,11 @@
         "freight_tons_q2_2026_qualifier": "more than",
         "loads_cumulative": 20000,
         "loads_cumulative_qualifier": "exceeded",
+        "loads_qoq_growth": 0.32,
+        "loads_qoq_growth_qualifier": "approximately",
         "paid_driverless_hours_cumulative": 40000,
         "paid_driverless_hours_cumulative_qualifier": "surpassed",
+        "paid_driverless_hours_qoq_growth": 0.71,
         "simultaneous_loadout_points": 2
       },
       "customer": "Atlas Energy Solutions",

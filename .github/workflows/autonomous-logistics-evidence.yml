@@ -65,7 +65,7 @@ jobs:
               for row in rows:
                   cleaned.append({
                       key: value for key, value in row.items()
-                      if key not in {'source_sha256', 'source_url', 'retrieved_at'}
+                      if key not in {'source_evidence_path', 'source_sha256', 'source_url', 'retrieved_at'}
                   })
               semantic[name] = cleaned
           payload = json.dumps(semantic, sort_keys=True, separators=(',', ':')).encode()
@@ -209,7 +209,7 @@ jobs:
               rows = json.loads((api / name).read_text())['records']
               semantic[name] = [{
                   key: value for key, value in row.items()
-                  if key not in {'source_sha256', 'source_url', 'retrieved_at'}
+                  if key not in {'source_evidence_path', 'source_sha256', 'source_url', 'retrieved_at'}
               } for row in rows]
           semantic_payload = json.dumps(semantic, sort_keys=True, separators=(',', ':')).encode()
           current_digest = hashlib.sha256(semantic_payload).hexdigest()

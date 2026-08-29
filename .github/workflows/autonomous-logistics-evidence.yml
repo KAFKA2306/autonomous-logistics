@@ -4,7 +4,7 @@ on:
   pull_request:
     paths:
       - autonomous_logistics.py
-      - test_autonomous_logistics.py
+      - 'test_*.py'
       - data/registry.json
       - web/**
       - README.md
@@ -14,7 +14,7 @@ on:
     branches: [main]
     paths:
       - autonomous_logistics.py
-      - test_autonomous_logistics.py
+      - 'test_*.py'
       - data/registry.json
       - web/**
       - README.md
@@ -45,8 +45,8 @@ jobs:
 
       - name: Compile and unit test
         run: |
-          python -m py_compile autonomous_logistics.py test_autonomous_logistics.py
-          python -m unittest -v test_autonomous_logistics
+          python -m compileall -q autonomous_logistics.py test_*.py
+          python -m unittest discover -v -p 'test_*.py'
 
       - name: Snapshot verified state before collection
         if: github.event_name != 'pull_request'
@@ -264,9 +264,15 @@ jobs:
           deployment = json.loads(Path('deployment.json').read_text())
           events = json.loads(Path('events.json').read_text())['records']
           latest = max(events, key=lambda row: row['effective_at'])
+          kodiak_daily_record = next(
+              row for row in events
+              if row['event_id'] == 'kodiak-daily-record-2026-07-20'
+          )
           assert len(deployment['source_commit_sha']) == 40
           assert deployment['dataset_retrieved_at']
           assert deployment['latest_event_id'] == latest['event_id']
           assert deployment['latest_event_effective_at'] == latest['effective_at']
           assert isinstance(deployment['verified_state_changed_since_previous_collection'], bool)
+          assert kodiak_daily_record['loads_single_day'] == 176
+          assert kodiak_daily_record['operation_status'] == 'commercial_driverless'
           PY

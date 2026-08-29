@@ -1,84 +1,19 @@
 {
   "schema_version": 1,
   "sources": [
-    {
-      "source_id": "faa-part135-package-delivery",
-      "authority": "Federal Aviation Administration",
-      "source_url": "https://www.faa.gov/uas/advanced_operations/package_delivery_drone",
-      "required_markers": ["Amazon Prime Air", "Causey Aviation Unmanned", "DroneUp", "Drone Express", "UPS Flight Forward", "Wing Aviation", "Zipline", "first commercial package delivery by drone operations", "began commercial operations in August 2020", "Zipline began operations in Charlotte, NC", "began on-demand commercial drone deliveries in Holly Springs and Raeford, NC with the Flytrex UAS", "began operations in the Murphy, TX area as an on-demand package delivery service provider"]
-    },
-    {
-      "source_id": "wing-christiansburg-commercial-start-2019",
-      "authority": "Wing Aviation LLC",
-      "source_url": "https://wing.com/news/wing-launches-americas-first-commercial",
-      "required_markers": ["Oct 18, 2019", "commercial air delivery service", "Christiansburg, Virginia", "delivers directly to their homes"]
-    },
-    {
-      "source_id": "faa-ipa-causey-operations",
-      "authority": "Federal Aviation Administration",
-      "source_url": "https://www.faa.gov/uas/programs_partnerships/ipa",
-      "required_markers": ["Causey Aviation Unmanned", "As of March 2024", "over 80,000 deliveries", "consumer homes in the U.S."]
-    },
-    {
-      "source_id": "doordash-air-part135-2026",
-      "authority": "DoorDash",
-      "source_url": "https://about.doordash.com/en-us/news/doordash-air",
-      "required_markers": ["Jul 29, 2026", "Part 135 air carrier certification", "authorized by the FAA to commercially operate our own drone delivery service", "eighth drone operator"]
-    },
-    {
-      "source_id": "faa-nepa-drone-operations",
-      "authority": "Federal Aviation Administration",
-      "source_url": "https://www.faa.gov/uas/advanced_operations/nepa_and_drones",
-      "required_markers": ["August 18, 2026", "Wing Aviation, LLC", "Houston metropolitan area", "Finding of No Significant Impact", "March 24, 2026", "Pea Ridge, Arkansas", "from 100 operations per day to 400 operations per day", "24 hours per day"]
-    },
-    {
-      "source_id": "droneup-capacity-test-2024",
-      "authority": "DroneUp",
-      "source_url": "https://www.droneup.com/news/droneup-achieves-500-deliveries-per-day",
-      "required_markers": ["August 6, 2024", "500 deliveries made in a single day", "40 deliveries per hour", "Automation testing"]
-    },
-    {
-      "source_id": "wing-commercial-scale-2026",
-      "authority": "Wing Aviation LLC",
-      "source_url": "https://wing.com/news/wing-and-walmart-seven-new-markets-drone-delivery",
-      "required_markers": ["Jun 8, 2026", "well over one million commercial deliveries completed", "Dallas-Fort Worth", "Metro Atlanta", "Greater Houston"]
-    },
-    {
-      "source_id": "zipline-commercial-scale-2026",
-      "authority": "Zipline",
-      "source_url": "https://www.zipline.com/newsroom/zipline-accelerates-u-s-growth-with-13x-marketplace-expansion-new-leadership-hires-and-launches-in-austin-and-cleveland",
-      "required_markers": ["July 14, 2026", "more than 2.5 million commercial deliveries", "one million in the last year alone", "Roughly 70% of them take place in the United States"]
-    },
-    {
-      "source_id": "uber-zipline-partnership-2026",
-      "authority": "Uber Technologies, Inc.",
-      "source_url": "https://investor.uber.com/news-events/news/press-release-details/2026/Uber-and-Zipline-Partner-to-Bring-Drone-Delivery-to-Millions-of-Americans/default.aspx",
-      "required_markers": ["August 17, 2026", "more than 2.7 million deliveries", "more than 135 million commercial autonomous miles", "first deployments will begin later this year"]
-    },
-    {
-      "source_id": "aurora-q2-2026",
-      "authority": "Aurora Innovation",
-      "source_url": "https://ir.aurora.tech/sec-filings/all-sec-filings/content/0001828108-26-000075/aurora26q2shareholderlet.htm",
-      "required_markers": ["440,000", "driverless miles", "Midland", "Monahans"]
-    },
-    {
-      "source_id": "gatik-2026-scale",
-      "authority": "Gatik",
-      "source_url": "https://archive.gatik.ai/news/press-releases/gatik-becomes-first-us-company-to-operate-fully-driverless-trucks-at-scale-for-commercial-deliveries/",
-      "required_markers": ["January 27, 2026", "without a driver or safety observer", "Texas, Arkansas, and Arizona", "60,000 fully driverless orders"]
-    },
-    {
-      "source_id": "kodiak-2025-commercial",
-      "authority": "Kodiak AI",
-      "source_url": "https://kodiak.ai/news/kodiak-delivers-two-additional-driverless-trucks",
-      "required_markers": ["June 10, 2025", "commercial operations with driverless trucks in December 2024", "over 800 loads", "over 1,600 hours of driverless service", "Permian Basin"]
-    },
-    {
-      "source_id": "kodiak-q2-2026",
-      "authority": "Kodiak AI, Inc.",
-      "source_url": "https://investors.kodiak.ai/news-releases/news-release-details/kodiak-ai-reports-second-quarter-2026-results-and-advances",
-      "required_markers": ["35 Customer-Owned Driverless Vehicles", "40,000 Cumulative Hours of Paid Driverless Operations", "more than 300,000 tons of freight", "20,000 Cumulative Loads Delivered"]
-    }
+    {"source_id":"faa-part135-package-delivery","authority":"Federal Aviation Administration","source_url":"https://www.faa.gov/uas/advanced_operations/package_delivery_drone","required_markers":["Amazon Prime Air","Causey Aviation Unmanned","DroneUp","Drone Express","UPS Flight Forward","Wing Aviation","Zipline","first commercial package delivery by drone operations","began commercial operations in August 2020","Zipline began operations in Charlotte, NC","began on-demand commercial drone deliveries in Holly Springs and Raeford, NC with the Flytrex UAS","began operations in the Murphy, TX area as an on-demand package delivery service provider"]},
+    {"source_id":"wing-christiansburg-commercial-start-2019","authority":"Wing Aviation LLC","source_url":"https://wing.com/news/wing-launches-americas-first-commercial","required_markers":["Oct 18, 2019","commercial air delivery service","Christiansburg, Virginia","delivers directly to their homes"]},
+    {"source_id":"faa-ipa-causey-operations","authority":"Federal Aviation Administration","source_url":"https://www.faa.gov/uas/programs_partnerships/ipa","required_markers":["Causey Aviation Unmanned","As of March 2024","over 80,000 deliveries","consumer homes in the U.S."]},
+    {"source_id":"doordash-air-part135-2026","authority":"DoorDash","source_url":"https://about.doordash.com/en-us/news/doordash-air","required_markers":["Jul 29, 2026","Part 135 air carrier certification","authorized by the FAA to commercially operate our own drone delivery service","eighth drone operator"]},
+    {"source_id":"faa-nepa-drone-operations","authority":"Federal Aviation Administration","source_url":"https://www.faa.gov/uas/advanced_operations/nepa_and_drones","required_markers":["August 18, 2026","Wing Aviation, LLC","Houston metropolitan area","Finding of No Significant Impact","March 24, 2026","Pea Ridge, Arkansas","from 100 operations per day to 400 operations per day","24 hours per day"]},
+    {"source_id":"droneup-capacity-test-2024","authority":"DroneUp","source_url":"https://www.droneup.com/news/droneup-achieves-500-deliveries-per-day","required_markers":["August 6, 2024","500 deliveries made in a single day","40 deliveries per hour","Automation testing"]},
+    {"source_id":"wing-commercial-scale-2026","authority":"Wing Aviation LLC","source_url":"https://wing.com/news/wing-and-walmart-seven-new-markets-drone-delivery","required_markers":["Jun 8, 2026","well over one million commercial deliveries completed","Dallas-Fort Worth","Metro Atlanta","Greater Houston"]},
+    {"source_id":"zipline-commercial-scale-2026","authority":"Zipline","source_url":"https://www.zipline.com/newsroom/zipline-accelerates-u-s-growth-with-13x-marketplace-expansion-new-leadership-hires-and-launches-in-austin-and-cleveland","required_markers":["July 14, 2026","more than 2.5 million commercial deliveries","one million in the last year alone","Roughly 70% of them take place in the United States"]},
+    {"source_id":"uber-zipline-partnership-2026","authority":"Uber Technologies, Inc.","source_url":"https://investor.uber.com/news-events/news/press-release-details/2026/Uber-and-Zipline-Partner-to-Bring-Drone-Delivery-to-Millions-of-Americans/default.aspx","required_markers":["August 17, 2026","more than 2.7 million deliveries","more than 135 million commercial autonomous miles","first deployments will begin later this year"]},
+    {"source_id":"aurora-q2-2026","authority":"Aurora Innovation","source_url":"https://ir.aurora.tech/sec-filings/all-sec-filings/content/0001828108-26-000075/aurora26q2shareholderlet.htm","required_markers":["440,000","driverless miles","Midland","Monahans","along I-20"]},
+    {"source_id":"gatik-2026-scale","authority":"Gatik","source_url":"https://archive.gatik.ai/news/press-releases/gatik-becomes-first-us-company-to-operate-fully-driverless-trucks-at-scale-for-commercial-deliveries/","required_markers":["January 27, 2026","without a driver or safety observer","Texas, Arkansas, and Arizona","60,000 fully driverless orders"]},
+    {"source_id":"kodiak-2025-commercial","authority":"Kodiak AI","source_url":"https://kodiak.ai/news/kodiak-delivers-two-additional-driverless-trucks","required_markers":["June 10, 2025","commercial operations with driverless trucks in December 2024","over 800 loads","over 1,600 hours of driverless service","Permian Basin"]},
+    {"source_id":"kodiak-q2-2026","authority":"Kodiak AI, Inc.","source_url":"https://investors.kodiak.ai/news-releases/news-release-details/kodiak-ai-reports-second-quarter-2026-results-and-advances","required_markers":["35 Customer-Owned Driverless Vehicles","40,000 Cumulative Hours of Paid Driverless Operations","more than 300,000 tons of freight","20,000 Cumulative Loads Delivered"]}
   ],
   "drone_part135": [
     {"operator_id":"wing-aviation","operator_name":"Wing Aviation, LLC","part135_certificate_period":"2019-04","permission":"FAA Part 135 UAS package delivery operator","current_faa_registry_status":"listed","operation_status":"regulatory_authorization","operating_area":null,"operating_area_status":"not_listed_as_current_operating_area_on_faa_page","source_id":"faa-part135-package-delivery"},
@@ -90,7 +25,7 @@
     {"operator_id":"drone-express","operator_name":"Drone Express, Inc. (DEXA)","part135_certificate_period":"2025-04","permission":"FAA Part 135 UAS package delivery operator","current_faa_registry_status":"listed","operation_status":"regulatory_authorization","operating_area":null,"operating_area_status":"not_listed_as_current_operating_area_on_faa_page","source_id":"faa-part135-package-delivery"}
   ],
   "trucking_operators": [
-    {"operator_id":"aurora","operator_name":"Aurora Innovation","vehicle_class":"Class 8 tractor-trailer","system":"Aurora Driver","operation_status":"commercial_driverless","commercial":true,"human_driver_in_cab":false,"safety_observer_required":false,"geography":["Texas"],"current_snapshot":{"as_of":"2026-06-30","driverless_miles_cumulative":440000,"qualifier":"nearly"},"source_id":"aurora-q2-2026"},
+    {"operator_id":"aurora","operator_name":"Aurora Innovation","vehicle_class":"Class 8 tractor-trailer","system":"Aurora Driver","operation_status":"commercial_driverless","commercial":true,"human_driver_in_cab":false,"safety_observer_required":false,"geography":["Midland, Texas","Monahans, Texas","Interstate 20 between Midland and Monahans, Texas"],"current_snapshot":{"as_of":"2026-06-30","driverless_miles_cumulative":440000,"qualifier":"nearly"},"source_id":"aurora-q2-2026"},
     {"operator_id":"gatik","operator_name":"Gatik","vehicle_class":"freight-only autonomous trucks","system":"Gatik Driver","operation_status":"commercial_driverless","commercial":true,"human_driver_in_cab":false,"safety_observer_required":false,"geography":["Texas","Arkansas","Arizona"],"current_snapshot":{"as_of":"2026-01-27","fully_driverless_orders":60000,"driverless_hours":2000,"driverless_public_road_miles":10000,"max_route_miles":400},"source_id":"gatik-2026-scale"},
     {"operator_id":"kodiak","operator_name":"Kodiak AI","vehicle_class":"Class 8 tractor-trailer","system":"Kodiak Driver","operation_status":"commercial_driverless","commercial":true,"human_driver_in_cab":false,"safety_observer_required":false,"geography":["Permian Basin, West Texas","eastern New Mexico"],"customer":"Atlas Energy Solutions","current_snapshot":{"as_of":"2026-06-30","customer_owned_driverless_vehicles":35,"paid_driverless_hours_cumulative":40000,"paid_driverless_hours_cumulative_qualifier":"surpassed","loads_cumulative":20000,"loads_cumulative_qualifier":"exceeded","freight_tons_q2_2026":300000,"freight_tons_q2_2026_qualifier":"more than"},"source_id":"kodiak-q2-2026"}
   ],
@@ -108,7 +43,7 @@
     {"event_id":"doordash-air-part135-announcement-2026","operator_id":"doordash-air","operator_name":"DoorDash Air / DoorDash Labs","mode":"drone_package_delivery","event_type":"regulatory_authorization_announcement","effective_at":"2026-07-29","operation_status":"regulatory_authorization","authorization_type":"FAA Part 135 air carrier certification","source_id":"doordash-air-part135-2026"},
     {"event_id":"zipline-commercial-scale-2026-08-17","operator_id":"zipline","mode":"drone_package_delivery","event_type":"commercial_operation_snapshot","effective_at":"2026-08-17","operation_status":"commercial","deliveries_cumulative":2700000,"deliveries_cumulative_qualifier":"more than","commercial_autonomous_miles_cumulative":135000000,"commercial_autonomous_miles_cumulative_qualifier":"more than","source_id":"uber-zipline-partnership-2026"},
     {"event_id":"wing-houston-nepa-fonsi-2026","operator_id":"wing-aviation","mode":"drone_package_delivery","event_type":"environmental_authorization","effective_at":"2026-08-18","operation_status":"regulatory_authorization","authorization_type":"NEPA Finding of No Significant Impact / Record of Decision","geography":["Houston metropolitan area, Texas"],"source_id":"faa-nepa-drone-operations"},
-    {"event_id":"aurora-current-2026","operator_id":"aurora","mode":"autonomous_trucking","event_type":"commercial_operation_snapshot","effective_at":"2026-06-30","operation_status":"commercial_driverless","source_id":"aurora-q2-2026"},
+    {"event_id":"aurora-current-2026","operator_id":"aurora","mode":"autonomous_trucking","event_type":"commercial_operation_snapshot","effective_at":"2026-06-30","operation_status":"commercial_driverless","geography":["Midland, Texas","Monahans, Texas","Interstate 20 between Midland and Monahans, Texas"],"source_id":"aurora-q2-2026"},
     {"event_id":"gatik-scale-2026","operator_id":"gatik","mode":"autonomous_trucking","event_type":"commercial_operation_snapshot","effective_at":"2026-01-27","operation_status":"commercial_driverless","source_id":"gatik-2026-scale"},
     {"event_id":"kodiak-launch-2024","operator_id":"kodiak","mode":"autonomous_trucking","event_type":"commercial_service_start","effective_at":"2024-12-01","operation_status":"commercial_driverless","source_id":"kodiak-2025-commercial"},
     {"event_id":"kodiak-scale-2025","operator_id":"kodiak","mode":"autonomous_trucking","event_type":"commercial_operation_snapshot","effective_at":"2025-06-10","operation_status":"commercial_driverless","source_id":"kodiak-2025-commercial"},

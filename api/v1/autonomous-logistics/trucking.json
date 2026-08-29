@@ -8,7 +8,9 @@
         "qualifier": "nearly"
       },
       "geography": [
-        "Texas"
+        "Midland, Texas",
+        "Monahans, Texas",
+        "Interstate 20 between Midland and Monahans, Texas"
       ],
       "human_driver_in_cab": false,
       "operation_status": "commercial_driverless",
@@ -41,9 +43,9 @@
       "operator_id": "gatik",
       "operator_name": "Gatik",
       "safety_observer_required": false,
-      "source_evidence_path": "raw/objects/efa91f3aa658edab966eef6d8883cfcf42b4294616bf61504e6395d46d968e0b.html",
+      "source_evidence_path": "raw/objects/ff347349563bc17812a22ee9e994d2474a163e93042a61c5c4a1ecbb2c26b9da.html",
       "source_id": "gatik-2026-scale",
-      "source_sha256": "efa91f3aa658edab966eef6d8883cfcf42b4294616bf61504e6395d46d968e0b",
+      "source_sha256": "ff347349563bc17812a22ee9e994d2474a163e93042a61c5c4a1ecbb2c26b9da",
       "source_url": "https://archive.gatik.ai/news/press-releases/gatik-becomes-first-us-company-to-operate-fully-driverless-trucks-at-scale-for-commercial-deliveries/",
       "system": "Gatik Driver",
       "vehicle_class": "freight-only autonomous trucks"

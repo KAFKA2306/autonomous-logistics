@@ -254,6 +254,11 @@
       "effective_at": "2026-06-30",
       "event_id": "aurora-current-2026",
       "event_type": "commercial_operation_snapshot",
+      "geography": [
+        "Midland, Texas",
+        "Monahans, Texas",
+        "Interstate 20 between Midland and Monahans, Texas"
+      ],
       "mode": "autonomous_trucking",
       "operation_status": "commercial_driverless",
       "operator_id": "aurora",
@@ -442,7 +447,8 @@
         "440,000",
         "driverless miles",
         "Midland",
-        "Monahans"
+        "Monahans",
+        "along I-20"
       ],
       "source_id": "aurora-q2-2026",
       "source_url": "https://ir.aurora.tech/sec-filings/all-sec-filings/content/0001828108-26-000075/aurora26q2shareholderlet.htm"
@@ -491,7 +497,9 @@
         "qualifier": "nearly"
       },
       "geography": [
-        "Texas"
+        "Midland, Texas",
+        "Monahans, Texas",
+        "Interstate 20 between Midland and Monahans, Texas"
       ],
       "human_driver_in_cab": false,
       "operation_status": "commercial_driverless",

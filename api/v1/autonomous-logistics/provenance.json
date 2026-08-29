@@ -1,5 +1,5 @@
 {
-  "retrieved_at": "2026-08-29T21:41:10.543565+00:00",
+  "retrieved_at": "2026-08-29T23:34:00.609371+00:00",
   "schema_version": 1,
   "sources": [
     {
@@ -58,8 +58,8 @@
     {
       "authority": "DoorDash",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/776b2b73c59cacc78824a65de42f256764a2b8aba5b511f180d784b04d2c0edd.html",
-      "sha256": "776b2b73c59cacc78824a65de42f256764a2b8aba5b511f180d784b04d2c0edd",
+      "evidence_path": "raw/objects/b74081530343b331770fed61508e0701aca10a85e0d90eeca5766116b4217df1.html",
+      "sha256": "b74081530343b331770fed61508e0701aca10a85e0d90eeca5766116b4217df1",
       "size_bytes": 406072,
       "source_id": "doordash-air-part135-2026",
       "source_url": "https://about.doordash.com/en-us/news/doordash-air",
@@ -92,8 +92,8 @@
     {
       "authority": "DroneUp",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/deac78440b63668da73a6884e291a7ec66b8d537112e7c4b4fede1f4d1cc8ad7.html",
-      "sha256": "deac78440b63668da73a6884e291a7ec66b8d537112e7c4b4fede1f4d1cc8ad7",
+      "evidence_path": "raw/objects/d0e5253d877c9fd114633f3d7f34e805283544a01a1a0a0259d8dfa54740e3b5.html",
+      "sha256": "d0e5253d877c9fd114633f3d7f34e805283544a01a1a0a0259d8dfa54740e3b5",
       "size_bytes": 542818,
       "source_id": "droneup-capacity-test-2024",
       "source_url": "https://www.droneup.com/news/droneup-achieves-500-deliveries-per-day",
@@ -169,8 +169,8 @@
     {
       "authority": "Gatik",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/e328281727e5f2e7c4d5e4c088d719b14fbfc462f23da5e0c561510724e26ecf.html",
-      "sha256": "e328281727e5f2e7c4d5e4c088d719b14fbfc462f23da5e0c561510724e26ecf",
+      "evidence_path": "raw/objects/e058d54f6ea6751e5075193d70d7d32ecf46cd32dff5ffe87a39030eb5c3ac59.html",
+      "sha256": "e058d54f6ea6751e5075193d70d7d32ecf46cd32dff5ffe87a39030eb5c3ac59",
       "size_bytes": 91731,
       "source_id": "gatik-2026-scale",
       "source_url": "https://archive.gatik.ai/news/press-releases/gatik-becomes-first-us-company-to-operate-fully-driverless-trucks-at-scale-for-commercial-deliveries/",
@@ -184,9 +184,9 @@
     {
       "authority": "Kodiak AI",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/bdae1fb462062b3bbb9e905668a68554694d80301d96770d8bbc8459ac765c24.html",
-      "sha256": "bdae1fb462062b3bbb9e905668a68554694d80301d96770d8bbc8459ac765c24",
-      "size_bytes": 126311,
+      "evidence_path": "raw/objects/c2dd25cd3410b84e1c68580da70a8183123cc053f01ccf41c224d97fe634f9cf.html",
+      "sha256": "c2dd25cd3410b84e1c68580da70a8183123cc053f01ccf41c224d97fe634f9cf",
+      "size_bytes": 126246,
       "source_id": "kodiak-2025-commercial",
       "source_url": "https://kodiak.ai/news/kodiak-delivers-two-additional-driverless-trucks",
       "verified_markers": [

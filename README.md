@@ -1,8 +1,12 @@
+https://kafka2306.github.io/autonomous-logistics/
+
 # Autonomous Logistics Primary Evidence
 
 [![Autonomous logistics evidence](https://github.com/KAFKA2306/autonomous-logistics/actions/workflows/autonomous-logistics-evidence.yml/badge.svg)](https://github.com/KAFKA2306/autonomous-logistics/actions/workflows/autonomous-logistics-evidence.yml)
 
 Drone package deliveryとautonomous truckingを、**規制認可・試験・supervised operation・commercial operationを混同せず**一次情報で追跡するdatasetです。`api/v1/autonomous-logistics/` が正準成果物です。
+
+公開ダッシュボードは正準APIを直接読み込みます。FAA Part 135掲載をcommercial operationと同義にせず、商用無人トラック、確認済みoperation event、一次情報URLとSHA-256を同じ画面から確認できます。
 
 ## 正準data
 

@@ -482,7 +482,9 @@
         "35 Customer-Owned Driverless Vehicles",
         "40,000 Cumulative Hours of Paid Driverless Operations",
         "more than 300,000 tons of freight",
-        "20,000 Cumulative Loads Delivered"
+        "20,000 Cumulative Loads Delivered",
+        "second simultaneous load-out point",
+        "42-mile Dune Express sand conveyor system"
       ],
       "source_id": "kodiak-q2-2026",
       "source_url": "https://investors.kodiak.ai/news-releases/news-release-details/kodiak-ai-reports-second-quarter-2026-results-and-advances"
@@ -538,12 +540,14 @@
       "current_snapshot": {
         "as_of": "2026-06-30",
         "customer_owned_driverless_vehicles": 35,
+        "dune_express_miles": 42,
         "freight_tons_q2_2026": 300000,
         "freight_tons_q2_2026_qualifier": "more than",
         "loads_cumulative": 20000,
         "loads_cumulative_qualifier": "exceeded",
         "paid_driverless_hours_cumulative": 40000,
-        "paid_driverless_hours_cumulative_qualifier": "surpassed"
+        "paid_driverless_hours_cumulative_qualifier": "surpassed",
+        "simultaneous_loadout_points": 2
       },
       "customer": "Atlas Energy Solutions",
       "geography": [

@@ -43,9 +43,9 @@
       "operator_id": "gatik",
       "operator_name": "Gatik",
       "safety_observer_required": false,
-      "source_evidence_path": "raw/objects/ff347349563bc17812a22ee9e994d2474a163e93042a61c5c4a1ecbb2c26b9da.html",
+      "source_evidence_path": "raw/objects/cffb2193ac7132c4ff193a60a6d75ecef5f60822259da6102ad52fabd12739b9.html",
       "source_id": "gatik-2026-scale",
-      "source_sha256": "ff347349563bc17812a22ee9e994d2474a163e93042a61c5c4a1ecbb2c26b9da",
+      "source_sha256": "cffb2193ac7132c4ff193a60a6d75ecef5f60822259da6102ad52fabd12739b9",
       "source_url": "https://archive.gatik.ai/news/press-releases/gatik-becomes-first-us-company-to-operate-fully-driverless-trucks-at-scale-for-commercial-deliveries/",
       "system": "Gatik Driver",
       "vehicle_class": "freight-only autonomous trucks"
@@ -55,12 +55,14 @@
       "current_snapshot": {
         "as_of": "2026-06-30",
         "customer_owned_driverless_vehicles": 35,
+        "dune_express_miles": 42,
         "freight_tons_q2_2026": 300000,
         "freight_tons_q2_2026_qualifier": "more than",
         "loads_cumulative": 20000,
         "loads_cumulative_qualifier": "exceeded",
         "paid_driverless_hours_cumulative": 40000,
-        "paid_driverless_hours_cumulative_qualifier": "surpassed"
+        "paid_driverless_hours_cumulative_qualifier": "surpassed",
+        "simultaneous_loadout_points": 2
       },
       "customer": "Atlas Energy Solutions",
       "geography": [

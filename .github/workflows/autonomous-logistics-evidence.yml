@@ -6,6 +6,7 @@ on:
       - autonomous_logistics.py
       - test_autonomous_logistics.py
       - data/registry.json
+      - web/**
       - README.md
       - AGENTS.md
       - .github/workflows/autonomous-logistics-evidence.yml
@@ -15,6 +16,7 @@ on:
       - autonomous_logistics.py
       - test_autonomous_logistics.py
       - data/registry.json
+      - web/**
       - README.md
       - AGENTS.md
       - .github/workflows/autonomous-logistics-evidence.yml
@@ -24,6 +26,8 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 concurrency:
   group: autonomous-logistics-evidence-${{ github.ref }}
@@ -100,6 +104,26 @@ jobs:
               assert hashlib.sha256(raw).hexdigest() == row['sha256'], row['source_id']
           PY
 
+      - name: Audit public dashboard contract
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          page = Path('web/index.html').read_text()
+          readme = Path('README.md').read_text()
+          assert readme.startswith('https://kafka2306.github.io/autonomous-logistics/\n')
+          for required in [
+              "api/v1/autonomous-logistics/",
+              "認可 ≠ 実運用",
+              "commercial_driverless",
+              "canonical APIの取得または解析に失敗しました",
+              "source_sha256",
+              "source_url",
+          ]:
+              assert required in page, required
+          assert "fetch(API + path, { cache: 'no-store' })" in page
+          assert "if (!response.ok) throw new Error" in page
+          PY
+
       - name: Rebuild API from raw evidence
         run: |
           if [ "${{ github.event_name }}" = "pull_request" ]; then
@@ -132,7 +156,64 @@ jobs:
           git add data/autonomous-logistics api/v1/autonomous-logistics
           if git diff --cached --quiet; then
             echo 'No autonomous-logistics evidence change.'
-            exit 0
+          else
+            git commit -m 'data: update autonomous logistics evidence'
+            git push
           fi
-          git commit -m 'data: update autonomous logistics evidence'
-          git push
+
+      - name: Prepare Pages artifact
+        if: github.event_name != 'pull_request'
+        run: |
+          rm -rf build/pages
+          mkdir -p build/pages/api/v1/autonomous-logistics
+          cp web/index.html build/pages/index.html
+          cp api/v1/autonomous-logistics/*.json build/pages/api/v1/autonomous-logistics/
+          python - <<'PY'
+          import json
+          import subprocess
+          from pathlib import Path
+          payload = {
+              'source_commit_sha': subprocess.check_output(['git', 'rev-parse', 'HEAD'], text=True).strip(),
+              'dataset_retrieved_at': json.loads(Path('api/v1/autonomous-logistics/index.json').read_text())['retrieved_at'],
+          }
+          Path('build/pages/deployment.json').write_text(json.dumps(payload, indent=2) + '\n')
+          PY
+
+      - name: Configure GitHub Pages
+        if: github.event_name != 'pull_request'
+        uses: actions/configure-pages@v5
+
+      - name: Upload GitHub Pages artifact
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: build/pages
+
+  deploy:
+    if: github.event_name != 'pull_request'
+    needs: evidence
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Verify production
+        env:
+          PAGE_URL: ${{ steps.deployment.outputs.page_url }}
+        run: |
+          test -n "$PAGE_URL"
+          curl --fail --silent --show-error --location --retry 3 --retry-delay 5 "${PAGE_URL}index.html" | grep -F '認可 ≠ 実運用'
+          curl --fail --silent --show-error --location --retry 3 --retry-delay 5 "${PAGE_URL}api/v1/autonomous-logistics/index.json" | python -m json.tool >/dev/null
+          curl --fail --silent --show-error --location --retry 3 --retry-delay 5 "${PAGE_URL}deployment.json" -o deployment.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          payload = json.loads(Path('deployment.json').read_text())
+          assert len(payload['source_commit_sha']) == 40
+          assert payload['dataset_retrieved_at']
+          PY

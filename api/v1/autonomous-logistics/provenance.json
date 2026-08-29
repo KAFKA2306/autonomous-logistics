@@ -1,5 +1,5 @@
 {
-  "retrieved_at": "2026-08-29T16:41:25.678525+00:00",
+  "retrieved_at": "2026-08-29T16:44:19.206549+00:00",
   "schema_version": 1,
   "sources": [
     {
@@ -58,8 +58,8 @@
     {
       "authority": "DoorDash",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/e06d8d260690d6c145ccd6de7790db493e4954911176c5b6c57d172fa7645165.html",
-      "sha256": "e06d8d260690d6c145ccd6de7790db493e4954911176c5b6c57d172fa7645165",
+      "evidence_path": "raw/objects/01923119a8ab13a3143ad4a0dfcf45a834e5f402a7dfa5b66fff08a718ed7274.html",
+      "sha256": "01923119a8ab13a3143ad4a0dfcf45a834e5f402a7dfa5b66fff08a718ed7274",
       "size_bytes": 406072,
       "source_id": "doordash-air-part135-2026",
       "source_url": "https://about.doordash.com/en-us/news/doordash-air",
@@ -92,8 +92,8 @@
     {
       "authority": "DroneUp",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/1e82525e319d4fe4a6134d63f842946e4a71b9b5fae9b839023e64fbd66cc79d.html",
-      "sha256": "1e82525e319d4fe4a6134d63f842946e4a71b9b5fae9b839023e64fbd66cc79d",
+      "evidence_path": "raw/objects/8e6741dd4776bf7c45bdad57d4f9d8fd810fe10a1f5a4920eccd3e1beb9ac609.html",
+      "sha256": "8e6741dd4776bf7c45bdad57d4f9d8fd810fe10a1f5a4920eccd3e1beb9ac609",
       "size_bytes": 542818,
       "source_id": "droneup-capacity-test-2024",
       "source_url": "https://www.droneup.com/news/droneup-achieves-500-deliveries-per-day",
@@ -138,9 +138,9 @@
     {
       "authority": "Uber Technologies, Inc.",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/a8ee6543d180ff3e52163615013a925a6ce8f4f2ba2c9f5dadbc244e71c8da02.html",
-      "sha256": "a8ee6543d180ff3e52163615013a925a6ce8f4f2ba2c9f5dadbc244e71c8da02",
-      "size_bytes": 76953,
+      "evidence_path": "raw/objects/ca9d091cdbb902b517f37a9b7cccba950a0574ccf78762b85ab6d8d364369b8b.html",
+      "sha256": "ca9d091cdbb902b517f37a9b7cccba950a0574ccf78762b85ab6d8d364369b8b",
+      "size_bytes": 78739,
       "source_id": "uber-zipline-partnership-2026",
       "source_url": "https://investor.uber.com/news-events/news/press-release-details/2026/Uber-and-Zipline-Partner-to-Bring-Drone-Delivery-to-Millions-of-Americans/default.aspx",
       "verified_markers": [
@@ -168,8 +168,8 @@
     {
       "authority": "Gatik",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/3d2c79c1cead536dc9c05c3c8b820115475a82da8d9cd39c5c11263aa74257db.html",
-      "sha256": "3d2c79c1cead536dc9c05c3c8b820115475a82da8d9cd39c5c11263aa74257db",
+      "evidence_path": "raw/objects/efa91f3aa658edab966eef6d8883cfcf42b4294616bf61504e6395d46d968e0b.html",
+      "sha256": "efa91f3aa658edab966eef6d8883cfcf42b4294616bf61504e6395d46d968e0b",
       "size_bytes": 91731,
       "source_id": "gatik-2026-scale",
       "source_url": "https://archive.gatik.ai/news/press-releases/gatik-becomes-first-us-company-to-operate-fully-driverless-trucks-at-scale-for-commercial-deliveries/",
@@ -183,8 +183,8 @@
     {
       "authority": "Kodiak AI",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/466624c3f303231acb5472e77f3488ec63322335896f6c0ee1a81258853685ff.html",
-      "sha256": "466624c3f303231acb5472e77f3488ec63322335896f6c0ee1a81258853685ff",
+      "evidence_path": "raw/objects/463236ccf9c70180b210b20223e9d5d22e7255c72717a2784cbe4dd69a10ad4c.html",
+      "sha256": "463236ccf9c70180b210b20223e9d5d22e7255c72717a2784cbe4dd69a10ad4c",
       "size_bytes": 126246,
       "source_id": "kodiak-2025-commercial",
       "source_url": "https://kodiak.ai/news/kodiak-delivers-two-additional-driverless-trucks",
@@ -199,9 +199,9 @@
     {
       "authority": "Kodiak AI, Inc.",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/d7637f65e90cecc7305a7814eb06e75b1f7418248f12fb04e19826e36d19aee3.html",
-      "sha256": "d7637f65e90cecc7305a7814eb06e75b1f7418248f12fb04e19826e36d19aee3",
-      "size_bytes": 239777,
+      "evidence_path": "raw/objects/507125d557abef95d197cad8742bad968fb1478c3a9239ab0e39ecd9e36398f4.html",
+      "sha256": "507125d557abef95d197cad8742bad968fb1478c3a9239ab0e39ecd9e36398f4",
+      "size_bytes": 237574,
       "source_id": "kodiak-q2-2026",
       "source_url": "https://investors.kodiak.ai/news-releases/news-release-details/kodiak-ai-reports-second-quarter-2026-results-and-advances",
       "verified_markers": [

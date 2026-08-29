@@ -43,9 +43,9 @@
       "operator_id": "gatik",
       "operator_name": "Gatik",
       "safety_observer_required": false,
-      "source_evidence_path": "raw/objects/50d36eb4a75ba2c42f919d2379006d658b77f135df10e6cadd9da373de966059.html",
+      "source_evidence_path": "raw/objects/e328281727e5f2e7c4d5e4c088d719b14fbfc462f23da5e0c561510724e26ecf.html",
       "source_id": "gatik-2026-scale",
-      "source_sha256": "50d36eb4a75ba2c42f919d2379006d658b77f135df10e6cadd9da373de966059",
+      "source_sha256": "e328281727e5f2e7c4d5e4c088d719b14fbfc462f23da5e0c561510724e26ecf",
       "source_url": "https://archive.gatik.ai/news/press-releases/gatik-becomes-first-us-company-to-operate-fully-driverless-trucks-at-scale-for-commercial-deliveries/",
       "system": "Gatik Driver",
       "vehicle_class": "freight-only autonomous trucks"

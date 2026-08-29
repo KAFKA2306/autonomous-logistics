@@ -301,6 +301,20 @@
       "source_id": "kodiak-q2-2026"
     },
     {
+      "effective_at": "2026-07-20",
+      "event_id": "kodiak-daily-record-2026-07-20",
+      "event_type": "commercial_operation_snapshot",
+      "geography": [
+        "Permian Basin"
+      ],
+      "loads_single_day": 176,
+      "mode": "autonomous_trucking",
+      "operation_status": "commercial_driverless",
+      "operator_id": "kodiak",
+      "record_context": "all-time daily high across 18 months of driverless deployments with Atlas Energy Solutions",
+      "source_id": "kodiak-atlas-expansion-2026"
+    },
+    {
       "deliveries_per_hour": 40,
       "deliveries_single_day": 500,
       "effective_at": "2024-08-06",
@@ -490,6 +504,19 @@
       ],
       "source_id": "kodiak-q2-2026",
       "source_url": "https://investors.kodiak.ai/news-releases/news-release-details/kodiak-ai-reports-second-quarter-2026-results-and-advances"
+    },
+    {
+      "authority": "Kodiak AI, Inc. / Atlas Energy Solutions Inc.",
+      "required_markers": [
+        "July 31, 2026",
+        "On July 20",
+        "176 loads of sand in a single day",
+        "all-time daily high",
+        "18 months of driverless deployments",
+        "Permian Basin"
+      ],
+      "source_id": "kodiak-atlas-expansion-2026",
+      "source_url": "https://investors.kodiak.ai/news-releases/news-release-details/atlas-energy-solutions-expands-ai-enabled-digital-transformation"
     }
   ],
   "trucking_operators": [

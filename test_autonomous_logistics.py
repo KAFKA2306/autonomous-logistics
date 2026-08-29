@@ -308,11 +308,22 @@ class AutonomousLogisticsEvidenceTests(unittest.TestCase):
         self.assertEqual(
             index["coverage"]["commercial_driverless_trucking_operator_count"], 3
         )
-        self.assertEqual(index["coverage"]["operation_event_count"], 19)
-        self.assertEqual(index["coverage"]["primary_source_count"], 13)
+        self.assertEqual(
+            index["coverage"]["operation_event_count"],
+            len(self.registry["operation_events"]),
+        )
+        self.assertEqual(
+            index["coverage"]["primary_source_count"], len(self.registry["sources"])
+        )
         self.assertEqual(index["coverage"]["operation_event_first_period"], "2019-09")
         self.assertEqual(index["coverage"]["operation_event_last_period"], "2026-08-18")
-        self.assertEqual(index["coverage"]["events_2024_or_later"], 14)
+        self.assertEqual(
+            index["coverage"]["events_2024_or_later"],
+            sum(
+                event_period_key(row["effective_at"]) >= (2024, 1, 0)
+                for row in self.registry["operation_events"]
+            ),
+        )
         self.assertTrue(
             all(row["operation_status"] == "regulatory_authorization" for row in drones)
         )

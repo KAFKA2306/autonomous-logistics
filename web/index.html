@@ -54,6 +54,7 @@
 
   <section aria-labelledby="latest-title">
     <h2 id="latest-title">最新の確認済み変更</h2>
+    <p id="collection-change" class="boundary" aria-live="polite"></p>
     <div id="latest"></div>
   </section>
 
@@ -130,9 +131,15 @@ async function loadJson(path) {
   return response.json();
 }
 
+async function loadDeployment() {
+  const response = await fetch('deployment.json', { cache: 'no-store' });
+  if (!response.ok) throw new Error(`deployment.json: HTTP ${response.status}`);
+  return response.json();
+}
+
 async function render() {
-  const [index, droneData, truckingData, eventData] = await Promise.all([
-    loadJson('index.json'), loadJson('drone-part135.json'), loadJson('trucking.json'), loadJson('events.json')
+  const [index, droneData, truckingData, eventData, deployment] = await Promise.all([
+    loadJson('index.json'), loadJson('drone-part135.json'), loadJson('trucking.json'), loadJson('events.json'), loadDeployment()
   ]);
   const drones = droneData.records;
   const trucking = truckingData.records;
@@ -148,6 +155,9 @@ async function render() {
     metric('一次情報', index.coverage.primary_source_count, 'raw evidenceをSHA-256固定')
   ].join('');
   document.querySelector('#retrieved').textContent = `データ取得時刻: ${index.retrieved_at}`;
+  document.querySelector('#collection-change').innerHTML = deployment.verified_state_changed_since_previous_collection
+    ? '<strong>今回の取得で、確認済み状態に変更があります。</strong> 下の最新イベントと時系列を一次情報までたどって確認できます。'
+    : '<strong>今回の取得では、確認済み状態の変更はありません。</strong> 一次情報は再取得していますが、取得時刻や本文SHA-256の変化だけを新しい運用変化とは扱いません。';
   document.querySelector('#latest').innerHTML = latest ? eventCard(latest, maps) : '<p>確認済みイベントはありません。</p>';
 
   document.querySelector('#trucking').innerHTML = trucking.map(row => `<article class="card">
@@ -185,7 +195,7 @@ async function render() {
 render().catch(error => {
   document.querySelector('#error-section').hidden = false;
   document.querySelector('#error').textContent = `canonical APIの取得または解析に失敗しました。\n${error.message}`;
-  for (const id of ['summary', 'latest', 'trucking', 'drones', 'events']) document.querySelector(`#${id}`).replaceChildren();
+  for (const id of ['summary', 'collection-change', 'latest', 'trucking', 'drones', 'events']) document.querySelector(`#${id}`).replaceChildren();
 });
 </script>
 </body>

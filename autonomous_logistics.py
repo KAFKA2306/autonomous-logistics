@@ -21,6 +21,10 @@ DEFAULT_DATA_ROOT = ROOT / "data" / "autonomous-logistics"
 DEFAULT_API_DIR = ROOT / "api" / "v1" / "autonomous-logistics"
 ALLOWED_STATUSES = {"regulatory_authorization", "testing", "supervised", "commercial", "commercial_driverless"}
 USER_AGENT = "KAFKA2306 autonomous-logistics 137051370+KAFKA2306@users.noreply.github.com"
+GATIK_LIVE_HEADER = "Truck Start Time End Time Driving Time Stops Status"
+GATIK_LIVE_TIME_ZONE = "Pacific Standard Time (PST)"
+GATIK_LIVE_STOPS_VALUES = ("Completed", "Unloading", "Driving", "Loading", "Parked")
+GATIK_LIVE_STATUS_VALUES = ("On Time", "Completed", "Ready")
 
 
 def dump(value: object) -> bytes:
@@ -36,6 +40,72 @@ def normalized_text(raw: bytes) -> str:
     text = re.sub(r"(?is)<script.*?</script>|<style.*?</style>", " ", text)
     text = re.sub(r"(?s)<[^>]+>", " ", text)
     return " ".join(html.unescape(text).split())
+
+
+def parse_gatik_live_operations(text: str) -> dict[str, Any]:
+    if GATIK_LIVE_TIME_ZONE not in text:
+        raise ValueError("Gatik Live Operations time zone marker is missing")
+    if GATIK_LIVE_HEADER not in text:
+        raise ValueError("Gatik Live Operations columns are missing or reordered")
+    if "Load more" not in text:
+        raise ValueError("Gatik Live Operations completeness boundary is missing")
+
+    body = text.split(GATIK_LIVE_HEADER, 1)[1].split("Load more", 1)[0].strip()
+    row_pattern = re.compile(
+        r"(G-\d{3}A)\s+"
+        r"(\d{1,2}:\d{2}\s+[AP]M)\s+"
+        r"(\d{1,2}:\d{2}\s+[AP]M)\s+"
+        r"(\d+(?::\d{2})?\s+hrs)\s+"
+        r"(.+?)(?=\s+G-\d{3}A\s+|$)"
+    )
+    matches = list(row_pattern.finditer(body))
+    if not matches:
+        raise ValueError("Gatik Live Operations has no parseable displayed rows")
+
+    uncovered = []
+    cursor = 0
+    for match in matches:
+        uncovered.append(body[cursor:match.start()].strip())
+        cursor = match.end()
+    uncovered.append(body[cursor:].strip())
+    if any(uncovered):
+        raise ValueError("Gatik Live Operations row structure changed or a truck ID is missing")
+
+    records = []
+    seen_truck_ids: set[str] = set()
+    for match in matches:
+        truck_id, start_time, end_time, driving_time, tail = match.groups()
+        if truck_id in seen_truck_ids:
+            raise ValueError(f"duplicate displayed Gatik truck label: {truck_id}")
+        seen_truck_ids.add(truck_id)
+
+        status = next(
+            (value for value in GATIK_LIVE_STATUS_VALUES if tail == value or tail.endswith(f" {value}")),
+            None,
+        )
+        if status is None:
+            raise ValueError(f"unrecognized Gatik status value in displayed row: {truck_id}")
+        stops = tail[: -len(status)].strip()
+        if stops not in GATIK_LIVE_STOPS_VALUES:
+            raise ValueError(f"unrecognized Gatik Stops value in displayed row: {truck_id}")
+        records.append(
+            {
+                "truck_label": truck_id,
+                "start_time": start_time,
+                "end_time": end_time,
+                "driving_time": driving_time,
+                "stops": stops,
+                "status": status,
+            }
+        )
+
+    return {
+        "time_zone_display": GATIK_LIVE_TIME_ZONE,
+        "refresh_interval_hours": 3,
+        "displayed_rows_complete": False,
+        "displayed_row_count": len(records),
+        "records": records,
+    }
 
 
 def fetch_source(source: dict[str, Any], data_root: Path) -> dict[str, Any]:
@@ -71,7 +141,7 @@ def fetch_source(source: dict[str, Any], data_root: Path) -> dict[str, Any]:
     path = objects / f"{digest}{suffix}"
     if not path.exists():
         path.write_bytes(raw)
-    return {
+    evidence = {
         "source_id": source_id,
         "authority": source["authority"],
         "source_url": url,
@@ -81,6 +151,12 @@ def fetch_source(source: dict[str, Any], data_root: Path) -> dict[str, Any]:
         "evidence_path": path.relative_to(data_root).as_posix(),
         "verified_markers": source.get("required_markers", []),
     }
+    parser_name = source.get("parser")
+    if parser_name == "gatik_live_operations":
+        evidence["structured_data"] = parse_gatik_live_operations(text)
+    elif parser_name is not None:
+        raise ValueError(f"unsupported primary source parser: {parser_name}")
+    return evidence
 
 
 def event_period_key(value: object) -> tuple[int, int, int]:
@@ -99,6 +175,9 @@ def validate_registry(registry: dict[str, Any]) -> None:
     sources = {str(row["source_id"]): row for row in registry.get("sources", [])}
     if len(sources) != len(registry.get("sources", [])) or len(sources) < 4:
         raise ValueError("source registry is incomplete or duplicated")
+    parser_names = {row.get("parser") for row in sources.values() if row.get("parser") is not None}
+    if not parser_names.issubset({"gatik_live_operations"}):
+        raise ValueError(f"unsupported source parser in registry: {sorted(parser_names)}")
     drones = registry.get("drone_part135") or []
     if len(drones) != 7:
         raise ValueError(f"FAA Part 135 operator registry must contain 7 current operators, got {len(drones)}")
@@ -149,6 +228,17 @@ def validate_registry(registry: dict[str, Any]) -> None:
             raise ValueError("event refers to unknown source")
 
 
+def validate_structured_evidence(registry: dict[str, Any], manifest: dict[str, Any]) -> None:
+    source_map = {row["source_id"]: row for row in manifest["sources"]}
+    live_sources = [source for source in registry["sources"] if source.get("parser") == "gatik_live_operations"]
+    if len(live_sources) != 1:
+        raise ValueError("registry must contain exactly one Gatik Live Operations source")
+    live_source_id = str(live_sources[0]["source_id"])
+    live_evidence = source_map.get(live_source_id)
+    if not live_evidence or "structured_data" not in live_evidence:
+        raise ValueError("Gatik Live Operations structured data is missing from verified evidence")
+
+
 def verify_manifest(data_root: Path) -> dict[str, Any]:
     manifest = json.loads((data_root / "raw" / "latest-manifest.json").read_text())
     for row in manifest["sources"]:
@@ -182,6 +272,23 @@ def build_api(registry: dict[str, Any], manifest: dict[str, Any], api_dir: Path)
     (api_dir / "events.json").write_bytes(dump({"schema_version": 1, "records": events}))
     (api_dir / "provenance.json").write_bytes(dump(manifest))
     (api_dir / "registry.json").write_bytes(dump(registry))
+
+    live_sources = [source for source in registry["sources"] if source.get("parser") == "gatik_live_operations"]
+    live_source_id = str(live_sources[0]["source_id"]) if len(live_sources) == 1 else None
+    live_evidence = source_map.get(live_source_id) if live_source_id else None
+    gatik_live = None
+    if live_evidence and "structured_data" in live_evidence:
+        gatik_live = {
+            "schema_version": 1,
+            "source_id": live_source_id,
+            "source_url": live_evidence["source_url"],
+            "source_sha256": live_evidence["sha256"],
+            "source_evidence_path": live_evidence["evidence_path"],
+            "retrieved_at": manifest["retrieved_at"],
+            **live_evidence["structured_data"],
+        }
+        (api_dir / "gatik-live-operations.json").write_bytes(dump(gatik_live))
+
     event_periods = [str(row["effective_at"]) for row in events]
     coverage = {
         "faa_part135_operator_count": len(drones),
@@ -194,18 +301,23 @@ def build_api(registry: dict[str, Any], manifest: dict[str, Any], api_dir: Path)
         "primary_source_count": len(manifest["sources"]),
         "raw_evidence_count": len(manifest["sources"]),
     }
+    views = {
+        "drone_part135": "drone-part135.json",
+        "trucking": "trucking.json",
+        "events": "events.json",
+        "registry": "registry.json",
+        "provenance": "provenance.json",
+    }
+    if gatik_live is not None:
+        coverage["gatik_live_displayed_row_count"] = gatik_live["displayed_row_count"]
+        coverage["gatik_live_displayed_rows_complete"] = gatik_live["displayed_rows_complete"]
+        views["gatik_live_operations"] = "gatik-live-operations.json"
     index = {
         "schema_version": 1,
         "dataset": "Autonomous logistics primary evidence",
         "retrieved_at": manifest["retrieved_at"],
         "coverage": coverage,
-        "views": {
-            "drone_part135": "drone-part135.json",
-            "trucking": "trucking.json",
-            "events": "events.json",
-            "registry": "registry.json",
-            "provenance": "provenance.json",
-        },
+        "views": views,
         "rules": registry["rules"],
     }
     (api_dir / "index.json").write_bytes(dump(index))
@@ -247,6 +359,7 @@ def main() -> None:
     registry = json.loads(args.registry.read_text())
     validate_registry(registry)
     manifest = verify_manifest(args.data_root) if args.offline else collect(registry, args.data_root)
+    validate_structured_evidence(registry, manifest)
     index = build_api(registry, manifest, args.api_dir)
     print(json.dumps(index["coverage"], sort_keys=True))
 

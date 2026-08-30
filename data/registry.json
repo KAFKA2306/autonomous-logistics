@@ -107,7 +107,7 @@
       "source_id": "kodiak-atlas-expansion-2026",
       "authority": "Kodiak AI, Inc. / Atlas Energy Solutions Inc.",
       "source_url": "https://investors.kodiak.ai/news-releases/news-release-details/atlas-energy-solutions-expands-ai-enabled-digital-transformation",
-      "required_markers": ["July 31, 2026", "As of March 31, 2026", "28 driverless trucks across 15 distinct routes", "approximately 7,000 loads", "more than 450,000 tons of sand", "over 23,500 driverless hours of operation", "On July 20", "176 loads of sand in a single day", "all-time daily high", "18 months of driverless deployments", "Permian Basin"]
+      "required_markers": ["July 31, 2026", "As of March 31, 2026", "28 driverless trucks across 15 distinct routes", "approximately 7,000 loads", "more than 450,000 tons of sand", "over 23,500 driverless hours of operation", "On July 20", "176 loads of sand in a single day", "all-time daily high", "18 months of driverless deployments", "Permian Basin", "three connected trailers simultaneously", "combined loaded weight of more than 135 tons"]
     }
   ],
   "drone_part135": [
@@ -150,6 +150,7 @@
     {"event_id":"kodiak-scale-2026-q2","operator_id":"kodiak","mode":"autonomous_trucking","event_type":"commercial_operation_snapshot","effective_at":"2026-06-30","operation_status":"commercial_driverless","source_id":"kodiak-q2-2026"},
     {"event_id":"kodiak-atlas-2026-q2","operator_id":"kodiak","mode":"autonomous_trucking","event_type":"commercial_operation_snapshot","effective_at":"2026-06-30","operation_status":"commercial_driverless","customer":"Atlas Energy Solutions","simultaneous_loadout_points":2,"dune_express_miles":42,"source_id":"kodiak-q2-2026"},
     {"event_id":"kodiak-daily-record-2026-07-20","operator_id":"kodiak","mode":"autonomous_trucking","event_type":"commercial_operation_snapshot","effective_at":"2026-07-20","operation_status":"commercial_driverless","geography":["Permian Basin"],"loads_single_day":176,"record_context":"all-time daily high across 18 months of driverless deployments with Atlas Energy Solutions","source_id":"kodiak-atlas-expansion-2026"},
+    {"event_id":"kodiak-atlas-triple-trailer-2026-07-31","operator_id":"kodiak","mode":"autonomous_trucking","event_type":"commercial_operation_snapshot","effective_at":"2026-07-31","operation_status":"commercial_driverless","customer":"Atlas Energy Solutions","trailers_per_truck":3,"combined_loaded_weight_tons":135,"combined_loaded_weight_tons_qualifier":"more than","source_id":"kodiak-atlas-expansion-2026"},
     {"event_id":"droneup-capacity-test-2024","operator_id":"droneup","mode":"drone_package_delivery","event_type":"capacity_test_snapshot","effective_at":"2024-08-06","operation_status":"testing","deliveries_single_day":500,"deliveries_per_hour":40,"max_package_weight_lb":10,"pilot_to_drone_ratio":"one-to-many","test_context":"research and development facility capacity testing for commercial partners","source_id":"droneup-capacity-test-2024"}
   ],
   "rules": [

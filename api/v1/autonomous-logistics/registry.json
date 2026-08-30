@@ -265,13 +265,33 @@
       "source_id": "aurora-q2-2026"
     },
     {
+      "driverless_hours": 2000,
+      "driverless_hours_qualifier": "more than",
+      "driverless_public_road_miles": 10000,
+      "driverless_public_road_miles_qualifier": "over",
       "effective_at": "2026-01-27",
       "event_id": "gatik-scale-2026",
       "event_type": "commercial_operation_snapshot",
+      "fully_driverless_orders": 60000,
+      "max_route_miles": 400,
+      "max_route_miles_qualifier": "up to",
       "mode": "autonomous_trucking",
       "operation_status": "commercial_driverless",
       "operator_id": "gatik",
       "source_id": "gatik-2026-scale"
+    },
+    {
+      "contracted_revenue_usd": 600000000,
+      "contracted_revenue_usd_qualifier": "more than",
+      "effective_at": "2026-08-25",
+      "event_id": "gatik-scale-2026-08-25",
+      "event_type": "commercial_operation_snapshot",
+      "fully_driverless_orders": 85000,
+      "mode": "autonomous_trucking",
+      "on_time_delivery_rate": 0.99,
+      "operation_status": "commercial_driverless",
+      "operator_id": "gatik",
+      "source_id": "gatik-2026-08-25-scale"
     },
     {
       "customer": "Atlas Energy Solutions",
@@ -566,6 +586,17 @@
       "source_url": "https://archive.gatik.ai/news/press-releases/gatik-becomes-first-us-company-to-operate-fully-driverless-trucks-at-scale-for-commercial-deliveries/"
     },
     {
+      "authority": "Gatik",
+      "required_markers": [
+        "Aug. 25, 2026",
+        "more than $600 million in contracted revenue",
+        "85,000 fully driverless orders completed",
+        "99% on-time delivery"
+      ],
+      "source_id": "gatik-2026-08-25-scale",
+      "source_url": "https://archive.gatik.ai/news/coverage/gatik-raises-200-million-series-d-led-by-qia-and-kdt-as-demand-for-driverless-commercial-freight-accelerates/"
+    },
+    {
       "authority": "Kodiak AI, Inc. / Atlas Energy Solutions Inc.",
       "required_markers": [
         "January 24, 2025",
@@ -672,14 +703,11 @@
     {
       "commercial": true,
       "current_snapshot": {
-        "as_of": "2026-01-27",
-        "driverless_hours": 2000,
-        "driverless_hours_qualifier": "more than",
-        "driverless_public_road_miles": 10000,
-        "driverless_public_road_miles_qualifier": "over",
-        "fully_driverless_orders": 60000,
-        "max_route_miles": 400,
-        "max_route_miles_qualifier": "up to"
+        "as_of": "2026-08-25",
+        "contracted_revenue_usd": 600000000,
+        "contracted_revenue_usd_qualifier": "more than",
+        "fully_driverless_orders": 85000,
+        "on_time_delivery_rate": 0.99
       },
       "geography": [
         "Texas",
@@ -691,7 +719,7 @@
       "operator_id": "gatik",
       "operator_name": "Gatik",
       "safety_observer_required": false,
-      "source_id": "gatik-2026-scale",
+      "source_id": "gatik-2026-08-25-scale",
       "system": "Gatik Driver",
       "vehicle_class": "freight-only autonomous trucks"
     },

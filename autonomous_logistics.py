@@ -23,7 +23,8 @@ ALLOWED_STATUSES = {"regulatory_authorization", "testing", "supervised", "commer
 USER_AGENT = "KAFKA2306 autonomous-logistics 137051370+KAFKA2306@users.noreply.github.com"
 GATIK_LIVE_HEADER = "Truck Start Time End Time Driving Time Stops Status"
 GATIK_LIVE_TIME_ZONE = "Pacific Standard Time (PST)"
-GATIK_LIVE_STATUS_VALUES = ("On Time", "Completed", "Ready", "Delayed")
+GATIK_LIVE_STOPS_VALUES = ("Completed", "Unloading", "Driving", "Loading", "Parked")
+GATIK_LIVE_STATUS_VALUES = ("On Time", "Completed", "Ready")
 
 
 def dump(value: object) -> bytes:
@@ -85,8 +86,8 @@ def parse_gatik_live_operations(text: str) -> dict[str, Any]:
         if status is None:
             raise ValueError(f"unrecognized Gatik status value in displayed row: {truck_id}")
         stops = tail[: -len(status)].strip()
-        if not stops:
-            raise ValueError(f"missing Gatik Stops value: {truck_id}")
+        if stops not in GATIK_LIVE_STOPS_VALUES:
+            raise ValueError(f"unrecognized Gatik Stops value in displayed row: {truck_id}")
         records.append(
             {
                 "truck_label": truck_id,
@@ -227,6 +228,17 @@ def validate_registry(registry: dict[str, Any]) -> None:
             raise ValueError("event refers to unknown source")
 
 
+def validate_structured_evidence(registry: dict[str, Any], manifest: dict[str, Any]) -> None:
+    source_map = {row["source_id"]: row for row in manifest["sources"]}
+    live_sources = [source for source in registry["sources"] if source.get("parser") == "gatik_live_operations"]
+    if len(live_sources) != 1:
+        raise ValueError("registry must contain exactly one Gatik Live Operations source")
+    live_source_id = str(live_sources[0]["source_id"])
+    live_evidence = source_map.get(live_source_id)
+    if not live_evidence or "structured_data" not in live_evidence:
+        raise ValueError("Gatik Live Operations structured data is missing from verified evidence")
+
+
 def verify_manifest(data_root: Path) -> dict[str, Any]:
     manifest = json.loads((data_root / "raw" / "latest-manifest.json").read_text())
     for row in manifest["sources"]:
@@ -262,22 +274,20 @@ def build_api(registry: dict[str, Any], manifest: dict[str, Any], api_dir: Path)
     (api_dir / "registry.json").write_bytes(dump(registry))
 
     live_sources = [source for source in registry["sources"] if source.get("parser") == "gatik_live_operations"]
-    if len(live_sources) != 1:
-        raise ValueError("registry must contain exactly one Gatik Live Operations source")
-    live_source_id = str(live_sources[0]["source_id"])
-    live_evidence = source_map.get(live_source_id)
-    if not live_evidence or "structured_data" not in live_evidence:
-        raise ValueError("Gatik Live Operations structured data is missing from verified evidence")
-    gatik_live = {
-        "schema_version": 1,
-        "source_id": live_source_id,
-        "source_url": live_evidence["source_url"],
-        "source_sha256": live_evidence["sha256"],
-        "source_evidence_path": live_evidence["evidence_path"],
-        "retrieved_at": manifest["retrieved_at"],
-        **live_evidence["structured_data"],
-    }
-    (api_dir / "gatik-live-operations.json").write_bytes(dump(gatik_live))
+    live_source_id = str(live_sources[0]["source_id"]) if len(live_sources) == 1 else None
+    live_evidence = source_map.get(live_source_id) if live_source_id else None
+    gatik_live = None
+    if live_evidence and "structured_data" in live_evidence:
+        gatik_live = {
+            "schema_version": 1,
+            "source_id": live_source_id,
+            "source_url": live_evidence["source_url"],
+            "source_sha256": live_evidence["sha256"],
+            "source_evidence_path": live_evidence["evidence_path"],
+            "retrieved_at": manifest["retrieved_at"],
+            **live_evidence["structured_data"],
+        }
+        (api_dir / "gatik-live-operations.json").write_bytes(dump(gatik_live))
 
     event_periods = [str(row["effective_at"]) for row in events]
     coverage = {
@@ -290,22 +300,24 @@ def build_api(registry: dict[str, Any], manifest: dict[str, Any], api_dir: Path)
         "events_2024_or_later": sum(event_period_key(value)[0] >= 2024 for value in event_periods),
         "primary_source_count": len(manifest["sources"]),
         "raw_evidence_count": len(manifest["sources"]),
-        "gatik_live_displayed_row_count": gatik_live["displayed_row_count"],
-        "gatik_live_displayed_rows_complete": gatik_live["displayed_rows_complete"],
     }
+    views = {
+        "drone_part135": "drone-part135.json",
+        "trucking": "trucking.json",
+        "events": "events.json",
+        "registry": "registry.json",
+        "provenance": "provenance.json",
+    }
+    if gatik_live is not None:
+        coverage["gatik_live_displayed_row_count"] = gatik_live["displayed_row_count"]
+        coverage["gatik_live_displayed_rows_complete"] = gatik_live["displayed_rows_complete"]
+        views["gatik_live_operations"] = "gatik-live-operations.json"
     index = {
         "schema_version": 1,
         "dataset": "Autonomous logistics primary evidence",
         "retrieved_at": manifest["retrieved_at"],
         "coverage": coverage,
-        "views": {
-            "drone_part135": "drone-part135.json",
-            "trucking": "trucking.json",
-            "events": "events.json",
-            "gatik_live_operations": "gatik-live-operations.json",
-            "registry": "registry.json",
-            "provenance": "provenance.json",
-        },
+        "views": views,
         "rules": registry["rules"],
     }
     (api_dir / "index.json").write_bytes(dump(index))
@@ -347,6 +359,7 @@ def main() -> None:
     registry = json.loads(args.registry.read_text())
     validate_registry(registry)
     manifest = verify_manifest(args.data_root) if args.offline else collect(registry, args.data_root)
+    validate_structured_evidence(registry, manifest)
     index = build_api(registry, manifest, args.api_dir)
     print(json.dumps(index["coverage"], sort_keys=True))
 

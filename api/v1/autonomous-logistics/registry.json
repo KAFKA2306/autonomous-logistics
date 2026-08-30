@@ -251,6 +251,20 @@
       "source_id": "faa-nepa-drone-operations"
     },
     {
+      "annual_run_rate_miles_per_truck": 225000,
+      "annual_run_rate_miles_per_truck_qualifier": "+",
+      "customer": "Werner",
+      "driverless_miles_per_truck_per_week": 4000,
+      "driverless_miles_per_truck_per_week_qualifier": "+",
+      "effective_at": "2026-05-06",
+      "event_id": "aurora-werner-utilization-2026-05-06",
+      "event_type": "commercial_operation_snapshot",
+      "mode": "autonomous_trucking",
+      "operation_status": "commercial_driverless",
+      "operator_id": "aurora",
+      "source_id": "aurora-q1-2026"
+    },
+    {
       "effective_at": "2026-06-30",
       "event_id": "aurora-current-2026",
       "event_type": "commercial_operation_snapshot",
@@ -571,6 +585,17 @@
       ],
       "source_id": "uber-zipline-partnership-2026",
       "source_url": "https://investor.uber.com/news-events/news/press-release-details/2026/Uber-and-Zipline-Partner-to-Bring-Drone-Delivery-to-Millions-of-Americans/default.aspx"
+    },
+    {
+      "authority": "Aurora Innovation",
+      "required_markers": [
+        "May 6, 2026",
+        "Werner",
+        "4,000+ miles per week",
+        "225,000+ miles per truck"
+      ],
+      "source_id": "aurora-q1-2026",
+      "source_url": "https://ir.aurora.tech/sec-filings/all-sec-filings/content/0001828108-26-000050/aurora26q1shareholderlet.htm"
     },
     {
       "authority": "Aurora Innovation",

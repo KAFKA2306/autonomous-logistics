@@ -18,6 +18,8 @@ This repository owns primary evidence for autonomous logistics: FAA-regulated UA
 4. Require definition, unit and jurisdiction comparability before aggregating operators or periods.
 5. Run the smallest relevant checks and verify the exact reviewed revision before merge.
 6. Stop at the fixed point. Do not infer commercial scale from authorization, testing or a planned program, and do not churn a blocked source when external state has not changed.
+7. Keep `README.md` and `AGENTS.md` at the repository root. If additional human-facing documentation is required, place it under the single `docs/` directory. Do not create parallel documentation directories such as `documentation/`, `notes/`, `reports/`, `research/` or `design/`.
+8. Do not create an empty `docs/` directory. Before adding a document, merge it into an existing current document when that preserves clarity; delete stale or duplicate documents instead of moving them.
 
 Cross-repository forecast comparison belongs in `investor2`; do not duplicate ARK or valuation forecast authority here. Do not execute trades, transfers or account actions.
 

@@ -636,6 +636,26 @@
       "source_url": "https://archive.gatik.ai/news/coverage/gatik-raises-200-million-series-d-led-by-qia-and-kdt-as-demand-for-driverless-commercial-freight-accelerates/"
     },
     {
+      "authority": "Gatik",
+      "parser": "gatik_live_operations",
+      "required_markers": [
+        "Everything below is live.",
+        "real trips from our operations",
+        "refreshed every 3 hours",
+        "Live Operations",
+        "Pacific Standard Time (PST)",
+        "Truck",
+        "Start Time",
+        "End Time",
+        "Driving Time",
+        "Stops",
+        "Status",
+        "Load more"
+      ],
+      "source_id": "gatik-live-operations",
+      "source_url": "https://www.gatik.ai/"
+    },
+    {
       "authority": "Kodiak AI, Inc. / Atlas Energy Solutions Inc.",
       "required_markers": [
         "January 24, 2025",

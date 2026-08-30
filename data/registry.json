@@ -86,6 +86,12 @@
       "required_markers": ["May 7, 2026", "28 Customer-Owned Driverless Vehicles", "23,500 hours of Cumulative Hours of Paid Driverless Operations", "15,600 cumulative loads", "approximately 24% growth over the end of Q4 2025"]
     },
     {
+      "source_id": "kodiak-roehl-commercial-2026",
+      "authority": "Kodiak AI, Inc.",
+      "source_url": "https://kodiak.ai/news/roehl-transport-autonomous-freight",
+      "required_markers": ["May 7, 2026", "Starting in April 2026", "between Dallas and Houston four times roundtrip per week for Roehl Transport", "launching driverless operations by the end of 2026"]
+    },
+    {
       "source_id": "kodiak-q2-2026",
       "authority": "Kodiak AI, Inc.",
       "source_url": "https://investors.kodiak.ai/news-releases/news-release-details/kodiak-ai-reports-second-quarter-2026-results-and-advances",
@@ -133,6 +139,7 @@
     {"event_id":"kodiak-scale-2025","operator_id":"kodiak","mode":"autonomous_trucking","event_type":"commercial_operation_snapshot","effective_at":"2025-06-10","operation_status":"commercial_driverless","customer":"Atlas Energy Solutions","driverless_trucks":4,"loads_cumulative":800,"loads_cumulative_qualifier":"over","driverless_hours_cumulative":1600,"driverless_hours_cumulative_qualifier":"over","service_availability":"up to 24/7","geography":["Permian Basin"],"source_id":"kodiak-2025-commercial"},
     {"event_id":"kodiak-company-2026-q1","operator_id":"kodiak","mode":"autonomous_trucking","event_type":"commercial_operation_snapshot","effective_at":"2026-03-31","operation_status":"commercial_driverless","customer_owned_driverless_vehicles":28,"paid_driverless_hours_cumulative":23500,"paid_driverless_hours_cumulative_qualifier":"over","loads_cumulative":15600,"loads_cumulative_qualifier":"more than","source_id":"kodiak-q1-2026"},
     {"event_id":"kodiak-atlas-2026-q1","operator_id":"kodiak","mode":"autonomous_trucking","event_type":"commercial_operation_snapshot","effective_at":"2026-03-31","operation_status":"commercial_driverless","customer":"Atlas Energy Solutions","driverless_trucks":28,"routes":15,"loads_cumulative":7000,"loads_cumulative_qualifier":"approximately","freight_tons_cumulative":450000,"freight_tons_cumulative_qualifier":"more than","driverless_hours_q1":23500,"driverless_hours_q1_qualifier":"over","source_id":"kodiak-atlas-expansion-2026"},
+    {"event_id":"kodiak-roehl-commercial-2026-04","operator_id":"kodiak","mode":"autonomous_trucking","event_type":"commercial_service_start","effective_at":"2026-04","operation_status":"commercial","customer":"Roehl Transport","geography":["between Dallas and Houston, Texas"],"roundtrips_per_week":4,"source_id":"kodiak-roehl-commercial-2026"},
     {"event_id":"kodiak-scale-2026-q2","operator_id":"kodiak","mode":"autonomous_trucking","event_type":"commercial_operation_snapshot","effective_at":"2026-06-30","operation_status":"commercial_driverless","source_id":"kodiak-q2-2026"},
     {"event_id":"kodiak-atlas-2026-q2","operator_id":"kodiak","mode":"autonomous_trucking","event_type":"commercial_operation_snapshot","effective_at":"2026-06-30","operation_status":"commercial_driverless","customer":"Atlas Energy Solutions","simultaneous_loadout_points":2,"dune_express_miles":42,"source_id":"kodiak-q2-2026"},
     {"event_id":"kodiak-daily-record-2026-07-20","operator_id":"kodiak","mode":"autonomous_trucking","event_type":"commercial_operation_snapshot","effective_at":"2026-07-20","operation_status":"commercial_driverless","geography":["Permian Basin"],"loads_single_day":176,"record_context":"all-time daily high across 18 months of driverless deployments with Atlas Energy Solutions","source_id":"kodiak-atlas-expansion-2026"},
@@ -148,6 +155,7 @@
     "If the current FAA page does not publish a current operating area, operating_area remains null rather than inferred from historical or launch geography.",
     "regulatory authorization, testing, supervised, commercial package delivery and commercial driverless trucking are kept distinct.",
     "planned routes or future driverless validation are not promoted to commercial_driverless facts.",
+    "Long-haul autonomous freight that is already commercial but whose driverless launch is still stated as future remains commercial, not commercial_driverless.",
     "operator statements and filings are stored with their original qualifiers such as nearly, over, or more than.",
     "Company-wide and customer-specific operating metrics are stored separately and are not added, interpolated, or overwritten across reporting scopes."
   ]

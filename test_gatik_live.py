@@ -37,7 +37,7 @@ class GatikLiveOperationsTests(unittest.TestCase):
 
     def test_missing_truck_label_fails_loudly(self):
         broken = VALID.replace("G-002A ", "", 1)
-        with self.assertRaisesRegex(ValueError, "row structure changed or a truck ID is missing"):
+        with self.assertRaisesRegex(ValueError, "unrecognized Gatik Stops value"):
             parse_gatik_live_operations(broken)
 
     def test_unknown_status_fails_loudly(self):

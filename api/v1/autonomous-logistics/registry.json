@@ -283,12 +283,22 @@
       "source_id": "kodiak-2025-commercial"
     },
     {
+      "customer": "Atlas Energy Solutions",
+      "driverless_hours_cumulative": 1600,
+      "driverless_hours_cumulative_qualifier": "over",
+      "driverless_trucks": 4,
       "effective_at": "2025-06-10",
       "event_id": "kodiak-scale-2025",
       "event_type": "commercial_operation_snapshot",
+      "geography": [
+        "Permian Basin"
+      ],
+      "loads_cumulative": 800,
+      "loads_cumulative_qualifier": "over",
       "mode": "autonomous_trucking",
       "operation_status": "commercial_driverless",
       "operator_id": "kodiak",
+      "service_availability": "up to 24/7",
       "source_id": "kodiak-2025-commercial"
     },
     {
@@ -527,9 +537,11 @@
       "authority": "Kodiak AI",
       "required_markers": [
         "June 10, 2025",
+        "Atlas now owns and operates four trucks equipped with the Kodiak Driver",
         "commercial operations with driverless trucks in December 2024",
         "over 800 loads",
         "over 1,600 hours of driverless service",
+        "up to 24/7 driverless service",
         "Permian Basin"
       ],
       "source_id": "kodiak-2025-commercial",

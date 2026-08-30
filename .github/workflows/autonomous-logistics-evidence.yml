@@ -21,7 +21,7 @@ on:
       - AGENTS.md
       - .github/workflows/autonomous-logistics-evidence.yml
   schedule:
-    - cron: '35 21 * * *'
+    - cron: '35 */3 * * *'
   workflow_dispatch:
 
 permissions:

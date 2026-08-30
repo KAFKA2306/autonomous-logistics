@@ -258,6 +258,7 @@ jobs:
           curl --fail --silent --show-error --location --retry 3 --retry-delay 5 "${PAGE_URL}api/v1/autonomous-logistics/index.json" | python -m json.tool >/dev/null
           curl --fail --silent --show-error --location --retry 3 --retry-delay 5 "${PAGE_URL}api/v1/autonomous-logistics/events.json" -o events.json
           curl --fail --silent --show-error --location --retry 3 --retry-delay 5 "${PAGE_URL}api/v1/autonomous-logistics/trucking.json" -o trucking.json
+          curl --fail --silent --show-error --location --retry 3 --retry-delay 5 "${PAGE_URL}api/v1/autonomous-logistics/gatik-live-operations.json" -o gatik-live-operations.json
           curl --fail --silent --show-error --location --retry 3 --retry-delay 5 "${PAGE_URL}deployment.json" -o deployment.json
           python - <<'PY'
           import json
@@ -265,6 +266,7 @@ jobs:
           deployment = json.loads(Path('deployment.json').read_text())
           events = json.loads(Path('events.json').read_text())['records']
           trucking = json.loads(Path('trucking.json').read_text())['records']
+          gatik_live = json.loads(Path('gatik-live-operations.json').read_text())
           latest = max(events, key=lambda row: row['effective_at'])
           by_event_id = {row['event_id']: row for row in events}
           kodiak_daily_record = by_event_id['kodiak-daily-record-2026-07-20']
@@ -277,6 +279,15 @@ jobs:
           assert deployment['latest_event_id'] == latest['event_id']
           assert deployment['latest_event_effective_at'] == latest['effective_at']
           assert isinstance(deployment['verified_state_changed_since_previous_collection'], bool)
+          assert gatik_live['source_id'] == 'gatik-live-operations'
+          assert gatik_live['source_url'] == 'https://www.gatik.ai/'
+          assert len(gatik_live['source_sha256']) == 64
+          assert gatik_live['displayed_rows_complete'] is False
+          assert gatik_live['displayed_row_count'] == len(gatik_live['records']) > 0
+          assert all(
+              set(row) == {'truck_label', 'start_time', 'end_time', 'driving_time', 'stops', 'status'}
+              for row in gatik_live['records']
+          )
           assert kodiak_daily_record['loads_single_day'] == 176
           assert kodiak_daily_record['operation_status'] == 'commercial_driverless'
           assert kodiak_company_q1['effective_at'] == '2026-03-31'

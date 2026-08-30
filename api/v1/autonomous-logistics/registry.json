@@ -557,7 +557,10 @@
         "January 27, 2026",
         "without a driver or safety observer",
         "Texas, Arkansas, and Arizona",
-        "60,000 fully driverless orders"
+        "60,000 fully driverless orders",
+        "more than 2,000 hours of driverless operation",
+        "over 10,000 driverless miles",
+        "routes extend up to 400 miles"
       ],
       "source_id": "gatik-2026-scale",
       "source_url": "https://archive.gatik.ai/news/press-releases/gatik-becomes-first-us-company-to-operate-fully-driverless-trucks-at-scale-for-commercial-deliveries/"
@@ -671,9 +674,12 @@
       "current_snapshot": {
         "as_of": "2026-01-27",
         "driverless_hours": 2000,
+        "driverless_hours_qualifier": "more than",
         "driverless_public_road_miles": 10000,
+        "driverless_public_road_miles_qualifier": "over",
         "fully_driverless_orders": 60000,
-        "max_route_miles": 400
+        "max_route_miles": 400,
+        "max_route_miles_qualifier": "up to"
       },
       "geography": [
         "Texas",

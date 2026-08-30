@@ -1,5 +1,5 @@
 {
-  "retrieved_at": "2026-08-30T07:45:12.470778+00:00",
+  "retrieved_at": "2026-08-30T09:46:08.828626+00:00",
   "schema_version": 1,
   "sources": [
     {
@@ -58,8 +58,8 @@
     {
       "authority": "DoorDash",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/790d96eddcf65895bbcf825c79d8f91d392b8a2ef218fa2bc8804a3fe06c264e.html",
-      "sha256": "790d96eddcf65895bbcf825c79d8f91d392b8a2ef218fa2bc8804a3fe06c264e",
+      "evidence_path": "raw/objects/b83bcd396d44f20572851dc5eb86eefe94ec924daec42f0d69f7933da0fd1675.html",
+      "sha256": "b83bcd396d44f20572851dc5eb86eefe94ec924daec42f0d69f7933da0fd1675",
       "size_bytes": 406072,
       "source_id": "doordash-air-part135-2026",
       "source_url": "https://about.doordash.com/en-us/news/doordash-air",
@@ -92,8 +92,8 @@
     {
       "authority": "DroneUp",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/89837e2d5796fa9f0d1e1fc079059ffa2c49392ff2d277315842cdb908cfb272.html",
-      "sha256": "89837e2d5796fa9f0d1e1fc079059ffa2c49392ff2d277315842cdb908cfb272",
+      "evidence_path": "raw/objects/489d9317525cee8ea0f065541cb413e684157df9b22a9ffe26234f7144b57387.html",
+      "sha256": "489d9317525cee8ea0f065541cb413e684157df9b22a9ffe26234f7144b57387",
       "size_bytes": 542818,
       "source_id": "droneup-capacity-test-2024",
       "source_url": "https://www.droneup.com/news/droneup-achieves-500-deliveries-per-day",
@@ -138,9 +138,9 @@
     {
       "authority": "Uber Technologies, Inc.",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/a8ee6543d180ff3e52163615013a925a6ce8f4f2ba2c9f5dadbc244e71c8da02.html",
-      "sha256": "a8ee6543d180ff3e52163615013a925a6ce8f4f2ba2c9f5dadbc244e71c8da02",
-      "size_bytes": 76953,
+      "evidence_path": "raw/objects/5276a63ab09a309f43810b0ce75fdca1ac1c9e87b0653b82896664775fcd991b.html",
+      "sha256": "5276a63ab09a309f43810b0ce75fdca1ac1c9e87b0653b82896664775fcd991b",
+      "size_bytes": 78739,
       "source_id": "uber-zipline-partnership-2026",
       "source_url": "https://investor.uber.com/news-events/news/press-release-details/2026/Uber-and-Zipline-Partner-to-Bring-Drone-Delivery-to-Millions-of-Americans/default.aspx",
       "verified_markers": [
@@ -169,8 +169,8 @@
     {
       "authority": "Gatik",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/cf179add7f71c91b56e6215cbd08fa550fb319a68275b0e94edb832a73c0073c.html",
-      "sha256": "cf179add7f71c91b56e6215cbd08fa550fb319a68275b0e94edb832a73c0073c",
+      "evidence_path": "raw/objects/690062f9c1543a73a8386d578a4f15c3dcfa2131976600ac7826fac73a8845fb.html",
+      "sha256": "690062f9c1543a73a8386d578a4f15c3dcfa2131976600ac7826fac73a8845fb",
       "size_bytes": 91731,
       "source_id": "gatik-2026-scale",
       "source_url": "https://archive.gatik.ai/news/press-releases/gatik-becomes-first-us-company-to-operate-fully-driverless-trucks-at-scale-for-commercial-deliveries/",
@@ -178,14 +178,17 @@
         "January 27, 2026",
         "without a driver or safety observer",
         "Texas, Arkansas, and Arizona",
-        "60,000 fully driverless orders"
+        "60,000 fully driverless orders",
+        "more than 2,000 hours of driverless operation",
+        "over 10,000 driverless miles",
+        "routes extend up to 400 miles"
       ]
     },
     {
       "authority": "Kodiak AI, Inc. / Atlas Energy Solutions Inc.",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/ae14de77fb5faac45a8123d01c554605f3f031360cfe570600e40f0aa72ecef0.html",
-      "sha256": "ae14de77fb5faac45a8123d01c554605f3f031360cfe570600e40f0aa72ecef0",
+      "evidence_path": "raw/objects/3bf9250174e1f5d66ec34bfeda53e0ce8ce76d7f284b82518b35c89a16e930bb.html",
+      "sha256": "3bf9250174e1f5d66ec34bfeda53e0ce8ce76d7f284b82518b35c89a16e930bb",
       "size_bytes": 156231,
       "source_id": "kodiak-atlas-commercial-start-2025",
       "source_url": "https://kodiak.ai/news/kodiak-delivers-customer-owned-autonomous-robotrucks-to-atlas",
@@ -199,8 +202,8 @@
     {
       "authority": "Kodiak AI",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/ba79320b37e7b3846222a9fccc8c0def9951d6113dd650f6377a539ee5614239.html",
-      "sha256": "ba79320b37e7b3846222a9fccc8c0def9951d6113dd650f6377a539ee5614239",
+      "evidence_path": "raw/objects/8be7bf9ce145185c45f5953e128f6c350273e11b9d449df32e4346239e320bc4.html",
+      "sha256": "8be7bf9ce145185c45f5953e128f6c350273e11b9d449df32e4346239e320bc4",
       "size_bytes": 126246,
       "source_id": "kodiak-2025-commercial",
       "source_url": "https://kodiak.ai/news/kodiak-delivers-two-additional-driverless-trucks",
@@ -233,9 +236,9 @@
     {
       "authority": "Kodiak AI, Inc.",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/d9c1d7c2cc57189a973ccca26e65cf80cc56bbcf3243ea3ff65b53216aa4baf4.html",
-      "sha256": "d9c1d7c2cc57189a973ccca26e65cf80cc56bbcf3243ea3ff65b53216aa4baf4",
-      "size_bytes": 136940,
+      "evidence_path": "raw/objects/f1d684cf20008e88ffadd82d5b05caec18f65e70dea6a7eaf408ffa0be95d9e6.html",
+      "sha256": "f1d684cf20008e88ffadd82d5b05caec18f65e70dea6a7eaf408ffa0be95d9e6",
+      "size_bytes": 136879,
       "source_id": "kodiak-roehl-commercial-2026",
       "source_url": "https://kodiak.ai/news/roehl-transport-autonomous-freight",
       "verified_markers": [

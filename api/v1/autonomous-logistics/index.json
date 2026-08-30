@@ -2,16 +2,16 @@
   "coverage": {
     "autonomous_trucking_operator_count": 3,
     "commercial_driverless_trucking_operator_count": 3,
-    "events_2024_or_later": 19,
+    "events_2024_or_later": 20,
     "faa_part135_operator_count": 7,
-    "operation_event_count": 24,
+    "operation_event_count": 25,
     "operation_event_first_period": "2019-09",
     "operation_event_last_period": "2026-08-18",
-    "primary_source_count": 16,
-    "raw_evidence_count": 16
+    "primary_source_count": 17,
+    "raw_evidence_count": 17
   },
   "dataset": "Autonomous logistics primary evidence",
-  "retrieved_at": "2026-08-30T06:40:42.867551+00:00",
+  "retrieved_at": "2026-08-30T07:45:12.470778+00:00",
   "rules": [
     "FAA Part 135 listing is regulatory authorization evidence and is not treated as proof of active commercial flights.",
     "When an operator primary source reports a new Part 135 authorization before the FAA package-delivery page is updated, preserve that authorization as a separate event without adding it to the FAA-listed registry view.",
@@ -22,6 +22,7 @@
     "If the current FAA page does not publish a current operating area, operating_area remains null rather than inferred from historical or launch geography.",
     "regulatory authorization, testing, supervised, commercial package delivery and commercial driverless trucking are kept distinct.",
     "planned routes or future driverless validation are not promoted to commercial_driverless facts.",
+    "Long-haul autonomous freight that is already commercial but whose driverless launch is still stated as future remains commercial, not commercial_driverless.",
     "operator statements and filings are stored with their original qualifiers such as nearly, over, or more than.",
     "Company-wide and customer-specific operating metrics are stored separately and are not added, interpolated, or overwritten across reporting scopes."
   ],

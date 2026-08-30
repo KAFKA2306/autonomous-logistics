@@ -348,6 +348,20 @@
       "source_id": "kodiak-atlas-expansion-2026"
     },
     {
+      "customer": "Roehl Transport",
+      "effective_at": "2026-04",
+      "event_id": "kodiak-roehl-commercial-2026-04",
+      "event_type": "commercial_service_start",
+      "geography": [
+        "between Dallas and Houston, Texas"
+      ],
+      "mode": "autonomous_trucking",
+      "operation_status": "commercial",
+      "operator_id": "kodiak",
+      "roundtrips_per_week": 4,
+      "source_id": "kodiak-roehl-commercial-2026"
+    },
+    {
       "effective_at": "2026-06-30",
       "event_id": "kodiak-scale-2026-q2",
       "event_type": "commercial_operation_snapshot",
@@ -407,6 +421,7 @@
     "If the current FAA page does not publish a current operating area, operating_area remains null rather than inferred from historical or launch geography.",
     "regulatory authorization, testing, supervised, commercial package delivery and commercial driverless trucking are kept distinct.",
     "planned routes or future driverless validation are not promoted to commercial_driverless facts.",
+    "Long-haul autonomous freight that is already commercial but whose driverless launch is still stated as future remains commercial, not commercial_driverless.",
     "operator statements and filings are stored with their original qualifiers such as nearly, over, or more than.",
     "Company-wide and customer-specific operating metrics are stored separately and are not added, interpolated, or overwritten across reporting scopes."
   ],
@@ -583,6 +598,17 @@
       ],
       "source_id": "kodiak-q1-2026",
       "source_url": "https://investors.kodiak.ai/news-releases/news-release-details/kodiak-ai-reports-first-quarter-2026-results-announces-100"
+    },
+    {
+      "authority": "Kodiak AI, Inc.",
+      "required_markers": [
+        "May 7, 2026",
+        "Starting in April 2026",
+        "between Dallas and Houston four times roundtrip per week for Roehl Transport",
+        "launching driverless operations by the end of 2026"
+      ],
+      "source_id": "kodiak-roehl-commercial-2026",
+      "source_url": "https://kodiak.ai/news/roehl-transport-autonomous-freight"
     },
     {
       "authority": "Kodiak AI, Inc.",

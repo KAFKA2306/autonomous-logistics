@@ -30,6 +30,7 @@ Cross-repository forecast comparison belongs in `investor2`; do not duplicate AR
 - Missing operating areas stay null with an explicit source limitation; never infer geography.
 - Future/planned driverless routes remain planned/supervised until a primary source states actual commercial driverless operation.
 - Preserve original qualifiers such as `nearly`, `more than`, or date scope.
+- Do not calculate deltas, rates, or growth from cumulative values that are only lower/upper bounds unless the available bounds are sufficient to prove the derived result; otherwise keep the derived value UNVERIFIED.
 - Do not compare or aggregate operator-specific throughput units such as Gatik `fully_driverless_orders` and Kodiak `loads` unless a primary source defines their unit equivalence; otherwise keep the original units separate.
 - Every normalized record must resolve to a raw source SHA-256.
 

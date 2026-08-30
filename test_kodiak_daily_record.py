@@ -7,6 +7,32 @@ class KodiakDailyRecordTests(unittest.TestCase):
     def setUp(self):
         self.registry = json.loads(Path("data/registry.json").read_text())
 
+    def test_december_2024_atlas_launch_and_january_2025_snapshot_match_primary_source(self):
+        events = {row["event_id"]: row for row in self.registry["operation_events"]}
+        launch = events["kodiak-launch-2024"]
+        snapshot = events["kodiak-atlas-2025-01-24"]
+
+        self.assertEqual(launch["effective_at"], "2024-12-18")
+        self.assertEqual(launch["event_type"], "commercial_service_start")
+        self.assertEqual(launch["operation_status"], "commercial_driverless")
+        self.assertEqual(launch["customer"], "Atlas Energy Solutions")
+        self.assertEqual(launch["driverless_trucks"], 2)
+        self.assertEqual(launch["source_id"], "kodiak-atlas-commercial-start-2025")
+
+        self.assertEqual(snapshot["effective_at"], "2025-01-24")
+        self.assertEqual(snapshot["event_type"], "commercial_operation_snapshot")
+        self.assertEqual(snapshot["customer"], "Atlas Energy Solutions")
+        self.assertEqual(snapshot["driverless_trucks"], 2)
+        self.assertEqual(snapshot["loads_cumulative"], 100)
+        self.assertNotIn("loads_cumulative_qualifier", snapshot)
+        self.assertEqual(snapshot["source_id"], "kodiak-atlas-commercial-start-2025")
+
+        sources = {row["source_id"]: row for row in self.registry["sources"]}
+        source = sources["kodiak-atlas-commercial-start-2025"]
+        self.assertIn("January 24, 2025", source["required_markers"])
+        self.assertIn("completed the delivery of 100 loads of proppant", source["required_markers"])
+        self.assertIn("driverless service with these trucks commenced on December 18th, 2024", source["required_markers"])
+
     def test_june_2025_atlas_metrics_match_primary_source(self):
         events = {row["event_id"]: row for row in self.registry["operation_events"]}
         event = events["kodiak-scale-2025"]

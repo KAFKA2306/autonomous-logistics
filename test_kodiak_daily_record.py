@@ -7,6 +7,30 @@ class KodiakDailyRecordTests(unittest.TestCase):
     def setUp(self):
         self.registry = json.loads(Path("data/registry.json").read_text())
 
+    def test_june_2025_atlas_metrics_match_primary_source(self):
+        events = {row["event_id"]: row for row in self.registry["operation_events"]}
+        event = events["kodiak-scale-2025"]
+        self.assertEqual(event["effective_at"], "2025-06-10")
+        self.assertEqual(event["operation_status"], "commercial_driverless")
+        self.assertEqual(event["customer"], "Atlas Energy Solutions")
+        self.assertEqual(event["driverless_trucks"], 4)
+        self.assertEqual(event["loads_cumulative"], 800)
+        self.assertEqual(event["loads_cumulative_qualifier"], "over")
+        self.assertEqual(event["driverless_hours_cumulative"], 1600)
+        self.assertEqual(event["driverless_hours_cumulative_qualifier"], "over")
+        self.assertEqual(event["service_availability"], "up to 24/7")
+        self.assertEqual(event["geography"], ["Permian Basin"])
+        self.assertEqual(event["source_id"], "kodiak-2025-commercial")
+
+        sources = {row["source_id"]: row for row in self.registry["sources"]}
+        source = sources["kodiak-2025-commercial"]
+        self.assertIn(
+            "Atlas now owns and operates four trucks equipped with the Kodiak Driver",
+            source["required_markers"],
+        )
+        self.assertIn("over 800 loads", source["required_markers"])
+        self.assertIn("over 1,600 hours of driverless service", source["required_markers"])
+
     def test_july_20_2026_daily_record_matches_primary_source(self):
         events = {row["event_id"]: row for row in self.registry["operation_events"]}
         event = events["kodiak-daily-record-2026-07-20"]

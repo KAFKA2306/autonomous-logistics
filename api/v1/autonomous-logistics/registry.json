@@ -292,12 +292,56 @@
       "source_id": "kodiak-2025-commercial"
     },
     {
+      "customer_owned_driverless_vehicles": 28,
+      "effective_at": "2026-03-31",
+      "event_id": "kodiak-company-2026-q1",
+      "event_type": "commercial_operation_snapshot",
+      "loads_cumulative": 15600,
+      "loads_cumulative_qualifier": "more than",
+      "mode": "autonomous_trucking",
+      "operation_status": "commercial_driverless",
+      "operator_id": "kodiak",
+      "paid_driverless_hours_cumulative": 23500,
+      "paid_driverless_hours_cumulative_qualifier": "over",
+      "source_id": "kodiak-q1-2026"
+    },
+    {
+      "customer": "Atlas Energy Solutions",
+      "driverless_hours_q1": 23500,
+      "driverless_hours_q1_qualifier": "over",
+      "driverless_trucks": 28,
+      "effective_at": "2026-03-31",
+      "event_id": "kodiak-atlas-2026-q1",
+      "event_type": "commercial_operation_snapshot",
+      "freight_tons_cumulative": 450000,
+      "freight_tons_cumulative_qualifier": "more than",
+      "loads_cumulative": 7000,
+      "loads_cumulative_qualifier": "approximately",
+      "mode": "autonomous_trucking",
+      "operation_status": "commercial_driverless",
+      "operator_id": "kodiak",
+      "routes": 15,
+      "source_id": "kodiak-atlas-expansion-2026"
+    },
+    {
       "effective_at": "2026-06-30",
       "event_id": "kodiak-scale-2026-q2",
       "event_type": "commercial_operation_snapshot",
       "mode": "autonomous_trucking",
       "operation_status": "commercial_driverless",
       "operator_id": "kodiak",
+      "source_id": "kodiak-q2-2026"
+    },
+    {
+      "customer": "Atlas Energy Solutions",
+      "dune_express_miles": 42,
+      "effective_at": "2026-06-30",
+      "event_id": "kodiak-atlas-2026-q2",
+      "event_type": "commercial_operation_snapshot",
+      "mode": "autonomous_trucking",
+      "operation_status": "commercial_driverless",
+      "operator_id": "kodiak",
+      "simultaneous_loadout_points": 2,
       "source_id": "kodiak-q2-2026"
     },
     {
@@ -339,7 +383,8 @@
     "If the current FAA page does not publish a current operating area, operating_area remains null rather than inferred from historical or launch geography.",
     "regulatory authorization, testing, supervised, commercial package delivery and commercial driverless trucking are kept distinct.",
     "planned routes or future driverless validation are not promoted to commercial_driverless facts.",
-    "operator statements and filings are stored with their original qualifiers such as nearly, over, or more than."
+    "operator statements and filings are stored with their original qualifiers such as nearly, over, or more than.",
+    "Company-wide and customer-specific operating metrics are stored separately and are not added, interpolated, or overwritten across reporting scopes."
   ],
   "schema_version": 1,
   "sources": [
@@ -493,6 +538,18 @@
     {
       "authority": "Kodiak AI, Inc.",
       "required_markers": [
+        "May 7, 2026",
+        "28 Customer-Owned Driverless Vehicles",
+        "23,500 hours of Cumulative Hours of Paid Driverless Operations",
+        "15,600 cumulative loads",
+        "approximately 24% growth over the end of Q4 2025"
+      ],
+      "source_id": "kodiak-q1-2026",
+      "source_url": "https://investors.kodiak.ai/news-releases/news-release-details/kodiak-ai-reports-first-quarter-2026-results-announces-100"
+    },
+    {
+      "authority": "Kodiak AI, Inc.",
+      "required_markers": [
         "35 Customer-Owned Driverless Vehicles",
         "40,000 Cumulative Hours of Paid Driverless Operations",
         "71% increase from the end of Q1",
@@ -509,6 +566,11 @@
       "authority": "Kodiak AI, Inc. / Atlas Energy Solutions Inc.",
       "required_markers": [
         "July 31, 2026",
+        "As of March 31, 2026",
+        "28 driverless trucks across 15 distinct routes",
+        "approximately 7,000 loads",
+        "more than 450,000 tons of sand",
+        "over 23,500 driverless hours of operation",
         "On July 20",
         "176 loads of sand in a single day",
         "all-time daily high",
@@ -569,7 +631,6 @@
       "current_snapshot": {
         "as_of": "2026-06-30",
         "customer_owned_driverless_vehicles": 35,
-        "dune_express_miles": 42,
         "freight_tons_q2_2026": 300000,
         "freight_tons_q2_2026_qualifier": "more than",
         "loads_cumulative": 20000,
@@ -578,10 +639,8 @@
         "loads_qoq_growth_qualifier": "approximately",
         "paid_driverless_hours_cumulative": 40000,
         "paid_driverless_hours_cumulative_qualifier": "surpassed",
-        "paid_driverless_hours_qoq_growth": 0.71,
-        "simultaneous_loadout_points": 2
+        "paid_driverless_hours_qoq_growth": 0.71
       },
-      "customer": "Atlas Energy Solutions",
       "geography": [
         "Permian Basin, West Texas",
         "eastern New Mexico"

@@ -1,5 +1,5 @@
 {
-  "retrieved_at": "2026-08-29T23:39:31.608459+00:00",
+  "retrieved_at": "2026-08-30T02:37:33.065716+00:00",
   "schema_version": 1,
   "sources": [
     {
@@ -58,8 +58,8 @@
     {
       "authority": "DoorDash",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/78679eadc2ff7cbfc95f5f6e6624d6647ee64473bf7e0cef2428e2d56a0f460c.html",
-      "sha256": "78679eadc2ff7cbfc95f5f6e6624d6647ee64473bf7e0cef2428e2d56a0f460c",
+      "evidence_path": "raw/objects/6a0c030452e3754311fb377fc4a8062d1b9b531ed52998b7ff764e686b2b200a.html",
+      "sha256": "6a0c030452e3754311fb377fc4a8062d1b9b531ed52998b7ff764e686b2b200a",
       "size_bytes": 406072,
       "source_id": "doordash-air-part135-2026",
       "source_url": "https://about.doordash.com/en-us/news/doordash-air",
@@ -92,8 +92,8 @@
     {
       "authority": "DroneUp",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/e3e1f6c25776f97efc81553c5400613413ec9e932ec258251f14a925ffc0564d.html",
-      "sha256": "e3e1f6c25776f97efc81553c5400613413ec9e932ec258251f14a925ffc0564d",
+      "evidence_path": "raw/objects/c53f208a634e817b9c32ffa10587f180266fb78b72be59f7a7477d635e2f023a.html",
+      "sha256": "c53f208a634e817b9c32ffa10587f180266fb78b72be59f7a7477d635e2f023a",
       "size_bytes": 542818,
       "source_id": "droneup-capacity-test-2024",
       "source_url": "https://www.droneup.com/news/droneup-achieves-500-deliveries-per-day",
@@ -169,8 +169,8 @@
     {
       "authority": "Gatik",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/4ad0e03d8b6ad9e69db899d8f8b5c92a07d90768200628f846aed15649f7f7db.html",
-      "sha256": "4ad0e03d8b6ad9e69db899d8f8b5c92a07d90768200628f846aed15649f7f7db",
+      "evidence_path": "raw/objects/742b8ed17cd83990fb687f5fbbcd040307f6c469bfcc99b121593602e0f2d127.html",
+      "sha256": "742b8ed17cd83990fb687f5fbbcd040307f6c469bfcc99b121593602e0f2d127",
       "size_bytes": 91731,
       "source_id": "gatik-2026-scale",
       "source_url": "https://archive.gatik.ai/news/press-releases/gatik-becomes-first-us-company-to-operate-fully-driverless-trucks-at-scale-for-commercial-deliveries/",
@@ -184,9 +184,9 @@
     {
       "authority": "Kodiak AI",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/fded7f0cc2ba3b735712321b8c62573a6dc584edf20f99ba8e270ab44340eed7.html",
-      "sha256": "fded7f0cc2ba3b735712321b8c62573a6dc584edf20f99ba8e270ab44340eed7",
-      "size_bytes": 126311,
+      "evidence_path": "raw/objects/982e22e1cbb9dcaf81328074156ba5e432a60842734ed280f2b99d1deb3bd74f.html",
+      "sha256": "982e22e1cbb9dcaf81328074156ba5e432a60842734ed280f2b99d1deb3bd74f",
+      "size_bytes": 126246,
       "source_id": "kodiak-2025-commercial",
       "source_url": "https://kodiak.ai/news/kodiak-delivers-two-additional-driverless-trucks",
       "verified_markers": [
@@ -195,6 +195,22 @@
         "over 800 loads",
         "over 1,600 hours of driverless service",
         "Permian Basin"
+      ]
+    },
+    {
+      "authority": "Kodiak AI, Inc.",
+      "content_type": "text/html",
+      "evidence_path": "raw/objects/7fb2246b1fa5ccd6ca1ee305bb462282f11a53bb2998db7eb2f4d7ec8cabfb3d.html",
+      "sha256": "7fb2246b1fa5ccd6ca1ee305bb462282f11a53bb2998db7eb2f4d7ec8cabfb3d",
+      "size_bytes": 187096,
+      "source_id": "kodiak-q1-2026",
+      "source_url": "https://investors.kodiak.ai/news-releases/news-release-details/kodiak-ai-reports-first-quarter-2026-results-announces-100",
+      "verified_markers": [
+        "May 7, 2026",
+        "28 Customer-Owned Driverless Vehicles",
+        "23,500 hours of Cumulative Hours of Paid Driverless Operations",
+        "15,600 cumulative loads",
+        "approximately 24% growth over the end of Q4 2025"
       ]
     },
     {
@@ -219,13 +235,18 @@
     {
       "authority": "Kodiak AI, Inc. / Atlas Energy Solutions Inc.",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/9035ed09b41c86454827929cdb9a8b86c72c40efe50dec77aa0779047ed143f7.html",
-      "sha256": "9035ed09b41c86454827929cdb9a8b86c72c40efe50dec77aa0779047ed143f7",
-      "size_bytes": 47248,
+      "evidence_path": "raw/objects/5a091a12fe7043fe9e7d68530b2bddd8f8e3b270cd162a58b743848101a4120e.html",
+      "sha256": "5a091a12fe7043fe9e7d68530b2bddd8f8e3b270cd162a58b743848101a4120e",
+      "size_bytes": 48265,
       "source_id": "kodiak-atlas-expansion-2026",
       "source_url": "https://investors.kodiak.ai/news-releases/news-release-details/atlas-energy-solutions-expands-ai-enabled-digital-transformation",
       "verified_markers": [
         "July 31, 2026",
+        "As of March 31, 2026",
+        "28 driverless trucks across 15 distinct routes",
+        "approximately 7,000 loads",
+        "more than 450,000 tons of sand",
+        "over 23,500 driverless hours of operation",
         "On July 20",
         "176 loads of sand in a single day",
         "all-time daily high",

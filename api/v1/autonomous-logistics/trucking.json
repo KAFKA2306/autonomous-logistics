@@ -43,9 +43,9 @@
       "operator_id": "gatik",
       "operator_name": "Gatik",
       "safety_observer_required": false,
-      "source_evidence_path": "raw/objects/4ad0e03d8b6ad9e69db899d8f8b5c92a07d90768200628f846aed15649f7f7db.html",
+      "source_evidence_path": "raw/objects/742b8ed17cd83990fb687f5fbbcd040307f6c469bfcc99b121593602e0f2d127.html",
       "source_id": "gatik-2026-scale",
-      "source_sha256": "4ad0e03d8b6ad9e69db899d8f8b5c92a07d90768200628f846aed15649f7f7db",
+      "source_sha256": "742b8ed17cd83990fb687f5fbbcd040307f6c469bfcc99b121593602e0f2d127",
       "source_url": "https://archive.gatik.ai/news/press-releases/gatik-becomes-first-us-company-to-operate-fully-driverless-trucks-at-scale-for-commercial-deliveries/",
       "system": "Gatik Driver",
       "vehicle_class": "freight-only autonomous trucks"
@@ -55,7 +55,6 @@
       "current_snapshot": {
         "as_of": "2026-06-30",
         "customer_owned_driverless_vehicles": 35,
-        "dune_express_miles": 42,
         "freight_tons_q2_2026": 300000,
         "freight_tons_q2_2026_qualifier": "more than",
         "loads_cumulative": 20000,
@@ -64,10 +63,8 @@
         "loads_qoq_growth_qualifier": "approximately",
         "paid_driverless_hours_cumulative": 40000,
         "paid_driverless_hours_cumulative_qualifier": "surpassed",
-        "paid_driverless_hours_qoq_growth": 0.71,
-        "simultaneous_loadout_points": 2
+        "paid_driverless_hours_qoq_growth": 0.71
       },
-      "customer": "Atlas Energy Solutions",
       "geography": [
         "Permian Basin, West Texas",
         "eastern New Mexico"

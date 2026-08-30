@@ -68,6 +68,12 @@
       "required_markers": ["January 27, 2026", "without a driver or safety observer", "Texas, Arkansas, and Arizona", "60,000 fully driverless orders"]
     },
     {
+      "source_id": "kodiak-atlas-commercial-start-2025",
+      "authority": "Kodiak AI, Inc. / Atlas Energy Solutions Inc.",
+      "source_url": "https://kodiak.ai/news/kodiak-delivers-customer-owned-autonomous-robotrucks-to-atlas",
+      "required_markers": ["January 24, 2025", "completed the delivery of 100 loads of proppant", "two RoboTrucks", "driverless service with these trucks commenced on December 18th, 2024"]
+    },
+    {
       "source_id": "kodiak-2025-commercial",
       "authority": "Kodiak AI",
       "source_url": "https://kodiak.ai/news/kodiak-delivers-two-additional-driverless-trucks",
@@ -122,7 +128,8 @@
     {"event_id":"wing-houston-nepa-fonsi-2026","operator_id":"wing-aviation","mode":"drone_package_delivery","event_type":"environmental_authorization","effective_at":"2026-08-18","operation_status":"regulatory_authorization","authorization_type":"NEPA Finding of No Significant Impact / Record of Decision","geography":["Houston metropolitan area, Texas"],"source_id":"faa-nepa-drone-operations"},
     {"event_id":"aurora-current-2026","operator_id":"aurora","mode":"autonomous_trucking","event_type":"commercial_operation_snapshot","effective_at":"2026-06-30","operation_status":"commercial_driverless","geography":["Midland, Texas","Monahans, Texas","Interstate 20 between Midland and Monahans, Texas"],"source_id":"aurora-q2-2026"},
     {"event_id":"gatik-scale-2026","operator_id":"gatik","mode":"autonomous_trucking","event_type":"commercial_operation_snapshot","effective_at":"2026-01-27","operation_status":"commercial_driverless","source_id":"gatik-2026-scale"},
-    {"event_id":"kodiak-launch-2024","operator_id":"kodiak","mode":"autonomous_trucking","event_type":"commercial_service_start","effective_at":"2024-12-01","operation_status":"commercial_driverless","source_id":"kodiak-2025-commercial"},
+    {"event_id":"kodiak-launch-2024","operator_id":"kodiak","mode":"autonomous_trucking","event_type":"commercial_service_start","effective_at":"2024-12-18","operation_status":"commercial_driverless","customer":"Atlas Energy Solutions","driverless_trucks":2,"source_id":"kodiak-atlas-commercial-start-2025"},
+    {"event_id":"kodiak-atlas-2025-01-24","operator_id":"kodiak","mode":"autonomous_trucking","event_type":"commercial_operation_snapshot","effective_at":"2025-01-24","operation_status":"commercial_driverless","customer":"Atlas Energy Solutions","driverless_trucks":2,"loads_cumulative":100,"source_id":"kodiak-atlas-commercial-start-2025"},
     {"event_id":"kodiak-scale-2025","operator_id":"kodiak","mode":"autonomous_trucking","event_type":"commercial_operation_snapshot","effective_at":"2025-06-10","operation_status":"commercial_driverless","customer":"Atlas Energy Solutions","driverless_trucks":4,"loads_cumulative":800,"loads_cumulative_qualifier":"over","driverless_hours_cumulative":1600,"driverless_hours_cumulative_qualifier":"over","service_availability":"up to 24/7","geography":["Permian Basin"],"source_id":"kodiak-2025-commercial"},
     {"event_id":"kodiak-company-2026-q1","operator_id":"kodiak","mode":"autonomous_trucking","event_type":"commercial_operation_snapshot","effective_at":"2026-03-31","operation_status":"commercial_driverless","customer_owned_driverless_vehicles":28,"paid_driverless_hours_cumulative":23500,"paid_driverless_hours_cumulative_qualifier":"over","loads_cumulative":15600,"loads_cumulative_qualifier":"more than","source_id":"kodiak-q1-2026"},
     {"event_id":"kodiak-atlas-2026-q1","operator_id":"kodiak","mode":"autonomous_trucking","event_type":"commercial_operation_snapshot","effective_at":"2026-03-31","operation_status":"commercial_driverless","customer":"Atlas Energy Solutions","driverless_trucks":28,"routes":15,"loads_cumulative":7000,"loads_cumulative_qualifier":"approximately","freight_tons_cumulative":450000,"freight_tons_cumulative_qualifier":"more than","driverless_hours_q1":23500,"driverless_hours_q1_qualifier":"over","source_id":"kodiak-atlas-expansion-2026"},

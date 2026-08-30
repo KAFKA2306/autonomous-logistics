@@ -257,17 +257,21 @@ jobs:
           grep -F '今回の取得では、確認済み状態の変更はありません' index.html
           curl --fail --silent --show-error --location --retry 3 --retry-delay 5 "${PAGE_URL}api/v1/autonomous-logistics/index.json" | python -m json.tool >/dev/null
           curl --fail --silent --show-error --location --retry 3 --retry-delay 5 "${PAGE_URL}api/v1/autonomous-logistics/events.json" -o events.json
+          curl --fail --silent --show-error --location --retry 3 --retry-delay 5 "${PAGE_URL}api/v1/autonomous-logistics/trucking.json" -o trucking.json
           curl --fail --silent --show-error --location --retry 3 --retry-delay 5 "${PAGE_URL}deployment.json" -o deployment.json
           python - <<'PY'
           import json
           from pathlib import Path
           deployment = json.loads(Path('deployment.json').read_text())
           events = json.loads(Path('events.json').read_text())['records']
+          trucking = json.loads(Path('trucking.json').read_text())['records']
           latest = max(events, key=lambda row: row['effective_at'])
-          kodiak_daily_record = next(
-              row for row in events
-              if row['event_id'] == 'kodiak-daily-record-2026-07-20'
-          )
+          by_event_id = {row['event_id']: row for row in events}
+          kodiak_daily_record = by_event_id['kodiak-daily-record-2026-07-20']
+          kodiak_company_q1 = by_event_id['kodiak-company-2026-q1']
+          kodiak_atlas_q1 = by_event_id['kodiak-atlas-2026-q1']
+          kodiak_atlas_q2 = by_event_id['kodiak-atlas-2026-q2']
+          kodiak = next(row for row in trucking if row['operator_id'] == 'kodiak')
           assert len(deployment['source_commit_sha']) == 40
           assert deployment['dataset_retrieved_at']
           assert deployment['latest_event_id'] == latest['event_id']
@@ -275,4 +279,23 @@ jobs:
           assert isinstance(deployment['verified_state_changed_since_previous_collection'], bool)
           assert kodiak_daily_record['loads_single_day'] == 176
           assert kodiak_daily_record['operation_status'] == 'commercial_driverless'
+          assert kodiak_company_q1['effective_at'] == '2026-03-31'
+          assert kodiak_company_q1['loads_cumulative'] == 15600
+          assert kodiak_company_q1['loads_cumulative_qualifier'] == 'more than'
+          assert 'customer' not in kodiak_company_q1
+          assert kodiak_atlas_q1['effective_at'] == '2026-03-31'
+          assert kodiak_atlas_q1['customer'] == 'Atlas Energy Solutions'
+          assert kodiak_atlas_q1['loads_cumulative'] == 7000
+          assert kodiak_atlas_q1['loads_cumulative_qualifier'] == 'approximately'
+          assert kodiak_atlas_q1['routes'] == 15
+          assert kodiak_atlas_q1['freight_tons_cumulative'] == 450000
+          assert kodiak_atlas_q2['customer'] == 'Atlas Energy Solutions'
+          assert kodiak_atlas_q2['simultaneous_loadout_points'] == 2
+          assert kodiak_atlas_q2['dune_express_miles'] == 42
+          assert 'customer' not in kodiak
+          assert kodiak['current_snapshot']['customer_owned_driverless_vehicles'] == 35
+          assert kodiak['current_snapshot']['paid_driverless_hours_cumulative'] == 40000
+          assert kodiak['current_snapshot']['loads_cumulative'] == 20000
+          assert 'simultaneous_loadout_points' not in kodiak['current_snapshot']
+          assert 'dune_express_miles' not in kodiak['current_snapshot']
           PY

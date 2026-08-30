@@ -274,13 +274,27 @@
       "source_id": "gatik-2026-scale"
     },
     {
-      "effective_at": "2024-12-01",
+      "customer": "Atlas Energy Solutions",
+      "driverless_trucks": 2,
+      "effective_at": "2024-12-18",
       "event_id": "kodiak-launch-2024",
       "event_type": "commercial_service_start",
       "mode": "autonomous_trucking",
       "operation_status": "commercial_driverless",
       "operator_id": "kodiak",
-      "source_id": "kodiak-2025-commercial"
+      "source_id": "kodiak-atlas-commercial-start-2025"
+    },
+    {
+      "customer": "Atlas Energy Solutions",
+      "driverless_trucks": 2,
+      "effective_at": "2025-01-24",
+      "event_id": "kodiak-atlas-2025-01-24",
+      "event_type": "commercial_operation_snapshot",
+      "loads_cumulative": 100,
+      "mode": "autonomous_trucking",
+      "operation_status": "commercial_driverless",
+      "operator_id": "kodiak",
+      "source_id": "kodiak-atlas-commercial-start-2025"
     },
     {
       "customer": "Atlas Energy Solutions",
@@ -532,6 +546,17 @@
       ],
       "source_id": "gatik-2026-scale",
       "source_url": "https://archive.gatik.ai/news/press-releases/gatik-becomes-first-us-company-to-operate-fully-driverless-trucks-at-scale-for-commercial-deliveries/"
+    },
+    {
+      "authority": "Kodiak AI, Inc. / Atlas Energy Solutions Inc.",
+      "required_markers": [
+        "January 24, 2025",
+        "completed the delivery of 100 loads of proppant",
+        "two RoboTrucks",
+        "driverless service with these trucks commenced on December 18th, 2024"
+      ],
+      "source_id": "kodiak-atlas-commercial-start-2025",
+      "source_url": "https://kodiak.ai/news/kodiak-delivers-customer-owned-autonomous-robotrucks-to-atlas"
     },
     {
       "authority": "Kodiak AI",

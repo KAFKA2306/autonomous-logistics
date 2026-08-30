@@ -316,7 +316,7 @@ class AutonomousLogisticsEvidenceTests(unittest.TestCase):
             index["coverage"]["primary_source_count"], len(self.registry["sources"])
         )
         self.assertEqual(index["coverage"]["operation_event_first_period"], "2019-09")
-        self.assertEqual(index["coverage"]["operation_event_last_period"], "2026-08-18")
+        self.assertEqual(index["coverage"]["operation_event_last_period"], "2026-08-25")
         self.assertEqual(
             index["coverage"]["events_2024_or_later"],
             sum(

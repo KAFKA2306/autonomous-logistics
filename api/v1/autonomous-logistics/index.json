@@ -13,7 +13,7 @@
     "raw_evidence_count": 20
   },
   "dataset": "Autonomous logistics primary evidence",
-  "retrieved_at": "2026-08-30T21:39:43.292027+00:00",
+  "retrieved_at": "2026-08-31T06:00:55.898021+00:00",
   "rules": [
     "FAA Part 135 listing is regulatory authorization evidence and is not treated as proof of active commercial flights.",
     "When an operator primary source reports a new Part 135 authorization before the FAA package-delivery page is updated, preserve that authorization as a separate event without adding it to the FAA-listed registry view.",

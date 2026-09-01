@@ -25,9 +25,9 @@
       "mode": "drone_package_delivery",
       "operation_status": "commercial",
       "operator_id": "wing-aviation",
-      "source_evidence_path": "raw/objects/76171208e35efb83da5133639c155308f7059942c1a8c31a7d32b3a78a0c8f33.html",
+      "source_evidence_path": "raw/objects/fdac599e27886047cb13df0720902cada6d66a7a5b281486f626e1a1db069e01.html",
       "source_id": "wing-christiansburg-commercial-start-2019",
-      "source_sha256": "76171208e35efb83da5133639c155308f7059942c1a8c31a7d32b3a78a0c8f33",
+      "source_sha256": "fdac599e27886047cb13df0720902cada6d66a7a5b281486f626e1a1db069e01",
       "source_url": "https://wing.com/news/wing-launches-americas-first-commercial"
     },
     {
@@ -142,9 +142,9 @@
       "mode": "drone_package_delivery",
       "operation_status": "commercial",
       "operator_id": "wing-aviation",
-      "source_evidence_path": "raw/objects/bef889a95d19aba6b04b44217375fd68b6282d3c0468d7ea70be052728f2098c.html",
+      "source_evidence_path": "raw/objects/bd1beccd08bdb8b8445a851399b2ba8fba6f2b37b7a7795baea1146917870364.html",
       "source_id": "wing-commercial-scale-2026",
-      "source_sha256": "bef889a95d19aba6b04b44217375fd68b6282d3c0468d7ea70be052728f2098c",
+      "source_sha256": "bd1beccd08bdb8b8445a851399b2ba8fba6f2b37b7a7795baea1146917870364",
       "source_url": "https://wing.com/news/wing-and-walmart-seven-new-markets-drone-delivery"
     },
     {
@@ -173,9 +173,9 @@
       "operation_status": "regulatory_authorization",
       "operator_id": "doordash-air",
       "operator_name": "DoorDash Air / DoorDash Labs",
-      "source_evidence_path": "raw/objects/923d6ba0a3b32d0e894226981cdd1388cb6ffa50f65f8050447d362197ec83df.html",
+      "source_evidence_path": "raw/objects/fd948ea81fbea351a70469171ff2d70141121db9f8e4f00484ce50770913e4ba.html",
       "source_id": "doordash-air-part135-2026",
-      "source_sha256": "923d6ba0a3b32d0e894226981cdd1388cb6ffa50f65f8050447d362197ec83df",
+      "source_sha256": "fd948ea81fbea351a70469171ff2d70141121db9f8e4f00484ce50770913e4ba",
       "source_url": "https://about.doordash.com/en-us/news/doordash-air"
     },
     {
@@ -189,9 +189,9 @@
       "mode": "drone_package_delivery",
       "operation_status": "commercial",
       "operator_id": "zipline",
-      "source_evidence_path": "raw/objects/daffa3ad8accf3abd2c0a9e29e2a0bf244ecf7e52b8f14cd2d23d65574cf03a4.html",
+      "source_evidence_path": "raw/objects/7cbd351acc9931158e9a821ca2d4ae27abd5dc08c6ef3699075b6dc74204cd7e.html",
       "source_id": "uber-zipline-partnership-2026",
-      "source_sha256": "daffa3ad8accf3abd2c0a9e29e2a0bf244ecf7e52b8f14cd2d23d65574cf03a4",
+      "source_sha256": "7cbd351acc9931158e9a821ca2d4ae27abd5dc08c6ef3699075b6dc74204cd7e",
       "source_url": "https://investor.uber.com/news-events/news/press-release-details/2026/Uber-and-Zipline-Partner-to-Bring-Drone-Delivery-to-Millions-of-Americans/default.aspx"
     },
     {
@@ -258,9 +258,9 @@
       "mode": "autonomous_trucking",
       "operation_status": "commercial_driverless",
       "operator_id": "gatik",
-      "source_evidence_path": "raw/objects/cf7248ab6ad54821158f7b7418ffb4bdf716d303d74041af13ddedab71158dfb.html",
+      "source_evidence_path": "raw/objects/6ff1e810d1be85182af0a292acace69d3f7489f35219f7a800498dc5e967b4e1.html",
       "source_id": "gatik-2026-scale",
-      "source_sha256": "cf7248ab6ad54821158f7b7418ffb4bdf716d303d74041af13ddedab71158dfb",
+      "source_sha256": "6ff1e810d1be85182af0a292acace69d3f7489f35219f7a800498dc5e967b4e1",
       "source_url": "https://archive.gatik.ai/news/press-releases/gatik-becomes-first-us-company-to-operate-fully-driverless-trucks-at-scale-for-commercial-deliveries/"
     },
     {
@@ -274,9 +274,9 @@
       "on_time_delivery_rate": 0.99,
       "operation_status": "commercial_driverless",
       "operator_id": "gatik",
-      "source_evidence_path": "raw/objects/850f0e48a7249e15d1bf54ee20bf831de1d49bd991397098018c9ad7d01e46b5.html",
+      "source_evidence_path": "raw/objects/c8c80b3cb2e36bf60bd2d988bc2ceb0081aa25b352662525f1a8a6d2d639a1d0.html",
       "source_id": "gatik-2026-08-25-scale",
-      "source_sha256": "850f0e48a7249e15d1bf54ee20bf831de1d49bd991397098018c9ad7d01e46b5",
+      "source_sha256": "c8c80b3cb2e36bf60bd2d988bc2ceb0081aa25b352662525f1a8a6d2d639a1d0",
       "source_url": "https://archive.gatik.ai/news/coverage/gatik-raises-200-million-series-d-led-by-qia-and-kdt-as-demand-for-driverless-commercial-freight-accelerates/"
     },
     {
@@ -288,9 +288,9 @@
       "mode": "autonomous_trucking",
       "operation_status": "commercial_driverless",
       "operator_id": "kodiak",
-      "source_evidence_path": "raw/objects/aac5472434c15b61efbbadd4467c4ee0711494e8a7c3c664f8ab1f2c68d35a72.html",
+      "source_evidence_path": "raw/objects/dc099b672fb8e615ab70bada05211ac2facb31f5a8356a90957ac6bac509336d.html",
       "source_id": "kodiak-atlas-commercial-start-2025",
-      "source_sha256": "aac5472434c15b61efbbadd4467c4ee0711494e8a7c3c664f8ab1f2c68d35a72",
+      "source_sha256": "dc099b672fb8e615ab70bada05211ac2facb31f5a8356a90957ac6bac509336d",
       "source_url": "https://kodiak.ai/news/kodiak-delivers-customer-owned-autonomous-robotrucks-to-atlas"
     },
     {
@@ -303,9 +303,9 @@
       "mode": "autonomous_trucking",
       "operation_status": "commercial_driverless",
       "operator_id": "kodiak",
-      "source_evidence_path": "raw/objects/aac5472434c15b61efbbadd4467c4ee0711494e8a7c3c664f8ab1f2c68d35a72.html",
+      "source_evidence_path": "raw/objects/dc099b672fb8e615ab70bada05211ac2facb31f5a8356a90957ac6bac509336d.html",
       "source_id": "kodiak-atlas-commercial-start-2025",
-      "source_sha256": "aac5472434c15b61efbbadd4467c4ee0711494e8a7c3c664f8ab1f2c68d35a72",
+      "source_sha256": "dc099b672fb8e615ab70bada05211ac2facb31f5a8356a90957ac6bac509336d",
       "source_url": "https://kodiak.ai/news/kodiak-delivers-customer-owned-autonomous-robotrucks-to-atlas"
     },
     {
@@ -325,9 +325,9 @@
       "operation_status": "commercial_driverless",
       "operator_id": "kodiak",
       "service_availability": "up to 24/7",
-      "source_evidence_path": "raw/objects/c47cb190ec034f22149685e91eabe089727aaaeda79ed36d462a96609b4b6615.html",
+      "source_evidence_path": "raw/objects/af240a0232c355b14d0903b116498eda9bafe78dde0953b8e4e18595ee973fd2.html",
       "source_id": "kodiak-2025-commercial",
-      "source_sha256": "c47cb190ec034f22149685e91eabe089727aaaeda79ed36d462a96609b4b6615",
+      "source_sha256": "af240a0232c355b14d0903b116498eda9bafe78dde0953b8e4e18595ee973fd2",
       "source_url": "https://kodiak.ai/news/kodiak-delivers-two-additional-driverless-trucks"
     },
     {
@@ -380,9 +380,9 @@
       "operation_status": "commercial",
       "operator_id": "kodiak",
       "roundtrips_per_week": 4,
-      "source_evidence_path": "raw/objects/515693afd600b11ff79cdf6290aff476c825ec687e8aae399ab245155a2d138b.html",
+      "source_evidence_path": "raw/objects/f58e3fdc4d297fddf44426fb5a2bf88df34071801b92a22e4f4c91e2fa145256.html",
       "source_id": "kodiak-roehl-commercial-2026",
-      "source_sha256": "515693afd600b11ff79cdf6290aff476c825ec687e8aae399ab245155a2d138b",
+      "source_sha256": "f58e3fdc4d297fddf44426fb5a2bf88df34071801b92a22e4f4c91e2fa145256",
       "source_url": "https://kodiak.ai/news/roehl-transport-autonomous-freight"
     },
     {
@@ -456,9 +456,9 @@
       "operation_status": "testing",
       "operator_id": "droneup",
       "pilot_to_drone_ratio": "one-to-many",
-      "source_evidence_path": "raw/objects/3726496facbd37e3b8b805a169d3830242758583eaab8b76affc8d50b999b55a.html",
+      "source_evidence_path": "raw/objects/ecc7346a2022672faaec9084c880862a2b9988c5981aa0f198c911a0cc5e03e1.html",
       "source_id": "droneup-capacity-test-2024",
-      "source_sha256": "3726496facbd37e3b8b805a169d3830242758583eaab8b76affc8d50b999b55a",
+      "source_sha256": "ecc7346a2022672faaec9084c880862a2b9988c5981aa0f198c911a0cc5e03e1",
       "source_url": "https://www.droneup.com/news/droneup-achieves-500-deliveries-per-day",
       "test_context": "research and development facility capacity testing for commercial partners"
     }

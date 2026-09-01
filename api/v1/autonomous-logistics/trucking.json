@@ -44,9 +44,9 @@
       "operator_id": "gatik",
       "operator_name": "Gatik",
       "safety_observer_required": false,
-      "source_evidence_path": "raw/objects/850f0e48a7249e15d1bf54ee20bf831de1d49bd991397098018c9ad7d01e46b5.html",
+      "source_evidence_path": "raw/objects/c8c80b3cb2e36bf60bd2d988bc2ceb0081aa25b352662525f1a8a6d2d639a1d0.html",
       "source_id": "gatik-2026-08-25-scale",
-      "source_sha256": "850f0e48a7249e15d1bf54ee20bf831de1d49bd991397098018c9ad7d01e46b5",
+      "source_sha256": "c8c80b3cb2e36bf60bd2d988bc2ceb0081aa25b352662525f1a8a6d2d639a1d0",
       "source_url": "https://archive.gatik.ai/news/coverage/gatik-raises-200-million-series-d-led-by-qia-and-kdt-as-demand-for-driverless-commercial-freight-accelerates/",
       "system": "Gatik Driver",
       "vehicle_class": "freight-only autonomous trucks"

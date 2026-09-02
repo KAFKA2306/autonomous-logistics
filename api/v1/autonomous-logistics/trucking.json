@@ -44,9 +44,9 @@
       "operator_id": "gatik",
       "operator_name": "Gatik",
       "safety_observer_required": false,
-      "source_evidence_path": "raw/objects/7d92deae21a0b9b443dd8fe21a090eebebe8709a78579ba26213b5e271e1bbc1.html",
+      "source_evidence_path": "raw/objects/f85453f7ee5cdc51119eaf0c8c816fb0db1c7b4c863845f222c1a05938fd0d76.html",
       "source_id": "gatik-2026-08-25-scale",
-      "source_sha256": "7d92deae21a0b9b443dd8fe21a090eebebe8709a78579ba26213b5e271e1bbc1",
+      "source_sha256": "f85453f7ee5cdc51119eaf0c8c816fb0db1c7b4c863845f222c1a05938fd0d76",
       "source_url": "https://archive.gatik.ai/news/coverage/gatik-raises-200-million-series-d-led-by-qia-and-kdt-as-demand-for-driverless-commercial-freight-accelerates/",
       "system": "Gatik Driver",
       "vehicle_class": "freight-only autonomous trucks"
@@ -75,9 +75,9 @@
       "operator_id": "kodiak",
       "operator_name": "Kodiak AI",
       "safety_observer_required": false,
-      "source_evidence_path": "raw/objects/d7637f65e90cecc7305a7814eb06e75b1f7418248f12fb04e19826e36d19aee3.html",
+      "source_evidence_path": "raw/objects/b714da6f6832910445dbcbd36e02c056458cc4e78284a361800b0ad1088a56c0.html",
       "source_id": "kodiak-q2-2026",
-      "source_sha256": "d7637f65e90cecc7305a7814eb06e75b1f7418248f12fb04e19826e36d19aee3",
+      "source_sha256": "b714da6f6832910445dbcbd36e02c056458cc4e78284a361800b0ad1088a56c0",
       "source_url": "https://investors.kodiak.ai/news-releases/news-release-details/kodiak-ai-reports-second-quarter-2026-results-and-advances",
       "system": "Kodiak Driver",
       "vehicle_class": "Class 8 tractor-trailer"

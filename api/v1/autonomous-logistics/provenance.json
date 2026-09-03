@@ -1,5 +1,5 @@
 {
-  "retrieved_at": "2026-09-03T21:16:42.853322+00:00",
+  "retrieved_at": "2026-09-03T23:30:07.210493+00:00",
   "schema_version": 1,
   "sources": [
     {
@@ -58,8 +58,8 @@
     {
       "authority": "DoorDash",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/2d10f7b86d612de21e94ec74f5af8dccbf6efd2e314c27277de400a1d37936c1.html",
-      "sha256": "2d10f7b86d612de21e94ec74f5af8dccbf6efd2e314c27277de400a1d37936c1",
+      "evidence_path": "raw/objects/b4a56f10a021e519eb280bb523a7076c3f2f28e1b7e99f42a8809d7d03f8167f.html",
+      "sha256": "b4a56f10a021e519eb280bb523a7076c3f2f28e1b7e99f42a8809d7d03f8167f",
       "size_bytes": 407163,
       "source_id": "doordash-air-part135-2026",
       "source_url": "https://about.doordash.com/en-us/news/doordash-air",
@@ -92,8 +92,8 @@
     {
       "authority": "DroneUp",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/d275002a8a1198a0a00df072bbc43d94c6b470d0be34b7d30782a4654d9203ac.html",
-      "sha256": "d275002a8a1198a0a00df072bbc43d94c6b470d0be34b7d30782a4654d9203ac",
+      "evidence_path": "raw/objects/0507d20bc7b50ed2d8c748887e2d707d997673c87991499a2c4f7fb7b5eedcaa.html",
+      "sha256": "0507d20bc7b50ed2d8c748887e2d707d997673c87991499a2c4f7fb7b5eedcaa",
       "size_bytes": 187824,
       "source_id": "droneup-capacity-test-2024",
       "source_url": "https://www.droneup.com/news/droneup-achieves-500-deliveries-per-day",
@@ -138,9 +138,9 @@
     {
       "authority": "Uber Technologies, Inc.",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/bbe9dca27097cb0fe7841b251094a7c845cfc0d064e309686d1dd0181f13999f.html",
-      "sha256": "bbe9dca27097cb0fe7841b251094a7c845cfc0d064e309686d1dd0181f13999f",
-      "size_bytes": 76952,
+      "evidence_path": "raw/objects/1dc7536c20931f36cfb5b8fdd14e5b4360cd0dfcc363fcf97a9a5f87e02ef83c.html",
+      "sha256": "1dc7536c20931f36cfb5b8fdd14e5b4360cd0dfcc363fcf97a9a5f87e02ef83c",
+      "size_bytes": 78744,
       "source_id": "uber-zipline-partnership-2026",
       "source_url": "https://investor.uber.com/news-events/news/press-release-details/2026/Uber-and-Zipline-Partner-to-Bring-Drone-Delivery-to-Millions-of-Americans/default.aspx",
       "verified_markers": [
@@ -184,8 +184,8 @@
     {
       "authority": "Gatik",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/336b0acc3b0296a533887ba0bcb0d36ebded7d281c33ced5f5752b89de0dd2d0.html",
-      "sha256": "336b0acc3b0296a533887ba0bcb0d36ebded7d281c33ced5f5752b89de0dd2d0",
+      "evidence_path": "raw/objects/7b0bd2293e61c6fe791e3b95e113adc4b646af80ed6220f171e80f0f4dc92065.html",
+      "sha256": "7b0bd2293e61c6fe791e3b95e113adc4b646af80ed6220f171e80f0f4dc92065",
       "size_bytes": 91731,
       "source_id": "gatik-2026-scale",
       "source_url": "https://archive.gatik.ai/news/press-releases/gatik-becomes-first-us-company-to-operate-fully-driverless-trucks-at-scale-for-commercial-deliveries/",
@@ -202,8 +202,8 @@
     {
       "authority": "Gatik",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/8d6bc39202abc5822fa57d11ed61823a17f279dd092df7333cbafadf5755dacd.html",
-      "sha256": "8d6bc39202abc5822fa57d11ed61823a17f279dd092df7333cbafadf5755dacd",
+      "evidence_path": "raw/objects/fa7dfc8bcc64065189b5ca0d4d269d48c166af63d8e057e2a654759d422674f2.html",
+      "sha256": "fa7dfc8bcc64065189b5ca0d4d269d48c166af63d8e057e2a654759d422674f2",
       "size_bytes": 91648,
       "source_id": "gatik-2026-08-25-scale",
       "source_url": "https://archive.gatik.ai/news/coverage/gatik-raises-200-million-series-d-led-by-qia-and-kdt-as-demand-for-driverless-commercial-freight-accelerates/",
@@ -218,9 +218,9 @@
     {
       "authority": "Gatik",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/7203bcc3a9333995190e09e7ad97d28ff62d6b07bd874f777339db119d3ef543.html",
-      "sha256": "7203bcc3a9333995190e09e7ad97d28ff62d6b07bd874f777339db119d3ef543",
-      "size_bytes": 80134,
+      "evidence_path": "raw/objects/8e5893978082037ffff8ba612dfbd21b517d3637f8682c028bd3f1d14a3b31ab.html",
+      "sha256": "8e5893978082037ffff8ba612dfbd21b517d3637f8682c028bd3f1d14a3b31ab",
+      "size_bytes": 73570,
       "source_id": "gatik-live-operations",
       "source_url": "https://www.gatik.ai/",
       "structured_data": {
@@ -228,137 +228,137 @@
         "displayed_rows_complete": false,
         "records": [
           {
-            "driving_time": "3:45 hrs",
-            "end_time": "5:03 AM",
-            "start_time": "12:36 AM",
+            "driving_time": "4:07 hrs",
+            "end_time": "9:39 AM",
+            "start_time": "3:30 AM",
             "status": "Completed",
             "stops": "Completed",
             "truck_label": "G-001A"
           },
           {
-            "driving_time": "2:51 hrs",
-            "end_time": "4:45 AM",
-            "start_time": "12:39 AM",
+            "driving_time": "0:41 hrs",
+            "end_time": "4:35 AM",
+            "start_time": "3:30 AM",
             "status": "Completed",
             "stops": "Completed",
             "truck_label": "G-002A"
           },
           {
-            "driving_time": "4:17 hrs",
-            "end_time": "9:12 AM",
-            "start_time": "12:45 AM",
-            "status": "On Time",
-            "stops": "Driving",
+            "driving_time": "2:37 hrs",
+            "end_time": "7:06 AM",
+            "start_time": "3:30 AM",
+            "status": "Completed",
+            "stops": "Completed",
             "truck_label": "G-003A"
           },
           {
-            "driving_time": "4:19 hrs",
-            "end_time": "8:29 AM",
-            "start_time": "12:45 AM",
+            "driving_time": "5:37 hrs",
+            "end_time": "10:20 AM",
+            "start_time": "3:35 AM",
             "status": "Completed",
             "stops": "Completed",
             "truck_label": "G-004A"
           },
           {
-            "driving_time": "6:48 hrs",
-            "end_time": "10:31 AM",
-            "start_time": "1:07 AM",
+            "driving_time": "3:15 hrs",
+            "end_time": "8:00 AM",
+            "start_time": "3:45 AM",
             "status": "Completed",
             "stops": "Completed",
             "truck_label": "G-005A"
           },
           {
-            "driving_time": "4:49 hrs",
-            "end_time": "7:46 AM",
-            "start_time": "1:12 AM",
+            "driving_time": "2:45 hrs",
+            "end_time": "7:45 AM",
+            "start_time": "3:45 AM",
             "status": "Completed",
             "stops": "Completed",
             "truck_label": "G-006A"
           },
           {
-            "driving_time": "6:54 hrs",
-            "end_time": "9:06 AM",
-            "start_time": "1:14 AM",
-            "status": "Completed",
-            "stops": "Completed",
+            "driving_time": "4:35 hrs",
+            "end_time": "7:08 PM",
+            "start_time": "4:00 AM",
+            "status": "On Time",
+            "stops": "Unloading",
             "truck_label": "G-007A"
           },
           {
-            "driving_time": "4:05 hrs",
-            "end_time": "9:35 AM",
-            "start_time": "1:15 AM",
+            "driving_time": "1:32 hrs",
+            "end_time": "6:11 AM",
+            "start_time": "4:20 AM",
             "status": "Completed",
             "stops": "Completed",
             "truck_label": "G-008A"
           },
           {
-            "driving_time": "1:58 hrs",
-            "end_time": "3:31 AM",
-            "start_time": "1:20 AM",
+            "driving_time": "0:15 hrs",
+            "end_time": "4:25 AM",
+            "start_time": "4:25 AM",
             "status": "Completed",
             "stops": "Completed",
             "truck_label": "G-009A"
           },
           {
-            "driving_time": "2:52 hrs",
-            "end_time": "6:16 AM",
-            "start_time": "1:24 AM",
+            "driving_time": "1:32 hrs",
+            "end_time": "5:57 AM",
+            "start_time": "4:35 AM",
             "status": "Completed",
             "stops": "Completed",
             "truck_label": "G-010A"
           },
           {
-            "driving_time": "7:39 hrs",
-            "end_time": "10:01 AM",
-            "start_time": "1:25 AM",
+            "driving_time": "1:57 hrs",
+            "end_time": "6:27 AM",
+            "start_time": "4:46 AM",
             "status": "Completed",
             "stops": "Completed",
             "truck_label": "G-011A"
           },
           {
-            "driving_time": "4:36 hrs",
-            "end_time": "6:29 AM",
-            "start_time": "1:26 AM",
+            "driving_time": "0:51 hrs",
+            "end_time": "5:54 AM",
+            "start_time": "4:50 AM",
             "status": "Completed",
             "stops": "Completed",
             "truck_label": "G-012A"
           },
           {
-            "driving_time": "4:44 hrs",
-            "end_time": "4:41 AM",
-            "start_time": "1:27 AM",
+            "driving_time": "0:15 hrs",
+            "end_time": "4:55 AM",
+            "start_time": "4:55 AM",
             "status": "Completed",
             "stops": "Completed",
             "truck_label": "G-013A"
           },
           {
-            "driving_time": "4:05 hrs",
-            "end_time": "9:00 AM",
-            "start_time": "1:30 AM",
-            "status": "On Time",
-            "stops": "Unloading",
+            "driving_time": "2:00 hrs",
+            "end_time": "6:25 AM",
+            "start_time": "5:05 AM",
+            "status": "Completed",
+            "stops": "Completed",
             "truck_label": "G-014A"
           },
           {
-            "driving_time": "4:02 hrs",
-            "end_time": "11:50 AM",
-            "start_time": "1:30 AM",
+            "driving_time": "0:50 hrs",
+            "end_time": "6:25 AM",
+            "start_time": "5:15 AM",
             "status": "Completed",
             "stops": "Completed",
             "truck_label": "G-015A"
           },
           {
-            "driving_time": "4:27 hrs",
-            "end_time": "9:15 AM",
-            "start_time": "1:30 AM",
-            "status": "On Time",
-            "stops": "Unloading",
+            "driving_time": "0:15 hrs",
+            "end_time": "5:25 AM",
+            "start_time": "5:25 AM",
+            "status": "Completed",
+            "stops": "Completed",
             "truck_label": "G-016A"
           },
           {
-            "driving_time": "3:54 hrs",
-            "end_time": "6:06 AM",
-            "start_time": "1:31 AM",
+            "driving_time": "0:34 hrs",
+            "end_time": "6:03 AM",
+            "start_time": "5:25 AM",
             "status": "Completed",
             "stops": "Completed",
             "truck_label": "G-017A"
@@ -385,9 +385,9 @@
     {
       "authority": "Kodiak AI, Inc. / Atlas Energy Solutions Inc.",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/351fa2ada6b4f9d7e013819b58b16af6bd7ef9068c522893c5d345b2fac5e704.html",
-      "sha256": "351fa2ada6b4f9d7e013819b58b16af6bd7ef9068c522893c5d345b2fac5e704",
-      "size_bytes": 155803,
+      "evidence_path": "raw/objects/ad6ae71aca66e276fe56713d07df892ef047bfb2f69bc8c7613318a3834f8f16.html",
+      "sha256": "ad6ae71aca66e276fe56713d07df892ef047bfb2f69bc8c7613318a3834f8f16",
+      "size_bytes": 155894,
       "source_id": "kodiak-atlas-commercial-start-2025",
       "source_url": "https://kodiak.ai/news/kodiak-delivers-customer-owned-autonomous-robotrucks-to-atlas",
       "verified_markers": [
@@ -400,8 +400,8 @@
     {
       "authority": "Kodiak AI",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/7df4568ff259fca2ff35779189b6a20c519f6f16be6e8e7c4d0270f4635b809a.html",
-      "sha256": "7df4568ff259fca2ff35779189b6a20c519f6f16be6e8e7c4d0270f4635b809a",
+      "evidence_path": "raw/objects/09bbf2934aa5c7421580f0b103583ea4ddc1e5cc800419d61f40661c6c9cbe63.html",
+      "sha256": "09bbf2934aa5c7421580f0b103583ea4ddc1e5cc800419d61f40661c6c9cbe63",
       "size_bytes": 125734,
       "source_id": "kodiak-2025-commercial",
       "source_url": "https://kodiak.ai/news/kodiak-delivers-two-additional-driverless-trucks",
@@ -434,8 +434,8 @@
     {
       "authority": "Kodiak AI, Inc.",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/04680c6747a72532fd503f9e53950f7d5d82874255a6704d65de8351928bd92d.html",
-      "sha256": "04680c6747a72532fd503f9e53950f7d5d82874255a6704d65de8351928bd92d",
+      "evidence_path": "raw/objects/5bd845ab9d22509ceb1b0c68dbb70a5bb4bcfe1a362dca6ecf13e3f21591f970.html",
+      "sha256": "5bd845ab9d22509ceb1b0c68dbb70a5bb4bcfe1a362dca6ecf13e3f21591f970",
       "size_bytes": 136367,
       "source_id": "kodiak-roehl-commercial-2026",
       "source_url": "https://kodiak.ai/news/roehl-transport-autonomous-freight",

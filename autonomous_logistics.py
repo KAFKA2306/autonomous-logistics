@@ -25,6 +25,7 @@ GATIK_LIVE_HEADER = "Truck Start Time End Time Driving Time Stops Status"
 GATIK_LIVE_TIME_ZONE = "Pacific Standard Time (PST)"
 GATIK_LIVE_STOPS_VALUES = ("Completed", "Unloading", "Driving", "Loading", "Parked")
 GATIK_LIVE_STATUS_VALUES = ("On Time", "Completed", "Ready")
+FAA_PART135_SOURCE_ID = "faa-part135-package-delivery"
 
 
 def dump(value: object) -> bytes:
@@ -261,15 +262,76 @@ def enrich_records(records: list[dict[str, Any]], source_map: dict[str, dict[str
     ]
 
 
+def build_part135_reconciliation(
+    drones: list[dict[str, Any]],
+    events: list[dict[str, Any]],
+    source_map: dict[str, dict[str, Any]],
+    retrieved_at: str,
+) -> dict[str, Any]:
+    faa_source = source_map.get(FAA_PART135_SOURCE_ID)
+    if faa_source is None:
+        raise ValueError("FAA Part 135 package-delivery source is missing")
+    listed_operator_ids = {str(row["operator_id"]) for row in drones}
+    records = []
+    announcements = sorted(
+        (
+            row
+            for row in events
+            if row.get("mode") == "drone_package_delivery"
+            and row.get("event_type") == "regulatory_authorization_announcement"
+            and row.get("operation_status") == "regulatory_authorization"
+        ),
+        key=lambda row: (event_period_key(row["effective_at"]), str(row["operator_id"])),
+    )
+    for row in announcements:
+        operator_id = str(row["operator_id"])
+        if operator_id in listed_operator_ids:
+            continue
+        operator_source = source_map.get(str(row["source_id"]))
+        if operator_source is None:
+            raise ValueError(f"authorization announcement source is missing: {row['source_id']}")
+        records.append(
+            {
+                "operator_id": operator_id,
+                "operator_name": row.get("operator_name"),
+                "announcement_effective_at": row["effective_at"],
+                "authorization_type": row.get("authorization_type"),
+                "operator_source_id": row["source_id"],
+                "operator_source_url": operator_source["source_url"],
+                "operator_source_sha256": operator_source["sha256"],
+                "faa_registry_status": "not_listed_on_current_faa_package_delivery_page",
+            }
+        )
+    return {
+        "schema_version": 1,
+        "retrieved_at": retrieved_at,
+        "faa_registry": {
+            "source_id": FAA_PART135_SOURCE_ID,
+            "source_url": faa_source["source_url"],
+            "source_sha256": faa_source["sha256"],
+            "listed_operator_count": len(drones),
+        },
+        "records": records,
+        "interpretation": (
+            "An operator primary source may report FAA Part 135 authorization before the current FAA package-delivery page lists the operator. "
+            "This view does not infer that the authorization is invalid, that commercial service has started, or that an unlisted operator belongs in the FAA-listed registry."
+        ),
+    }
+
+
 def build_api(registry: dict[str, Any], manifest: dict[str, Any], api_dir: Path) -> dict[str, Any]:
     source_map = {row["source_id"]: row for row in manifest["sources"]}
     drones = enrich_records(registry["drone_part135"], source_map)
     trucking = enrich_records(registry["trucking_operators"], source_map)
     events = enrich_records(registry["operation_events"], source_map)
+    part135_reconciliation = build_part135_reconciliation(
+        drones, events, source_map, manifest["retrieved_at"]
+    )
     api_dir.mkdir(parents=True, exist_ok=True)
     (api_dir / "drone-part135.json").write_bytes(dump({"schema_version": 1, "records": drones}))
     (api_dir / "trucking.json").write_bytes(dump({"schema_version": 1, "records": trucking}))
     (api_dir / "events.json").write_bytes(dump({"schema_version": 1, "records": events}))
+    (api_dir / "part135-reconciliation.json").write_bytes(dump(part135_reconciliation))
     (api_dir / "provenance.json").write_bytes(dump(manifest))
     (api_dir / "registry.json").write_bytes(dump(registry))
 
@@ -292,6 +354,7 @@ def build_api(registry: dict[str, Any], manifest: dict[str, Any], api_dir: Path)
     event_periods = [str(row["effective_at"]) for row in events]
     coverage = {
         "faa_part135_operator_count": len(drones),
+        "part135_operator_announcements_not_listed_count": len(part135_reconciliation["records"]),
         "autonomous_trucking_operator_count": len(trucking),
         "commercial_driverless_trucking_operator_count": sum(row["operation_status"] == "commercial_driverless" for row in trucking),
         "operation_event_count": len(events),
@@ -303,6 +366,7 @@ def build_api(registry: dict[str, Any], manifest: dict[str, Any], api_dir: Path)
     }
     views = {
         "drone_part135": "drone-part135.json",
+        "part135_reconciliation": "part135-reconciliation.json",
         "trucking": "trucking.json",
         "events": "events.json",
         "registry": "registry.json",

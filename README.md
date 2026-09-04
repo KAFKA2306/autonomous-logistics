@@ -12,6 +12,7 @@ Drone package deliveryとautonomous truckingを、**規制認可・試験・supe
 
 - [dataset index](api/v1/autonomous-logistics/index.json)
 - [FAA Part 135 UAS package-delivery operators](api/v1/autonomous-logistics/drone-part135.json)
+- [FAA Part 135 cross-source reconciliation](api/v1/autonomous-logistics/part135-reconciliation.json)
 - [autonomous trucking operators](api/v1/autonomous-logistics/trucking.json)
 - [operation / authorization events](api/v1/autonomous-logistics/events.json)
 - [registry](api/v1/autonomous-logistics/registry.json)
@@ -21,7 +22,9 @@ Drone package deliveryとautonomous truckingを、**規制認可・試験・supe
 
 FAAの現行Part 135 UAS package-delivery operator一覧を`drone-part135.json`の正準registryとして使います。Part 135掲載は**規制認可の証拠**であり、それだけで現在commercial flightを運航しているとは扱いません。
 
-FAA pageの更新より新しいoperator一次情報でPart 135認可が確認できた場合は、FAA-listed viewを書き換えず`events.json`へ別のauthorization eventとして保持します。2026-07-29のDoorDash Air発表はこの境界に該当し、FAA pageが7社表示の間はDoorDashをFAA-listed rowへ追加しません。また、その発表だけからDoorDash自身のcommercial flight開始も主張しません。
+FAA pageの更新より新しいoperator一次情報でPart 135認可が確認できた場合は、FAA-listed viewを書き換えず`events.json`へ別のauthorization eventとして保持します。`part135-reconciliation.json`は、このoperator一次情報と現行FAA-listed viewを決定論的に照合し、operator側で認可発表済みだが現行FAA package-delivery pageに未掲載のrecordだけを示します。未掲載を認可無効とは解釈せず、commercial service開始も推測しません。
+
+2026-07-29のDoorDash Air発表はこの境界に該当し、FAA pageが7社表示の間はDoorDashをFAA-listed rowへ追加しません。また、その発表だけからDoorDash自身のcommercial flight開始も主張しません。
 
 現行FAA pageが直接示すoperator membershipとcertificate timingだけを正規化します。certificate timingが月単位なら`part135_certificate_period: YYYY-MM`として保持し、日付を推測しません。Flytrexのようにcertificate holderではなくpartner/UASとして言及される組織をoperator rowへ昇格させません。
 
@@ -71,7 +74,7 @@ workflowは一次source本文をlive取得し、必要markerを検証してSHA-2
 
 ```bash
 python autonomous_logistics.py
-python -m unittest -v test_autonomous_logistics
+python -m unittest -v test_autonomous_logistics test_part135_reconciliation
 ```
 
 offline再生成:

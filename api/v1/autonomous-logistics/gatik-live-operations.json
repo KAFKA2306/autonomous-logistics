@@ -1,6 +1,11 @@
 {
   "displayed_row_count": 17,
   "displayed_rows_complete": false,
+  "displayed_status_counts": {
+    "Completed": 2,
+    "On Time": 13,
+    "Ready": 2
+  },
   "records": [
     {
       "driving_time": "0:50 hrs",
@@ -140,7 +145,7 @@
     }
   ],
   "refresh_interval_hours": 3,
-  "retrieved_at": "2026-09-05T10:52:50.068516+00:00",
+  "retrieved_at": "2026-09-05T10:53:24.573287+00:00",
   "schema_version": 1,
   "source_evidence_path": "raw/objects/61de695376beb3f6dfd6b57a1052c34221a759878e87e3ffa9809f89741076bf.html",
   "source_id": "gatik-live-operations",

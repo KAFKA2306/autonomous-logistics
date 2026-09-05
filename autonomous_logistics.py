@@ -105,6 +105,10 @@ def parse_gatik_live_operations(text: str) -> dict[str, Any]:
         "refresh_interval_hours": 3,
         "displayed_rows_complete": False,
         "displayed_row_count": len(records),
+        "displayed_status_counts": {
+            value: sum(record["status"] == value for record in records)
+            for value in GATIK_LIVE_STATUS_VALUES
+        },
         "records": records,
     }
 

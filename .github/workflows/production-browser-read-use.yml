@@ -5,6 +5,10 @@ on:
     paths:
       - '.github/workflows/production-browser-read-use.yml'
       - 'web/**'
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/production-browser-read-use.yml'
   workflow_run:
     workflows: ['Autonomous logistics evidence']
     types: [completed]
@@ -14,7 +18,7 @@ permissions:
 
 jobs:
   verify:
-    if: github.event_name == 'pull_request' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'main')
+    if: github.event_name == 'pull_request' || github.event_name == 'push' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'main')
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
@@ -30,8 +34,8 @@ jobs:
           CHROME_BIN="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
           test -n "$CHROME_BIN"
           export CHROME_BIN
-          node <<'NODE'
-          const { spawn } = require('node:child_process');
+          node --input-type=module <<'NODE'
+          import { spawn } from 'node:child_process';
 
           const pageUrl = process.env.PAGE_URL;
           const chrome = spawn(process.env.CHROME_BIN, [

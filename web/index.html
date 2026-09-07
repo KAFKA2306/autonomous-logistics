@@ -58,6 +58,14 @@
     <div id="latest"></div>
   </section>
 
+  <section aria-labelledby="gatik-live-title">
+    <h2 id="gatik-live-title">Gatik Live Operations</h2>
+    <p class="muted">Gatik公式が3時間ごとに更新する表示中trip snapshotです。Load moreがあるため、表示行数をfleet総数・全trip数とは扱いません。</p>
+    <div id="gatik-live-summary" class="grid" aria-live="polite"></div>
+    <p id="gatik-live-retrieved" class="muted"></p>
+    <div id="gatik-live" class="cards"></div>
+  </section>
+
   <section aria-labelledby="trucking-title">
     <h2 id="trucking-title">商用の無人トラック運行</h2>
     <p class="muted">この欄は <code>commercial_driverless</code> として一次情報で確認できた事業者だけを表示します。</p>
@@ -138,8 +146,13 @@ async function loadDeployment() {
 }
 
 async function render() {
-  const [index, droneData, truckingData, eventData, deployment] = await Promise.all([
-    loadJson('index.json'), loadJson('drone-part135.json'), loadJson('trucking.json'), loadJson('events.json'), loadDeployment()
+  const [index, droneData, truckingData, eventData, gatikLive, deployment] = await Promise.all([
+    loadJson('index.json'),
+    loadJson('drone-part135.json'),
+    loadJson('trucking.json'),
+    loadJson('events.json'),
+    loadJson('gatik-live-operations.json'),
+    loadDeployment()
   ]);
   const drones = droneData.records;
   const trucking = truckingData.records;
@@ -159,6 +172,34 @@ async function render() {
     ? '<strong>今回の取得で、確認済み状態に変更があります。</strong> 下の最新イベントと時系列を一次情報までたどって確認できます。'
     : '<strong>今回の取得では、確認済み状態の変更はありません。</strong> 一次情報は再取得していますが、取得時刻や本文SHA-256の変化だけを新しい運用変化とは扱いません。';
   document.querySelector('#latest').innerHTML = latest ? eventCard(latest, maps) : '<p>確認済みイベントはありません。</p>';
+
+  if (!Number.isInteger(gatikLive.displayed_row_count) || !Array.isArray(gatikLive.records) || !gatikLive.displayed_status_counts) {
+    throw new Error('gatik-live-operations.json: displayed snapshot is incomplete');
+  }
+  if (gatikLive.displayed_row_count !== gatikLive.records.length) {
+    throw new Error('gatik-live-operations.json: displayed row count mismatch');
+  }
+  const statusTotal = Object.values(gatikLive.displayed_status_counts).reduce((sum, count) => sum + count, 0);
+  if (statusTotal !== gatikLive.displayed_row_count) {
+    throw new Error('gatik-live-operations.json: displayed status count mismatch');
+  }
+  document.querySelector('#gatik-live-summary').innerHTML = [
+    metric('Gatik表示中trip', gatikLive.displayed_row_count, gatikLive.displayed_rows_complete ? '表示範囲が全件と確認済み' : 'Load moreがあるため全件数ではない'),
+    metric('On Time', gatikLive.displayed_status_counts['On Time'] || 0, 'Gatik表示status'),
+    metric('Completed', gatikLive.displayed_status_counts.Completed || 0, 'Gatik表示status'),
+    metric('Ready', gatikLive.displayed_status_counts.Ready || 0, 'Gatik表示status')
+  ].join('');
+  document.querySelector('#gatik-live-retrieved').innerHTML = `取得: ${esc(gatikLive.retrieved_at)} / 表示時刻: ${esc(gatikLive.time_zone_display)} / ${sourceLink(gatikLive)}`;
+  document.querySelector('#gatik-live').innerHTML = gatikLive.records.map(row => `<article class="card">
+    <div><span class="status">${esc(row.status)}</span></div>
+    <h3>${esc(row.truck_label)}</h3>
+    <ul class="facts">
+      <li><strong>Start:</strong> ${esc(row.start_time)}</li>
+      <li><strong>End:</strong> ${esc(row.end_time)}</li>
+      <li><strong>Driving Time:</strong> ${esc(row.driving_time)}</li>
+      <li><strong>Stops:</strong> ${esc(row.stops)}</li>
+    </ul>
+  </article>`).join('');
 
   document.querySelector('#trucking').innerHTML = trucking.map(row => `<article class="card">
     <div><span class="status">${esc(statusJa[row.operation_status] || row.operation_status)}</span></div>
@@ -194,8 +235,8 @@ async function render() {
 
 render().catch(error => {
   document.querySelector('#error-section').hidden = false;
-  document.querySelector('#error').textContent = `canonical APIの取得または解析に失敗しました。\n${error.message}`;
-  for (const id of ['summary', 'collection-change', 'latest', 'trucking', 'drones', 'events']) document.querySelector(`#${id}`).replaceChildren();
+  document.querySelector('#error').textContent = `canonical APIの取得または解析に失敗しました.\n${error.message}`;
+  for (const id of ['summary', 'collection-change', 'latest', 'gatik-live-summary', 'gatik-live-retrieved', 'gatik-live', 'trucking', 'drones', 'events']) document.querySelector(`#${id}`).replaceChildren();
 });
 </script>
 </body>

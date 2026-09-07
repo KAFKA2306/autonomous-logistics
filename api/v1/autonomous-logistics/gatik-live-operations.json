@@ -145,11 +145,11 @@
     }
   ],
   "refresh_interval_hours": 3,
-  "retrieved_at": "2026-09-07T14:47:23.957056+00:00",
+  "retrieved_at": "2026-09-07T19:21:44.121707+00:00",
   "schema_version": 1,
-  "source_evidence_path": "raw/objects/d64da5b24eabd28aa597ed08eb9d049fbf5d444b0f3416e95ea8bf00b940f40f.html",
+  "source_evidence_path": "raw/objects/a0a3fa18dd5bd5be1403705dc2160f86dbee55923acbfeaee21b63eb50db4784.html",
   "source_id": "gatik-live-operations",
-  "source_sha256": "d64da5b24eabd28aa597ed08eb9d049fbf5d444b0f3416e95ea8bf00b940f40f",
+  "source_sha256": "a0a3fa18dd5bd5be1403705dc2160f86dbee55923acbfeaee21b63eb50db4784",
   "source_url": "https://www.gatik.ai/",
   "time_zone_display": "Pacific Standard Time (PST)"
 }

@@ -14,10 +14,10 @@
       "operator_id": "doordash-air",
       "operator_name": "DoorDash Air / DoorDash Labs",
       "operator_source_id": "doordash-air-part135-2026",
-      "operator_source_sha256": "acd1cf3421c4f03b540c9e82fe3cbc5e1b247fac8ce526bbaac4c3d03e3b5b46",
+      "operator_source_sha256": "9794c56427e8509966b7d15d87d3307d16b36325c9e0276f0465851976006735",
       "operator_source_url": "https://about.doordash.com/en-us/news/doordash-air"
     }
   ],
-  "retrieved_at": "2026-09-07T23:43:08.617479+00:00",
+  "retrieved_at": "2026-09-08T05:07:09.100399+00:00",
   "schema_version": 1
 }

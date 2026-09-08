@@ -1,0 +1,101 @@
+{
+  "authority": "U.S. Census Bureau",
+  "records": [
+    {
+      "canonical_geography": "Christiansburg, Virginia",
+      "census_geoid": "5116608",
+      "census_name": "Christiansburg town",
+      "latitude": 37.140663,
+      "longitude": -80.404512,
+      "source_record": "VA|5116608|1600000US5116608|02390793|Christiansburg town|43|A|38130746|65904|14.722|0.025|37.140663|-80.404512",
+      "source_record_sha256": "033fdf39c5e5ad953b19d41f1804836dcabb5f8dfaa9d3e0db2108bbdc2efb0f",
+      "source_url": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_gaz_place_51.txt"
+    },
+    {
+      "canonical_geography": "Pendleton, Oregon",
+      "census_geoid": "4157150",
+      "census_name": "Pendleton city",
+      "latitude": 45.675609,
+      "longitude": -118.819548,
+      "source_record": "OR|4157150|1600000US4157150|02411399|Pendleton city|25|A|30043479|0|11.6|0.|45.675609|-118.819548",
+      "source_record_sha256": "15abfae3bb363094234d50aa75cafbcb9dc2929ffb01b3d092c4e1c465cd726c",
+      "source_url": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_gaz_place_41.txt"
+    },
+    {
+      "canonical_geography": "Charlotte, North Carolina",
+      "census_geoid": "3712000",
+      "census_name": "Charlotte city",
+      "latitude": 35.209045,
+      "longitude": -80.83099,
+      "source_record": "NC|3712000|1600000US3712000|02404032|Charlotte city|25|A|808332406|5149772|312.099|1.988|35.209045|-80.83099",
+      "source_record_sha256": "4734b24b096b16e1da49064e37ce929edae8ca861cf3db2f29498037350bad01",
+      "source_url": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_gaz_place_37.txt"
+    },
+    {
+      "canonical_geography": "Holly Springs, North Carolina",
+      "census_geoid": "3732260",
+      "census_name": "Holly Springs town",
+      "latitude": 35.651994,
+      "longitude": -78.843196,
+      "source_record": "NC|3732260|1600000US3732260|02405854|Holly Springs town|43|A|51179104|313105|19.76|0.121|35.651994|-78.843196",
+      "source_record_sha256": "bd992fdaeafed7a88454836496398c8a3cb7d6f10156aa14cfec7086f4ac6126",
+      "source_url": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_gaz_place_37.txt"
+    },
+    {
+      "canonical_geography": "Raeford, North Carolina",
+      "census_geoid": "3754580",
+      "census_name": "Raeford city",
+      "latitude": 34.981303,
+      "longitude": -79.229567,
+      "source_record": "NC|3754580|1600000US3754580|02404587|Raeford city|25|A|11096015|58544|4.284|0.023|34.981303|-79.229567",
+      "source_record_sha256": "0c74bbd0c8f79e24e40f908e1de1345989f98ab801dc029547c95518bc909ec7",
+      "source_url": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_gaz_place_37.txt"
+    },
+    {
+      "canonical_geography": "Murphy, Texas",
+      "census_geoid": "4850100",
+      "census_name": "Murphy city",
+      "latitude": 33.016418,
+      "longitude": -96.608233,
+      "source_record": "TX|4850100|1600000US4850100|02411197|Murphy city|25|A|14755058|11543|5.697|0.004|33.016418|-96.608233",
+      "source_record_sha256": "9dbc9e1b0da42a3964f435ebc2fb05797c4bd8a76310e022a5e49b0bf31a8554",
+      "source_url": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_gaz_place_48.txt"
+    },
+    {
+      "canonical_geography": "Midland, Texas",
+      "census_geoid": "4848072",
+      "census_name": "Midland city",
+      "latitude": 32.024642,
+      "longitude": -102.113467,
+      "source_record": "TX|4848072|1600000US4848072|02411096|Midland city|25|A|197326451|441855|76.188|0.171|32.024642|-102.113467",
+      "source_record_sha256": "0a7a9c5d207863b6643057e2d4317b143e14d84996a2443d17151b73985ff6bf",
+      "source_url": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_gaz_place_48.txt"
+    },
+    {
+      "canonical_geography": "Monahans, Texas",
+      "census_geoid": "4848936",
+      "census_name": "Monahans city",
+      "latitude": 31.655721,
+      "longitude": -103.083694,
+      "source_record": "TX|4848936|1600000US4848936|02411133|Monahans city|25|A|74901163|31467|28.92|0.012|31.655721|-103.083694",
+      "source_record_sha256": "891fd2731e834d9d4b745b8915430fad9e10fc5794f2d1381dfda26b90e22393",
+      "source_url": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_gaz_place_48.txt"
+    }
+  ],
+  "retrieval_date": "2026-09-08",
+  "schema_version": 1,
+  "semantics": "Representative latitude/longitude from the 2025 Census Gazetteer is attached only when a current canonical geography string exactly identifies the same Census place. Site-specific, route, metro, basin, state, multi-state, and surrounding-area geographies are not approximated with a place point.",
+  "source_page": "https://www.census.gov/geographies/reference-files/time-series/geo/gazetteer-files.html",
+  "source_revision": "2025 Gazetteer Files",
+  "unmapped_boundary_examples": [
+    "WakeMed hospital campus, Raleigh, North Carolina",
+    "Pea Ridge, Arkansas and surrounding area",
+    "Dallas-Fort Worth",
+    "Metro Atlanta",
+    "Greater Houston",
+    "Houston metropolitan area, Texas",
+    "Interstate 20 between Midland and Monahans, Texas",
+    "Permian Basin",
+    "between Dallas and Houston, Texas"
+  ]
+}

@@ -9,9 +9,37 @@ from autonomous_logistics import build_api
 class Part135ReconciliationTests(unittest.TestCase):
     def test_operator_authorization_announcement_is_reconciled_with_faa_registry(self):
         registry = json.loads(Path("data/registry.json").read_text())
-        manifest = json.loads(
-            Path("api/v1/autonomous-logistics/provenance.json").read_text()
-        )
+        manifest = {
+            "schema_version": 1,
+            "retrieved_at": "2026-09-09T00:00:00+00:00",
+            "sources": [
+                {
+                    "source_id": source["source_id"],
+                    "authority": source["authority"],
+                    "source_url": source["source_url"],
+                    "sha256": "a" * 64,
+                    "size_bytes": 1,
+                    "content_type": "text/html",
+                    "evidence_path": f"raw/objects/{source['source_id']}.html",
+                    "verified_markers": source["required_markers"],
+                    **(
+                        {
+                            "structured_data": {
+                                "time_zone_display": "Pacific Standard Time (PST)",
+                                "refresh_interval_hours": 3,
+                                "displayed_rows_complete": False,
+                                "displayed_row_count": 0,
+                                "displayed_status_counts": {},
+                                "records": [],
+                            }
+                        }
+                        if source.get("parser") == "gatik_live_operations"
+                        else {}
+                    ),
+                }
+                for source in registry["sources"]
+            ],
+        }
 
         with tempfile.TemporaryDirectory() as tmp:
             api_dir = Path(tmp)

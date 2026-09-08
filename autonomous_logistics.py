@@ -362,9 +362,12 @@ def build_part135_reconciliation(
 def build_api(
     registry: dict[str, Any],
     manifest: dict[str, Any],
-    geography_points: dict[str, Any],
     api_dir: Path,
+    geography_points: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
+    if geography_points is None:
+        geography_points = json.loads(DEFAULT_GEOGRAPHY_POINTS.read_text())
+        validate_geography_points(geography_points, registry)
     source_map = {row["source_id"]: row for row in manifest["sources"]}
     drones = enrich_records(registry["drone_part135"], source_map)
     trucking = enrich_records(registry["trucking_operators"], source_map)
@@ -475,7 +478,7 @@ def main() -> None:
     validate_geography_points(geography_points, registry)
     manifest = verify_manifest(args.data_root) if args.offline else collect(registry, args.data_root)
     validate_structured_evidence(registry, manifest)
-    index = build_api(registry, manifest, geography_points, args.api_dir)
+    index = build_api(registry, manifest, args.api_dir, geography_points)
     print(json.dumps(index["coverage"], sort_keys=True))
 
 

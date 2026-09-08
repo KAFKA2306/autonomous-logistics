@@ -184,6 +184,21 @@
       "source_id": "faa-nepa-drone-operations"
     },
     {
+      "effective_at": "2026-05-11",
+      "event_id": "wing-charlotte-papa-johns-commercial-pilot-2026-05-11",
+      "event_type": "commercial_pilot_start",
+      "geography": [
+        "Charlotte, North Carolina"
+      ],
+      "mode": "drone_package_delivery",
+      "operation_status": "commercial",
+      "operator_id": "wing-aviation",
+      "partner": "Papa Johns",
+      "pilot_scope": "initial pilot program",
+      "service_channel": "Wing app",
+      "source_id": "wing-charlotte-papa-johns-commercial-pilot-2026"
+    },
+    {
       "deliveries_cumulative": 1000000,
       "deliveries_cumulative_qualifier": "well over",
       "effective_at": "2026-06-08",
@@ -563,6 +578,17 @@
       ],
       "source_id": "wing-commercial-scale-2026",
       "source_url": "https://wing.com/news/wing-and-walmart-seven-new-markets-drone-delivery"
+    },
+    {
+      "authority": "Wing Aviation LLC",
+      "required_markers": [
+        "May 11, 2026",
+        "initial pilot program in Charlotte, North Carolina",
+        "deliver new Oven Toasted Sandwiches",
+        "pilot is initially launching via the Wing app"
+      ],
+      "source_id": "wing-charlotte-papa-johns-commercial-pilot-2026",
+      "source_url": "https://wing.com/news/wing-papa-johns-fresh-hot-drone-deliveries"
     },
     {
       "authority": "Zipline",

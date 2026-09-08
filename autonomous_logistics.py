@@ -17,6 +17,7 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parent
 DEFAULT_REGISTRY = ROOT / "data" / "registry.json"
+DEFAULT_GEOGRAPHY_POINTS = ROOT / "data" / "geography-points.json"
 DEFAULT_DATA_ROOT = ROOT / "data" / "autonomous-logistics"
 DEFAULT_API_DIR = ROOT / "api" / "v1" / "autonomous-logistics"
 ALLOWED_STATUSES = {"regulatory_authorization", "testing", "supervised", "commercial", "commercial_driverless"}
@@ -233,6 +234,41 @@ def validate_registry(registry: dict[str, Any]) -> None:
             raise ValueError("event refers to unknown source")
 
 
+def validate_geography_points(geography_points: dict[str, Any], registry: dict[str, Any]) -> None:
+    records = geography_points.get("records") or []
+    if len(records) != 8:
+        raise ValueError(f"official geography point set must contain 8 exact canonical places, got {len(records)}")
+    canonical_geographies = {
+        str(value)
+        for row in [*(registry.get("trucking_operators") or []), *(registry.get("operation_events") or [])]
+        for value in (row.get("geography") or [])
+    }
+    seen_names: set[str] = set()
+    seen_geoids: set[str] = set()
+    for row in records:
+        name = str(row.get("canonical_geography", ""))
+        geoid = str(row.get("census_geoid", ""))
+        if name not in canonical_geographies:
+            raise ValueError(f"geography point is not an exact current canonical geography: {name}")
+        if name in seen_names or geoid in seen_geoids:
+            raise ValueError(f"duplicate official geography point identity: {name} {geoid}")
+        seen_names.add(name)
+        seen_geoids.add(geoid)
+        if not row.get("source_url", "").startswith("https://www2.census.gov/"):
+            raise ValueError(f"geography point lacks official Census source: {name}")
+        source_record = str(row.get("source_record", ""))
+        if sha256((source_record + "\n").encode()) != row.get("source_record_sha256"):
+            raise ValueError(f"Census source-record hash mismatch: {name}")
+        latitude = row.get("latitude")
+        longitude = row.get("longitude")
+        if not isinstance(latitude, (int, float)) or not isinstance(longitude, (int, float)):
+            raise ValueError(f"geography point lacks numeric coordinates: {name}")
+        if not 24 <= latitude <= 50 or not -125 <= longitude <= -66:
+            raise ValueError(f"geography point is outside the supported continental U.S. map: {name}")
+    if set(geography_points.get("unmapped_boundary_examples") or []) & seen_names:
+        raise ValueError("a non-exact geography boundary was incorrectly promoted to a Census place point")
+
+
 def validate_structured_evidence(registry: dict[str, Any], manifest: dict[str, Any]) -> None:
     source_map = {row["source_id"]: row for row in manifest["sources"]}
     live_sources = [source for source in registry["sources"] if source.get("parser") == "gatik_live_operations"]
@@ -323,7 +359,15 @@ def build_part135_reconciliation(
     }
 
 
-def build_api(registry: dict[str, Any], manifest: dict[str, Any], api_dir: Path) -> dict[str, Any]:
+def build_api(
+    registry: dict[str, Any],
+    manifest: dict[str, Any],
+    api_dir: Path,
+    geography_points: dict[str, Any] | None = None,
+) -> dict[str, Any]:
+    if geography_points is None:
+        geography_points = json.loads(DEFAULT_GEOGRAPHY_POINTS.read_text())
+        validate_geography_points(geography_points, registry)
     source_map = {row["source_id"]: row for row in manifest["sources"]}
     drones = enrich_records(registry["drone_part135"], source_map)
     trucking = enrich_records(registry["trucking_operators"], source_map)
@@ -335,6 +379,7 @@ def build_api(registry: dict[str, Any], manifest: dict[str, Any], api_dir: Path)
     (api_dir / "drone-part135.json").write_bytes(dump({"schema_version": 1, "records": drones}))
     (api_dir / "trucking.json").write_bytes(dump({"schema_version": 1, "records": trucking}))
     (api_dir / "events.json").write_bytes(dump({"schema_version": 1, "records": events}))
+    (api_dir / "geography-points.json").write_bytes(dump(geography_points))
     (api_dir / "part135-reconciliation.json").write_bytes(dump(part135_reconciliation))
     (api_dir / "provenance.json").write_bytes(dump(manifest))
     (api_dir / "registry.json").write_bytes(dump(registry))
@@ -365,6 +410,7 @@ def build_api(registry: dict[str, Any], manifest: dict[str, Any], api_dir: Path)
         "operation_event_first_period": min(event_periods, key=event_period_key),
         "operation_event_last_period": max(event_periods, key=event_period_key),
         "events_2024_or_later": sum(event_period_key(value)[0] >= 2024 for value in event_periods),
+        "official_geography_point_count": len(geography_points["records"]),
         "primary_source_count": len(manifest["sources"]),
         "raw_evidence_count": len(manifest["sources"]),
     }
@@ -373,6 +419,7 @@ def build_api(registry: dict[str, Any], manifest: dict[str, Any], api_dir: Path)
         "part135_reconciliation": "part135-reconciliation.json",
         "trucking": "trucking.json",
         "events": "events.json",
+        "geography_points": "geography-points.json",
         "registry": "registry.json",
         "provenance": "provenance.json",
     }
@@ -420,15 +467,18 @@ def collect(registry: dict[str, Any], data_root: Path) -> dict[str, Any]:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--registry", type=Path, default=DEFAULT_REGISTRY)
+    parser.add_argument("--geography-points", type=Path, default=DEFAULT_GEOGRAPHY_POINTS)
     parser.add_argument("--data-root", type=Path, default=DEFAULT_DATA_ROOT)
     parser.add_argument("--api-dir", type=Path, default=DEFAULT_API_DIR)
     parser.add_argument("--offline", action="store_true")
     args = parser.parse_args()
     registry = json.loads(args.registry.read_text())
+    geography_points = json.loads(args.geography_points.read_text())
     validate_registry(registry)
+    validate_geography_points(geography_points, registry)
     manifest = verify_manifest(args.data_root) if args.offline else collect(registry, args.data_root)
     validate_structured_evidence(registry, manifest)
-    index = build_api(registry, manifest, args.api_dir)
+    index = build_api(registry, manifest, args.api_dir, geography_points)
     print(json.dumps(index["coverage"], sort_keys=True))
 
 

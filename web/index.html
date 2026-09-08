@@ -29,6 +29,14 @@
     .timeline { padding: 0; list-style: none; display: grid; gap: 12px; }
     .timeline li { border-bottom: 1px solid color-mix(in srgb, CanvasText 18%, transparent); padding: 0 0 14px; }
     .timeline time { font-variant-numeric: tabular-nums; font-weight: 700; }
+    .map-wrap { border: 1px solid color-mix(in srgb, CanvasText 22%, transparent); border-radius: 12px; padding: 12px; overflow-x: auto; }
+    .map { display: block; width: 100%; min-width: 640px; height: auto; }
+    .map-frame { fill: none; stroke: currentColor; stroke-opacity: .35; }
+    .map-grid { stroke: currentColor; stroke-opacity: .12; stroke-dasharray: 5 7; }
+    .map-point { fill: Canvas; stroke: currentColor; stroke-width: 2.5; }
+    .map-label { fill: currentColor; font-size: 13px; font-weight: 650; paint-order: stroke; stroke: Canvas; stroke-width: 4px; stroke-linejoin: round; }
+    .map-list { margin-top: 14px; }
+    .map-list li { margin: .45rem 0; }
     .error { border: 2px solid currentColor; padding: 16px; border-radius: 12px; white-space: pre-wrap; }
     .source-hash { overflow-wrap: anywhere; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: .78rem; opacity: .7; }
     footer { margin-top: 3rem; opacity: .75; font-size: .9rem; }
@@ -56,6 +64,13 @@
     <h2 id="latest-title">最新の確認済み変更</h2>
     <p id="collection-change" class="boundary" aria-live="polite"></p>
     <div id="latest"></div>
+  </section>
+
+  <section aria-labelledby="geography-title">
+    <h2 id="geography-title">一次情報で座標化できた地域</h2>
+    <p class="muted">現在のcanonical地名とU.S. Census Bureau 2025 Gazetteerのplaceが完全一致する地域だけを代表緯度・経度で表示します。点は配送範囲・走行ルート・施設境界ではありません。広域名やルート名を都市中心点へ置き換えません。</p>
+    <div id="geography-map" class="map-wrap" aria-live="polite"></div>
+    <ul id="geography-list" class="map-list"></ul>
   </section>
 
   <section aria-labelledby="gatik-live-title">
@@ -133,6 +148,24 @@ function eventCard(row, maps) {
   </article>`;
 }
 
+function geographyMap(data) {
+  if (!Array.isArray(data.records) || data.records.length === 0) throw new Error('geography-points.json: records are missing');
+  const minLon = -125, maxLon = -66, minLat = 24, maxLat = 50;
+  const width = 1000, height = 520, pad = 28;
+  const x = lon => pad + ((lon - minLon) / (maxLon - minLon)) * (width - pad * 2);
+  const y = lat => pad + ((maxLat - lat) / (maxLat - minLat)) * (height - pad * 2);
+  const grid = [-120, -110, -100, -90, -80, -70].map(lon => `<line class="map-grid" x1="${x(lon)}" y1="${pad}" x2="${x(lon)}" y2="${height-pad}"/>`).join('')
+    + [25, 30, 35, 40, 45, 50].map(lat => `<line class="map-grid" x1="${pad}" y1="${y(lat)}" x2="${width-pad}" y2="${y(lat)}"/>`).join('');
+  const points = data.records.map(row => {
+    const px = x(row.longitude), py = y(row.latitude);
+    return `<g><circle class="map-point" cx="${px}" cy="${py}" r="7"><title>${esc(row.canonical_geography)} / Census ${esc(row.census_name)}</title></circle><text class="map-label" x="${px + 10}" y="${py - 10}">${esc(row.canonical_geography)}</text></g>`;
+  }).join('');
+  return `<svg class="map" viewBox="0 0 ${width} ${height}" role="img" aria-label="U.S. Census Bureauの代表緯度・経度で配置したcanonical地理ポイント">
+    <rect class="map-frame" x="${pad}" y="${pad}" width="${width-pad*2}" height="${height-pad*2}" rx="8"/>
+    ${grid}${points}
+  </svg>`;
+}
+
 async function loadJson(path) {
   const response = await fetch(API + path, { cache: 'no-store' });
   if (!response.ok) throw new Error(`${path}: HTTP ${response.status}`);
@@ -146,11 +179,12 @@ async function loadDeployment() {
 }
 
 async function render() {
-  const [index, droneData, truckingData, eventData, gatikLive, deployment] = await Promise.all([
+  const [index, droneData, truckingData, eventData, geographyData, gatikLive, deployment] = await Promise.all([
     loadJson('index.json'),
     loadJson('drone-part135.json'),
     loadJson('trucking.json'),
     loadJson('events.json'),
+    loadJson('geography-points.json'),
     loadJson('gatik-live-operations.json'),
     loadDeployment()
   ]);
@@ -165,6 +199,7 @@ async function render() {
     metric('FAA Part 135掲載事業者', index.coverage.faa_part135_operator_count, '認可の証拠'),
     metric('商用無人トラック事業者', index.coverage.commercial_driverless_trucking_operator_count, '車内の人間運転手なし'),
     metric('商用ドローン運用イベント', commercialDroneEvents.length, '一次情報で開始・実績を確認'),
+    metric('公式座標付き地域', index.coverage.official_geography_point_count, 'Census代表点・完全一致のみ'),
     metric('一次情報', index.coverage.primary_source_count, 'raw evidenceをSHA-256固定')
   ].join('');
   document.querySelector('#retrieved').textContent = `データ取得時刻: ${index.retrieved_at}`;
@@ -172,6 +207,12 @@ async function render() {
     ? '<strong>今回の取得で、確認済み状態に変更があります。</strong> 下の最新イベントと時系列を一次情報までたどって確認できます。'
     : '<strong>今回の取得では、確認済み状態の変更はありません。</strong> 一次情報は再取得していますが、取得時刻や本文SHA-256の変化だけを新しい運用変化とは扱いません。';
   document.querySelector('#latest').innerHTML = latest ? eventCard(latest, maps) : '<p>確認済みイベントはありません。</p>';
+
+  if (index.coverage.official_geography_point_count !== geographyData.records.length) {
+    throw new Error('geography-points.json: coverage count mismatch');
+  }
+  document.querySelector('#geography-map').innerHTML = geographyMap(geographyData);
+  document.querySelector('#geography-list').innerHTML = geographyData.records.map(row => `<li><strong>${esc(row.canonical_geography)}</strong> — Census ${esc(row.census_name)} / GEOID ${esc(row.census_geoid)} / ${row.latitude}, ${row.longitude} / ${sourceLink(row)}</li>`).join('');
 
   if (!Number.isInteger(gatikLive.displayed_row_count) || !Array.isArray(gatikLive.records) || !gatikLive.displayed_status_counts) {
     throw new Error('gatik-live-operations.json: displayed snapshot is incomplete');
@@ -236,7 +277,7 @@ async function render() {
 render().catch(error => {
   document.querySelector('#error-section').hidden = false;
   document.querySelector('#error').textContent = `canonical APIの取得または解析に失敗しました.\n${error.message}`;
-  for (const id of ['summary', 'collection-change', 'latest', 'gatik-live-summary', 'gatik-live-retrieved', 'gatik-live', 'trucking', 'drones', 'events']) document.querySelector(`#${id}`).replaceChildren();
+  for (const id of ['summary', 'collection-change', 'latest', 'geography-map', 'geography-list', 'gatik-live-summary', 'gatik-live-retrieved', 'gatik-live', 'trucking', 'drones', 'events']) document.querySelector(`#${id}`).replaceChildren();
 });
 </script>
 </body>

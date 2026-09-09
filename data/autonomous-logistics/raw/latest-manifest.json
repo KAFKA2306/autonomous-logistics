@@ -1,5 +1,5 @@
 {
-  "retrieved_at": "2026-09-09T00:10:27.680173+00:00",
+  "retrieved_at": "2026-09-09T01:09:13.707130+00:00",
   "schema_version": 1,
   "sources": [
     {
@@ -58,8 +58,8 @@
     {
       "authority": "DoorDash",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/82ad626b86fd4dcc92778bf6bc79faca97f2bc3e7c31a55f2c8a3767585e850c.html",
-      "sha256": "82ad626b86fd4dcc92778bf6bc79faca97f2bc3e7c31a55f2c8a3767585e850c",
+      "evidence_path": "raw/objects/d4e372caf25ecb4f6db6b7c73261ca2fa95427b3485de11536e7ba986e361f22.html",
+      "sha256": "d4e372caf25ecb4f6db6b7c73261ca2fa95427b3485de11536e7ba986e361f22",
       "size_bytes": 406273,
       "source_id": "doordash-air-part135-2026",
       "source_url": "https://about.doordash.com/en-us/news/doordash-air",
@@ -92,9 +92,9 @@
     {
       "authority": "DroneUp",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/0960974258f8a721ec1f037799b916b318296cff5110f25a9b62bba5ef07de60.html",
-      "sha256": "0960974258f8a721ec1f037799b916b318296cff5110f25a9b62bba5ef07de60",
-      "size_bytes": 231344,
+      "evidence_path": "raw/objects/1f433a4d90304cc8690a6d31b8852ba8e9a9d918c4d3e1de29d6d538d1d7f40d.html",
+      "sha256": "1f433a4d90304cc8690a6d31b8852ba8e9a9d918c4d3e1de29d6d538d1d7f40d",
+      "size_bytes": 178304,
       "source_id": "droneup-capacity-test-2024",
       "source_url": "https://www.droneup.com/news/droneup-achieves-500-deliveries-per-day",
       "verified_markers": [
@@ -118,6 +118,21 @@
         "Dallas-Fort Worth",
         "Metro Atlanta",
         "Greater Houston"
+      ]
+    },
+    {
+      "authority": "Wing Aviation LLC",
+      "content_type": "text/html",
+      "evidence_path": "raw/objects/ae520f2cb17e01c90edabb8db4f705d91a346854a0b268ce2132704628a862a4.html",
+      "sha256": "ae520f2cb17e01c90edabb8db4f705d91a346854a0b268ce2132704628a862a4",
+      "size_bytes": 411388,
+      "source_id": "wing-atlanta-commercial-start-2025",
+      "source_url": "https://wing.com/news/wing-walmart-metro-atlanta-drone-delivery-launch",
+      "verified_markers": [
+        "Dec 3, 2025",
+        "Beginning December 3",
+        "six Walmart stores across Metro Atlanta",
+        "eligible customers in Metro Atlanta can now place orders"
       ]
     },
     {
@@ -214,8 +229,8 @@
     {
       "authority": "Gatik",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/5f52c29d4d59cefeeffb8617771b960d68c78b78c79102b14be139e884ff1c5a.html",
-      "sha256": "5f52c29d4d59cefeeffb8617771b960d68c78b78c79102b14be139e884ff1c5a",
+      "evidence_path": "raw/objects/9cf39e28ec53c0d0dd3c2787ebe1e14f3e2c8baf47999e3be3774fe1ccd3d388.html",
+      "sha256": "9cf39e28ec53c0d0dd3c2787ebe1e14f3e2c8baf47999e3be3774fe1ccd3d388",
       "size_bytes": 91753,
       "source_id": "gatik-2026-scale",
       "source_url": "https://archive.gatik.ai/news/press-releases/gatik-becomes-first-us-company-to-operate-fully-driverless-trucks-at-scale-for-commercial-deliveries/",
@@ -232,8 +247,8 @@
     {
       "authority": "Gatik",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/f85366a8130997c3d689a9a26d003bdd99a80c77d5b3846aa663ea104bf9cceb.html",
-      "sha256": "f85366a8130997c3d689a9a26d003bdd99a80c77d5b3846aa663ea104bf9cceb",
+      "evidence_path": "raw/objects/0845dd6c77aa456f8d1568afe3f1d296d9cae9bc7eda2308e2051f40688a0a9a.html",
+      "sha256": "0845dd6c77aa456f8d1568afe3f1d296d9cae9bc7eda2308e2051f40688a0a9a",
       "size_bytes": 91670,
       "source_id": "gatik-2026-08-25-scale",
       "source_url": "https://archive.gatik.ai/news/coverage/gatik-raises-200-million-series-d-led-by-qia-and-kdt-as-demand-for-driverless-commercial-freight-accelerates/",
@@ -420,9 +435,9 @@
     {
       "authority": "Kodiak AI, Inc. / Atlas Energy Solutions Inc.",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/a88c790d368c2470ab34f4dfef84e46809d9a66feadfa29c01f3d80b5cb7a91d.html",
-      "sha256": "a88c790d368c2470ab34f4dfef84e46809d9a66feadfa29c01f3d80b5cb7a91d",
-      "size_bytes": 156260,
+      "evidence_path": "raw/objects/ce1dff2ce88f293807c1fba8d252cae732d0469e10c025193a67c772b720a111.html",
+      "sha256": "ce1dff2ce88f293807c1fba8d252cae732d0469e10c025193a67c772b720a111",
+      "size_bytes": 156344,
       "source_id": "kodiak-atlas-commercial-start-2025",
       "source_url": "https://kodiak.ai/news/kodiak-delivers-customer-owned-autonomous-robotrucks-to-atlas",
       "verified_markers": [
@@ -435,9 +450,9 @@
     {
       "authority": "Kodiak AI",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/978c9e37ab26c338351cefaed31305b8cbc50f5bc57c890b9f74c9f08fbde319.html",
-      "sha256": "978c9e37ab26c338351cefaed31305b8cbc50f5bc57c890b9f74c9f08fbde319",
-      "size_bytes": 126275,
+      "evidence_path": "raw/objects/93f7784182924ccf39b4ec8b2a4b27e868ad2922ad45a61e04fa7a2b1893e98e.html",
+      "sha256": "93f7784182924ccf39b4ec8b2a4b27e868ad2922ad45a61e04fa7a2b1893e98e",
+      "size_bytes": 126340,
       "source_id": "kodiak-2025-commercial",
       "source_url": "https://kodiak.ai/news/kodiak-delivers-two-additional-driverless-trucks",
       "verified_markers": [
@@ -469,9 +484,9 @@
     {
       "authority": "Kodiak AI, Inc.",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/6d6dd00ba285435b9acbd2300fac6e4178c3b2bb5a4a4baa8ee8a40ba9799958.html",
-      "sha256": "6d6dd00ba285435b9acbd2300fac6e4178c3b2bb5a4a4baa8ee8a40ba9799958",
-      "size_bytes": 136908,
+      "evidence_path": "raw/objects/06e2c081ca502fece6527a7929ba99a5761633d1649ea7a7b239d38f7bdffc10.html",
+      "sha256": "06e2c081ca502fece6527a7929ba99a5761633d1649ea7a7b239d38f7bdffc10",
+      "size_bytes": 137006,
       "source_id": "kodiak-roehl-commercial-2026",
       "source_url": "https://kodiak.ai/news/roehl-transport-autonomous-freight",
       "verified_markers": [

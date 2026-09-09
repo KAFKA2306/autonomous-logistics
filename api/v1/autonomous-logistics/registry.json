@@ -497,6 +497,22 @@
       "trailers_per_truck": 3
     },
     {
+      "autonomy_readiness_measure": 0.93,
+      "autonomy_readiness_measure_prior": 0.91,
+      "autonomy_readiness_measure_prior_period": "2026-07",
+      "autonomy_readiness_measure_unit": "fraction_of_safety_case_claims_and_evidence_materially_complete",
+      "driverless_long_haul_launch_timing": "by end of 2026",
+      "driverless_long_haul_launch_timing_status": "forward_looking_statement",
+      "effective_at": "2026-08",
+      "event_id": "kodiak-long-haul-readiness-2026-08",
+      "event_type": "driverless_long_haul_readiness_snapshot",
+      "mode": "autonomous_trucking",
+      "operation_status": "commercial",
+      "operator_id": "kodiak",
+      "remaining_work": "final engineering verification and validation activities",
+      "source_id": "kodiak-long-haul-readiness-2026-09-08"
+    },
+    {
       "deliveries_per_hour": 40,
       "deliveries_single_day": 500,
       "effective_at": "2024-08-06",
@@ -834,6 +850,19 @@
       ],
       "source_id": "kodiak-atlas-expansion-2026",
       "source_url": "https://investors.kodiak.ai/news-releases/news-release-details/atlas-energy-solutions-expands-ai-enabled-digital-transformation"
+    },
+    {
+      "authority": "Kodiak AI, Inc.",
+      "required_markers": [
+        "September 8, 2026",
+        "remains on track to launch driverless long-haul commercial service by the end of 2026",
+        "reached 93% at the end of August 2026",
+        "up from 91% at the end of July",
+        "percentage of claims and evidence in Kodiak",
+        "35 driverless trucks were operating commercially with no humans in the cab"
+      ],
+      "source_id": "kodiak-long-haul-readiness-2026-09-08",
+      "source_url": "https://investors.kodiak.ai/news-releases/news-release-details/kodiak-ai-track-year-end-driverless-long-haul-launch-safety-case"
     }
   ],
   "trucking_operators": [

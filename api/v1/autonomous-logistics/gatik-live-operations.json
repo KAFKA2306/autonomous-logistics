@@ -145,7 +145,7 @@
     }
   ],
   "refresh_interval_hours": 3,
-  "retrieved_at": "2026-09-09T15:15:31.033388+00:00",
+  "retrieved_at": "2026-09-09T16:51:46.116338+00:00",
   "schema_version": 1,
   "source_evidence_path": "raw/objects/143dbee3333d4e12b40b6df2e20bd867a1a32d17e997d257de6dd4fdb74e2aaa.html",
   "source_id": "gatik-live-operations",

@@ -263,6 +263,19 @@ class AutonomousLogisticsEvidenceTests(unittest.TestCase):
         self.assertEqual(event["operation_status"], "commercial_driverless")
         self.assertEqual(event["source_id"], "kodiak-q2-2026")
 
+    def test_kodiak_long_haul_readiness_stays_non_driverless_until_launch(self):
+        events = {row["event_id"]: row for row in self.registry["operation_events"]}
+        event = events["kodiak-long-haul-readiness-2026-08"]
+        self.assertEqual(event["effective_at"], "2026-08")
+        self.assertEqual(event["event_type"], "driverless_long_haul_readiness_snapshot")
+        self.assertEqual(event["operation_status"], "commercial")
+        self.assertEqual(event["autonomy_readiness_measure"], 0.93)
+        self.assertEqual(event["autonomy_readiness_measure_prior"], 0.91)
+        self.assertEqual(event["autonomy_readiness_measure_prior_period"], "2026-07")
+        self.assertEqual(event["driverless_long_haul_launch_timing_status"], "forward_looking_statement")
+        self.assertEqual(event["source_id"], "kodiak-long-haul-readiness-2026-09-08")
+        self.assertNotEqual(event["operation_status"], "commercial_driverless")
+
     def test_droneup_capacity_benchmark_remains_testing_evidence(self):
         events = {row["event_id"]: row for row in self.registry["operation_events"]}
         event = events["droneup-capacity-test-2024"]

@@ -116,6 +116,18 @@
       "source_id": "faa-part135-package-delivery"
     },
     {
+      "effective_at": "2022-04-07",
+      "event_id": "wing-dfw-commercial-start-2022-04-07",
+      "event_type": "commercial_service_start",
+      "geography": [
+        "Dallas-Fort Worth Metroplex, Texas"
+      ],
+      "mode": "drone_package_delivery",
+      "operation_status": "commercial",
+      "operator_id": "wing-aviation",
+      "source_id": "wing-dfw-commercial-start-2022"
+    },
+    {
       "effective_at": "2022-06",
       "event_id": "zipline-commercial-start-2022",
       "event_type": "commercial_service_start",
@@ -604,6 +616,17 @@
       ],
       "source_id": "wing-commercial-scale-2026",
       "source_url": "https://wing.com/news/wing-and-walmart-seven-new-markets-drone-delivery"
+    },
+    {
+      "authority": "Wing Aviation LLC",
+      "required_markers": [
+        "Apr 7, 2025",
+        "On this day in 2022",
+        "first ever drone delivery in the Dallas-Fort Worth Metroplex",
+        "Since launching in DFW in 2022"
+      ],
+      "source_id": "wing-dfw-commercial-start-2022",
+      "source_url": "https://wing.com/news/wing-celebrates-3-years-of-drone-delivery-in-dfw"
     },
     {
       "authority": "Wing Aviation LLC",

@@ -1,0 +1,69 @@
+name: Temporary Kodiak readiness patch
+
+on:
+  push:
+    branches: [research/kodiak-long-haul-readiness-20260910]
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: research/kodiak-long-haul-readiness-20260910
+      - name: Apply minimal canonical patch
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          registry_path = Path('data/registry.json')
+          text = registry_path.read_text()
+          source = {"source_id":"kodiak-long-haul-readiness-2026-09-08","authority":"Kodiak AI, Inc.","source_url":"https://investors.kodiak.ai/news-releases/news-release-details/kodiak-ai-track-year-end-driverless-long-haul-launch-safety-case","required_markers":["September 8, 2026","remains on track to launch driverless long-haul commercial service by the end of 2026","reached 93% at the end of August 2026","up from 91% at the end of July","percentage of claims and evidence in Kodiak","35 driverless trucks were operating commercially with no humans in the cab"]}
+          boundary = '    }\n  ],\n  "drone_part135": ['
+          replacement = '    },\n    ' + json.dumps(source, ensure_ascii=False, separators=(',', ':')) + '\n  ],\n  "drone_part135": ['
+          if text.count(boundary) != 1:
+              raise SystemExit('source insertion boundary changed')
+          text = text.replace(boundary, replacement, 1)
+          event = {"event_id":"kodiak-long-haul-readiness-2026-08","operator_id":"kodiak","mode":"autonomous_trucking","event_type":"driverless_long_haul_readiness_snapshot","effective_at":"2026-08","operation_status":"commercial","autonomy_readiness_measure":0.93,"autonomy_readiness_measure_unit":"fraction_of_safety_case_claims_and_evidence_materially_complete","autonomy_readiness_measure_prior":0.91,"autonomy_readiness_measure_prior_period":"2026-07","driverless_long_haul_launch_timing":"by end of 2026","driverless_long_haul_launch_timing_status":"forward_looking_statement","remaining_work":"final engineering verification and validation activities","source_id":"kodiak-long-haul-readiness-2026-09-08"}
+          event_boundary = '    {"event_id":"droneup-capacity-test-2024"'
+          event_replacement = '    ' + json.dumps(event, ensure_ascii=False, separators=(',', ':')) + ',\n' + event_boundary
+          if text.count(event_boundary) != 1:
+              raise SystemExit('event insertion boundary changed')
+          registry_path.write_text(text.replace(event_boundary, event_replacement, 1))
+          test_path = Path('test_autonomous_logistics.py')
+          tests = test_path.read_text()
+          test_boundary = '    def test_droneup_capacity_benchmark_remains_testing_evidence(self):\n'
+          test_lines = [
+              '    def test_kodiak_long_haul_readiness_stays_non_driverless_until_launch(self):',
+              '        events = {row["event_id"]: row for row in self.registry["operation_events"]}',
+              '        event = events["kodiak-long-haul-readiness-2026-08"]',
+              '        self.assertEqual(event["effective_at"], "2026-08")',
+              '        self.assertEqual(event["event_type"], "driverless_long_haul_readiness_snapshot")',
+              '        self.assertEqual(event["operation_status"], "commercial")',
+              '        self.assertEqual(event["autonomy_readiness_measure"], 0.93)',
+              '        self.assertEqual(event["autonomy_readiness_measure_prior"], 0.91)',
+              '        self.assertEqual(event["autonomy_readiness_measure_prior_period"], "2026-07")',
+              '        self.assertEqual(event["driverless_long_haul_launch_timing_status"], "forward_looking_statement")',
+              '        self.assertEqual(event["source_id"], "kodiak-long-haul-readiness-2026-09-08")',
+              '        self.assertNotEqual(event["operation_status"], "commercial_driverless")',
+              '',
+          ]
+          if tests.count(test_boundary) != 1:
+              raise SystemExit('test insertion boundary changed')
+          test_path.write_text(tests.replace(test_boundary, '\n'.join(test_lines) + '\n' + test_boundary, 1))
+          PY
+      - name: Validate focused contract
+        run: |
+          python -m py_compile autonomous_logistics.py test_autonomous_logistics.py
+          python -m unittest -v test_autonomous_logistics
+      - name: Commit patch
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add data/registry.json test_autonomous_logistics.py
+          git commit -m 'feat: record Kodiak long-haul readiness boundary'
+          git push origin HEAD:research/kodiak-long-haul-readiness-20260910

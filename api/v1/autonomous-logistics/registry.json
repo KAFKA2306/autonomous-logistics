@@ -184,6 +184,19 @@
       "source_id": "faa-nepa-drone-operations"
     },
     {
+      "effective_at": "2026-01-15",
+      "event_id": "wing-houston-commercial-start-2026-01-15",
+      "event_type": "commercial_service_start",
+      "geography": [
+        "Greater Houston, Texas"
+      ],
+      "mode": "drone_package_delivery",
+      "operation_status": "commercial",
+      "operator_id": "wing-aviation",
+      "partner": "Walmart",
+      "source_id": "wing-houston-commercial-start-2026"
+    },
+    {
       "effective_at": "2026-05-11",
       "event_id": "wing-charlotte-papa-johns-commercial-pilot-2026-05-11",
       "event_type": "commercial_pilot_start",
@@ -589,6 +602,17 @@
       ],
       "source_id": "wing-charlotte-papa-johns-commercial-pilot-2026",
       "source_url": "https://wing.com/news/wing-papa-johns-fresh-hot-drone-deliveries"
+    },
+    {
+      "authority": "Wing Aviation LLC",
+      "required_markers": [
+        "Jan 15, 2026",
+        "ultra-fast drone delivery across Greater Houston",
+        "marking the start",
+        "we are now serving one of the largest and most dynamic metropolitan areas in the country"
+      ],
+      "source_id": "wing-houston-commercial-start-2026",
+      "source_url": "https://wing.com/news/greater-houston-kicks-off-walmart-wing-expansion-year"
     },
     {
       "authority": "Zipline",

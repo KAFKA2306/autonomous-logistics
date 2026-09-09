@@ -1,5 +1,5 @@
 {
-  "retrieved_at": "2026-09-08T23:36:59.284390+00:00",
+  "retrieved_at": "2026-09-09T00:10:27.680173+00:00",
   "schema_version": 1,
   "sources": [
     {
@@ -58,8 +58,8 @@
     {
       "authority": "DoorDash",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/e3323f207566286747561ef8119942db5466467a8468e4ebfa66bd25c3bfbe96.html",
-      "sha256": "e3323f207566286747561ef8119942db5466467a8468e4ebfa66bd25c3bfbe96",
+      "evidence_path": "raw/objects/82ad626b86fd4dcc92778bf6bc79faca97f2bc3e7c31a55f2c8a3767585e850c.html",
+      "sha256": "82ad626b86fd4dcc92778bf6bc79faca97f2bc3e7c31a55f2c8a3767585e850c",
       "size_bytes": 406273,
       "source_id": "doordash-air-part135-2026",
       "source_url": "https://about.doordash.com/en-us/news/doordash-air",
@@ -92,9 +92,9 @@
     {
       "authority": "DroneUp",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/458d06ba9837204a7ddcc69a9a55ab39d8a74b34f0e46c300012d4514f06c170.html",
-      "sha256": "458d06ba9837204a7ddcc69a9a55ab39d8a74b34f0e46c300012d4514f06c170",
-      "size_bytes": 178304,
+      "evidence_path": "raw/objects/0960974258f8a721ec1f037799b916b318296cff5110f25a9b62bba5ef07de60.html",
+      "sha256": "0960974258f8a721ec1f037799b916b318296cff5110f25a9b62bba5ef07de60",
+      "size_bytes": 231344,
       "source_id": "droneup-capacity-test-2024",
       "source_url": "https://www.droneup.com/news/droneup-achieves-500-deliveries-per-day",
       "verified_markers": [
@@ -133,6 +133,21 @@
         "initial pilot program in Charlotte, North Carolina",
         "deliver new Oven Toasted Sandwiches",
         "pilot is initially launching via the Wing app"
+      ]
+    },
+    {
+      "authority": "Wing Aviation LLC",
+      "content_type": "text/html",
+      "evidence_path": "raw/objects/a44f57cdb5195204aafcb2190fd96d666e5a4f28bb463db97d1388541638b43b.html",
+      "sha256": "a44f57cdb5195204aafcb2190fd96d666e5a4f28bb463db97d1388541638b43b",
+      "size_bytes": 408914,
+      "source_id": "wing-houston-commercial-start-2026",
+      "source_url": "https://wing.com/news/greater-houston-kicks-off-walmart-wing-expansion-year",
+      "verified_markers": [
+        "Jan 15, 2026",
+        "ultra-fast drone delivery across Greater Houston",
+        "marking the start",
+        "we are now serving one of the largest and most dynamic metropolitan areas in the country"
       ]
     },
     {
@@ -199,8 +214,8 @@
     {
       "authority": "Gatik",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/593e41d691053057bd5a2c29b27a36797bf4300f32994aea901cb2adfadaba5a.html",
-      "sha256": "593e41d691053057bd5a2c29b27a36797bf4300f32994aea901cb2adfadaba5a",
+      "evidence_path": "raw/objects/5f52c29d4d59cefeeffb8617771b960d68c78b78c79102b14be139e884ff1c5a.html",
+      "sha256": "5f52c29d4d59cefeeffb8617771b960d68c78b78c79102b14be139e884ff1c5a",
       "size_bytes": 91753,
       "source_id": "gatik-2026-scale",
       "source_url": "https://archive.gatik.ai/news/press-releases/gatik-becomes-first-us-company-to-operate-fully-driverless-trucks-at-scale-for-commercial-deliveries/",
@@ -217,8 +232,8 @@
     {
       "authority": "Gatik",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/9f215f044f01764f4a2053476f209e661f3a2c73b824cccc902d37ad23250da8.html",
-      "sha256": "9f215f044f01764f4a2053476f209e661f3a2c73b824cccc902d37ad23250da8",
+      "evidence_path": "raw/objects/f85366a8130997c3d689a9a26d003bdd99a80c77d5b3846aa663ea104bf9cceb.html",
+      "sha256": "f85366a8130997c3d689a9a26d003bdd99a80c77d5b3846aa663ea104bf9cceb",
       "size_bytes": 91670,
       "source_id": "gatik-2026-08-25-scale",
       "source_url": "https://archive.gatik.ai/news/coverage/gatik-raises-200-million-series-d-led-by-qia-and-kdt-as-demand-for-driverless-commercial-freight-accelerates/",
@@ -405,9 +420,9 @@
     {
       "authority": "Kodiak AI, Inc. / Atlas Energy Solutions Inc.",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/64734abd2ff81da0403104aa0f59ffad14477c516556990c78d81bbef35220e0.html",
-      "sha256": "64734abd2ff81da0403104aa0f59ffad14477c516556990c78d81bbef35220e0",
-      "size_bytes": 156316,
+      "evidence_path": "raw/objects/a88c790d368c2470ab34f4dfef84e46809d9a66feadfa29c01f3d80b5cb7a91d.html",
+      "sha256": "a88c790d368c2470ab34f4dfef84e46809d9a66feadfa29c01f3d80b5cb7a91d",
+      "size_bytes": 156260,
       "source_id": "kodiak-atlas-commercial-start-2025",
       "source_url": "https://kodiak.ai/news/kodiak-delivers-customer-owned-autonomous-robotrucks-to-atlas",
       "verified_markers": [
@@ -420,8 +435,8 @@
     {
       "authority": "Kodiak AI",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/17761d30e880980b19566ce5b605a53798a6aeff5c47e3f563abe88ad98ea4bb.html",
-      "sha256": "17761d30e880980b19566ce5b605a53798a6aeff5c47e3f563abe88ad98ea4bb",
+      "evidence_path": "raw/objects/978c9e37ab26c338351cefaed31305b8cbc50f5bc57c890b9f74c9f08fbde319.html",
+      "sha256": "978c9e37ab26c338351cefaed31305b8cbc50f5bc57c890b9f74c9f08fbde319",
       "size_bytes": 126275,
       "source_id": "kodiak-2025-commercial",
       "source_url": "https://kodiak.ai/news/kodiak-delivers-two-additional-driverless-trucks",
@@ -454,8 +469,8 @@
     {
       "authority": "Kodiak AI, Inc.",
       "content_type": "text/html",
-      "evidence_path": "raw/objects/cb508cbc75e051da518b99004ff87448a541386a08249ffcefe872edf3175eea.html",
-      "sha256": "cb508cbc75e051da518b99004ff87448a541386a08249ffcefe872edf3175eea",
+      "evidence_path": "raw/objects/6d6dd00ba285435b9acbd2300fac6e4178c3b2bb5a4a4baa8ee8a40ba9799958.html",
+      "sha256": "6d6dd00ba285435b9acbd2300fac6e4178c3b2bb5a4a4baa8ee8a40ba9799958",
       "size_bytes": 136908,
       "source_id": "kodiak-roehl-commercial-2026",
       "source_url": "https://kodiak.ai/news/roehl-transport-autonomous-freight",

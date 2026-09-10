@@ -54,6 +54,12 @@ commercial_driverless
 
 `commercial`はdrone package-deliveryの実運行、`commercial_driverless`は無人commercial truckingに使います。future planやdriverless validation予定をcurrent commercial operationへ昇格させません。`human_driver_in_cab` / `safety_observer_required` / geography / source qualifierも別fieldで保持します。
 
+### Gatik live operations snapshot の比較境界
+
+`gatik-live-operations.json` はGatik公式サイトの **3時間ごとに更新されるlive trips表示の時点snapshot** です。`displayed_rows_complete: false` のため、表示中の行だけからfleet全体の完了率、on-time率、稼働率、fleet sizeを計算しません。
+
+異なる取得時刻の `displayed_status_counts` は、その時点で画面に表示されたtrip状態の構成です。観測時刻・対象trip・表示範囲が揃っていないsnapshot間で、`Completed` / `On Time` / `Ready` の増減を性能改善・悪化、成長、service-level trendとして解釈しません。trendを判断するには、同一定義の観測窓とcompleteな母集団、またはoperatorが一次情報として公開した集計KPIが必要です。
+
 ## Provenance
 
 ```text

@@ -2,8 +2,8 @@
   "displayed_row_count": 17,
   "displayed_rows_complete": false,
   "displayed_status_counts": {
-    "Completed": 8,
-    "On Time": 9,
+    "Completed": 13,
+    "On Time": 4,
     "Ready": 0
   },
   "records": [
@@ -19,8 +19,8 @@
       "driving_time": "3:50 hrs",
       "end_time": "7:52 AM",
       "start_time": "12:00 AM",
-      "status": "On Time",
-      "stops": "Unloading",
+      "status": "Completed",
+      "stops": "Completed",
       "truck_label": "G-002A"
     },
     {
@@ -43,8 +43,8 @@
       "driving_time": "4:17 hrs",
       "end_time": "8:25 AM",
       "start_time": "12:43 AM",
-      "status": "On Time",
-      "stops": "Driving",
+      "status": "Completed",
+      "stops": "Completed",
       "truck_label": "G-005A"
     },
     {
@@ -67,8 +67,8 @@
       "driving_time": "6:48 hrs",
       "end_time": "10:31 AM",
       "start_time": "1:07 AM",
-      "status": "On Time",
-      "stops": "Unloading",
+      "status": "Completed",
+      "stops": "Completed",
       "truck_label": "G-008A"
     },
     {
@@ -92,15 +92,15 @@
       "end_time": "9:06 AM",
       "start_time": "1:14 AM",
       "status": "On Time",
-      "stops": "Unloading",
+      "stops": "Driving",
       "truck_label": "G-011A"
     },
     {
       "driving_time": "4:35 hrs",
       "end_time": "8:50 AM",
       "start_time": "1:15 AM",
-      "status": "On Time",
-      "stops": "Driving",
+      "status": "Completed",
+      "stops": "Completed",
       "truck_label": "G-012A"
     },
     {
@@ -115,8 +115,8 @@
       "driving_time": "7:09 hrs",
       "end_time": "10:53 AM",
       "start_time": "1:25 AM",
-      "status": "On Time",
-      "stops": "Unloading",
+      "status": "Completed",
+      "stops": "Completed",
       "truck_label": "G-014A"
     },
     {
@@ -145,11 +145,11 @@
     }
   ],
   "refresh_interval_hours": 3,
-  "retrieved_at": "2026-09-18T16:40:43.893598+00:00",
+  "retrieved_at": "2026-09-18T21:10:44.591863+00:00",
   "schema_version": 1,
-  "source_evidence_path": "raw/objects/6b3b5cefe092f35307988da935e50fb8f48edf82c017680d115bc0d638bfeece.html",
+  "source_evidence_path": "raw/objects/9bea5c2def7140c3f3f0c971282bdc944176480f2b0331bfec56b919028ce429.html",
   "source_id": "gatik-live-operations",
-  "source_sha256": "6b3b5cefe092f35307988da935e50fb8f48edf82c017680d115bc0d638bfeece",
+  "source_sha256": "9bea5c2def7140c3f3f0c971282bdc944176480f2b0331bfec56b919028ce429",
   "source_url": "https://www.gatik.ai/",
   "time_zone_display": "Pacific Standard Time (PST)"
 }

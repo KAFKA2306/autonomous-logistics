@@ -3,153 +3,153 @@
   "displayed_rows_complete": false,
   "displayed_status_counts": {
     "Completed": 16,
-    "On Time": 1,
-    "Ready": 0
+    "On Time": 0,
+    "Ready": 1
   },
   "records": [
     {
-      "driving_time": "0:37 hrs",
-      "end_time": "3:59 AM",
-      "start_time": "3:00 AM",
+      "driving_time": "0:40 hrs",
+      "end_time": "9:34 AM",
+      "start_time": "8:57 AM",
       "status": "Completed",
       "stops": "Completed",
       "truck_label": "G-001A"
     },
     {
-      "driving_time": "0:32 hrs",
-      "end_time": "4:01 AM",
-      "start_time": "3:05 AM",
+      "driving_time": "0:52 hrs",
+      "end_time": "10:48 AM",
+      "start_time": "9:40 AM",
       "status": "Completed",
       "stops": "Completed",
       "truck_label": "G-002A"
     },
     {
-      "driving_time": "3:44 hrs",
-      "end_time": "8:42 AM",
-      "start_time": "3:15 AM",
+      "driving_time": "1:18 hrs",
+      "end_time": "10:55 AM",
+      "start_time": "9:41 AM",
       "status": "Completed",
       "stops": "Completed",
       "truck_label": "G-003A"
     },
     {
-      "driving_time": "1:04 hrs",
-      "end_time": "4:29 AM",
-      "start_time": "3:15 AM",
+      "driving_time": "0:50 hrs",
+      "end_time": "11:05 AM",
+      "start_time": "9:55 AM",
       "status": "Completed",
       "stops": "Completed",
       "truck_label": "G-004A"
     },
     {
-      "driving_time": "0:30 hrs",
-      "end_time": "3:59 AM",
-      "start_time": "3:20 AM",
+      "driving_time": "0:54 hrs",
+      "end_time": "11:00 AM",
+      "start_time": "9:56 AM",
       "status": "Completed",
       "stops": "Completed",
       "truck_label": "G-005A"
     },
     {
-      "driving_time": "0:48 hrs",
-      "end_time": "4:35 AM",
-      "start_time": "3:25 AM",
+      "driving_time": "0:22 hrs",
+      "end_time": "10:25 AM",
+      "start_time": "9:56 AM",
       "status": "Completed",
       "stops": "Completed",
       "truck_label": "G-006A"
     },
     {
-      "driving_time": "0:41 hrs",
-      "end_time": "4:35 AM",
-      "start_time": "3:30 AM",
+      "driving_time": "1:30 hrs",
+      "end_time": "11:22 AM",
+      "start_time": "10:04 AM",
       "status": "Completed",
       "stops": "Completed",
       "truck_label": "G-007A"
     },
     {
-      "driving_time": "2:45 hrs",
-      "end_time": "8:30 AM",
-      "start_time": "3:45 AM",
+      "driving_time": "0:50 hrs",
+      "end_time": "11:20 AM",
+      "start_time": "10:10 AM",
       "status": "Completed",
       "stops": "Completed",
       "truck_label": "G-008A"
     },
     {
-      "driving_time": "4:49 hrs",
-      "end_time": "6:58 PM",
-      "start_time": "4:00 AM",
-      "status": "On Time",
-      "stops": "Unloading",
+      "driving_time": "0:40 hrs",
+      "end_time": "11:04 AM",
+      "start_time": "10:27 AM",
+      "status": "Completed",
+      "stops": "Completed",
       "truck_label": "G-009A"
     },
     {
-      "driving_time": "0:15 hrs",
-      "end_time": "4:25 AM",
-      "start_time": "4:25 AM",
+      "driving_time": "0:36 hrs",
+      "end_time": "11:04 AM",
+      "start_time": "10:28 AM",
       "status": "Completed",
       "stops": "Completed",
       "truck_label": "G-010A"
     },
     {
-      "driving_time": "1:32 hrs",
-      "end_time": "5:57 AM",
-      "start_time": "4:35 AM",
+      "driving_time": "0:32 hrs",
+      "end_time": "11:18 AM",
+      "start_time": "10:47 AM",
       "status": "Completed",
       "stops": "Completed",
       "truck_label": "G-011A"
     },
     {
-      "driving_time": "1:57 hrs",
-      "end_time": "6:27 AM",
-      "start_time": "4:46 AM",
+      "driving_time": "1:50 hrs",
+      "end_time": "12:28 PM",
+      "start_time": "10:56 AM",
       "status": "Completed",
       "stops": "Completed",
       "truck_label": "G-012A"
     },
     {
-      "driving_time": "0:51 hrs",
-      "end_time": "5:54 AM",
-      "start_time": "4:50 AM",
-      "status": "Completed",
-      "stops": "Completed",
+      "driving_time": "1:05 hrs",
+      "end_time": "1:10 PM",
+      "start_time": "11:00 AM",
+      "status": "Ready",
+      "stops": "Parked",
       "truck_label": "G-013A"
     },
     {
-      "driving_time": "0:15 hrs",
-      "end_time": "4:55 AM",
-      "start_time": "4:55 AM",
+      "driving_time": "2:12 hrs",
+      "end_time": "12:48 PM",
+      "start_time": "11:04 AM",
       "status": "Completed",
       "stops": "Completed",
       "truck_label": "G-014A"
     },
     {
-      "driving_time": "2:00 hrs",
-      "end_time": "6:25 AM",
-      "start_time": "5:05 AM",
+      "driving_time": "0:51 hrs",
+      "end_time": "12:08 PM",
+      "start_time": "11:05 AM",
       "status": "Completed",
       "stops": "Completed",
       "truck_label": "G-015A"
     },
     {
       "driving_time": "0:50 hrs",
-      "end_time": "6:25 AM",
-      "start_time": "5:15 AM",
+      "end_time": "12:25 PM",
+      "start_time": "11:15 AM",
       "status": "Completed",
       "stops": "Completed",
       "truck_label": "G-016A"
     },
     {
-      "driving_time": "0:15 hrs",
-      "end_time": "5:25 AM",
-      "start_time": "5:25 AM",
+      "driving_time": "0:52 hrs",
+      "end_time": "12:48 PM",
+      "start_time": "11:40 AM",
       "status": "Completed",
       "stops": "Completed",
       "truck_label": "G-017A"
     }
   ],
   "refresh_interval_hours": 3,
-  "retrieved_at": "2026-09-18T23:32:35.869748+00:00",
+  "retrieved_at": "2026-09-19T04:57:29.225471+00:00",
   "schema_version": 1,
-  "source_evidence_path": "raw/objects/8dc4f497196599a3db67414533e3fe9ab808a7d59f5840f8c8a6d24fe08561d2.html",
+  "source_evidence_path": "raw/objects/8ac39455011d5799a2644487a1374828a6b5a0c528e3757f88b6fee4f54e0dd4.html",
   "source_id": "gatik-live-operations",
-  "source_sha256": "8dc4f497196599a3db67414533e3fe9ab808a7d59f5840f8c8a6d24fe08561d2",
+  "source_sha256": "8ac39455011d5799a2644487a1374828a6b5a0c528e3757f88b6fee4f54e0dd4",
   "source_url": "https://www.gatik.ai/",
   "time_zone_display": "Pacific Standard Time (PST)"
 }

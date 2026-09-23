@@ -17,9 +17,9 @@
       "operator_id": "aurora",
       "operator_name": "Aurora Innovation",
       "safety_observer_required": false,
-      "source_evidence_path": "raw/objects/8b066732cd390d18f95b8a2f17d8c871e332a8c39931d341c9aba530531385db.html",
+      "source_evidence_path": "raw/objects/383df78ca88afa61b0a7192e5f23b0f7ee2327abfc7a90569b5879cec7184af4.html",
       "source_id": "aurora-q2-2026",
-      "source_sha256": "8b066732cd390d18f95b8a2f17d8c871e332a8c39931d341c9aba530531385db",
+      "source_sha256": "383df78ca88afa61b0a7192e5f23b0f7ee2327abfc7a90569b5879cec7184af4",
       "source_url": "https://ir.aurora.tech/sec-filings/all-sec-filings/content/0001828108-26-000075/aurora26q2shareholderlet.htm",
       "system": "Aurora Driver",
       "vehicle_class": "Class 8 tractor-trailer"
@@ -44,9 +44,9 @@
       "operator_id": "gatik",
       "operator_name": "Gatik",
       "safety_observer_required": false,
-      "source_evidence_path": "raw/objects/18bf597856987a0da6e072f9d3e0477312bd0d91620b9feba0a68c633437bb78.html",
+      "source_evidence_path": "raw/objects/0a02374656548b8e4393f3d99da3d0c8b9fcb4d108ab7ad317df5b63e117b288.html",
       "source_id": "gatik-2026-08-25-scale",
-      "source_sha256": "18bf597856987a0da6e072f9d3e0477312bd0d91620b9feba0a68c633437bb78",
+      "source_sha256": "0a02374656548b8e4393f3d99da3d0c8b9fcb4d108ab7ad317df5b63e117b288",
       "source_url": "https://archive.gatik.ai/news/coverage/gatik-raises-200-million-series-d-led-by-qia-and-kdt-as-demand-for-driverless-commercial-freight-accelerates/",
       "system": "Gatik Driver",
       "vehicle_class": "freight-only autonomous trucks"

@@ -238,9 +238,9 @@
       "operation_status": "regulatory_authorization",
       "operator_id": "doordash-air",
       "operator_name": "DoorDash Air / DoorDash Labs",
-      "source_evidence_path": "raw/objects/bc866e89c20d63837c2390f24f408d602d2802e90c509eff54003a35456e8c3f.html",
+      "source_evidence_path": "raw/objects/0344eb92a29dbb72912b638a2a76d8cd073aff8d0fc9f4bbcb93f8b45237641d.html",
       "source_id": "doordash-air-part135-2026",
-      "source_sha256": "bc866e89c20d63837c2390f24f408d602d2802e90c509eff54003a35456e8c3f",
+      "source_sha256": "0344eb92a29dbb72912b638a2a76d8cd073aff8d0fc9f4bbcb93f8b45237641d",
       "source_url": "https://about.doordash.com/en-us/news/doordash-air"
     },
     {
@@ -254,9 +254,9 @@
       "mode": "drone_package_delivery",
       "operation_status": "commercial",
       "operator_id": "zipline",
-      "source_evidence_path": "raw/objects/8af621a00c9c27b8f0855fd87432da8375a7a5fed8ed4592d93ebf34a9cc3bff.html",
+      "source_evidence_path": "raw/objects/5d66067bda4854317aaf4cd94d84093afcbe2f57a1f83da40f9505df71cd596c.html",
       "source_id": "uber-zipline-partnership-2026",
-      "source_sha256": "8af621a00c9c27b8f0855fd87432da8375a7a5fed8ed4592d93ebf34a9cc3bff",
+      "source_sha256": "5d66067bda4854317aaf4cd94d84093afcbe2f57a1f83da40f9505df71cd596c",
       "source_url": "https://investor.uber.com/news-events/news/press-release-details/2026/Uber-and-Zipline-Partner-to-Bring-Drone-Delivery-to-Millions-of-Americans/default.aspx"
     },
     {
@@ -323,9 +323,9 @@
       "mode": "autonomous_trucking",
       "operation_status": "commercial_driverless",
       "operator_id": "gatik",
-      "source_evidence_path": "raw/objects/2accef83a4faf5f37c0139d8bcbeab8da069e694b557b8abaafb421f569a6729.html",
+      "source_evidence_path": "raw/objects/828c3b161e2b3da20dcb1d8452bc3b6ea7bd571ed36f4e5855b6d1db72415aa0.html",
       "source_id": "gatik-2026-scale",
-      "source_sha256": "2accef83a4faf5f37c0139d8bcbeab8da069e694b557b8abaafb421f569a6729",
+      "source_sha256": "828c3b161e2b3da20dcb1d8452bc3b6ea7bd571ed36f4e5855b6d1db72415aa0",
       "source_url": "https://archive.gatik.ai/news/press-releases/gatik-becomes-first-us-company-to-operate-fully-driverless-trucks-at-scale-for-commercial-deliveries/"
     },
     {
@@ -339,9 +339,9 @@
       "on_time_delivery_rate": 0.99,
       "operation_status": "commercial_driverless",
       "operator_id": "gatik",
-      "source_evidence_path": "raw/objects/09f1f88a802a6019fb27f6c4f6cd9d8df1042ce50a05d40797a66536aeaa2216.html",
+      "source_evidence_path": "raw/objects/e0be80309c85b2ab8c862019cda71727ffdc09ec45e4ab0f1e0aa88c82bbf9d4.html",
       "source_id": "gatik-2026-08-25-scale",
-      "source_sha256": "09f1f88a802a6019fb27f6c4f6cd9d8df1042ce50a05d40797a66536aeaa2216",
+      "source_sha256": "e0be80309c85b2ab8c862019cda71727ffdc09ec45e4ab0f1e0aa88c82bbf9d4",
       "source_url": "https://archive.gatik.ai/news/coverage/gatik-raises-200-million-series-d-led-by-qia-and-kdt-as-demand-for-driverless-commercial-freight-accelerates/"
     },
     {
@@ -353,9 +353,9 @@
       "mode": "autonomous_trucking",
       "operation_status": "commercial_driverless",
       "operator_id": "kodiak",
-      "source_evidence_path": "raw/objects/38002da91a40f01c6d3eaedbc74c0043606c12672879b0f37bf5120b1f9f20c1.html",
+      "source_evidence_path": "raw/objects/954738b3bfd65a651dde2b4399702227e5b9bd876d5960e972c4847d4ca2758f.html",
       "source_id": "kodiak-atlas-commercial-start-2025",
-      "source_sha256": "38002da91a40f01c6d3eaedbc74c0043606c12672879b0f37bf5120b1f9f20c1",
+      "source_sha256": "954738b3bfd65a651dde2b4399702227e5b9bd876d5960e972c4847d4ca2758f",
       "source_url": "https://kodiak.ai/news/kodiak-delivers-customer-owned-autonomous-robotrucks-to-atlas"
     },
     {
@@ -368,9 +368,9 @@
       "mode": "autonomous_trucking",
       "operation_status": "commercial_driverless",
       "operator_id": "kodiak",
-      "source_evidence_path": "raw/objects/38002da91a40f01c6d3eaedbc74c0043606c12672879b0f37bf5120b1f9f20c1.html",
+      "source_evidence_path": "raw/objects/954738b3bfd65a651dde2b4399702227e5b9bd876d5960e972c4847d4ca2758f.html",
       "source_id": "kodiak-atlas-commercial-start-2025",
-      "source_sha256": "38002da91a40f01c6d3eaedbc74c0043606c12672879b0f37bf5120b1f9f20c1",
+      "source_sha256": "954738b3bfd65a651dde2b4399702227e5b9bd876d5960e972c4847d4ca2758f",
       "source_url": "https://kodiak.ai/news/kodiak-delivers-customer-owned-autonomous-robotrucks-to-atlas"
     },
     {
@@ -390,9 +390,9 @@
       "operation_status": "commercial_driverless",
       "operator_id": "kodiak",
       "service_availability": "up to 24/7",
-      "source_evidence_path": "raw/objects/ff45611c2fb45aa6a3afce20c804c57f558ca5236184b571e2c12449cd8bc284.html",
+      "source_evidence_path": "raw/objects/c978b80b8057b35e5a5aa6ca294a20dbae941719b271459e3513c628bde82435.html",
       "source_id": "kodiak-2025-commercial",
-      "source_sha256": "ff45611c2fb45aa6a3afce20c804c57f558ca5236184b571e2c12449cd8bc284",
+      "source_sha256": "c978b80b8057b35e5a5aa6ca294a20dbae941719b271459e3513c628bde82435",
       "source_url": "https://kodiak.ai/news/kodiak-delivers-two-additional-driverless-trucks"
     },
     {
@@ -445,9 +445,9 @@
       "operation_status": "commercial",
       "operator_id": "kodiak",
       "roundtrips_per_week": 4,
-      "source_evidence_path": "raw/objects/5159c3df104d120a54ac9b11b7e32a4ea745ce1f4398f0a745b1662b372aa1a9.html",
+      "source_evidence_path": "raw/objects/36d7880fd2e4ecba158d0bbe023f6ab64da969d1b0a949c6d92f26c446ae5f4f.html",
       "source_id": "kodiak-roehl-commercial-2026",
-      "source_sha256": "5159c3df104d120a54ac9b11b7e32a4ea745ce1f4398f0a745b1662b372aa1a9",
+      "source_sha256": "36d7880fd2e4ecba158d0bbe023f6ab64da969d1b0a949c6d92f26c446ae5f4f",
       "source_url": "https://kodiak.ai/news/roehl-transport-autonomous-freight"
     },
     {
@@ -540,9 +540,9 @@
       "operation_status": "testing",
       "operator_id": "droneup",
       "pilot_to_drone_ratio": "one-to-many",
-      "source_evidence_path": "raw/objects/b58707c611f3fc27332fb153581a0742210a085da306061e3d54389d6114557e.html",
+      "source_evidence_path": "raw/objects/a74dd3ec497f620585ad5946eff1e93d1bcec7e6f6c7a53a5a9340f51c69986c.html",
       "source_id": "droneup-capacity-test-2024",
-      "source_sha256": "b58707c611f3fc27332fb153581a0742210a085da306061e3d54389d6114557e",
+      "source_sha256": "a74dd3ec497f620585ad5946eff1e93d1bcec7e6f6c7a53a5a9340f51c69986c",
       "source_url": "https://www.droneup.com/news/droneup-achieves-500-deliveries-per-day",
       "test_context": "research and development facility capacity testing for commercial partners"
     }

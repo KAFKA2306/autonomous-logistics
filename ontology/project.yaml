@@ -1,0 +1,85 @@
+project:
+  id: "kafka:autonomous-logistics"
+  name: "Autonomous Logistics Evidence"
+  repository: "https://github.com/KAFKA2306/autonomous-logistics"
+  version: "0.1.0"
+  updated: "2026-10-08"
+  core_ontology: "https://raw.githubusercontent.com/KAFKA2306/know/main/ontology/causal-evidence-core.yaml"
+  schema: "https://raw.githubusercontent.com/KAFKA2306/know/main/ontology/project.schema.json"
+
+purpose:
+  problem: "Maintain source-backed authorization, testing, supervised and commercial operation events without status inflation."
+  intended_decisions: ["accept_authorization","accept_operation_event","reject_status_inference","publish_registry"]
+  success_conditions:
+    - "Authorization cannot imply commercial operations."
+    - "Partial live trip display does not imply fleet performance."
+    - "Effective dates preserve published precision."
+  falsification_conditions:
+    - "Testing is relabeled commercial."
+    - "Partial sample counts become fleet-level statistics."
+
+scope:
+  included: ["operator","certificate","regulatory event","operation event","effective time","raw provenance"]
+  excluded: ["autonomy claims inferred from tests","fleet KPI from incomplete snapshots","future plan as current service"]
+  temporal: "Source event time, effective time, snapshot retrieval and decision time remain distinguishable."
+  abstraction_level: "Domain-specific evidence, guarded decisions and source authority."
+
+competency_questions:
+  - "Was the operator authorized or actually serving customers?"
+  - "What evidence supports driverless operation?"
+  - "Is the live trip sample complete enough for a fleet KPI?"
+
+domain_mapping:
+  System: "RegulatoryAuthorizationAndOperations"
+  State: ["authorization status","testing status","supervision status","commercial status"]
+  Action: ["collect official source","reconcile operator","validate status","publish record"]
+  Process: ["official data collection","source reconciliation","evidence snapshot generation"]
+  Observation: ["FAA authorization","operator announcement","live operational status"]
+  Model: ["status transition rules","source reconciliation"]
+  Requirement: ["primary source","status distinction","effective date precision","population completeness"]
+  Claim: ["operator authorized","commercial operation commenced","supervision requirement"]
+  Evidence: ["FAA Part 135 operator listing","operator first-party announcements","official operations records"]
+  Decision: ["accept_authorization","accept_operation_event","reject_status_inference","publish_registry"]
+
+claims_and_evidence:
+  assertion_types: ["ObservedFact","ReportedFact","CalculatedValue","ModelEstimate","RequirementAssertion","DecisionAssertion"]
+  required_evidence:
+    MaterialClaim: ["source identity","event or effective date","entity identity","status"]
+    Decision: ["explicit rule","supporting evidence","decision time"]
+  unknown_policy: "Missing, stale or scope-mismatched evidence blocks promotion to verified state."
+
+decision_rules:
+  - id: "publish_verified_operation_status"
+    when: "Primary source explicitly supports operation type, effective period and applicable operator"
+    result: "accept_authorization"
+  - id: "missing-evidence"
+    when: "Required supporting evidence cannot be verified."
+    result: "REVIEW_REQUIRED"
+
+provenance:
+  sources: ["FAA Part 135 operator listing","operator first-party announcements","official operations records"]
+  generated_artifacts: ["api/v1/autonomous-logistics/","README.md"]
+  agents: ["existing repository scripts","GitHub Actions","human reviewer"]
+  lineage: "Source observation -> versioned canonical entity -> validation -> decision -> published result."
+
+validation:
+  structural: "Canonical record identity, source metadata and artifact signatures must validate."
+  semantic: "Observed facts, derived views, forecasts, authorizations and assertions remain separate."
+  evidence: "Evidence dates, versions, scopes and sources must support each material decision."
+  publication: "Published status follows canonical artifact evidence and does not imply unavailable production behavior."
+
+operational_model:
+  implementation_status: "mapping to existing source workflows; execution requires independent evidence"
+  canonical_sources: ["api/v1/autonomous-logistics/","README.md"]
+  objects: ["Operator","Authorization","OperationEvent","Vehicle","Source","Status"]
+  links:
+    - ["Operator","HOLDS","Authorization"]
+    - ["Operator","PERFORMS","OperationEvent"]
+    - ["OperationEvent","SUPPORTED_BY","Source"]
+    - ["OperationEvent","HAS_STATUS","Status"]
+  actions:
+    - id: "publish_verified_operation_status"
+      preconditions: "Primary source explicitly supports operation type, effective period and applicable operator"
+      recorded_effect: "Publish current status without inferring commercial service from authorization"
+      rollback_or_recovery: "Downgrade unsupported claims to UNKNOWN while preserving raw source record"
+  outcome_metrics: ["primary_evidence_coverage","unsupported_status_claims","verified_operation_events"]

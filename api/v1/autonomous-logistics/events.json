@@ -10,9 +10,9 @@
       "mode": "drone_package_delivery",
       "operation_status": "commercial",
       "operator_id": "ups-flight-forward",
-      "source_evidence_path": "raw/objects/814f6a3043e2116c497dc375c6062f2476356869cc1005238a89df3e18eed407.html",
+      "source_evidence_path": "raw/objects/869fbca5066981d3417fc652f9033156699dbe276656dd35d41d726ca11e9b14.html",
       "source_id": "faa-part135-package-delivery",
-      "source_sha256": "814f6a3043e2116c497dc375c6062f2476356869cc1005238a89df3e18eed407",
+      "source_sha256": "869fbca5066981d3417fc652f9033156699dbe276656dd35d41d726ca11e9b14",
       "source_url": "https://www.faa.gov/uas/advanced_operations/package_delivery_drone"
     },
     {
@@ -25,9 +25,9 @@
       "mode": "drone_package_delivery",
       "operation_status": "commercial",
       "operator_id": "wing-aviation",
-      "source_evidence_path": "raw/objects/32a977ad8cb8e535dbb6ad7e33244d4791ee1648e935812e07a141ad72b0d97b.html",
+      "source_evidence_path": "raw/objects/506e33afd3991c31a09204b2accd29987a64e65f46b854bcb9ed88c376432faf.html",
       "source_id": "wing-christiansburg-commercial-start-2019",
-      "source_sha256": "32a977ad8cb8e535dbb6ad7e33244d4791ee1648e935812e07a141ad72b0d97b",
+      "source_sha256": "506e33afd3991c31a09204b2accd29987a64e65f46b854bcb9ed88c376432faf",
       "source_url": "https://wing.com/news/wing-launches-americas-first-commercial"
     },
     {
@@ -40,9 +40,9 @@
       "mode": "drone_package_delivery",
       "operation_status": "commercial",
       "operator_id": "amazon-prime-air",
-      "source_evidence_path": "raw/objects/814f6a3043e2116c497dc375c6062f2476356869cc1005238a89df3e18eed407.html",
+      "source_evidence_path": "raw/objects/869fbca5066981d3417fc652f9033156699dbe276656dd35d41d726ca11e9b14.html",
       "source_id": "faa-part135-package-delivery",
-      "source_sha256": "814f6a3043e2116c497dc375c6062f2476356869cc1005238a89df3e18eed407",
+      "source_sha256": "869fbca5066981d3417fc652f9033156699dbe276656dd35d41d726ca11e9b14",
       "source_url": "https://www.faa.gov/uas/advanced_operations/package_delivery_drone"
     },
     {
@@ -55,9 +55,9 @@
       "mode": "drone_package_delivery",
       "operation_status": "commercial",
       "operator_id": "wing-aviation",
-      "source_evidence_path": "raw/objects/33d4d76c5fd964a7b5b124bfce6fcf73f061679315ccf4439e1a0b58d0194629.html",
+      "source_evidence_path": "raw/objects/c263d4c77946ed14cdd370611e7a9139ac48bd248b80e493b82ace045f7e13c0.html",
       "source_id": "wing-dfw-commercial-start-2022",
-      "source_sha256": "33d4d76c5fd964a7b5b124bfce6fcf73f061679315ccf4439e1a0b58d0194629",
+      "source_sha256": "c263d4c77946ed14cdd370611e7a9139ac48bd248b80e493b82ace045f7e13c0",
       "source_url": "https://wing.com/news/wing-celebrates-3-years-of-drone-delivery-in-dfw"
     },
     {
@@ -70,9 +70,9 @@
       "mode": "drone_package_delivery",
       "operation_status": "commercial",
       "operator_id": "zipline",
-      "source_evidence_path": "raw/objects/814f6a3043e2116c497dc375c6062f2476356869cc1005238a89df3e18eed407.html",
+      "source_evidence_path": "raw/objects/869fbca5066981d3417fc652f9033156699dbe276656dd35d41d726ca11e9b14.html",
       "source_id": "faa-part135-package-delivery",
-      "source_sha256": "814f6a3043e2116c497dc375c6062f2476356869cc1005238a89df3e18eed407",
+      "source_sha256": "869fbca5066981d3417fc652f9033156699dbe276656dd35d41d726ca11e9b14",
       "source_url": "https://www.faa.gov/uas/advanced_operations/package_delivery_drone"
     },
     {
@@ -87,9 +87,9 @@
       "mode": "drone_package_delivery",
       "operation_status": "commercial",
       "operator_id": "causey-aviation-unmanned",
-      "source_evidence_path": "raw/objects/814f6a3043e2116c497dc375c6062f2476356869cc1005238a89df3e18eed407.html",
+      "source_evidence_path": "raw/objects/869fbca5066981d3417fc652f9033156699dbe276656dd35d41d726ca11e9b14.html",
       "source_id": "faa-part135-package-delivery",
-      "source_sha256": "814f6a3043e2116c497dc375c6062f2476356869cc1005238a89df3e18eed407",
+      "source_sha256": "869fbca5066981d3417fc652f9033156699dbe276656dd35d41d726ca11e9b14",
       "source_url": "https://www.faa.gov/uas/advanced_operations/package_delivery_drone"
     },
     {
@@ -102,9 +102,9 @@
       "operation_status": "commercial",
       "operator_id": "causey-aviation-unmanned",
       "recipient_scope": "consumer homes in the U.S.",
-      "source_evidence_path": "raw/objects/45d8c783aec55035f5fb271c9ea75613c95a82eec2c00253903bf84590b013d3.html",
+      "source_evidence_path": "raw/objects/aab134a95b2b454903baebe2bc48c0e10bd9fbb5183c030b35e65009b2e59489.html",
       "source_id": "faa-ipa-causey-operations",
-      "source_sha256": "45d8c783aec55035f5fb271c9ea75613c95a82eec2c00253903bf84590b013d3",
+      "source_sha256": "aab134a95b2b454903baebe2bc48c0e10bd9fbb5183c030b35e65009b2e59489",
       "source_url": "https://www.faa.gov/uas/programs_partnerships/ipa"
     },
     {
@@ -118,9 +118,9 @@
       "mode": "drone_package_delivery",
       "operation_status": "commercial",
       "operator_id": "droneup",
-      "source_evidence_path": "raw/objects/814f6a3043e2116c497dc375c6062f2476356869cc1005238a89df3e18eed407.html",
+      "source_evidence_path": "raw/objects/869fbca5066981d3417fc652f9033156699dbe276656dd35d41d726ca11e9b14.html",
       "source_id": "faa-part135-package-delivery",
-      "source_sha256": "814f6a3043e2116c497dc375c6062f2476356869cc1005238a89df3e18eed407",
+      "source_sha256": "869fbca5066981d3417fc652f9033156699dbe276656dd35d41d726ca11e9b14",
       "source_url": "https://www.faa.gov/uas/advanced_operations/package_delivery_drone"
     },
     {
@@ -134,9 +134,9 @@
       "operation_status": "commercial",
       "operator_id": "wing-aviation",
       "partner": "Walmart",
-      "source_evidence_path": "raw/objects/3842a9dfcd361bde0240baefbe8aa7f86233ecbc1462e34044cf94b37265bd67.html",
+      "source_evidence_path": "raw/objects/11f7b47e7e022057d224975ea13bd1139a4c5f9647ab8a4b2ced9d70e172b703.html",
       "source_id": "wing-atlanta-commercial-start-2025",
-      "source_sha256": "3842a9dfcd361bde0240baefbe8aa7f86233ecbc1462e34044cf94b37265bd67",
+      "source_sha256": "11f7b47e7e022057d224975ea13bd1139a4c5f9647ab8a4b2ced9d70e172b703",
       "source_url": "https://wing.com/news/wing-walmart-metro-atlanta-drone-delivery-launch"
     },
     {
@@ -154,9 +154,9 @@
       "operation_status": "regulatory_authorization",
       "operator_id": "zipline",
       "prior_max_operations_per_day": 100,
-      "source_evidence_path": "raw/objects/0bb1022a57d03540d1698f4ce04bc3e2bfd59273763e8c438d8b882f8d419cb8.html",
+      "source_evidence_path": "raw/objects/95716db6c83e1892614104f50575ad3c9f210360fea03d46590541e94635e1ce.html",
       "source_id": "faa-nepa-drone-operations",
-      "source_sha256": "0bb1022a57d03540d1698f4ce04bc3e2bfd59273763e8c438d8b882f8d419cb8",
+      "source_sha256": "95716db6c83e1892614104f50575ad3c9f210360fea03d46590541e94635e1ce",
       "source_url": "https://www.faa.gov/uas/advanced_operations/nepa_and_drones"
     },
     {
@@ -170,9 +170,9 @@
       "operation_status": "commercial",
       "operator_id": "wing-aviation",
       "partner": "Walmart",
-      "source_evidence_path": "raw/objects/7385ac29d62d04c34f31eba3b036c6ad377151c3a7fc8293332732953676e69e.html",
+      "source_evidence_path": "raw/objects/460dfe32e158b3338c5358b3ecdecb3b0ff7a7eca1258cdcdd3a1b2aaad181d2.html",
       "source_id": "wing-houston-commercial-start-2026",
-      "source_sha256": "7385ac29d62d04c34f31eba3b036c6ad377151c3a7fc8293332732953676e69e",
+      "source_sha256": "460dfe32e158b3338c5358b3ecdecb3b0ff7a7eca1258cdcdd3a1b2aaad181d2",
       "source_url": "https://wing.com/news/greater-houston-kicks-off-walmart-wing-expansion-year"
     },
     {
@@ -188,9 +188,9 @@
       "partner": "Papa Johns",
       "pilot_scope": "initial pilot program",
       "service_channel": "Wing app",
-      "source_evidence_path": "raw/objects/31b2d851952afa2a05075b17ac98fe7f996699a0b119b1aaad2743611566d2c2.html",
+      "source_evidence_path": "raw/objects/94d2ace8872b55a025def6f1fec547010c04c34ed2d20809cb5fdaedc7ab5c9d.html",
       "source_id": "wing-charlotte-papa-johns-commercial-pilot-2026",
-      "source_sha256": "31b2d851952afa2a05075b17ac98fe7f996699a0b119b1aaad2743611566d2c2",
+      "source_sha256": "94d2ace8872b55a025def6f1fec547010c04c34ed2d20809cb5fdaedc7ab5c9d",
       "source_url": "https://wing.com/news/wing-papa-johns-fresh-hot-drone-deliveries"
     },
     {
@@ -207,9 +207,9 @@
       "mode": "drone_package_delivery",
       "operation_status": "commercial",
       "operator_id": "wing-aviation",
-      "source_evidence_path": "raw/objects/bedfc9796c35ea762363f5a46537cb5246fd3a38e33a9a2b0e764f44790637ff.html",
+      "source_evidence_path": "raw/objects/d97c8d8e9f291a58a479ae178746c22ec7af1355eedc4f8133a2ba82569c4313.html",
       "source_id": "wing-commercial-scale-2026",
-      "source_sha256": "bedfc9796c35ea762363f5a46537cb5246fd3a38e33a9a2b0e764f44790637ff",
+      "source_sha256": "d97c8d8e9f291a58a479ae178746c22ec7af1355eedc4f8133a2ba82569c4313",
       "source_url": "https://wing.com/news/wing-and-walmart-seven-new-markets-drone-delivery"
     },
     {
@@ -222,9 +222,9 @@
       "mode": "drone_package_delivery",
       "operation_status": "commercial",
       "operator_id": "zipline",
-      "source_evidence_path": "raw/objects/b27aadb957cebfe8d18e95452549b83f78af4509fc65c07320504d88fba57b3b.html",
+      "source_evidence_path": "raw/objects/5bde98adcb00863dd1358529b65aa3bc7fe688ae8ab8ac74c2be6612ee4e4dc3.html",
       "source_id": "zipline-commercial-scale-2026",
-      "source_sha256": "b27aadb957cebfe8d18e95452549b83f78af4509fc65c07320504d88fba57b3b",
+      "source_sha256": "5bde98adcb00863dd1358529b65aa3bc7fe688ae8ab8ac74c2be6612ee4e4dc3",
       "source_url": "https://www.zipline.com/newsroom/zipline-accelerates-u-s-growth-with-13x-marketplace-expansion-new-leadership-hires-and-launches-in-austin-and-cleveland",
       "us_flight_share_approx": 0.7,
       "us_flight_share_qualifier": "roughly"
@@ -238,9 +238,9 @@
       "operation_status": "regulatory_authorization",
       "operator_id": "doordash-air",
       "operator_name": "DoorDash Air / DoorDash Labs",
-      "source_evidence_path": "raw/objects/1c81a704b5bc4cc41c0796195525d0c3ef4d5c93d5dccbbe3d7553ce56bc3b18.html",
+      "source_evidence_path": "raw/objects/16d23ed0df3b1c32364f2fdc9ad0aece91b5bca7df37aad328ed6124ca65c4a2.html",
       "source_id": "doordash-air-part135-2026",
-      "source_sha256": "1c81a704b5bc4cc41c0796195525d0c3ef4d5c93d5dccbbe3d7553ce56bc3b18",
+      "source_sha256": "16d23ed0df3b1c32364f2fdc9ad0aece91b5bca7df37aad328ed6124ca65c4a2",
       "source_url": "https://about.doordash.com/en-us/news/doordash-air"
     },
     {
@@ -254,9 +254,9 @@
       "mode": "drone_package_delivery",
       "operation_status": "commercial",
       "operator_id": "zipline",
-      "source_evidence_path": "raw/objects/2b7c2558fae40cee8b421cee585c5f6792000b2244af85689798b12b5dc0b3a4.html",
+      "source_evidence_path": "raw/objects/c2f81182309620b687b23555848fb6518fa7eb28ea96b2e9275fd5177b7643f3.html",
       "source_id": "uber-zipline-partnership-2026",
-      "source_sha256": "2b7c2558fae40cee8b421cee585c5f6792000b2244af85689798b12b5dc0b3a4",
+      "source_sha256": "c2f81182309620b687b23555848fb6518fa7eb28ea96b2e9275fd5177b7643f3",
       "source_url": "https://investor.uber.com/news-events/news/press-release-details/2026/Uber-and-Zipline-Partner-to-Bring-Drone-Delivery-to-Millions-of-Americans/default.aspx"
     },
     {
@@ -270,9 +270,9 @@
       "mode": "drone_package_delivery",
       "operation_status": "regulatory_authorization",
       "operator_id": "wing-aviation",
-      "source_evidence_path": "raw/objects/0bb1022a57d03540d1698f4ce04bc3e2bfd59273763e8c438d8b882f8d419cb8.html",
+      "source_evidence_path": "raw/objects/95716db6c83e1892614104f50575ad3c9f210360fea03d46590541e94635e1ce.html",
       "source_id": "faa-nepa-drone-operations",
-      "source_sha256": "0bb1022a57d03540d1698f4ce04bc3e2bfd59273763e8c438d8b882f8d419cb8",
+      "source_sha256": "95716db6c83e1892614104f50575ad3c9f210360fea03d46590541e94635e1ce",
       "source_url": "https://www.faa.gov/uas/advanced_operations/nepa_and_drones"
     },
     {
@@ -323,9 +323,9 @@
       "mode": "autonomous_trucking",
       "operation_status": "commercial_driverless",
       "operator_id": "gatik",
-      "source_evidence_path": "raw/objects/cfe806f5d30a5c68c31454178c5e2891b8928d85f59f4893acdc1adcc282f767.html",
+      "source_evidence_path": "raw/objects/635bf9446e4f6e9535a98122f8486a09736c3e2451181fb9d76ccc99c201a762.html",
       "source_id": "gatik-2026-scale",
-      "source_sha256": "cfe806f5d30a5c68c31454178c5e2891b8928d85f59f4893acdc1adcc282f767",
+      "source_sha256": "635bf9446e4f6e9535a98122f8486a09736c3e2451181fb9d76ccc99c201a762",
       "source_url": "https://archive.gatik.ai/news/press-releases/gatik-becomes-first-us-company-to-operate-fully-driverless-trucks-at-scale-for-commercial-deliveries/"
     },
     {
@@ -339,9 +339,9 @@
       "on_time_delivery_rate": 0.99,
       "operation_status": "commercial_driverless",
       "operator_id": "gatik",
-      "source_evidence_path": "raw/objects/21f94aace468e625e0d5c75e2a0f68b3b235fcab41ace8a7a242d856be04f92e.html",
+      "source_evidence_path": "raw/objects/37ff224cf7061c3c2e4f32b1d529e3483987655d0470b9db736328fe01800d39.html",
       "source_id": "gatik-2026-08-25-scale",
-      "source_sha256": "21f94aace468e625e0d5c75e2a0f68b3b235fcab41ace8a7a242d856be04f92e",
+      "source_sha256": "37ff224cf7061c3c2e4f32b1d529e3483987655d0470b9db736328fe01800d39",
       "source_url": "https://archive.gatik.ai/news/coverage/gatik-raises-200-million-series-d-led-by-qia-and-kdt-as-demand-for-driverless-commercial-freight-accelerates/"
     },
     {
@@ -353,9 +353,9 @@
       "mode": "autonomous_trucking",
       "operation_status": "commercial_driverless",
       "operator_id": "kodiak",
-      "source_evidence_path": "raw/objects/edbc3aa11712932bc95f75da4c4c7f67e64604ecb79b5e802e6cb825a0f4d2fa.html",
+      "source_evidence_path": "raw/objects/988f2e57dc73933b10e41596d7b09b8ce954f9820157fa5c857d13d525956dc1.html",
       "source_id": "kodiak-atlas-commercial-start-2025",
-      "source_sha256": "edbc3aa11712932bc95f75da4c4c7f67e64604ecb79b5e802e6cb825a0f4d2fa",
+      "source_sha256": "988f2e57dc73933b10e41596d7b09b8ce954f9820157fa5c857d13d525956dc1",
       "source_url": "https://kodiak.ai/news/kodiak-delivers-customer-owned-autonomous-robotrucks-to-atlas"
     },
     {
@@ -368,9 +368,9 @@
       "mode": "autonomous_trucking",
       "operation_status": "commercial_driverless",
       "operator_id": "kodiak",
-      "source_evidence_path": "raw/objects/edbc3aa11712932bc95f75da4c4c7f67e64604ecb79b5e802e6cb825a0f4d2fa.html",
+      "source_evidence_path": "raw/objects/988f2e57dc73933b10e41596d7b09b8ce954f9820157fa5c857d13d525956dc1.html",
       "source_id": "kodiak-atlas-commercial-start-2025",
-      "source_sha256": "edbc3aa11712932bc95f75da4c4c7f67e64604ecb79b5e802e6cb825a0f4d2fa",
+      "source_sha256": "988f2e57dc73933b10e41596d7b09b8ce954f9820157fa5c857d13d525956dc1",
       "source_url": "https://kodiak.ai/news/kodiak-delivers-customer-owned-autonomous-robotrucks-to-atlas"
     },
     {
@@ -390,9 +390,9 @@
       "operation_status": "commercial_driverless",
       "operator_id": "kodiak",
       "service_availability": "up to 24/7",
-      "source_evidence_path": "raw/objects/e5e64665775a1f3b04133766cb9e76813a358b9738f476c3a44fe048eed291eb.html",
+      "source_evidence_path": "raw/objects/ee17f15308841ce132916346ddbc8bcbf4e527f480bc8352280bb05f6bb56780.html",
       "source_id": "kodiak-2025-commercial",
-      "source_sha256": "e5e64665775a1f3b04133766cb9e76813a358b9738f476c3a44fe048eed291eb",
+      "source_sha256": "ee17f15308841ce132916346ddbc8bcbf4e527f480bc8352280bb05f6bb56780",
       "source_url": "https://kodiak.ai/news/kodiak-delivers-two-additional-driverless-trucks"
     },
     {
@@ -407,9 +407,9 @@
       "operator_id": "kodiak",
       "paid_driverless_hours_cumulative": 23500,
       "paid_driverless_hours_cumulative_qualifier": "over",
-      "source_evidence_path": "raw/objects/b7563476a67ae0cd67bf4e9aaf4938369f05d6efa5932c58718d209e24c96a46.html",
+      "source_evidence_path": "raw/objects/a0ff94a54f47d55fd32024838f8ee7bfa578885d1f45f4728cb08c569f95daca.html",
       "source_id": "kodiak-q1-2026",
-      "source_sha256": "b7563476a67ae0cd67bf4e9aaf4938369f05d6efa5932c58718d209e24c96a46",
+      "source_sha256": "a0ff94a54f47d55fd32024838f8ee7bfa578885d1f45f4728cb08c569f95daca",
       "source_url": "https://investors.kodiak.ai/news-releases/news-release-details/kodiak-ai-reports-first-quarter-2026-results-announces-100"
     },
     {
@@ -445,9 +445,9 @@
       "operation_status": "commercial",
       "operator_id": "kodiak",
       "roundtrips_per_week": 4,
-      "source_evidence_path": "raw/objects/8af378e81570c4208f6124f3524fb10429e557c413da4dc0f293572a9aef251a.html",
+      "source_evidence_path": "raw/objects/a0815eecbdda64d0c8ec8352500515c0095cf2bef2df7797765616afe04532b7.html",
       "source_id": "kodiak-roehl-commercial-2026",
-      "source_sha256": "8af378e81570c4208f6124f3524fb10429e557c413da4dc0f293572a9aef251a",
+      "source_sha256": "a0815eecbdda64d0c8ec8352500515c0095cf2bef2df7797765616afe04532b7",
       "source_url": "https://kodiak.ai/news/roehl-transport-autonomous-freight"
     },
     {
@@ -540,9 +540,9 @@
       "operation_status": "testing",
       "operator_id": "droneup",
       "pilot_to_drone_ratio": "one-to-many",
-      "source_evidence_path": "raw/objects/48fc6fdd5a875a99503b85458681bcb3ee6bc9a420b8fd34ea8a834fa9eed644.html",
+      "source_evidence_path": "raw/objects/e1b7b3632ab23a3b87cdacb56df8726113499bf5d93b1c3b22bad1975bb6b74c.html",
       "source_id": "droneup-capacity-test-2024",
-      "source_sha256": "48fc6fdd5a875a99503b85458681bcb3ee6bc9a420b8fd34ea8a834fa9eed644",
+      "source_sha256": "e1b7b3632ab23a3b87cdacb56df8726113499bf5d93b1c3b22bad1975bb6b74c",
       "source_url": "https://www.droneup.com/news/droneup-achieves-500-deliveries-per-day",
       "test_context": "research and development facility capacity testing for commercial partners"
     }

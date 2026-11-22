@@ -2,7 +2,7 @@
   "faa_registry": {
     "listed_operator_count": 7,
     "source_id": "faa-part135-package-delivery",
-    "source_sha256": "3a252c17bcaa863291d51b07c650f01b9ced4392daefbcd40e31d1c6fc80a976",
+    "source_sha256": "1b7f18b445600e6cfad2a1b9cf7c8db91e207920656d0f75d1e03497832f883e",
     "source_url": "https://www.faa.gov/uas/advanced_operations/package_delivery_drone"
   },
   "interpretation": "An operator primary source may report FAA Part 135 authorization before the current FAA package-delivery page lists the operator. This view does not infer that the authorization is invalid, that commercial service has started, or that an unlisted operator belongs in the FAA-listed registry.",
@@ -14,10 +14,10 @@
       "operator_id": "doordash-air",
       "operator_name": "DoorDash Air / DoorDash Labs",
       "operator_source_id": "doordash-air-part135-2026",
-      "operator_source_sha256": "a5f7a1af7489ae6afd7a3f0420a916dd3f50f428bbb21e000f7b46ec5d499f59",
+      "operator_source_sha256": "9459fbef86bd2079ede3451f869a2493416e22659bcb8eba7cd1025120357238",
       "operator_source_url": "https://about.doordash.com/en-us/news/doordash-air"
     }
   ],
-  "retrieved_at": "2026-11-20T02:31:31.828579+00:00",
+  "retrieved_at": "2026-11-22T01:31:50.675653+00:00",
   "schema_version": 1
 }
